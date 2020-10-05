@@ -1,0 +1,40 @@
+.games-badges {}
+.games-badges__list {
+	display: flex;
+  	flex-wrap: wrap;  
+	margin: -4px;
+}
+.games-badges__item {
+	margin: 4px;
+}
+
+.game-badge {
+	padding: 4px 8px;
+	background-color: #000;
+  	white-space: nowrap;
+}
+.game-badge__title {
+	color: #fff;
+	font-size: 13px;
+	font-weight: unset;
+}
+.game-badge__title > a {
+	color: #fff;
+	text-decoration: none;
+	transition: all .1s;
+}
+.game-badge__title > a:hover {
+	background-color: #fff;
+	color: #000;
+}
+.game-badge__date {
+	margin-bottom: 2px;
+	color: #999;
+	font-size: 11px;
+}
+
+.game-badge--expansion {
+	padding-top: 0;
+	padding-bottom: 0;
+	filter: invert(1);
+}

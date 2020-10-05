@@ -1,0 +1,16 @@
+{
+  "games": [
+    {
+      "title": "Diablo",
+      "genre": "Role-playing",
+      "release-date": "07-27-1997",
+      "expansion": true
+    },
+    {
+      "title": "Fallout",
+      "genre": "Strategy",
+      "release-date": "09-01-1999",
+      "expansion": false
+    }
+  ]
+}
