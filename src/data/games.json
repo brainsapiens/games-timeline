@@ -1,16 +1,137 @@
 {
-  "games": [
+  "1994": [
     {
-      "title": "Diablo",
-      "genre": "Role-playing",
-      "release-date": "07-27-1997",
+      "title": "Warcraft:<br/> Orcs &amp;&nbsp;Humans",
+      "genre": "strategy",
+      "releaseDate": "November 23"
+    }
+  ],
+  "1995": [
+    {
+      "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
+      "genre": "strategy",
+      "releaseDate": "September 0"
+    },
+    {
+      "title": "Warcraft II:</br> Tides of&nbsp;Darkness",
+      "genre": "strategy",
+      "releaseDate": "December 9"
+    }
+  ],
+  "1996": [
+    {
+      "title": "Warcraft II:<br/> Beyond the Dark Portal",
+      "genre": "strategy",
+      "releaseDate": "April 30",
       "expansion": true
     },
     {
+      "title": "Heroes of&nbsp;Might and Magic II:<br/> The Succession Wars",
+      "genre": "strategy",
+      "releaseDate": "October 1"
+    }
+  ],
+  "1997": [
+    {
+      "title": "Diablo",
+      "genre": "role-playing",
+      "releaseDate": "January 3"
+    },
+    {
+      "title": "Heroes of&nbsp;Might and Magic II:<br/> The Price of&nbsp;Loyalty",
+      "genre": "strategy",
+      "releaseDate": "May 16",
+      "expansion": true
+    },
+    {
+      "title": "Dungeon Keeper",
+      "genre": "strategy",
+      "releaseDate": "June 26"
+    },
+    {
       "title": "Fallout",
-      "genre": "Strategy",
-      "release-date": "09-01-1999",
-      "expansion": false
+      "genre": "role-playing",
+      "releaseDate": "October 10"
+    },
+    {
+      "title": "Age of&nbsp;Empires",
+      "genre": "strategy",
+      "releaseDate": "October 15"
+    },
+    {
+      "title": "Diablo:<br/> Hellfire",
+      "genre": "role-playing",
+      "releaseDate": "November 25",
+      "expansion": true
+    }
+  ],
+  "1998": [
+    {
+      "title": "StarCraft",
+      "genre": "strategy",
+      "releaseDate": "March 31"
+    },
+    {
+      "title": "Age of&nbsp;Empires:<br/> The Rise of&nbsp;Rome",
+      "genre": "strategy",
+      "releaseDate": "October 22",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;2",
+      "genre": "role-playing",
+      "releaseDate": "October 29"
+    },
+    {
+      "title": "StarCraft:<br/> Brood War",
+      "genre": "strategy",
+      "releaseDate": "December 18",
+      "expansion": true
+    },
+    {
+      "title": "Baldur&rsquo;s Gate",
+      "genre": "role-playing",
+      "releaseDate": "December 21"
+    }
+  ],
+  "1999": [
+    {
+      "title": "Heroes of&nbsp;Might and Magic III:<br/> The Restoration of&nbsp;Erathia",
+      "genre": "strategy",
+      "releaseDate": "March 3"
+    },
+    {
+      "title": "Baldur&rsquo;s Gate:<br/> Tales of&nbsp;the Sword Coast",
+      "genre": "role-playing",
+      "releaseDate": "April 30",
+      "expansion": true
+    },
+    {
+      "title": "Dungeon Keeper&nbsp;2",
+      "genre": "strategy",
+      "releaseDate": "July 7"
+    },
+    {
+      "title": "Age of&nbsp;Empires II:<br/> The Age of&nbsp;Kings",
+      "genre": "strategy",
+      "releaseDate": "September 30"
+    },
+    {
+      "title": "Heroes of&nbsp;Might and Magic III:<br/> Armageddon&rsquo;s Blade",
+      "genre": "strategy",
+      "releaseDate": "September 30",
+      "expansion": true
+    },
+    {
+      "title": "Warcraft II:<br/> Baltle.net Edition",
+      "genre": "strategy",
+      "releaseDate": "September 30",
+      "expansion": true
+    },
+    {
+      "title": "Planescape:<br/> Torment",
+      "genre": "role-playing",
+      "releaseDate": "December 12"
     }
   ]
 }

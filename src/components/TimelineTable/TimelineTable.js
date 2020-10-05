@@ -2,15 +2,16 @@ import React from 'react';
 import styled from 'styled-components';
 import timeline from '../../data/timeline.json'
 import games from '../../data/games.json'
+import GameBadge from '../GameBadge';
+
+const numberOfYears = timeline.years.length;
 
 const Table = styled.div`
     position: sticky;
     top: 0;
     left: 0;
     display: inline-grid;
-    grid-template-columns: var(--genre-width) repeat(calc(var(--number-of-years) * 4), 1fr);
-    /*border-top: 1px solid #eee;
-    border-left: 1px solid #eee;*/
+    grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
     
     > div {
         padding: var(--cell-padding);
@@ -57,71 +58,6 @@ const Captions = styled.div`
     }
 `;
 
-//TOOD: Automate :nth-child's
-const Year = styled.div`
-    position: sticky;
-    z-index: 100;
-    top: 0;
-    background-color: #fff;
-    font-weight: var(--font-weight-extra);
-    text-align: center;
-
-    > span {
-        position: sticky;
-        left: calc(var(--genre-width) + var(--cell-padding));
-    }
-    
-    &:nth-of-type(2) {
-        grid-column-start: 2;
-        grid-column-end: 6;
-    }
-    &:nth-of-type(3) {
-        grid-column-start: 6;
-        grid-column-end: 10;
-    }
-    &:nth-of-type(4) {
-        grid-column-start: 10;
-        grid-column-end: 14;
-    }
-    &:nth-of-type(5) {
-        grid-column-start: 14;
-        grid-column-end: 18;
-    }
-    &:nth-of-type(6) {
-        grid-column-start: 18;
-        grid-column-end: 22;
-    }
-    &:nth-of-type(7) {
-        grid-column-start: 22;
-        grid-column-end: 26;
-    }
-    &:nth-of-type(8) {
-        grid-column-start: 26;
-        grid-column-end: 30;
-    }
-    &:nth-of-type(9) {
-        grid-column-start: 30;
-        grid-column-end: 34;
-    }
-    &:nth-of-type(10) {
-        grid-column-start: 34;
-        grid-column-end: 38;
-    }
-    &:nth-of-type(11) {
-        grid-column-start: 38;
-        grid-column-end: 42;
-    }
-    &:nth-of-type(12) {
-        grid-column-start: 42;
-        grid-column-end: 46;
-    }
-    &:nth-of-type(13) {
-        grid-column-start: 46;
-        grid-column-end: 50;
-    }
-`;
-
-//TODO: Inherit from Year
 const Genre = styled.div`
     position: sticky;
     z-index: 100;
@@ -129,6 +65,7 @@ const Genre = styled.div`
     background-color: #fff;
     font-weight: var(--font-weight-extra);
     text-align: center;
+    text-transform: capitalize;
 
     > span {
         position: sticky;
@@ -136,7 +73,63 @@ const Genre = styled.div`
     }
 `;
 
+function yearsLayout() {
+    const shiftToTheRight = 1;
+    let columnStart = 2;
+    let columnEnd = columnStart + 4;
+
+    let result = '';
+    for (let index = (1 + shiftToTheRight); index <= (numberOfYears + shiftToTheRight); index++) {
+        result += `
+            &:nth-of-type(${index}) {
+                grid-column-start: ${columnStart};
+                grid-column-end: ${columnEnd};
+            }
+        `
+        columnStart = columnStart + 4;
+        columnEnd = columnEnd + 4;
+    }
+    return result;
+}
+const Year = styled(Genre)`
+    top: 0;
+    left: unset;
+    text-transform: unset;
+
+    > span {
+        top: unset;
+        left: calc(var(--genre-width) + var(--cell-padding));
+    }
+    
+    ${yearsLayout()}
+`;
+
+const GamesBadgesList = styled.ul`
+    display: flex;
+    flex-wrap: wrap;  
+    margin: -4px;
+`;
+const GamesBadgesItem = styled.li`
+    margin: 4px;
+`;
+
 class TimelineTable extends React.Component {
+    matchQuarter (index, releaseDate) {
+        const monthIndex = new Date(releaseDate).getMonth() + 1;
+
+        if (index === 1 && monthIndex > 0 && monthIndex <= 3) {
+            return true;
+        }
+        if (index === 2 && monthIndex > 3 && monthIndex <= 6) {
+            return true;
+        }
+        if (index === 3 && monthIndex > 6 && monthIndex <= 9) {
+            return true;
+        }
+        return index === 4 && monthIndex > 9 && monthIndex <= 12;
+
+    }
+
     get captions () {
         return (
             <Captions>
@@ -149,240 +142,48 @@ class TimelineTable extends React.Component {
     get years () {
         return timeline.years.map((year, index) => {
             return (
-                <Year key={index}>{year}</Year>
+                <Year key={index}>
+                    <span>{year}</span>
+                </Year>
             )
         });
     }
 
     get genres () {
-        return timeline.genres.map((genre, index) => {
-            return (
-                <>
-                    <Genre key={index}>{genre}</Genre>
+        return timeline.genres
+            .sort((a, b) => a.localeCompare(b))
+            .map((genre, index) => {
+                return ([
+                    <Genre key={index}>
+                        <span>{genre}</span>
+                    </Genre>,
+                    timeline.years.map(year => {
+                        let result = [];
+                        for (let index = 1; index <= 4; index++) {
+                            let gameBadge = [];
+                            if (games[year]) {
+                                for (const game of games[year]) {
+                                    if (genre === game.genre && this.matchQuarter(index, game.releaseDate)) {
+                                        gameBadge.push(
+                                            <GamesBadgesItem key={game.title}>
+                                                <GameBadge key={game.title} game={game}/>
+                                            </GamesBadgesItem>
+                                        );
+                                    }
+                                }
+                            }
+                            result.push(
+                                <div key={index} data-annual-quarter={`Q${index}`}>
+                                    <GamesBadgesList>
+                                        {gameBadge}
+                                    </GamesBadgesList>
+                                </div>
+                            );
+                        }
+                        return result
 
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4"/>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4"/>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4"/>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4"/>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4"/>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4"/>
-
-                    <div data-annual-quarter="Q1">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Diablo_(video_game)">Diablo</a>
-                                        </h6>
-                                        <div className="game-badge__date">January&nbsp;3</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Fallout_(video_game)">Fallout</a>
-                                        </h6>
-                                        <div className="game-badge__date">October&nbsp;10</div>
-                                    </article>
-                                </li>
-                                <li className="games-badges__item">
-                                    <article className="game-badge game-badge--expansion">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Diablo:_Hellfire">Diablo: Hellfire</a>
-                                        </h6>
-                                        <div className="game-badge__date">November&nbsp;25</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Fallout_2">Fallout&nbsp;2</a>
-                                        </h6>
-                                        <div className="game-badge__date">October&nbsp;29</div>
-                                    </article>
-                                </li>
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Baldur%27s_Gate">Baldur&rsquo;s Gate</a>
-                                        </h6>
-                                        <div className="game-badge__date">December&nbsp;21</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge game-badge--expansion">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Baldur%27s_Gate:_Tales_of_the_Sword_Coast">Baldur&rsquo;s Gate:<br/> Tales of&nbsp;the Sword Coast</a>
-                                        </h6>
-                                        <div className="game-badge__date">April&nbsp;30</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Planescape:_Torment">Planescape:<br/> Torment</a>
-                                        </h6>
-                                        <div className="game-badge__date">December&nbsp;12</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Diablo_II">Diablo&nbsp;II</a>
-                                        </h6>
-                                        <div className="game-badge__date">June&nbsp;29</div>
-                                    </article>
-                                </li>
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Icewind_Dale">Icewind Dale</a>
-                                        </h6>
-                                        <div className="game-badge__date">June&nbsp;29</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div data-annual-quarter="Q3">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Shadows_of_Amn">Baldur&rsquo;s Gate II:<br/> Shadows of&nbsp;Amn</a>
-                                        </h6>
-                                        <div className="game-badge__date">September&nbsp;21</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div data-annual-quarter="Q4"/>
-
-                    <div data-annual-quarter="Q1">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge game-badge--expansion">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Icewind_Dale:_Heart_of_Winter">Icewind Dale:<br/> Heart of&nbsp;Winter</a>
-                                        </h6>
-                                        <div className="game-badge__date">February&nbsp;21</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div data-annual-quarter="Q2">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge game-badge--expansion">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Throne_of_Bhaal">Baldur&rsquo;s Gate II:<br/> Throne of&nbsp;Bhaal</a>
-                                        </h6>
-                                        <div className="game-badge__date">June&nbsp;22</div>
-                                    </article>
-                                </li>
-                                <li className="games-badges__item">
-                                    <article className="game-badge game-badge--expansion">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Diablo_II:_Lord_of_Destruction">Diablo II: Lord of&nbsp;Destruction</a>
-                                        </h6>
-                                        <div className="game-badge__date">June&nbsp;27</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div data-annual-quarter="Q3"/>
-                    <div data-annual-quarter="Q4"/>
-
-                    <div data-annual-quarter="Q1"/>
-                    <div data-annual-quarter="Q2"/>
-                    <div data-annual-quarter="Q3">
-                        <div className="games-badges">
-                            <ul className="games-badges__list">
-                                <li className="games-badges__item">
-                                    <article className="game-badge">
-                                        <h6 className="game-badge__title">
-                                            <a href="https://en.wikipedia.org/wiki/Icewind_Dale_II">Icewind Dale&nbsp;II</a>
-                                        </h6>
-                                        <div className="game-badge__date">August&nbsp;27</div>
-                                    </article>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div data-annual-quarter="Q4"/>
-                </>
-           )
+                    })
+                ])
         });
     }
 
