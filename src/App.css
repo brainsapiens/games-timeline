@@ -1,13 +1,11 @@
 @import url('../node_modules/normalize.css/normalize.css');
 
 :root {
-    --font-weight-base: 400;
-    --font-weight-extra: 600;
-
-    --number-of-years: 10;
-
     --year-height: 38px;
     --genre-width: 150px;
+
+    --font-weight-base: 400;
+    --font-weight-extra: 600;
 
     --cell-padding: 8px;
 }

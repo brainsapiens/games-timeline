@@ -133,5 +133,61 @@
       "genre": "role-playing",
       "releaseDate": "December 12"
     }
+  ],
+  "2000": [
+    {
+      "title": "Heroes of&nbsp;Might and Magic III:<br/> The Shadow of&nbsp;Death",
+      "genre": "strategy",
+      "releaseDate": "March 31",
+      "expansion": true
+    },
+    {
+      "title": "Diablo&nbsp;II",
+      "genre": "role-playing",
+      "releaseDate": "June 29"
+    },
+    {
+      "title": "Icewind Dale",
+      "genre": "role-playing",
+      "releaseDate": "June 29"
+    },
+    {
+      "title": "Age of&nbsp;Empires II:<br/> The Conquerors",
+      "genre": "strategy",
+      "releaseDate": "August 24",
+      "expansion": true
+    },
+    {
+      "title": "Baldur&rsquo;s Gate II:<br/> Shadows of&nbsp;Amn",
+      "genre": "role-playing",
+      "releaseDate": "September 21"
+    }
+  ],
+  "2001": [
+    {
+      "title": "Icewind Dale:<br/> Heart of&nbsp;Winter",
+      "genre": "role-playing",
+      "releaseDate": "February 21",
+      "expansion": true
+    },
+    {
+      "title": "Baldur&rsquo;s Gate II: Throne of&nbsp;Bhaal",
+      "genre": "role-playing",
+      "releaseDate": "June 22",
+      "expansion": true
+    },
+    {
+      "title": "Diablo II:<br/> Lord of&nbsp;Destruction",
+      "genre": "role-playing",
+      "releaseDate": "June 27",
+      "expansion": true
+    }
+  ],
+  "2002": [
+    {
+      "title": "Icewind Dale&nbsp;II",
+      "genre": "role-playing",
+      "releaseDate": "August 27"
+    }
   ]
 }

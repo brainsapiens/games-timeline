@@ -1,11 +1,12 @@
 import React from 'react';
 import styled from 'styled-components';
-import timeline from '../../data/timeline.json'
 import games from '../../data/games.json'
 import GameBadge from '../GameBadge';
 
-const numberOfYears = timeline.years.length;
+const listOfYears = Object.keys(games);
+const numberOfYears = listOfYears.length;
 
+// Styles
 const Table = styled.div`
     position: sticky;
     top: 0;
@@ -73,25 +74,8 @@ const Genre = styled.div`
     }
 `;
 
-function yearsLayout() {
-    const shiftToTheRight = 1;
-    let columnStart = 2;
-    let columnEnd = columnStart + 4;
-
-    let result = '';
-    for (let index = (1 + shiftToTheRight); index <= (numberOfYears + shiftToTheRight); index++) {
-        result += `
-            &:nth-of-type(${index}) {
-                grid-column-start: ${columnStart};
-                grid-column-end: ${columnEnd};
-            }
-        `
-        columnStart = columnStart + 4;
-        columnEnd = columnEnd + 4;
-    }
-    return result;
-}
 const Year = styled(Genre)`
+    grid-column: auto / span 4;
     top: 0;
     left: unset;
     text-transform: unset;
@@ -100,8 +84,6 @@ const Year = styled(Genre)`
         top: unset;
         left: calc(var(--genre-width) + var(--cell-padding));
     }
-    
-    ${yearsLayout()}
 `;
 
 const GamesBadgesList = styled.ul`
@@ -113,10 +95,10 @@ const GamesBadgesItem = styled.li`
     margin: 4px;
 `;
 
+// Component
 class TimelineTable extends React.Component {
     matchQuarter (index, releaseDate) {
         const monthIndex = new Date(releaseDate).getMonth() + 1;
-
         if (index === 1 && monthIndex > 0 && monthIndex <= 3) {
             return true;
         }
@@ -127,7 +109,18 @@ class TimelineTable extends React.Component {
             return true;
         }
         return index === 4 && monthIndex > 9 && monthIndex <= 12;
+    }
 
+    get listOfGenres () {
+        const listOfGenres = [];
+        Object.values(games).forEach(games => {
+            for (const game of games) {
+                if (listOfGenres.includes(game.genre)) continue;
+                listOfGenres.push(game.genre);
+            }
+        });
+        listOfGenres.sort((a, b) => a.localeCompare(b));
+        return listOfGenres;
     }
 
     get captions () {
@@ -140,7 +133,7 @@ class TimelineTable extends React.Component {
     }
 
     get years () {
-        return timeline.years.map((year, index) => {
+        return listOfYears.map((year, index) => {
             return (
                 <Year key={index}>
                     <span>{year}</span>
@@ -150,40 +143,37 @@ class TimelineTable extends React.Component {
     }
 
     get genres () {
-        return timeline.genres
-            .sort((a, b) => a.localeCompare(b))
-            .map((genre, index) => {
-                return ([
-                    <Genre key={index}>
-                        <span>{genre}</span>
-                    </Genre>,
-                    timeline.years.map(year => {
-                        let result = [];
-                        for (let index = 1; index <= 4; index++) {
-                            let gameBadge = [];
-                            if (games[year]) {
-                                for (const game of games[year]) {
-                                    if (genre === game.genre && this.matchQuarter(index, game.releaseDate)) {
-                                        gameBadge.push(
-                                            <GamesBadgesItem key={game.title}>
-                                                <GameBadge key={game.title} game={game}/>
-                                            </GamesBadgesItem>
-                                        );
-                                    }
+        return this.listOfGenres.map((genre, index) => {
+            return ([
+                <Genre key={index}>
+                    <span>{genre}</span>
+                </Genre>,
+                listOfYears.map(year => {
+                    let result = [];
+                    for (let index = 1; index <= 4; index++) {
+                        let gameBadge = [];
+                        if (games[year]) {
+                            for (const game of games[year]) {
+                                if (genre === game.genre && this.matchQuarter(index, game.releaseDate)) {
+                                    gameBadge.push(
+                                        <GamesBadgesItem key={game.title}>
+                                            <GameBadge key={game.title} game={game}/>
+                                        </GamesBadgesItem>
+                                    );
                                 }
                             }
-                            result.push(
-                                <div key={index} data-annual-quarter={`Q${index}`}>
-                                    <GamesBadgesList>
-                                        {gameBadge}
-                                    </GamesBadgesList>
-                                </div>
-                            );
                         }
-                        return result
-
-                    })
-                ])
+                        result.push(
+                            <div key={index} data-annual-quarter={`Q${index}`}>
+                                <GamesBadgesList>
+                                    {gameBadge}
+                                </GamesBadgesList>
+                            </div>
+                        );
+                    }
+                    return result
+                })
+            ])
         });
     }
 
