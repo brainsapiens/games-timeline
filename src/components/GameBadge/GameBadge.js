@@ -69,7 +69,7 @@ class GameBadge extends React.Component {
         return (
             <Badge className={[expansion ? 'expansion' : '', !release ? 'muted' : '']}>
                 <Title>
-                    <a href={url} target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
+                    <a href={url} rel="noopener noreferrer" target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
                 </Title>
                 <Footer>
                     <time>{release}</time>
