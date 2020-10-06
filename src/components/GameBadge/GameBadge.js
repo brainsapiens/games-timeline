@@ -12,7 +12,7 @@ const Badge = styled.div`
         filter: invert(1);
     }
     
-    &.muted {
+    &.shaded {
         margin: 0 -8px; 
         background: repeating-linear-gradient(
           -45deg,
@@ -67,7 +67,7 @@ class GameBadge extends React.Component {
         const {title, url, release, expansion} = this.props.game
 
         return (
-            <Badge className={[expansion ? 'expansion' : '', !release ? 'muted' : '']}>
+            <Badge className={[expansion ? 'expansion' : '', !release ? 'shaded' : '']}>
                 <Title>
                     <a href={url} rel="noopener noreferrer" target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
                 </Title>

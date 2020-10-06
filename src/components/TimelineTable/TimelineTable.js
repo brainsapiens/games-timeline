@@ -39,7 +39,7 @@ const Captions = styled.div`
     top: 0;
     left: 0;
     padding: var(--cell-padding);
-    background-color: #fff;
+    background-color: #fcfcfc;
     font-weight: var(--font-weight-extra);
     text-align: center;
     
@@ -66,14 +66,13 @@ const Genre = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fff;
+    background-color: #fcfcfc;
     font-weight: var(--font-weight-extra);
-    text-align: center;
-    white-space: nowrap;
     
     > span {
         position: sticky;
         top: calc(var(--year-height) + var(--cell-padding));
+        white-space: nowrap;
     }
 `;
 
@@ -81,11 +80,11 @@ const Year = styled(Genre)`
     grid-column: auto / span 4;
     top: 0;
     left: unset;
-    display: unset;
 
     > span {
         top: unset;
         left: calc(var(--genre-width) + var(--cell-padding));
+        white-space: unset;
     }
 `;
 
@@ -150,7 +149,7 @@ class TimelineTable extends React.Component {
         return this.listOfGenres.map((genre, index) => {
             return ([
                 <Genre key={index}>
-                    <span dangerouslySetInnerHTML={{ __html: genre }}/>
+                    <span>{genre}</span>
                 </Genre>,
 
                 listOfYears.map(year => {
