@@ -1,13 +1,15 @@
 @import url('../node_modules/normalize.css/normalize.css');
 
 :root {
-    --year-height: 38px;
-    --genre-width: 150px;
-
     --font-weight-base: 400;
     --font-weight-extra: 600;
 
+    --transition-duration-base: .1s;
+
     --cell-padding: 8px;
+
+    --year-height: 38px;
+    --genre-width: 180px;
 }
 
 *,

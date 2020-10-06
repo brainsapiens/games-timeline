@@ -63,11 +63,14 @@ const Genre = styled.div`
     position: sticky;
     z-index: 100;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fff;
     font-weight: var(--font-weight-extra);
     text-align: center;
-    text-transform: capitalize;
-
+    white-space: nowrap;
+    
     > span {
         position: sticky;
         top: calc(var(--year-height) + var(--cell-padding));
@@ -78,7 +81,7 @@ const Year = styled(Genre)`
     grid-column: auto / span 4;
     top: 0;
     left: unset;
-    text-transform: unset;
+    display: unset;
 
     > span {
         top: unset;
@@ -98,21 +101,13 @@ const GamesBadgesItem = styled.li`
 // Component
 class TimelineTable extends React.Component {
     matchQuarter (index, release) {
-        const invalidDate = new Date(release).toString() === 'Invalid Date';
-
-        if (invalidDate && index === 1) return true
+        if (!release) return true;
 
         const monthIndex = new Date(release).getMonth() + 1;
 
-        if (index === 1 && monthIndex > 0 && monthIndex <= 3) {
-            return true;
-        }
-        if (index === 2 && monthIndex > 3 && monthIndex <= 6) {
-            return true;
-        }
-        if (index === 3 && monthIndex > 6 && monthIndex <= 9) {
-            return true;
-        }
+        if (index === 1 && monthIndex > 0 && monthIndex <= 3) return true;
+        if (index === 2 && monthIndex > 3 && monthIndex <= 6) return true;
+        if (index === 3 && monthIndex > 6 && monthIndex <= 9) return true;
         return index === 4 && monthIndex > 9 && monthIndex <= 12;
     }
 
@@ -151,7 +146,7 @@ class TimelineTable extends React.Component {
         return this.listOfGenres.map((genre, index) => {
             return ([
                 <Genre key={index}>
-                    <span>{genre}</span>
+                    <span dangerouslySetInnerHTML={{ __html: genre }}/>
                 </Genre>,
                 listOfYears.map(year => {
                     let result = [];
