@@ -30,7 +30,7 @@ const Link = styled.a`
     }
 `;
 
-const ReleaseDate = styled.div`
+const Release = styled.time`
     margin-bottom: 2px;
     color: #999;
     font-size: 11px;
@@ -39,13 +39,13 @@ const ReleaseDate = styled.div`
 
 class GameBadge extends React.Component {
     render () {
-        const {title, releaseDate, expansion} = this.props.game
+        const {title, url, release, expansion} = this.props.game
         return (
             <Badge className={expansion ? 'expansion' : ''}>
                 <Title>
-                    <Link href='#' dangerouslySetInnerHTML={{ __html: title }} />
+                    <Link href={url} target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
                 </Title>
-                <ReleaseDate>{releaseDate}</ReleaseDate>
+                <Release>{release}</Release>
             </Badge>
         )
     }

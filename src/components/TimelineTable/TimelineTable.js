@@ -97,8 +97,13 @@ const GamesBadgesItem = styled.li`
 
 // Component
 class TimelineTable extends React.Component {
-    matchQuarter (index, releaseDate) {
-        const monthIndex = new Date(releaseDate).getMonth() + 1;
+    matchQuarter (index, release) {
+        const invalidDate = new Date(release).toString() === 'Invalid Date';
+
+        if (invalidDate && index === 1) return true
+
+        const monthIndex = new Date(release).getMonth() + 1;
+
         if (index === 1 && monthIndex > 0 && monthIndex <= 3) {
             return true;
         }
@@ -154,7 +159,7 @@ class TimelineTable extends React.Component {
                         let gameBadge = [];
                         if (games[year]) {
                             for (const game of games[year]) {
-                                if (genre === game.genre && this.matchQuarter(index, game.releaseDate)) {
+                                if (genre === game.genre && this.matchQuarter(index, game.release)) {
                                     gameBadge.push(
                                         <GamesBadgesItem key={game.title}>
                                             <GameBadge key={game.title} game={game}/>
