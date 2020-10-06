@@ -108,18 +108,22 @@ class TimelineTable extends React.Component {
         if (index === 1 && monthIndex > 0 && monthIndex <= 3) return true;
         if (index === 2 && monthIndex > 3 && monthIndex <= 6) return true;
         if (index === 3 && monthIndex > 6 && monthIndex <= 9) return true;
+
         return index === 4 && monthIndex > 9 && monthIndex <= 12;
     }
 
     get listOfGenres () {
         const listOfGenres = [];
+
         Object.values(games).forEach(games => {
             for (const game of games) {
                 if (listOfGenres.includes(game.genre)) continue;
                 listOfGenres.push(game.genre);
             }
         });
+
         listOfGenres.sort((a, b) => a.localeCompare(b));
+
         return listOfGenres;
     }
 
@@ -148,10 +152,13 @@ class TimelineTable extends React.Component {
                 <Genre key={index}>
                     <span dangerouslySetInnerHTML={{ __html: genre }}/>
                 </Genre>,
+
                 listOfYears.map(year => {
                     let result = [];
+
                     for (let index = 1; index <= 4; index++) {
                         let gameBadge = [];
+
                         if (games[year]) {
                             for (const game of games[year]) {
                                 if (genre === game.genre && this.matchQuarter(index, game.release)) {
@@ -163,6 +170,7 @@ class TimelineTable extends React.Component {
                                 }
                             }
                         }
+
                         result.push(
                             <div key={index} data-annual-quarter={`Q${index}`}>
                                 <GamesBadgesList>
@@ -171,6 +179,7 @@ class TimelineTable extends React.Component {
                             </div>
                         );
                     }
+
                     return result
                 })
             ])

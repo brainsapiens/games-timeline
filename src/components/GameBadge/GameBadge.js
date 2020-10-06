@@ -65,6 +65,7 @@ const Footer = styled.footer`
 class GameBadge extends React.Component {
     render () {
         const {title, url, release, expansion} = this.props.game
+
         return (
             <Badge className={[expansion ? 'expansion' : '', !release ? 'muted' : '']}>
                 <Title>
