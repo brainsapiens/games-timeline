@@ -3,14 +3,14 @@
     {
       "title": "King&rsquo;s Bounty",
       "url": "https://en.wikipedia.org/wiki/King%27s_Bounty",
-      "genre": "Strategy"
+      "genre": "strategy"
     }
   ],
   "1993": [
     {
       "title": "Doom",
       "url": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "December 10"
     }
   ],
@@ -18,13 +18,13 @@
     {
       "title": "Doom II:<br/> Hell on&nbsp;Earth",
       "url": "https://en.wikipedia.org/wiki/Doom_II",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "October 10"
     },
     {
       "title": "Warcraft:<br/> Orcs &amp;&nbsp;Humans",
       "url": "https://en.wikipedia.org/wiki/Warcraft:_Orcs_%26_Humans",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "November 23"
     }
   ],
@@ -32,18 +32,18 @@
     {
       "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic:_A_Strategic_Quest",
-      "genre": "Strategy"
+      "genre": "strategy"
     },
     {
       "title": "Full Throttle",
       "url": "https://en.wikipedia.org/wiki/Full_Throttle_(1995_video_game)",
-      "genre": "Adventure",
+      "genre": "adventure",
       "release": "April 30"
     },
     {
       "title": "Warcraft II:</br> Tides of&nbsp;Darkness",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "December 9"
     }
   ],
@@ -51,32 +51,32 @@
     {
       "title": "Warcraft II:<br/> Beyond the Dark Portal",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Beyond_the_Dark_Portal",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "April 30",
       "expansion": true
     },
     {
       "title": "Final Doom",
       "url": "https://en.wikipedia.org/wiki/Final_Doom",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "June 17"
     },
     {
       "title": "Quake",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "June 22"
     },
     {
       "title": "Heroes of&nbsp;Might and Magic II:<br/> The Succession Wars",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "October 1"
     },
     {
       "title": "The Neverhood",
       "url": "https://en.wikipedia.org/wiki/The_Neverhood",
-      "genre": "Adventure",
+      "genre": "adventure",
       "release": "October 31"
     }
   ],
@@ -84,65 +84,65 @@
     {
       "title": "Diablo",
       "url": "https://en.wikipedia.org/wiki/Diablo_(video_game)",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "January 3"
     },
     {
       "title": "Quake Mission Pack No.&nbsp;1:<br/> Scourge of&nbsp;Armagon",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._1:_Scourge_of_Armagon",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "March 5",
       "expansion": true
     },
     {
       "title": "Quake Mission Pack No.&nbsp;2:<br/> Dissolution of&nbsp;Eternity",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._2:_Dissolution_of_Eternity",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "March 19",
       "expansion": true
     },
     {
       "title": "Heroes of&nbsp;Might and Magic II:<br/> The Price of&nbsp;Loyalty",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II#Expansion",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "May 16",
       "expansion": true
     },
     {
       "title": "Carmageddon",
       "url": "https://en.wikipedia.org/wiki/Carmageddon",
-      "genre": "Racing",
+      "genre": "racing",
       "release": "June 13"
     },
     {
       "title": "Dungeon Keeper",
       "url": "https://en.wikipedia.org/wiki/Dungeon_Keeper",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "June 26"
     },
     {
       "title": "Fallout",
       "url": "https://en.wikipedia.org/wiki/Fallout_(video_game)",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "October 10"
     },
     {
       "title": "Age of&nbsp;Empires",
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_(video_game)",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "October 15"
     },
     {
       "title": "Diablo:<br/> Hellfire",
       "url": "https://en.wikipedia.org/wiki/Diablo:_Hellfire",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "November 25",
       "expansion": true
     },
     {
       "title": "Quake&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Quake_II",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "December 9"
     }
   ],
@@ -150,53 +150,53 @@
     {
       "title": "StarCraft",
       "url": "https://en.wikipedia.org/wiki/StarCraft_(video_game)s",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "March 31"
     },
     {
       "title": "Quake II&nbsp;Mission Pack:<br/> The Reckoning",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_The_Reckoning",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "May 31",
       "expansion": true
     },
     {
       "title": "Quake II&nbsp;Mission Pack:<br/> Ground Zero",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_Ground_Zero",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "September 11",
       "expansion": true
     },
     {
       "title": "Carmageddon II:</br> Carpocalypse Now",
       "url": "https://en.wikipedia.org/wiki/Carmageddon_II:_Carpocalypse_Now",
-      "genre": "Racing",
+      "genre": "racing",
       "release": "October 12"
     },
     {
       "title": "Age of&nbsp;Empires:<br/> The Rise of&nbsp;Rome",
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_(video_game)#The_Rise_of_Rome",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "October 22",
       "expansion": true
     },
     {
       "title": "Fallout&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Fallout_2",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "October 29"
     },
     {
       "title": "StarCraft:<br/> Brood War",
       "url": "https://en.wikipedia.org/wiki/StarCraft:_Brood_War",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "December 18",
       "expansion": true
     },
     {
       "title": "Baldur&rsquo;s Gate",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "December 21"
     }
   ],
@@ -204,52 +204,52 @@
     {
       "title": "Heroes of&nbsp;Might and Magic III:<br/> The Restoration of&nbsp;Erathia",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "March 3"
     },
     {
       "title": "Baldur&rsquo;s Gate:<br/> Tales of&nbsp;the Sword Coast",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate:_Tales_of_the_Sword_Coast",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "April 30",
       "expansion": true
     },
     {
       "title": "Dungeon Keeper&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Dungeon_Keeper_2",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "July 7"
     },
     {
       "title": "Age of&nbsp;Empires II:<br/> The Age of&nbsp;Kings",
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_II",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "September 30"
     },
     {
       "title": "Heroes of&nbsp;Might and Magic III:<br/> Armageddon&rsquo;s Blade",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Armageddon%27s_Blade",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "September 30",
       "expansion": true
     },
     {
       "title": "Warcraft II:<br/> Baltle.net Edition",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness#Battle.net_Edition",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "September 30",
       "expansion": true
     },
     {
       "title": "Quake III Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "December 2"
     },
     {
       "title": "Planescape:<br/> Torment",
       "url": "https://en.wikipedia.org/wiki/Planescape:_Torment",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "December 12"
     }
   ],
@@ -257,45 +257,45 @@
     {
       "title": "Heroes of&nbsp;Might and Magic III:<br/> The Shadow of&nbsp;Death",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_The_Shadow_of_Death",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "March 31",
       "expansion": true
     },
     {
       "title": "Diablo&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Diablo_II",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "June 29"
     },
     {
       "title": "Icewind Dale",
       "url": "https://en.wikipedia.org/wiki/Icewind_Dale",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "June 29"
     },
     {
       "title": "Age of&nbsp;Empires II:<br/> The Conquerors",
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_II:_The_Conquerors",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "August 24",
       "expansion": true
     },
     {
       "title": "Carmageddon TDR 2000",
       "url": "https://en.wikipedia.org/wiki/Carmageddon_TDR_2000",
-      "genre": "Racing",
+      "genre": "racing",
       "release": "September 1"
     },
     {
       "title": "Baldur&rsquo;s Gate II:<br/> Shadows of&nbsp;Amn",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Shadows_of_Amn",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "September 21"
     },
     {
       "title": "Quake III:<br/> Team Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena#Expansion",
-      "genre": "Shooter",
+      "genre": "shooter",
       "release": "December 18",
       "expansion": true
     }
@@ -304,21 +304,21 @@
     {
       "title": "Icewind Dale:<br/> Heart of&nbsp;Winter",
       "url": "https://en.wikipedia.org/wiki/Icewind_Dale:_Heart_of_Winter",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "February 21",
       "expansion": true
     },
     {
       "title": "Baldur&rsquo;s Gate II:<br/> Throne of&nbsp;Bhaal",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Throne_of_Bhaal",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "June 22",
       "expansion": true
     },
     {
       "title": "Diablo II:<br/> Lord of&nbsp;Destruction",
       "url": "https://en.wikipedia.org/wiki/Diablo_II:_Lord_of_Destruction",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "June 27",
       "expansion": true
     }
@@ -327,19 +327,19 @@
     {
       "title": "Warcraft III:<br/> Reign of&nbsp;Chaos",
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "July 3"
     },
     {
       "title": "Icewind Dale&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Icewind_Dale_II",
-      "genre": "Role-playing",
+      "genre": "role-playing",
       "release": "August 27"
     },
     {
       "title": "Age of&nbsp;Mythology",
       "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "October 30"
     }
   ],
@@ -347,14 +347,14 @@
     {
       "title": "Warcraft III:<br/> The Frozen Throne",
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_The_Frozen_Throne",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "July 1",
       "expansion": true
     },
     {
       "title": "Age of&nbsp;Mythology:<br/> The Titans",
       "url": "https://en.wikipedia.org/wiki/Age_of_Mythology:_The_Titans",
-      "genre": "Strategy",
+      "genre": "strategy",
       "release": "September 30"
     }
   ]

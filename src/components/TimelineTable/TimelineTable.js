@@ -3,6 +3,16 @@ import styled from 'styled-components';
 import games from '../../data/games.json'
 import GameBadge from '../GameBadge';
 
+// Icons
+import genreIconRolePlaying from '../../images/icons/genres/role-playing.svg';
+import genreIconStrategy from '../../images/icons/genres/strategy.svg';
+
+const genresIcons = {
+    'role-playing': genreIconRolePlaying,
+    strategy: genreIconStrategy
+}
+
+// Years
 const listOfYears = Object.keys(games);
 const numberOfYears = listOfYears.length;
 
@@ -69,22 +79,33 @@ const Genre = styled.div`
     background-color: #fcfcfc;
     font-weight: var(--font-weight-extra);
     
-    > span {
+    > div {
         position: sticky;
         top: calc(var(--year-height) + var(--cell-padding));
-        white-space: nowrap;
     }
 `;
+const GenreIcon = styled.img`
+    display: block;
+    margin: 4px auto;
+    width: 48px;
+    height: 48px;
+`;
+const GenreTitle = styled.div`
+    white-space: nowrap;
+            
+    &::first-letter {
+        text-transform: uppercase;
+    }
+`
 
 const Year = styled(Genre)`
     grid-column: auto / span 4;
     top: 0;
     left: unset;
 
-    > span {
+    > div {
         top: unset;
         left: calc(var(--genre-width) + var(--cell-padding));
-        white-space: unset;
     }
 `;
 
@@ -139,7 +160,7 @@ class TimelineTable extends React.Component {
         return listOfYears.map((year, index) => {
             return (
                 <Year key={index}>
-                    <span>{year}</span>
+                    <div>{year}</div>
                 </Year>
             )
         });
@@ -147,9 +168,14 @@ class TimelineTable extends React.Component {
 
     get genres () {
         return this.listOfGenres.map((genre, index) => {
+            console.log(genresIcons['adventure']);
+
             return ([
                 <Genre key={index}>
-                    <span>{genre}</span>
+                    <div>
+                        <GenreIcon src={genresIcons[genre]} alt={genre}/>
+                        <GenreTitle>{genre}</GenreTitle>
+                    </div>
                 </Genre>,
 
                 listOfYears.map(year => {
