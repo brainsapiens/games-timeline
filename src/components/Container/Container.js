@@ -1,10 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
-import TimelineTable from './../TimelineTable';
-
 const Container = styled.div`
-    padding: 12px 16px;
+    padding-right: 16px;
+    padding-left: 16px;
 `;
 
 class AppMain extends React.Component {

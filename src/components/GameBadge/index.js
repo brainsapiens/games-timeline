@@ -1,1 +1,1 @@
-export {default} from './GameBadge'
+export {default} from './GameBadge';

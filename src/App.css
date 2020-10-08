@@ -1,8 +1,19 @@
 @import url('../node_modules/normalize.css/normalize.css');
 
 :root {
+    --background-base: #fff;
+    --color-base: #333;
+
+    --background-inverse: #333;
+    --color-inverse: #fff;
+
     --font-weight-base: 400;
-    --font-weight-extra: 600;
+    --font-weight-title: 600;
+
+    --line-height-base: 1.4;
+    --line-height-title: 1.2;
+
+    --border-color: #eee;
 
     --transition-duration-base: .1s;
 
@@ -10,6 +21,8 @@
 
     --year-height: 40px;
     --genre-width: 160px;
+
+    --bar-height: 40px;
 }
 
 *,
@@ -26,12 +39,12 @@ body {
 }
 
 body {
-    background-color: #fff;
-    color: #333;
+    background-color: var(--background-base);
+    color: var(--color-base);
     font-family: 'Roboto Mono', monospace;
     font-size: 15px;
     font-weight: var(--font-weight-base);
-    line-height: 1.4;
+    line-height: var(--line-height-base);
 }
 
 h1,
@@ -40,8 +53,8 @@ h3,
 h4,
 h5,
 h6 {
-    font-weight: var(--font-weight-extra);
-    line-height: 1.2;
+    font-weight: var(--font-weight-title);
+    line-height: var(--line-height-title);
 }
 h1 {
     margin: 0;

@@ -13,7 +13,8 @@ const Badge = styled.div`
     }
     
     &.shaded {
-        margin: 0 -8px; 
+        margin-right: -8px;
+        margin-left: -8px;
         background: repeating-linear-gradient(
           -45deg,
           #ccc,
@@ -39,6 +40,7 @@ const Badge = styled.div`
 const Title = styled.h6`
     color: #fff;
     font-size: 13px;
+    line-height: unset;
     font-weight: unset;
     white-space: nowrap;
     

@@ -38,22 +38,38 @@ const numberOfYears = listOfYears.length;
 
 // Styles
 const TableWrapper = styled.div`
+    position: relative;
     width: 100vw;
-    overflow-x: hidden;
+    
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: 200;
+        bottom: 0;
+        left: 0;
+        background-color: var(--border-color);
+        content: "";
+    }
+    &::before {
+        width: 1px;
+        height: 100%;
+    }
+    &::after {
+        width: 100%;
+        height: 1px;
+    }
 `;
 const Table = styled.div`
     display: grid;
     grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
     grid-template-rows: var(--year-height) auto;
-    width: 100%;
-    overflow-x: auto;
-    border-top: 1px solid #eee;
-    border-left: 1px solid #eee;
+    max-height: calc(100vh - var(--bar-height));
+    overflow: auto;
     
     > div {
         padding: var(--cell-padding);
-        border-right: 1px solid #eee;
-        border-bottom: 1px solid #eee;
+        border-right: 1px solid var(--border-color);
+        border-bottom: 1px solid var(--border-color);
         
         &[data-annual-quarter]:not([data-annual-quarter='Q4']) {
             border-right-style: dashed;
@@ -72,11 +88,11 @@ const Table = styled.div`
 const Captions = styled.div`
     position: sticky;
     z-index: 101;
-    top: 1px;
-    left: 1px;
+    top: 0;
+    left: 0;
     padding: var(--cell-padding);
     background-color: #fcfcfc;
-    font-weight: var(--font-weight-extra);
+    font-weight: var(--font-weight-title);
     text-align: center;
     
     > span {
@@ -98,12 +114,9 @@ const Captions = styled.div`
 const Genre = styled.div`
     position: sticky;
     z-index: 100;
-    left: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    left: 0;
     background-color: #fcfcfc;
-    font-weight: var(--font-weight-extra);
+    font-weight: var(--font-weight-title);
     text-align: center;
     
     > div {
@@ -123,8 +136,8 @@ const GenreIcon = styled.img`
     white-space: nowrap;
     
     &.shooter {
-        margin-top: -36px;
-        margin-bottom: -12px;
+        margin-top: -24px;
+        margin-bottom: -24px;
     }
 `;
 const GenreTitle = styled.div`
@@ -138,7 +151,7 @@ const GenreTitle = styled.div`
 
 const Year = styled(Genre)`
     grid-column: auto / span 4;
-    top: 1px;
+    top: 0;
     left: unset;
     
     > div {
@@ -149,11 +162,11 @@ const Year = styled(Genre)`
 
 const GamesBadgesList = styled.ul`
     display: flex;
-    flex-wrap: wrap;  
-    margin: -4px;
+    flex-wrap: wrap;
+    grid-gap: 8px;
 `;
 const GamesBadgesItem = styled.li`
-    margin: 4px;
+    
 `;
 
 // Component

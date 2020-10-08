@@ -1,15 +1,23 @@
 import React from 'react';
+import styled from 'styled-components';
 
-import Container from '../Container'
+import Container from '../Container';
+import AppCopyright from '../AppCopyright';
+
+const Footer = styled.footer`
+    display: grid;
+    align-items: center;
+    height: var(--bar-height);
+`;
 
 class AppFooter extends React.Component {
     render () {
         return (
-            <footer role="contentinfo">
+            <Footer role="contentinfo">
                 <Container>
-                    <p>&copy;&nbsp;Copyright 2020</p>
+                    <AppCopyright />
                 </Container>
-            </footer>
+            </Footer>
         )
     }
 }
