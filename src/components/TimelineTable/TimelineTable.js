@@ -4,12 +4,32 @@ import games from '../../data/games.json'
 import GameBadge from '../GameBadge';
 
 // Icons
-import genreIconRolePlaying from '../../images/icons/genres/role-playing.svg';
-import genreIconStrategy from '../../images/icons/genres/strategy.svg';
+// import genreIconAdventure from '../../images/icons/genres/adventure.svg';
+// import genreIconRacing from '../../images/icons/genres/racing.svg';
+// import genreIconRolePlaying from '../../images/icons/genres/role-playing.svg';
+import genreIconShooter from '../../images/icons/genres/shooter.webp';
+// import genreIconStrategy from '../../images/icons/genres/strategy.svg';
+
+// import genreIconAdventure2x from '../../images/icons/genres/adventure@2x.svg';
+// import genreIconRacing2x from '../../images/icons/genres/racing2@x.svg';
+// import genreIconRolePlaying2x from '../../images/icons/genres/role-playing@2x.svg';
+import genreIconShooter2x from '../../images/icons/genres/shooter@2x.webp';
+// import genreIconStrategy2x from '../../images/icons/genres/strategy@2x.svg';
 
 const genresIcons = {
-    'role-playing': genreIconRolePlaying,
-    strategy: genreIconStrategy
+    // adventure: genreIconAdventure,
+    // racing: genreIconRacing,
+    // 'role-playing': genreIconRolePlaying,
+    shooter: genreIconShooter,
+    // strategy: genreIconStrategy
+}
+
+const genresIcons2x = {
+    // adventure: genreIconAdventure2x,
+    // racing: genreIconRacing2x,
+    // 'role-playing': genreIconRolePlaying2x,
+    shooter: genreIconShooter2x,
+    // strategy: genreIconStrategy2x
 }
 
 // Years
@@ -78,6 +98,7 @@ const Genre = styled.div`
     align-items: center;
     background-color: #fcfcfc;
     font-weight: var(--font-weight-extra);
+    text-align: center;
     
     > div {
         position: sticky;
@@ -85,12 +106,23 @@ const Genre = styled.div`
     }
 `;
 const GenreIcon = styled.img`
+    position: relative;
+    z-index: -1;
     display: block;
-    margin: 4px auto;
-    width: 48px;
-    height: 48px;
+    margin-right: auto;
+    margin-left: auto;
+    width: 96px;
+    height: 96px;
+    font-size: 9px;
+    white-space: nowrap;
+    
+    &.shooter {
+        margin-top: -24px;
+        margin-bottom: -12px;
+    }
 `;
 const GenreTitle = styled.div`
+    font-size: 17px;
     white-space: nowrap;
             
     &::first-letter {
@@ -102,6 +134,7 @@ const Year = styled(Genre)`
     grid-column: auto / span 4;
     top: 0;
     left: unset;
+    height: var(--year-height);
 
     > div {
         top: unset;
@@ -168,12 +201,16 @@ class TimelineTable extends React.Component {
 
     get genres () {
         return this.listOfGenres.map((genre, index) => {
-            console.log(genresIcons['adventure']);
+            let genreIcon = null;
+
+            if (genresIcons[genre]) {
+                genreIcon = <GenreIcon srcSet={genresIcons2x[genre] + ' 2x'} src={genresIcons[genre]} alt={genre} className={genre}/>;
+            }
 
             return ([
                 <Genre key={index}>
                     <div>
-                        <GenreIcon src={genresIcons[genre]} alt={genre}/>
+                        {genreIcon}
                         <GenreTitle>{genre}</GenreTitle>
                     </div>
                 </Genre>,

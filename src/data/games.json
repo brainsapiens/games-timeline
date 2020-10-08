@@ -187,6 +187,12 @@
       "release": "October 29"
     },
     {
+      "title": "Half-Life",
+      "url": "https://en.wikipedia.org/wiki/Half-Life_(video_game)",
+      "genre": "shooter",
+      "release": "November 19"
+    },
+    {
       "title": "StarCraft:<br/> Brood War",
       "url": "https://en.wikipedia.org/wiki/StarCraft:_Brood_War",
       "genre": "strategy",
@@ -238,6 +244,13 @@
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness#Battle.net_Edition",
       "genre": "strategy",
       "release": "September 30",
+      "expansion": true
+    },
+    {
+      "title": "Half-Life:<br/> Opposing Force",
+      "url": "https://en.wikipedia.org/wiki/Half-Life:_Opposing_Force",
+      "genre": "shooter",
+      "release": "November 19",
       "expansion": true
     },
     {
@@ -309,6 +322,13 @@
       "expansion": true
     },
     {
+      "title": "Half-Life:<br/> Blue Shift",
+      "url": "https://en.wikipedia.org/wiki/Half-Life:_Blue_Shift",
+      "genre": "shooter",
+      "release": "June 12",
+      "expansion": true
+    },
+    {
       "title": "Baldur&rsquo;s Gate II:<br/> Throne of&nbsp;Bhaal",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Throne_of_Bhaal",
       "genre": "role-playing",
@@ -320,6 +340,13 @@
       "url": "https://en.wikipedia.org/wiki/Diablo_II:_Lord_of_Destruction",
       "genre": "role-playing",
       "release": "June 27",
+      "expansion": true
+    },
+    {
+      "title": "Half-Life:<br/> Decay",
+      "url": "https://en.wikipedia.org/wiki/Half-Life:_Decay",
+      "genre": "shooter",
+      "release": "November 14",
       "expansion": true
     }
   ],
@@ -356,6 +383,41 @@
       "url": "https://en.wikipedia.org/wiki/Age_of_Mythology:_The_Titans",
       "genre": "strategy",
       "release": "September 30"
+    }
+  ],
+  "2004": [
+    {
+      "title": "Half-Life 2",
+      "url": "https://en.wikipedia.org/wiki/Half-Life_2",
+      "genre": "shooter",
+      "release": "November 16"
+    }
+  ],
+  "2005": [
+    {
+      "title": "Half-Life 2:<br/> Lost Coast",
+      "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Lost_Coast",
+      "genre": "shooter",
+      "release": "October 27",
+      "expansion": true
+    }
+  ],
+  "2006": [
+    {
+      "title": "Half-Life 2:<br/> Episode One",
+      "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_One",
+      "genre": "shooter",
+      "release": "June 1",
+      "expansion": true
+    }
+  ],
+  "2007": [
+    {
+      "title": "Half-Life 2:<br/> Episode Two",
+      "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Two",
+      "genre": "shooter",
+      "release": "October 10",
+      "expansion": true
     }
   ]
 }
