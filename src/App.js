@@ -1,12 +1,18 @@
 import React from 'react';
 import './App.css';
 
-import TimelineTable from './components/TimelineTable'
+import AppHeader from './components/AppHeader';
+import AppMain from './components/AppMain';
+import AppFooter from './components/AppFooter';
 
 function App() {
-  return (
-    <TimelineTable />
-  );
+    return (
+        <>
+          <AppHeader />
+          <AppMain />
+          <AppFooter />
+        </>
+    );
 }
 
 export default App;

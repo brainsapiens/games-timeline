@@ -41,13 +41,29 @@ h4,
 h5,
 h6 {
     font-weight: var(--font-weight-extra);
+    line-height: 1.2;
 }
 h1 {
     margin: 0;
+}
+
+img {
+    max-width: 100%;
+}
+img[width],
+img[height] {
+    max-width: none;
 }
 
 ol,
 ul {
     padding: 0;
     list-style: none;
+}
+
+/* App */
+#app {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* header main footer */
+    min-height: 100%;
 }

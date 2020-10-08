@@ -5,31 +5,31 @@ import GameBadge from '../GameBadge';
 
 // Icons
 // import genreIconAdventure from '../../images/icons/genres/adventure.svg';
-// import genreIconRacing from '../../images/icons/genres/racing.svg';
-// import genreIconRolePlaying from '../../images/icons/genres/role-playing.svg';
-import genreIconShooter from '../../images/icons/genres/shooter.webp';
-// import genreIconStrategy from '../../images/icons/genres/strategy.svg';
-
 // import genreIconAdventure2x from '../../images/icons/genres/adventure@2x.svg';
+// import genreIconRacing from '../../images/icons/genres/racing.svg';
 // import genreIconRacing2x from '../../images/icons/genres/racing2@x.svg';
+// import genreIconRolePlaying from '../../images/icons/genres/role-playing.svg';
 // import genreIconRolePlaying2x from '../../images/icons/genres/role-playing@2x.svg';
+import genreIconShooter from '../../images/icons/genres/shooter.webp';
 import genreIconShooter2x from '../../images/icons/genres/shooter@2x.webp';
+// import genreIconStrategy from '../../images/icons/genres/strategy.svg';
 // import genreIconStrategy2x from '../../images/icons/genres/strategy@2x.svg';
 
 const genresIcons = {
-    // adventure: genreIconAdventure,
-    // racing: genreIconRacing,
-    // 'role-playing': genreIconRolePlaying,
-    shooter: genreIconShooter,
-    // strategy: genreIconStrategy
-}
-
-const genresIcons2x = {
-    // adventure: genreIconAdventure2x,
-    // racing: genreIconRacing2x,
-    // 'role-playing': genreIconRolePlaying2x,
-    shooter: genreIconShooter2x,
-    // strategy: genreIconStrategy2x
+    '1x': {
+        // adventure: genreIconAdventure,
+        // racing: genreIconRacing,
+        // 'role-playing': genreIconRolePlaying,
+        shooter: genreIconShooter,
+        // strategy: genreIconStrategy
+    },
+    '2x': {
+        // adventure: genreIconAdventure2x,
+        // racing: genreIconRacing2x,
+        // 'role-playing': genreIconRolePlaying2x,
+        shooter: genreIconShooter2x,
+        // strategy: genreIconStrategy2x
+    }
 }
 
 // Years
@@ -37,12 +37,18 @@ const listOfYears = Object.keys(games);
 const numberOfYears = listOfYears.length;
 
 // Styles
+const TableWrapper = styled.div`
+    width: 100vw;
+    overflow-x: hidden;
+`;
 const Table = styled.div`
-    position: sticky;
-    top: 0;
-    left: 0;
-    display: inline-grid;
+    display: grid;
     grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
+    grid-template-rows: var(--year-height) auto;
+    width: 100%;
+    overflow-x: auto;
+    border-top: 1px solid #eee;
+    border-left: 1px solid #eee;
     
     > div {
         padding: var(--cell-padding);
@@ -66,8 +72,8 @@ const Table = styled.div`
 const Captions = styled.div`
     position: sticky;
     z-index: 101;
-    top: 0;
-    left: 0;
+    top: 1px;
+    left: 1px;
     padding: var(--cell-padding);
     background-color: #fcfcfc;
     font-weight: var(--font-weight-extra);
@@ -92,7 +98,7 @@ const Captions = styled.div`
 const Genre = styled.div`
     position: sticky;
     z-index: 100;
-    left: 0;
+    left: 1px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,7 +123,7 @@ const GenreIcon = styled.img`
     white-space: nowrap;
     
     &.shooter {
-        margin-top: -24px;
+        margin-top: -36px;
         margin-bottom: -12px;
     }
 `;
@@ -132,10 +138,9 @@ const GenreTitle = styled.div`
 
 const Year = styled(Genre)`
     grid-column: auto / span 4;
-    top: 0;
+    top: 1px;
     left: unset;
-    height: var(--year-height);
-
+    
     > div {
         top: unset;
         left: calc(var(--genre-width) + var(--cell-padding));
@@ -203,8 +208,8 @@ class TimelineTable extends React.Component {
         return this.listOfGenres.map((genre, index) => {
             let genreIcon = null;
 
-            if (genresIcons[genre]) {
-                genreIcon = <GenreIcon srcSet={genresIcons2x[genre] + ' 2x'} src={genresIcons[genre]} alt={genre} className={genre}/>;
+            if (genresIcons['2x'][genre] && genresIcons['1x'][genre]) {
+                genreIcon = <GenreIcon srcSet={genresIcons['2x'][genre] + ' 2x'} src={genresIcons['1x'][genre]} alt={genre} className={genre}/>;
             }
 
             return ([
@@ -250,11 +255,13 @@ class TimelineTable extends React.Component {
 
     render () {
         return (
-            <Table>
-                {this.captions}
-                {this.years}
-                {this.genres}
-            </Table>
+            <TableWrapper>
+                <Table>
+                    {this.captions}
+                    {this.years}
+                    {this.genres}
+                </Table>
+            </TableWrapper>
         )
     }
 }
