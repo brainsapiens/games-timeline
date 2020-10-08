@@ -1,4 +1,12 @@
 {
+  "1987": [
+    {
+      "title": "Maniac Mansion",
+      "url": "https://en.wikipedia.org/wiki/Maniac_Mansion",
+      "genre": "adventure",
+      "release": "October 5"
+    }
+  ],
   "1990": [
     {
       "title": "King&rsquo;s Bounty",
@@ -7,6 +15,12 @@
     }
   ],
   "1993": [
+    {
+      "title": "Day of&nbsp;the Tentacle",
+      "url": "https://en.wikipedia.org/wiki/Day_of_the_Tentacle",
+      "genre": "adventure",
+      "release": "June 25"
+    },
     {
       "title": "Doom",
       "url": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)",
