@@ -165,7 +165,6 @@ const GamesBadgesList = styled.ul`
     flex-wrap: wrap;
     grid-gap: 8px;
 `;
-const GamesBadgesItem = styled.li``;
 
 // Component
 class TimelineTable extends React.Component {
@@ -241,9 +240,9 @@ class TimelineTable extends React.Component {
                             for (const game of games[year]) {
                                 if (genre === game.genre && this.matchQuarter(index, game.release)) {
                                     GamesBadgesItems.push(
-                                        <GamesBadgesItem key={game.title}>
+                                        <li key={game.title}>
                                             <GameBadge key={game.title} game={game}/>
-                                        </GamesBadgesItem>
+                                        </li>
                                     );
                                 }
                             }
