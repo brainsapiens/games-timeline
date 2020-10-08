@@ -3,35 +3,6 @@ import styled from 'styled-components';
 import games from '../../data/games.json'
 import GameBadge from '../GameBadge';
 
-// Icons
-// import genreIconAdventure from '../../images/icons/genres/adventure.svg';
-// import genreIconAdventure2x from '../../images/icons/genres/adventure@2x.svg';
-// import genreIconRacing from '../../images/icons/genres/racing.svg';
-// import genreIconRacing2x from '../../images/icons/genres/racing2@x.svg';
-// import genreIconRolePlaying from '../../images/icons/genres/role-playing.svg';
-// import genreIconRolePlaying2x from '../../images/icons/genres/role-playing@2x.svg';
-import genreIconShooter from '../../images/icons/genres/shooter.webp';
-import genreIconShooter2x from '../../images/icons/genres/shooter@2x.webp';
-// import genreIconStrategy from '../../images/icons/genres/strategy.svg';
-// import genreIconStrategy2x from '../../images/icons/genres/strategy@2x.svg';
-
-const genresIcons = {
-    '1x': {
-        // adventure: genreIconAdventure,
-        // racing: genreIconRacing,
-        // 'role-playing': genreIconRolePlaying,
-        shooter: genreIconShooter,
-        // strategy: genreIconStrategy
-    },
-    '2x': {
-        // adventure: genreIconAdventure2x,
-        // racing: genreIconRacing2x,
-        // 'role-playing': genreIconRolePlaying2x,
-        shooter: genreIconShooter2x,
-        // strategy: genreIconStrategy2x
-    }
-}
-
 // Years
 const listOfYears = Object.keys(games);
 const numberOfYears = listOfYears.length;
@@ -92,8 +63,6 @@ const Captions = styled.div`
     left: 0;
     padding: var(--cell-padding);
     background-color: #fcfcfc;
-    font-weight: var(--font-weight-title);
-    text-align: center;
     
     > span {
         position: absolute;
@@ -116,45 +85,23 @@ const Genre = styled.div`
     z-index: 100;
     left: 0;
     background-color: #fcfcfc;
-    font-weight: var(--font-weight-title);
     text-align: center;
     
-    > div {
+    > span {
         position: sticky;
         top: calc(var(--year-height) + var(--cell-padding));
-    }
-`;
-const GenreIcon = styled.img`
-    position: relative;
-    z-index: -1;
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 96px;
-    height: 96px;
-    font-size: 9px;
-    white-space: nowrap;
-    
-    &.shooter {
-        margin-top: -24px;
-        margin-bottom: -24px;
-    }
-`;
-const GenreTitle = styled.div`
-    font-size: 17px;
-    white-space: nowrap;
-            
-    &::first-letter {
+        font-weight: var(--font-weight-title);
         text-transform: uppercase;
+        white-space: nowrap;
     }
-`
+`;
 
 const Year = styled(Genre)`
     grid-column: auto / span 4;
     top: 0;
     left: unset;
     
-    > div {
+    > span {
         top: unset;
         left: calc(var(--genre-width) + var(--cell-padding));
     }
@@ -198,8 +145,8 @@ class TimelineTable extends React.Component {
     get captions () {
         return (
             <Captions>
-                <span key='year'>year</span>
-                <span key='genre'>genre</span>
+                <span key='year'>Year</span>
+                <span key='genre'>Genre</span>
             </Captions>
         )
     }
@@ -208,7 +155,7 @@ class TimelineTable extends React.Component {
         return listOfYears.map((year, index) => {
             return (
                 <Year key={index}>
-                    <div>{year}</div>
+                    <span>{year}</span>
                 </Year>
             )
         });
@@ -216,18 +163,9 @@ class TimelineTable extends React.Component {
 
     get genres () {
         return this.listOfGenres.map((genre, index) => {
-            let genreIcon = null;
-
-            if (genresIcons['2x'][genre] && genresIcons['1x'][genre]) {
-                genreIcon = <GenreIcon srcSet={genresIcons['2x'][genre] + ' 2x'} src={genresIcons['1x'][genre]} alt={genre} className={genre}/>;
-            }
-
             return ([
                 <Genre key={index}>
-                    <div>
-                        {genreIcon}
-                        <GenreTitle>{genre}</GenreTitle>
-                    </div>
+                    <span>{genre}</span>
                 </Genre>,
 
                 listOfYears.map(year => {
