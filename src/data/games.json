@@ -22,6 +22,12 @@
   ],
   "1991": [
     {
+      "title": "Duke Nukem",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_(video_game)",
+      "genre": "platform",
+      "release": "July 1"
+    },
+    {
       "title": "Monkey Island&nbsp;2:<br/> LeChuck&rsquo;s Revenge",
       "url": "https://en.wikipedia.org/wiki/Monkey_Island_2:_LeChuck%27s_Revenge",
       "genre": "adventure",
@@ -42,6 +48,12 @@
       "release": "June 25"
     },
     {
+      "title": "Duke Nukem&nbsp;II",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_II",
+      "genre": "platform",
+      "release": "December 3"
+    },
+    {
       "title": "Doom",
       "url": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)",
       "genre": "shooter",
@@ -50,7 +62,7 @@
   ],
   "1994": [
     {
-      "title": "Doom II:<br/> Hell on&nbsp;Earth",
+      "title": "Doom&nbsp;II:<br/> Hell on&nbsp;Earth",
       "url": "https://en.wikipedia.org/wiki/Doom_II",
       "genre": "shooter",
       "release": "October 10"
@@ -88,7 +100,7 @@
       "release": "December"
     },
     {
-      "title": "Warcraft II:</br> Tides of&nbsp;Darkness",
+      "title": "Warcraft&nbsp;II:</br> Tides of&nbsp;Darkness",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness",
       "genre": "strategy",
       "release": "December 9"
@@ -96,7 +108,13 @@
   ],
   "1996": [
     {
-      "title": "Warcraft II:<br/> Beyond the Dark Portal",
+      "title": "Duke Nukem&nbsp;3D",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D",
+      "genre": "shooter",
+      "release": "January 29"
+    },
+    {
+      "title": "Warcraft&nbsp;II:<br/> Beyond the Dark Portal",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Beyond_the_Dark_Portal",
       "genre": "strategy",
       "release": "April 30",
@@ -121,7 +139,7 @@
       "release": "September 30"
     },
     {
-      "title": "Heroes of&nbsp;Might and Magic II:<br/> The Succession Wars",
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;II:<br/> The Succession Wars",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II",
       "genre": "strategy",
       "release": "October 1"
@@ -131,6 +149,13 @@
       "url": "https://en.wikipedia.org/wiki/The_Neverhood",
       "genre": "adventure",
       "release": "October 31"
+    },
+    {
+      "title": "Duke Nukem&nbsp;3D:<br/> Atomic Edition",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Release",
+      "genre": "shooter",
+      "release": "November",
+      "expansion": true
     }
   ],
   "1997": [
@@ -141,7 +166,7 @@
       "expansion": true
     },
     {
-      "title": "Carmageddon:<br/> Splat Pack",
+      "title": "Carmageddon<br/> Splat Pack",
       "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
       "genre": "racing",
       "expansion": true
@@ -153,14 +178,21 @@
       "release": "January 3"
     },
     {
-      "title": "Quake Mission Pack No.&nbsp;1:<br/> Scourge of&nbsp;Armagon",
+      "title": "Duke Nukem&nbsp;3D<br/> Duke It&nbsp;Out In&nbsp;D.C.",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
+      "genre": "shooter",
+      "release": "March",
+      "expansion": true
+    },
+    {
+      "title": "Quake<br/> Mission Pack No.&nbsp;1: Scourge of&nbsp;Armagon",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._1:_Scourge_of_Armagon",
       "genre": "shooter",
       "release": "March 5",
       "expansion": true
     },
     {
-      "title": "Quake Mission Pack No.&nbsp;2:<br/> Dissolution of&nbsp;Eternity",
+      "title": "Quake<br/> Mission Pack No.&nbsp;2: Dissolution of&nbsp;Eternity",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._2:_Dissolution_of_Eternity",
       "genre": "shooter",
       "release": "March 19",
@@ -173,7 +205,7 @@
       "release": "April 23"
     },
     {
-      "title": "Heroes of&nbsp;Might and Magic II:<br/> The Price of&nbsp;Loyalty",
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;II:<br/> The Price of&nbsp;Loyalty",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II#Expansion",
       "genre": "strategy",
       "release": "May 16",
@@ -198,14 +230,14 @@
       "release": "June 26"
     },
     {
-      "title": "Blood: Cryptic Passage",
+      "title": "Blood:<br/> Cryptic Passage",
       "url": "https://en.wikipedia.org/wiki/Blood_(video_game)#Cryptic_Passage",
       "genre": "shooter",
       "release": "June 30",
       "expansion": true
     },
     {
-      "title": "Blood: Plasma Pak",
+      "title": "Blood:<br/> Plasma Pak",
       "url": "https://en.wikipedia.org/wiki/Blood_(video_game)#Plasma_Pak",
       "genre": "shooter",
       "release": "September",
@@ -224,7 +256,7 @@
       "release": "October 15"
     },
     {
-      "title": "Broken Sword II:<br/> The Smoking Mirror",
+      "title": "Broken Sword&nbsp;II:<br/> The Smoking Mirror",
       "url": "https://en.wikipedia.org/wiki/Broken_Sword_II:_The_Smoking_Mirror",
       "genre": "adventure",
       "release": "October 17"
@@ -256,7 +288,21 @@
       "genre": "shooter"
     },
     {
-      "title": "Carmageddon:<br/> Max Pack",
+      "title": "Duke Nukem&nbsp;3D<br/> Duke Caribbean: Life&rsquo;s a&nbsp;Beach",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
+      "genre": "shooter",
+      "release": "January",
+      "expansion": true
+    },
+    {
+      "title": "Duke Nukem&nbsp;3D<br/> Duke: Nuclear Winter",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
+      "genre": "shooter",
+      "release": "January",
+      "expansion": true
+    },
+    {
+      "title": "Carmageddon<br/> Max Pack",
       "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
       "genre": "racing",
       "release": "February 17",
@@ -269,7 +315,7 @@
       "release": "March 31"
     },
     {
-      "title": "Quake II&nbsp;Mission Pack:<br/> The Reckoning",
+      "title": "Quake&nbsp;II<br/> Mission Pack: The Reckoning",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_The_Reckoning",
       "genre": "shooter",
       "release": "May 31",
@@ -283,14 +329,14 @@
       "expansion": true
     },
     {
-      "title": "Quake II&nbsp;Mission Pack:<br/> Ground Zero",
+      "title": "Quake&nbsp;II<br/> Mission Pack: Ground Zero",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_Ground_Zero",
       "genre": "shooter",
       "release": "September 11",
       "expansion": true
     },
     {
-      "title": "Carmageddon II:</br> Carpocalypse Now",
+      "title": "Carmageddon&nbsp;II:</br> Carpocalypse Now",
       "url": "https://en.wikipedia.org/wiki/Carmageddon_II:_Carpocalypse_Now",
       "genre": "racing",
       "release": "October 12"
@@ -321,7 +367,7 @@
       "release": "November 19"
     },
     {
-      "title": "Blood II:<br/> The Chosen",
+      "title": "Blood&nbsp;II:<br/> The Chosen",
       "url": "https://en.wikipedia.org/wiki/Blood_II:_The_Chosen",
       "genre": "shooter",
       "release": "November 25"
@@ -342,7 +388,7 @@
   ],
   "1999": [
     {
-      "title": "Heroes of&nbsp;Might and Magic III:<br/> The Restoration of&nbsp;Erathia",
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> The Restoration of&nbsp;Erathia",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III",
       "genre": "strategy",
       "release": "March 3"
@@ -361,27 +407,27 @@
       "release": "July 7"
     },
     {
-      "title": "Blood II:<br/> The Nightmare Levels",
+      "title": "Blood&nbsp;II:<br/> The Nightmare Levels",
       "url": "https://en.wikipedia.org/wiki/Blood_II:_The_Chosen#The_Nightmare_Levels",
       "genre": "shooter",
       "release": "August",
       "expansion": true
     },
     {
-      "title": "Age of&nbsp;Empires II:<br/> The Age of&nbsp;Kings",
+      "title": "Age of&nbsp;Empires&nbsp;II:<br/> The Age of&nbsp;Kings",
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_II",
       "genre": "strategy",
       "release": "September 30"
     },
     {
-      "title": "Heroes of&nbsp;Might and Magic III:<br/> Armageddon&rsquo;s Blade",
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> Armageddon&rsquo;s Blade",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Armageddon%27s_Blade",
       "genre": "strategy",
       "release": "September 30",
       "expansion": true
     },
     {
-      "title": "Warcraft II:<br/> Baltle.net Edition",
+      "title": "Warcraft&nbsp;II:<br/> Baltle.net Edition",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness#Battle.net_Edition",
       "genre": "strategy",
       "release": "September 30",
@@ -395,7 +441,7 @@
       "expansion": true
     },
     {
-      "title": "Quake III Arena",
+      "title": "Quake&nbsp;III Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena",
       "genre": "shooter",
       "release": "December 2"
@@ -409,7 +455,7 @@
   ],
   "2000": [
     {
-      "title": "Heroes of&nbsp;Might and Magic III:<br/> The Shadow of&nbsp;Death",
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> The Shadow of&nbsp;Death",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_The_Shadow_of_Death",
       "genre": "strategy",
       "release": "March 31",
@@ -428,7 +474,7 @@
       "release": "June 29"
     },
     {
-      "title": "Age of&nbsp;Empires II:<br/> The Conquerors",
+      "title": "Age of&nbsp;Empires&nbsp;II:<br/> The Conquerors",
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_II:_The_Conquerors",
       "genre": "strategy",
       "release": "August 24",
@@ -441,7 +487,7 @@
       "release": "September 1"
     },
     {
-      "title": "Baldur&rsquo;s Gate II:<br/> Shadows of&nbsp;Amn",
+      "title": "Baldur&rsquo;s Gate&nbsp;II:<br/> Shadows of&nbsp;Amn",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Shadows_of_Amn",
       "genre": "role-playing",
       "release": "September 21"
@@ -453,7 +499,7 @@
       "release": "November 8"
     },
     {
-      "title": "Quake III:<br/> Team Arena",
+      "title": "Quake&nbsp;III:<br/> Team Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena#Expansion",
       "genre": "shooter",
       "release": "December 18",
@@ -476,14 +522,14 @@
       "expansion": true
     },
     {
-      "title": "Baldur&rsquo;s Gate II:<br/> Throne of&nbsp;Bhaal",
+      "title": "Baldur&rsquo;s Gate&nbsp;II:<br/> Throne of&nbsp;Bhaal",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Throne_of_Bhaal",
       "genre": "role-playing",
       "release": "June 22",
       "expansion": true
     },
     {
-      "title": "Diablo II:<br/> Lord of&nbsp;Destruction",
+      "title": "Diablo&nbsp;II:<br/> Lord of&nbsp;Destruction",
       "url": "https://en.wikipedia.org/wiki/Diablo_II:_Lord_of_Destruction",
       "genre": "role-playing",
       "release": "June 27",
@@ -499,7 +545,7 @@
   ],
   "2002": [
     {
-      "title": "Warcraft III:<br/> Reign of&nbsp;Chaos",
+      "title": "Warcraft&nbsp;III:<br/> Reign of&nbsp;Chaos",
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos",
       "genre": "strategy",
       "release": "July 3"
@@ -519,7 +565,7 @@
   ],
   "2003": [
     {
-      "title": "Warcraft III:<br/> The Frozen Throne",
+      "title": "Warcraft&nbsp;III:<br/> The Frozen Throne",
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_The_Frozen_Throne",
       "genre": "strategy",
       "release": "July 1",
@@ -534,7 +580,7 @@
   ],
   "2004": [
     {
-      "title": "Half-Life 2",
+      "title": "Half-Life&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2",
       "genre": "shooter",
       "release": "November 16"
@@ -542,7 +588,7 @@
   ],
   "2005": [
     {
-      "title": "Half-Life 2:<br/> Lost Coast",
+      "title": "Half-Life&nbsp;2:<br/> Lost Coast",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Lost_Coast",
       "genre": "shooter",
       "release": "October 27",
@@ -551,7 +597,7 @@
   ],
   "2006": [
     {
-      "title": "Half-Life 2:<br/> Episode One",
+      "title": "Half-Life&nbsp;2:<br/> Episode One",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_One",
       "genre": "shooter",
       "release": "June 1",
@@ -560,7 +606,7 @@
   ],
   "2007": [
     {
-      "title": "Half-Life 2:<br/> Episode Two",
+      "title": "Half-Life&nbsp;2:<br/> Episode Two",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Two",
       "genre": "shooter",
       "release": "October 10",
