@@ -30,6 +30,12 @@
   ],
   "1993": [
     {
+      "title": "The 7th Guest",
+      "url": "https://en.wikipedia.org/wiki/The_7th_Guest",
+      "genre": "adventure",
+      "release": "April 1"
+    },
+    {
       "title": "Day of&nbsp;the Tentacle",
       "url": "https://en.wikipedia.org/wiki/Day_of_the_Tentacle",
       "genre": "adventure",
@@ -70,6 +76,18 @@
       "release": "April 30"
     },
     {
+      "title": "Torin&rsquo;s Passage",
+      "url": "https://en.wikipedia.org/wiki/Torin%27s_Passage",
+      "genre": "adventure",
+      "release": "October 31"
+    },
+    {
+      "title": "The 11th Hour",
+      "url": "https://en.wikipedia.org/wiki/The_11th_Hour_(video_game)",
+      "genre": "adventure",
+      "release": "December"
+    },
+    {
       "title": "Warcraft II:</br> Tides of&nbsp;Darkness",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness",
       "genre": "strategy",
@@ -97,6 +115,12 @@
       "release": "June 22"
     },
     {
+      "title": "Broken Sword:<br/> The Shadow of&nbsp;the Templars",
+      "url": "https://en.wikipedia.org/wiki/Broken_Sword:_The_Shadow_of_the_Templars",
+      "genre": "adventure",
+      "release": "September 30"
+    },
+    {
       "title": "Heroes of&nbsp;Might and Magic II:<br/> The Succession Wars",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II",
       "genre": "strategy",
@@ -110,6 +134,12 @@
     }
   ],
   "1997": [
+    {
+      "title": "Carmageddon:<br/> Splat Pack",
+      "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
+      "genre": "racing",
+      "expansion": true
+    },
     {
       "title": "Diablo",
       "url": "https://en.wikipedia.org/wiki/Diablo_(video_game)",
@@ -138,6 +168,12 @@
       "expansion": true
     },
     {
+      "title": "Blood",
+      "url": "https://en.wikipedia.org/wiki/Blood_(video_game)",
+      "genre": "shooter",
+      "release": "May 21"
+    },
+    {
       "title": "Carmageddon",
       "url": "https://en.wikipedia.org/wiki/Carmageddon",
       "genre": "racing",
@@ -150,6 +186,20 @@
       "release": "June 26"
     },
     {
+      "title": "Blood: Cryptic Passage",
+      "url": "https://en.wikipedia.org/wiki/Blood_(video_game)#Cryptic_Passage",
+      "genre": "shooter",
+      "release": "June 30",
+      "expansion": true
+    },
+    {
+      "title": "Blood: Plasma Pak",
+      "url": "https://en.wikipedia.org/wiki/Blood_(video_game)#Plasma_Pak",
+      "genre": "shooter",
+      "release": "September",
+      "expansion": true
+    },
+    {
       "title": "Fallout",
       "url": "https://en.wikipedia.org/wiki/Fallout_(video_game)",
       "genre": "role-playing",
@@ -160,6 +210,12 @@
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_(video_game)",
       "genre": "strategy",
       "release": "October 15"
+    },
+    {
+      "title": "Broken Sword II:<br/> The Smoking Mirror",
+      "url": "https://en.wikipedia.org/wiki/Broken_Sword_II:_The_Smoking_Mirror",
+      "genre": "adventure",
+      "release": "October 17"
     },
     {
       "title": "The Curse of&nbsp;Monkey Island",
@@ -183,6 +239,12 @@
   ],
   "1998": [
     {
+      "title": "Carmageddon:<br/> Max Pack",
+      "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
+      "genre": "racing",
+      "release": "February 17"
+    },
+    {
       "title": "StarCraft",
       "url": "https://en.wikipedia.org/wiki/StarCraft_(video_game)s",
       "genre": "strategy",
@@ -193,6 +255,13 @@
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_The_Reckoning",
       "genre": "shooter",
       "release": "May 31",
+      "expansion": true
+    },
+    {
+      "title": "Blood:<br/> One Unit Whole Blood",
+      "url": "https://en.wikipedia.org/wiki/Blood_(video_game)#Expansion_packs",
+      "genre": "shooter",
+      "release": "July 15",
       "expansion": true
     },
     {
@@ -222,10 +291,22 @@
       "release": "October 29"
     },
     {
+      "title": "Grim Fandango",
+      "url": "https://en.wikipedia.org/wiki/Grim_Fandango",
+      "genre": "adventure",
+      "release": "October 30"
+    },
+    {
       "title": "Half-Life",
       "url": "https://en.wikipedia.org/wiki/Half-Life_(video_game)",
       "genre": "shooter",
       "release": "November 19"
+    },
+    {
+      "title": "Blood II:<br/> The Chosen",
+      "url": "https://en.wikipedia.org/wiki/Blood_II:_The_Chosen",
+      "genre": "shooter",
+      "release": "November 25"
     },
     {
       "title": "StarCraft:<br/> Brood War",
@@ -260,6 +341,13 @@
       "url": "https://en.wikipedia.org/wiki/Dungeon_Keeper_2",
       "genre": "strategy",
       "release": "July 7"
+    },
+    {
+      "title": "Blood II:<br/> The Nightmare Levels",
+      "url": "https://en.wikipedia.org/wiki/Blood_II:_The_Chosen#The_Nightmare_Levels",
+      "genre": "shooter",
+      "release": "August",
+      "expansion": true
     },
     {
       "title": "Age of&nbsp;Empires II:<br/> The Age of&nbsp;Kings",
