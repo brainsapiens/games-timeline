@@ -25,6 +25,13 @@
     --bar-height: 40px;
 }
 
+:focus:not(:focus-visible) {
+    outline: 0;
+}
+:focus-visible {
+    outline: 2px solid #00f;
+}
+
 *,
 *::before,
 *::after {
