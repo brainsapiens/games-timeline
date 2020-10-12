@@ -135,6 +135,12 @@
   ],
   "1997": [
     {
+      "title": "Redneck Rampage:<br/> Suckin&rsquo; Grits on&nbsp;Route&nbsp;66",
+      "url": "https://en.wikipedia.org/wiki/Redneck_Rampage#Redneck_Rampage:_Suckin'_Grits_on_Route_66",
+      "genre": "shooter",
+      "expansion": true
+    },
+    {
       "title": "Carmageddon:<br/> Splat Pack",
       "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
       "genre": "racing",
@@ -159,6 +165,12 @@
       "genre": "shooter",
       "release": "March 19",
       "expansion": true
+    },
+    {
+      "title": "Redneck Rampage",
+      "url": "https://en.wikipedia.org/wiki/Redneck_Rampage",
+      "genre": "shooter",
+      "release": "April 23"
     },
     {
       "title": "Heroes of&nbsp;Might and Magic II:<br/> The Price of&nbsp;Loyalty",
@@ -239,10 +251,16 @@
   ],
   "1998": [
     {
+      "title": "Redneck Rampage Rides Again",
+      "url": "https://en.wikipedia.org/wiki/Redneck_Rampage_Rides_Again",
+      "genre": "shooter"
+    },
+    {
       "title": "Carmageddon:<br/> Max Pack",
       "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
       "genre": "racing",
-      "release": "February 17"
+      "release": "February 17",
+      "expansion": true
     },
     {
       "title": "StarCraft",
