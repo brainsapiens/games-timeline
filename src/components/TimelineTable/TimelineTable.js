@@ -112,13 +112,24 @@ const GamesBadgesList = styled.ul`
     flex-wrap: wrap;
     grid-gap: 8px;
 `;
+const GamesBadgesItem = styled.li`
+    &.release-date-unknown {
+        flex: 0 0 100%;
+    }
+`;
 
 // Component
 class TimelineTable extends React.Component {
-    matchQuarter (index, release) {
+    matchQuarter (index, year, release) {
         if (!release) return true;
 
-        const monthIndex = new Date(release).getMonth() + 1;
+        let date = new Date(release);
+
+        if (!date.getDate()) {
+            date = new Date(`${year} ${release}`);
+        }
+
+        const monthIndex = date.getMonth() + 1;
 
         if (index === 1 && monthIndex > 0 && monthIndex <= 3) return true;
         if (index === 2 && monthIndex > 3 && monthIndex <= 6) return true;
@@ -176,11 +187,11 @@ class TimelineTable extends React.Component {
 
                         if (games[year]) {
                             for (const game of games[year]) {
-                                if (genre === game.genre && this.matchQuarter(index, game.release)) {
+                                if (genre === game.genre && this.matchQuarter(index, year, game.release)) {
                                     GamesBadgesItems.push(
-                                        <li key={game.title}>
+                                        <GamesBadgesItem key={game.title} className={!game.release ? 'release-date-unknown' : ''}>
                                             <GameBadge key={game.title} game={game}/>
-                                        </li>
+                                        </GamesBadgesItem>
                                     );
                                 }
                             }

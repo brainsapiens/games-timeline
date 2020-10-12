@@ -12,6 +12,12 @@
       "title": "King&rsquo;s Bounty",
       "url": "https://en.wikipedia.org/wiki/King%27s_Bounty",
       "genre": "strategy"
+    },
+    {
+      "title": "The Secret of&nbsp;Monkey Island",
+      "url": "https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island",
+      "genre": "adventure",
+      "release": "October"
     }
   ],
   "1993": [
@@ -46,7 +52,8 @@
     {
       "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic:_A_Strategic_Quest",
-      "genre": "strategy"
+      "genre": "strategy",
+      "release": "September"
     },
     {
       "title": "Full Throttle",
