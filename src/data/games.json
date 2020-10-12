@@ -20,6 +20,14 @@
       "release": "October"
     }
   ],
+  "1991": [
+    {
+      "title": "Monkey Island&nbsp;2:<br/> LeChuck&rsquo;s Revenge",
+      "url": "https://en.wikipedia.org/wiki/Monkey_Island_2:_LeChuck%27s_Revenge",
+      "genre": "adventure",
+      "release": "December"
+    }
+  ],
   "1993": [
     {
       "title": "Day of&nbsp;the Tentacle",
@@ -152,6 +160,12 @@
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_(video_game)",
       "genre": "strategy",
       "release": "October 15"
+    },
+    {
+      "title": "The Curse of&nbsp;Monkey Island",
+      "url": "https://en.wikipedia.org/wiki/The_Curse_of_Monkey_Island",
+      "genre": "adventure",
+      "release": "November 1"
     },
     {
       "title": "Diablo:<br/> Hellfire",
@@ -325,6 +339,12 @@
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate_II:_Shadows_of_Amn",
       "genre": "role-playing",
       "release": "September 21"
+    },
+    {
+      "title": "Escape from Monkey Island",
+      "url": "https://en.wikipedia.org/wiki/Escape_from_Monkey_Island",
+      "genre": "adventure",
+      "release": "November 8"
     },
     {
       "title": "Quake III:<br/> Team Arena",

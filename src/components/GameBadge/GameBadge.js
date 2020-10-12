@@ -65,14 +65,23 @@ const Footer = styled.footer`
 `;
 
 class GameBadge extends React.Component {
+    get title () {
+        const {title, url} = this.props.game;
+        const titleContent = url
+            ? <a href={url} rel="noopener noreferrer" target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
+            : title;
+
+        return (
+            <Title>{titleContent}</Title>
+        );
+    }
+
     render () {
-        const {title, url, release, expansion} = this.props.game
+        const {release, expansion} = this.props.game
 
         return (
             <Badge className={[expansion ? 'expansion' : '', !release ? 'shaded' : '']}>
-                <Title>
-                    <a href={url} rel="noopener noreferrer" target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
-                </Title>
+                {this.title}
                 <Footer>
                     <time>{release}</time>
                 </Footer>

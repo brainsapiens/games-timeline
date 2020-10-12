@@ -143,8 +143,10 @@ class TimelineTable extends React.Component {
 
         Object.values(games).forEach(games => {
             for (const game of games) {
-                if (listOfGenres.includes(game.genre)) continue;
-                listOfGenres.push(game.genre);
+                const {genre} = game;
+
+                if (listOfGenres.includes(genre)) continue;
+                listOfGenres.push(genre);
             }
         });
 
@@ -173,10 +175,10 @@ class TimelineTable extends React.Component {
     }
 
     get genres () {
-        return this.listOfGenres.map((genre, index) => {
+        return this.listOfGenres.map((genreName, index) => {
             return ([
                 <Genre key={index}>
-                    <span>{genre}</span>
+                    <span>{genreName}</span>
                 </Genre>,
 
                 listOfYears.map(year => {
@@ -187,10 +189,12 @@ class TimelineTable extends React.Component {
 
                         if (games[year]) {
                             for (const game of games[year]) {
-                                if (genre === game.genre && this.matchQuarter(index, year, game.release)) {
+                                const {title, genre, release} = game;
+
+                                if (genreName === genre && this.matchQuarter(index, year, release)) {
                                     GamesBadgesItems.push(
-                                        <GamesBadgesItem key={game.title} className={!game.release ? 'release-date-unknown' : ''}>
-                                            <GameBadge key={game.title} game={game}/>
+                                        <GamesBadgesItem key={title} className={!release ? 'release-date-unknown' : ''}>
+                                            <GameBadge key={title} game={game}/>
                                         </GamesBadgesItem>
                                     );
                                 }
