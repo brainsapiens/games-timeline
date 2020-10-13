@@ -19,10 +19,10 @@
 
     --cell-padding: 8px;
 
-    --year-height: 40px;
+    --year-height: 36px;
     --genre-width: 160px;
 
-    --bar-height: 40px;
+    --bar-height: 48px;
 }
 
 :focus:not(:focus-visible) {
