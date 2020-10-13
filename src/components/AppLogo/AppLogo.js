@@ -31,12 +31,12 @@ const Logo = styled.div`
             display: block;
             color: #333;
             content: attr(data-key);
-            font-family: monospace;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
             font-weight: var(--font-weight-title);
-            font-size: 9px;
-            line-height: 9px;
-            text-indent: 1.5px;
+            font-size: 7px;
+            line-height: 7px;
             text-transform: uppercase;
+            transform: translate(1.75px, 1px);
         }
     }
 `;
