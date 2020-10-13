@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Badge = styled.div`
+const Badge = styled.article`
     padding: .4rem .8rem;
     background-color: #000;
     color: #fff;
@@ -76,15 +76,23 @@ class GameBadge extends React.Component {
         );
     }
 
+    get footer () {
+        const {release} = this.props.game;
+
+        return release ? (
+            <Footer>
+                <time>{release}</time>
+            </Footer>
+        ) : null
+    }
+
     render () {
         const {release, expansion} = this.props.game
 
         return (
             <Badge className={[expansion ? 'expansion' : '', !release ? 'shaded' : '']}>
                 {this.title}
-                <Footer>
-                    <time>{release}</time>
-                </Footer>
+                {this.footer}
             </Badge>
         )
     }
