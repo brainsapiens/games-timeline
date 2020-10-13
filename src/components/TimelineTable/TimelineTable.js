@@ -8,7 +8,7 @@ const listOfYears = Object.keys(games);
 const numberOfYears = listOfYears.length;
 
 // Styles
-const TableWrapper = styled.div`
+const TimelineWrapper = styled.div`
     position: relative;
     width: 100vw;
     
@@ -30,7 +30,7 @@ const TableWrapper = styled.div`
         height: 1px;
     }
 `;
-const Table = styled.div`
+const Timeline = styled.div`
     display: grid;
     grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
     grid-template-rows: var(--year-height) auto;
@@ -120,6 +120,52 @@ const GamesBadgesItem = styled.li`
 
 // Component
 class TimelineTable extends React.Component {
+    constructor(props) {
+        super(props);
+        this.timelineRef = React.createRef();
+    }
+
+    appSessionStorage = window.sessionStorage;
+
+    componentDidMount() {
+        const timeline = this.timelineRef.current;
+        const storage = this.appSessionStorage;
+        const storageScrollTop = storage.getItem('timelineScrollTop');
+        const storageScrollLeft = storage.getItem('timelineScrollLeft');
+
+        if (storageScrollTop) {
+            timeline.scrollTop = +storageScrollTop;
+        } else {
+            storage.setItem('timelineScrollTop', timeline.scrollTop);
+        }
+
+        if (storageScrollLeft) {
+            timeline.scrollLeft = +storageScrollLeft;
+        } else {
+            storage.setItem('timelineScrollLeft', timeline.scrollLeft);
+        }
+
+        timeline.addEventListener('scroll', this.setTimelineScrollPosition);
+    }
+
+    setTimelineScrollPosition = () => {
+        const timeline = this.timelineRef.current;
+        const storage = this.appSessionStorage;
+
+        storage.setItem('timelineScrollTop', timeline.scrollTop);
+        storage.setItem('timelineScrollLeft', timeline.scrollLeft);
+    }
+
+    componentWillUnmount() {
+        const timeline = this.timelineRef.current;
+        const storage = this.appSessionStorage;
+
+        storage.removeItem('timelineScrollTop');
+        storage.removeItem('timelineScrollLeft');
+
+        timeline.removeEventListener(this.setTimelineScrollPosition);
+    }
+
     matchQuarter (index, year, release) {
         if (!release) return true;
 
@@ -218,13 +264,13 @@ class TimelineTable extends React.Component {
 
     render () {
         return (
-            <TableWrapper>
-                <Table>
+            <TimelineWrapper>
+                <Timeline ref={this.timelineRef}>
                     {this.captions}
                     {this.years}
                     {this.genres}
-                </Table>
-            </TableWrapper>
+                </Timeline>
+            </TimelineWrapper>
         )
     }
 }
