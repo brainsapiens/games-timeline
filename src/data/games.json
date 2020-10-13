@@ -76,16 +76,16 @@
   ],
   "1995": [
     {
-      "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
-      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic:_A_Strategic_Quest",
-      "genre": "strategy",
-      "release": "September"
-    },
-    {
       "title": "Full Throttle",
       "url": "https://en.wikipedia.org/wiki/Full_Throttle_(1995_video_game)",
       "genre": "adventure",
       "release": "April 30"
+    },
+    {
+      "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic:_A_Strategic_Quest",
+      "genre": "strategy",
+      "release": "August 31"
     },
     {
       "title": "Torin&rsquo;s Passage",
@@ -97,7 +97,7 @@
       "title": "The 11th Hour",
       "url": "https://en.wikipedia.org/wiki/The_11th_Hour_(video_game)",
       "genre": "adventure",
-      "release": "December"
+      "release": "November 30"
     },
     {
       "title": "Warcraft&nbsp;II:</br> Tides of&nbsp;Darkness",
@@ -154,17 +154,11 @@
       "title": "Duke Nukem&nbsp;3D:<br/> Atomic Edition",
       "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Release",
       "genre": "shooter",
-      "release": "November",
+      "release": "November 1",
       "expansion": true
     }
   ],
   "1997": [
-    {
-      "title": "Redneck Rampage:<br/> Suckin&rsquo; Grits on&nbsp;Route&nbsp;66",
-      "url": "https://en.wikipedia.org/wiki/Redneck_Rampage#Redneck_Rampage:_Suckin'_Grits_on_Route_66",
-      "genre": "shooter",
-      "expansion": true
-    },
     {
       "title": "Carmageddon<br/> Splat Pack",
       "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
@@ -178,21 +172,21 @@
       "release": "January 3"
     },
     {
-      "title": "Duke Nukem&nbsp;3D<br/> Duke It&nbsp;Out In&nbsp;D.C.",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
-      "genre": "shooter",
-      "release": "March",
-      "expansion": true
-    },
-    {
-      "title": "Quake<br/> Mission Pack No.&nbsp;1: Scourge of&nbsp;Armagon",
+      "title": "Quake Mission Pack No.&nbsp;1:<br/> Scourge of&nbsp;Armagon",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._1:_Scourge_of_Armagon",
       "genre": "shooter",
       "release": "March 5",
       "expansion": true
     },
     {
-      "title": "Quake<br/> Mission Pack No.&nbsp;2: Dissolution of&nbsp;Eternity",
+      "title": "Duke It&nbsp;Out In&nbsp;D.C.",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
+      "genre": "shooter",
+      "release": "March 17",
+      "expansion": true
+    },
+    {
+      "title": "Quake Mission Pack No.&nbsp;2:<br/> Dissolution of&nbsp;Eternity",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._2:_Dissolution_of_Eternity",
       "genre": "shooter",
       "release": "March 19",
@@ -237,13 +231,6 @@
       "expansion": true
     },
     {
-      "title": "Blood:<br/> Plasma Pak",
-      "url": "https://en.wikipedia.org/wiki/Blood_(video_game)#Plasma_Pak",
-      "genre": "shooter",
-      "release": "September",
-      "expansion": true
-    },
-    {
       "title": "Fallout",
       "url": "https://en.wikipedia.org/wiki/Fallout_(video_game)",
       "genre": "role-playing",
@@ -254,6 +241,13 @@
       "url": "https://en.wikipedia.org/wiki/Age_of_Empires_(video_game)",
       "genre": "strategy",
       "release": "October 15"
+    },
+    {
+      "title": "Blood:<br/> Plasma Pak",
+      "url": "https://en.wikipedia.org/wiki/Blood_(video_game)#Plasma_Pak",
+      "genre": "shooter",
+      "release": "October 15",
+      "expansion": true
     },
     {
       "title": "Broken Sword&nbsp;II:<br/> The Smoking Mirror",
@@ -279,28 +273,23 @@
       "url": "https://en.wikipedia.org/wiki/Quake_II",
       "genre": "shooter",
       "release": "December 9"
+    },
+    {
+      "title": "Duke:<br/> Nuclear Winter",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
+      "genre": "shooter",
+      "release": "December 30",
+      "expansion": true
+    },
+    {
+      "title": "Duke Caribbean:<br/> Life&rsquo;s a&nbsp;Beach",
+      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
+      "genre": "shooter",
+      "release": "December 31",
+      "expansion": true
     }
   ],
   "1998": [
-    {
-      "title": "Redneck Rampage Rides Again",
-      "url": "https://en.wikipedia.org/wiki/Redneck_Rampage_Rides_Again",
-      "genre": "shooter"
-    },
-    {
-      "title": "Duke Nukem&nbsp;3D<br/> Duke Caribbean: Life&rsquo;s a&nbsp;Beach",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
-      "genre": "shooter",
-      "release": "January",
-      "expansion": true
-    },
-    {
-      "title": "Duke Nukem&nbsp;3D<br/> Duke: Nuclear Winter",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
-      "genre": "shooter",
-      "release": "January",
-      "expansion": true
-    },
     {
       "title": "Carmageddon<br/> Max Pack",
       "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
@@ -315,10 +304,23 @@
       "release": "March 31"
     },
     {
-      "title": "Quake&nbsp;II<br/> Mission Pack: The Reckoning",
+      "title": "Quake&nbsp;II Mission Pack:<br/> The Reckoning",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_The_Reckoning",
       "genre": "shooter",
       "release": "May 31",
+      "expansion": true
+    },
+    {
+      "title": "Redneck Rampage Rides Again",
+      "url": "https://en.wikipedia.org/wiki/Redneck_Rampage_Rides_Again",
+      "genre": "shooter",
+      "release": "May 31"
+    },
+    {
+      "title": "Redneck Rampage:<br/> Suckin&rsquo; Grits on&nbsp;Route&nbsp;66",
+      "url": "https://en.wikipedia.org/wiki/Redneck_Rampage#Redneck_Rampage:_Suckin'_Grits_on_Route_66",
+      "genre": "shooter",
+      "release": "July 13",
       "expansion": true
     },
     {
@@ -329,7 +331,7 @@
       "expansion": true
     },
     {
-      "title": "Quake&nbsp;II<br/> Mission Pack: Ground Zero",
+      "title": "Quake&nbsp;II Mission Pack:<br/> Ground Zero",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_Ground_Zero",
       "genre": "shooter",
       "release": "September 11",
@@ -410,7 +412,7 @@
       "title": "Blood&nbsp;II:<br/> The Nightmare Levels",
       "url": "https://en.wikipedia.org/wiki/Blood_II:_The_Chosen#The_Nightmare_Levels",
       "genre": "shooter",
-      "release": "August",
+      "release": "August 1",
       "expansion": true
     },
     {
