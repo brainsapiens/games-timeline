@@ -50,7 +50,7 @@ const Timeline = styled.div`
             margin-bottom: var(--cell-padding);
             color: #ccc;
             content: attr(data-annual-quarter);
-            font-size: 9px;
+            font-size: .9rem;
             text-align: right;
         }
     }
@@ -68,16 +68,16 @@ const Captions = styled.div`
     &::after {
         position: absolute;
         color: #ccc;
-        font-size: 9px;
+        font-size: .9rem;
     }
     &::before {
-        top: 4px;
-        right: 6px;
+        top: .4rem;
+        right: .6rem;
         content: attr(data-caption-year);
     }
     &::after {
-        bottom: 4px;
-        left: 6px;
+        bottom: .4rem;
+        left: .6rem;
         content: attr(data-caption-genre);
     }
 `;
@@ -109,10 +109,10 @@ const Year = styled(Genre)`
     }
 `;
 
-const GamesBadgesList = styled.ul`
+const GamesBadgesList = styled.ol`
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 8px;
+    grid-gap: .8rem;
 `;
 const GamesBadgesItem = styled.li`
     &.release-date-unknown {
@@ -122,16 +122,16 @@ const GamesBadgesItem = styled.li`
 
 // Component
 class TimelineTable extends React.Component {
-    constructor(props) {
+    constructor (props) {
         super(props);
         this.timelineRef = React.createRef();
     }
 
-    appSessionStorage = window.sessionStorage;
+    storage = window.sessionStorage;
 
-    componentDidMount() {
+    componentDidMount () {
         const timeline = this.timelineRef.current;
-        const storage = this.appSessionStorage;
+        const storage = this.storage;
         const storageScrollTop = storage.getItem('timelineScrollTop');
         const storageScrollLeft = storage.getItem('timelineScrollLeft');
 
@@ -152,15 +152,15 @@ class TimelineTable extends React.Component {
 
     setTimelineScrollPosition = () => {
         const timeline = this.timelineRef.current;
-        const storage = this.appSessionStorage;
+        const storage = this.storage;
 
         storage.setItem('timelineScrollTop', timeline.scrollTop);
         storage.setItem('timelineScrollLeft', timeline.scrollLeft);
     }
 
-    componentWillUnmount() {
+    componentWillUnmount () {
         const timeline = this.timelineRef.current;
-        const storage = this.appSessionStorage;
+        const storage = this.storage;
 
         storage.removeItem('timelineScrollTop');
         storage.removeItem('timelineScrollLeft');

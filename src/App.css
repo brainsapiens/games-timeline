@@ -1,12 +1,16 @@
 @import url('../node_modules/normalize.css/normalize.css');
 
 :root {
-    --background-base: #fff;
-    --color-base: #333;
+    --font-size-root: 62.5%;
 
+    --background-base: #fff;
     --background-inverse: #333;
+
+    --color-base: #333;
     --color-inverse: #fff;
 
+    --font-family-base: 'Roboto Mono', monospace;
+    --font-size-base: 1.5rem;
     --font-weight-base: 400;
     --font-weight-title: 600;
 
@@ -17,12 +21,12 @@
 
     --transition-duration-base: .1s;
 
-    --cell-padding: 8px;
+    --cell-padding: .8rem;
 
-    --year-height: 36px;
-    --genre-width: 160px;
+    --year-height: 3.6rem;
+    --genre-width: 16rem;
 
-    --bar-height: 48px;
+    --bar-height: 4.8rem;
 }
 
 :focus:not(:focus-visible) {
@@ -45,21 +49,21 @@ body {
     height: 100%;
 }
 
+html {
+    font-size: var(--font-size-root);
+}
+
 body {
     background-color: var(--background-base);
     color: var(--color-base);
-    font-family: 'Roboto Mono', monospace;
-    font-size: 15px;
+    font-family: var(--font-family-base);
     font-weight: var(--font-weight-base);
+    font-size: var(--font-size-base);
     line-height: var(--line-height-base);
 }
 
 h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h2 {
     font-weight: var(--font-weight-title);
     line-height: var(--line-height-title);
 }
@@ -67,16 +71,7 @@ h1 {
     margin: 0;
 }
 
-img {
-    max-width: 100%;
-}
-img[width],
-img[height] {
-    max-width: none;
-}
-
-ol,
-ul {
+ol {
     padding: 0;
     list-style: none;
 }

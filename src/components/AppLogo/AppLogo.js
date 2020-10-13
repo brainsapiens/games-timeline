@@ -29,12 +29,13 @@ const Logo = styled.div`
         
         &::before {
             display: block;
-            color: #000;
+            color: #333;
             content: attr(data-key);
             font-family: monospace;
+            font-weight: var(--font-weight-title);
             font-size: 9px;
             line-height: 9px;
-            text-indent: 1px;
+            text-indent: 1.5px;
             text-transform: uppercase;
         }
     }

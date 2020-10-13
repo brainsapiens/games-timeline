@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Badge = styled.div`
-    padding: 4px 8px;
+    padding: .4rem .8rem;
     background-color: #000;
     color: #fff;
     
@@ -13,14 +13,14 @@ const Badge = styled.div`
     }
     
     &.shaded {
-        margin-right: -8px;
-        margin-left: -8px;
+        margin-right: -.8rem;
+        margin-left: -.8rem;
         background: repeating-linear-gradient(
           -45deg,
           #ccc,
-          #ccc 10px,
-          #eee 10px,
-          #eee 20px
+          #ccc 12px,
+          #eee 12px,
+          #eee 24px
         );
         color: #000;
         opacity: .25;
@@ -30,8 +30,8 @@ const Badge = styled.div`
         }
         
         &.expansion {
-            padding-top: 4px;
-            padding-bottom: 4px;
+            padding-top: .4rem;
+            padding-bottom: .4rem;
             filter: invert(0);
         }
     }
@@ -39,9 +39,9 @@ const Badge = styled.div`
 
 const Title = styled.h2`
     color: #fff;
-    font-size: 13px;
-    line-height: unset;
+    font-size: 1.3rem;
     font-weight: unset;
+    line-height: unset;
     white-space: nowrap;
     
     > a {
@@ -59,7 +59,7 @@ const Title = styled.h2`
 const Footer = styled.footer`
     > time {
         color: #999;
-        font-size: 11px;
+        font-size: 1.1rem;
         white-space: nowrap;
     }
 `;
@@ -68,7 +68,7 @@ class GameBadge extends React.Component {
     get title () {
         const {title, url} = this.props.game;
         const titleContent = url
-            ? <a href={url} rel="noopener noreferrer" target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
+            ? <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
             : title;
 
         return (
