@@ -9,10 +9,9 @@ const Logo = styled.div`
         display: block;
         width: 16px;
         height: 16px;
-        padding: 1px;
         background: radial-gradient(#eee, #ccc);
-        border: 2px outset #ccc;
-        border-radius: 2px;
+        border: 2px outset #aaa;
+        border-radius: 3px;
         
         &[data-key="w"] {
             grid-area: 1 / 2 / 2 / 3;
@@ -30,10 +29,12 @@ const Logo = styled.div`
         
         &::before {
             display: block;
-            color: #333;
+            color: #000;
             content: attr(data-key);
-            font-size: 8px;
-            line-height: 8px;
+            font-family: monospace;
+            font-size: 9px;
+            line-height: 9px;
+            text-indent: 1px;
             text-transform: uppercase;
         }
     }
