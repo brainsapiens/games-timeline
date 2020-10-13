@@ -160,12 +160,6 @@
   ],
   "1997": [
     {
-      "title": "Carmageddon:<br/> Splat Pack",
-      "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
-      "genre": "racing",
-      "expansion": true
-    },
-    {
       "title": "Diablo",
       "url": "https://en.wikipedia.org/wiki/Diablo_(video_game)",
       "genre": "role-playing",
@@ -260,6 +254,13 @@
       "url": "https://en.wikipedia.org/wiki/The_Curse_of_Monkey_Island",
       "genre": "adventure",
       "release": "November 1"
+    },
+    {
+      "title": "Carmageddon:<br/> Splat Pack",
+      "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
+      "genre": "racing",
+      "release": "November 14",
+      "expansion": true
     },
     {
       "title": "Diablo:<br/> Hellfire",
