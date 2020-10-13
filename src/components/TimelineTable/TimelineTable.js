@@ -166,7 +166,7 @@ class TimelineTable extends React.Component {
         timeline.removeEventListener(this.setTimelineScrollPosition);
     }
 
-    matchQuarter (index, year, release) {
+    matchAnnualQuarter (index, year, release) {
         if (!release) return true;
 
         let date = new Date(release);
@@ -237,7 +237,7 @@ class TimelineTable extends React.Component {
                             for (const game of games[year]) {
                                 const {title, genre, release} = game;
 
-                                if (genreName === genre && this.matchQuarter(index, year, release)) {
+                                if (genreName === genre && this.matchAnnualQuarter(index, year, release)) {
                                     GamesBadgesItems.push(
                                         <GamesBadgesItem key={title} className={!release ? 'release-date-unknown' : ''}>
                                             <GameBadge key={title} game={game}/>
