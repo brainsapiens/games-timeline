@@ -64,19 +64,21 @@ const Captions = styled.div`
     padding: var(--cell-padding);
     background-color: #fcfcfc;
     
-    > span {
+    &::before,
+    &::after {
         position: absolute;
         color: #ccc;
         font-size: 9px;
-        
-        &:nth-of-type(1) {
-            top: 4px;
-            right: 6px;
-        }
-        &:nth-of-type(2) {
-            bottom: 4px;
-            left: 6px;
-        }
+    }
+    &::before {
+        top: 4px;
+        right: 6px;
+        content: attr(data-caption-year);
+    }
+    &::after {
+        bottom: 4px;
+        left: 6px;
+        content: attr(data-caption-genre);
     }
 `;
 
@@ -202,12 +204,7 @@ class TimelineTable extends React.Component {
     }
 
     get captions () {
-        return (
-            <Captions>
-                <span key='year'>Year</span>
-                <span key='genre'>Genre</span>
-            </Captions>
-        )
+        return <Captions data-caption-year="Year" data-caption-genre="Genre" />
     }
 
     get years () {

@@ -37,7 +37,7 @@ const Badge = styled.div`
     }
 `;
 
-const Title = styled.h6`
+const Title = styled.h2`
     color: #fff;
     font-size: 13px;
     line-height: unset;
