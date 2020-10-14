@@ -129,25 +129,20 @@ class TimelineTable extends React.Component {
 
     storage = window.sessionStorage;
 
-    componentDidMount () {
-        const timeline = this.timelineRef.current;
-        const storage = this.storage;
-        const storageScrollTop = storage.getItem('timelineScrollTop');
-        const storageScrollLeft = storage.getItem('timelineScrollLeft');
+    setGameAnchorScrollPosition = () => {
+        const hash = document.location.hash;
+        const hashValue = hash.substring(1);
+        const gameBadge = document.querySelector('[data-game-anchor="' + hashValue + '"]');
 
-        if (storageScrollTop) {
-            timeline.scrollTop = +storageScrollTop;
-        } else {
-            storage.setItem('timelineScrollTop', timeline.scrollTop);
+        if (gameBadge) {
+            gameBadge.scrollIntoView({
+                behavior: 'auto',
+                block: 'center',
+                inline: 'center'
+            });
+
+            gameBadge.querySelector('a:first-of-type').focus();
         }
-
-        if (storageScrollLeft) {
-            timeline.scrollLeft = +storageScrollLeft;
-        } else {
-            storage.setItem('timelineScrollLeft', timeline.scrollLeft);
-        }
-
-        timeline.addEventListener('scroll', this.setTimelineScrollPosition);
     }
 
     setTimelineScrollPosition = () => {
@@ -157,8 +152,33 @@ class TimelineTable extends React.Component {
         storage.setItem('timelineScrollTop', timeline.scrollTop);
         storage.setItem('timelineScrollLeft', timeline.scrollLeft);
     }
+    addTimelineScrollPosition = () => {
+        const timeline = this.timelineRef.current;
+        const hash = document.location.hash;
 
-    componentWillUnmount () {
+        if (hash) {
+            this.setGameAnchorScrollPosition();
+        } else {
+            const storage = this.storage;
+            const storageScrollTop = storage.getItem('timelineScrollTop');
+            const storageScrollLeft = storage.getItem('timelineScrollLeft');
+
+            if (storageScrollTop) {
+                timeline.scrollTop = +storageScrollTop;
+            } else {
+                storage.setItem('timelineScrollTop', timeline.scrollTop);
+            }
+
+            if (storageScrollLeft) {
+                timeline.scrollLeft = +storageScrollLeft;
+            } else {
+                storage.setItem('timelineScrollLeft', timeline.scrollLeft);
+            }
+        }
+
+        timeline.addEventListener('scroll', this.setTimelineScrollPosition);
+    }
+    removeTimelineScrollPosition = () => {
         const timeline = this.timelineRef.current;
         const storage = this.storage;
 
@@ -166,6 +186,13 @@ class TimelineTable extends React.Component {
         storage.removeItem('timelineScrollLeft');
 
         timeline.removeEventListener(this.setTimelineScrollPosition);
+    }
+
+    componentDidMount () {
+        this.addTimelineScrollPosition();
+    }
+    componentWillUnmount () {
+        this.removeTimelineScrollPosition();
     }
 
     matchAnnualQuarter (index, year, release) {
@@ -204,7 +231,12 @@ class TimelineTable extends React.Component {
     }
 
     get captions () {
-        return <Captions data-caption-year="Year" data-caption-genre="Genre" />
+        return (
+            <Captions
+                data-caption-year="Year"
+                data-caption-genre="Genre"
+            />
+        )
     }
 
     get years () {
@@ -228,14 +260,15 @@ class TimelineTable extends React.Component {
                     let result = [];
 
                     for (let index = 1; index <= 4; index++) {
-                        let GamesBadgesItems = [];
+                        let gamesBadgesList = [];
+                        let gamesBadgesItems = [];
 
                         if (games[year]) {
                             for (const game of games[year]) {
                                 const {title, genre, release} = game;
 
                                 if (genreName === genre && this.matchAnnualQuarter(index, year, release)) {
-                                    GamesBadgesItems.push(
+                                    gamesBadgesItems.push(
                                         <GamesBadgesItem key={title} className={!release ? 'release-date-unknown' : ''}>
                                             <GameBadge key={title} game={game}/>
                                         </GamesBadgesItem>
@@ -244,13 +277,20 @@ class TimelineTable extends React.Component {
                             }
                         }
 
+                        if (gamesBadgesItems.length) {
+                            gamesBadgesList.push(
+                                <GamesBadgesList key={index}>
+                                    {gamesBadgesItems}
+                                </GamesBadgesList>
+                            );
+                        }
+
                         result.push(
                             <div key={index} data-annual-quarter={`Q${index}`}>
-                                <GamesBadgesList>
-                                    {GamesBadgesItems}
-                                </GamesBadgesList>
+                                {gamesBadgesList}
                             </div>
                         );
+
                     }
 
                     return result

@@ -29,13 +29,6 @@
     --bar-height: 4.8rem;
 }
 
-:focus:not(:focus-visible) {
-    outline: 0;
-}
-:focus-visible {
-    outline: 2px solid #00f;
-}
-
 *,
 *::before,
 *::after {
@@ -51,6 +44,14 @@ body {
 
 html {
     font-size: var(--font-size-root);
+}
+
+html:not(.js-focus-visible) :focus:not(:focus-visible) {
+    outline: 0;
+}
+html:not(.js-focus-visible) :focus-visible,
+html.js-focus-visible :focus {
+    outline: 2px solid #00f;
 }
 
 body {
