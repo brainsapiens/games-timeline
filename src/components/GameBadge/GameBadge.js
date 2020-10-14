@@ -3,42 +3,41 @@ import styled from 'styled-components';
 
 import iconLink from '../../images/icons/link.svg';
 
-const GameAnchor = styled.a`
-    display: inline-flex;
-    margin-left: .4rem;
-    padding-right: .2rem;
-    padding-left: .2rem;
-    vertical-align: text-bottom;
-    visibility: hidden;
+const shadedGameTitle = `
+    .game-title {
+        color: #000;
 
-    &:hover {
-        img {
-            filter: unset;
-            opacity: 1;
+         > a {
+            background-color: unset;
+            color: #000;
+            
+            &:hover {
+                background-color: unset;
+                color: #333;
+            }
         }
-    }
-
-    img {
-        filter: invert(1);
-        opacity: .5;
     }
 `;
 
 const Badge = styled.article`
+    position: relative;
     padding: .4rem .8rem;
     background-color: #000;
     color: #fff;
     
-    &:hover {
-        ${GameAnchor} {
-            visibility: visible;
-        }
+    a {
+        color: #fff;
     }
     
     &.expansion {
         padding-top: 0;
         padding-bottom: 0;
-        filter: invert(1);
+        background-color: unset;
+        color: #000;
+        
+        a {
+            color: #000;
+        }
     }
     
     &.shaded {
@@ -54,15 +53,33 @@ const Badge = styled.article`
         color: #000;
         opacity: .25;
         
-        a {
-            color: #000;
-        }
+        ${shadedGameTitle};
         
         &.expansion {
             padding-top: .4rem;
             padding-bottom: .4rem;
-            filter: invert(0);
+            
+            ${shadedGameTitle};
         }
+    }
+`;
+
+const GameAnchor = styled.a`
+    position: absolute;
+    z-index: 300;
+    top: 0;
+    right: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: .6rem;
+    background-color: rgba(255, 255, 255, .75);
+    color: #000;
+    visibility: hidden;
+    
+    ${Badge}:hover & {
+        visibility: visible;
     }
 `;
 
@@ -73,6 +90,10 @@ const Title = styled.h2`
     line-height: unset;
     white-space: nowrap;
     
+    ${Badge}.expansion & {
+        color: #000;
+    }
+    
     > a {
         color: #fff;
         text-decoration: none;
@@ -81,15 +102,24 @@ const Title = styled.h2`
         &:hover {
             background-color: #fff;
             color: #000;
+            
+            ${Badge}.expansion & {
+                background-color: #000;
+                color: #fff;
+            }
         }
     }
 `;
 
 const Footer = styled.footer`
     > time {
-        color: #999;
+        color: #ccc;
         font-size: 1.1rem;
         white-space: nowrap;
+        
+        ${Badge}.expansion & {
+            color: #666;
+        }
     }
 `;
 
@@ -97,21 +127,20 @@ class GameBadge extends React.Component {
     get gameAnchor () {
         const {url} = this.props.game;
 
-        return url.replace('https://en.wikipedia.org/wiki/', '');
+        if (url) {
+            return url.replace('https://en.wikipedia.org/wiki/', '');
+        }
+
+        return null;
     }
     get gameAnchorLink () {
-        return (
-            <GameAnchor href={`#${this.gameAnchor}`} title='Game anchor' onClick={this.setGameAnchor}>
-                <img src={iconLink} width='16' height='16' alt='anchor' />
-            </GameAnchor>
-        )
-    }
-    removeFocusVisible = () => {
-        const html = document.documentElement;
-        html.classList.remove('js-focus-visible');
+        const {url, release} = this.props.game
 
-        const gameBadge = document.querySelector('[data-game-anchor="' + this.gameAnchor + '"]');
-        gameBadge.removeEventListener('blur', this.removeFocusVisible);
+        return url && release ? (
+            <GameAnchor href={`#${this.gameAnchor}`} title='Game anchor' onClick={this.setGameAnchor}>
+                <img src={iconLink} width='24' height='24' alt='anchor' />
+            </GameAnchor>
+        ) : null
     }
     setGameAnchor = () => {
         const gameBadge = document.querySelector('[data-game-anchor="' + this.gameAnchor + '"]');
@@ -126,7 +155,7 @@ class GameBadge extends React.Component {
             const html = document.documentElement;
             html.classList.add('js-focus-visible');
 
-            const titleLink = gameBadge.querySelector('a:first-of-type');
+            const titleLink = gameBadge.querySelector('.game-title > a');
             setTimeout(() => {
                 gameBadge.querySelectorAll('a').forEach(link => link.blur());
                 titleLink.focus();
@@ -134,19 +163,24 @@ class GameBadge extends React.Component {
             }, 0);
         }
     }
+    removeFocusVisible = () => {
+        const html = document.documentElement;
+        html.classList.remove('js-focus-visible');
+
+        const gameBadge = document.querySelector('[data-game-anchor="' + this.gameAnchor + '"]');
+        gameBadge.removeEventListener('blur', this.removeFocusVisible);
+    }
 
     get title () {
         const {title, url} = this.props.game;
-        const titleContent = url
-            ? <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
-            : title;
 
-        return (
-            <Title>
-                {titleContent}
-                {this.gameAnchorLink}
+        return url ? (
+            <Title className='game-title'>
+                <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
             </Title>
-        );
+        ) : (
+            <Title className='game-title' dangerouslySetInnerHTML={{ __html: title }} />
+        )
     }
 
     get footer () {
@@ -165,8 +199,9 @@ class GameBadge extends React.Component {
         return (
             <Badge
                 className={[expansion ? 'expansion' : '', !release ? 'shaded' : '']}
-                data-game-anchor={this.gameAnchor}
+                data-game-anchor={release ? this.gameAnchor : null}
             >
+                {this.gameAnchorLink}
                 {this.title}
                 {this.footer}
             </Badge>

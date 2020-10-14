@@ -141,7 +141,7 @@ class TimelineTable extends React.Component {
                 inline: 'center'
             });
 
-            gameBadge.querySelector('a:first-of-type').focus();
+            gameBadge.querySelector('.game-title > a').focus();
         }
     }
 
