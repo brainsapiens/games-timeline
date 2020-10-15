@@ -81,6 +81,14 @@ const GameAnchor = styled.a`
     color: #000;
     visibility: hidden;
     
+    &:hover > img {
+        opacity: .75;
+    }
+    
+    > img {
+        transition: opacity var(--transition-duration-base);        
+    }
+    
     ${Badge}:hover & {
         visibility: visible;
     }
@@ -100,7 +108,9 @@ const Title = styled.h2`
     > a {
         color: #fff;
         text-decoration: none;
-        transition: all var(--transition-duration-base);
+        transition:
+            background-color var(--transition-duration-base),
+            color var(--transition-duration-base);
         
         &:hover {
             background-color: #fff;
