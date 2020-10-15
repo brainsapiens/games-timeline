@@ -9,6 +9,7 @@ const Logo = styled.div`
         display: block;
         width: 16px;
         height: 16px;
+        padding: 2px;
         background: radial-gradient(#eee, #ccc);
         border: 2px outset #aaa;
         border-radius: 3px;
@@ -31,12 +32,11 @@ const Logo = styled.div`
             display: block;
             color: #333;
             content: attr(data-key);
-            font-family: 'Helvetica Neue', Arial, sans-serif;
+            font-family: sans-serif;
             font-weight: var(--font-weight-title);
             font-size: 7px;
             line-height: 7px;
             text-transform: uppercase;
-            transform: translate(1.75px, 1px);
         }
     }
 `;
