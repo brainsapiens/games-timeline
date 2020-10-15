@@ -323,6 +323,12 @@
       "expansion": true
     },
     {
+      "title": "Die by&nbsp;the Sword",
+      "url": "https://en.wikipedia.org/wiki/Die_by_the_Sword",
+      "genre": "action",
+      "release": "February 28"
+    },
+    {
       "title": "StarCraft",
       "url": "https://en.wikipedia.org/wiki/StarCraft_(video_game)",
       "genre": "strategy",
@@ -423,6 +429,12 @@
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate",
       "genre": "role-playing",
       "release": "December 21"
+    },
+    {
+      "title": "Die by&nbsp;the Sword:<br/> Limb from Limb",
+      "genre": "action",
+      "release": "December 31",
+      "expansion": true
     }
   ],
   "1999": [
