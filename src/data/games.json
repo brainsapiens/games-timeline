@@ -62,6 +62,12 @@
   ],
   "1994": [
     {
+      "title": "X-COM:<br/> UFO Defense",
+      "url": "https://en.wikipedia.org/wiki/UFO:_Enemy_Unknown",
+      "genre": "tactics",
+      "release": "March"
+    },
+    {
       "title": "Doom&nbsp;II:<br/> Hell on&nbsp;Earth",
       "url": "https://en.wikipedia.org/wiki/Doom_II",
       "genre": "shooter",
@@ -80,6 +86,12 @@
       "url": "https://en.wikipedia.org/wiki/Full_Throttle_(1995_video_game)",
       "genre": "adventure",
       "release": "April 30"
+    },
+    {
+      "title": "X-COM:<br/> Terror from the Deep",
+      "url": "https://en.wikipedia.org/wiki/X-COM:_Terror_from_the_Deep",
+      "genre": "tactics",
+      "release": "June"
     },
     {
       "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
@@ -332,7 +344,7 @@
     {
       "title": "Commandos:<br/> Behind Enemy Lines",
       "url": "https://en.wikipedia.org/wiki/Commandos:_Behind_Enemy_Lines",
-      "genre": "strategy",
+      "genre": "tactics",
       "release": "June 24"
     },
     {
@@ -423,7 +435,7 @@
     {
       "title": "Commandos:<br/> Beyond the Call of&nbsp;Duty",
       "url": "https://en.wikipedia.org/wiki/Commandos:_Behind_Enemy_Lines#Expansion",
-      "genre": "strategy",
+      "genre": "tactics",
       "release": "April 7",
       "expansion": true
     },
@@ -584,7 +596,7 @@
     {
       "title": "Commandos&nbsp;2:<br/> Men of&nbsp;Courage",
       "url": "https://en.wikipedia.org/wiki/Commandos_2:_Men_of_Courage",
-      "genre": "strategy",
+      "genre": "tactics",
       "release": "September 20"
     },
     {
@@ -638,7 +650,7 @@
     {
       "title": "Commandos&nbsp;3:<br/> Destination Berlin",
       "url": "https://en.wikipedia.org/wiki/Commandos_3:_Destination_Berlin",
-      "genre": "strategy",
+      "genre": "tactics",
       "release": "October 14"
     },
     {
