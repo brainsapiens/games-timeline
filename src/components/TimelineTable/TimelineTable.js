@@ -115,7 +115,7 @@ const GamesBadgesList = styled.ol`
     grid-gap: .8rem;
 `;
 const GamesBadgesItem = styled.li`
-    &.release-date-unknown {
+    &.release-unknown {
         flex: 0 0 100%;
     }
 `;
@@ -269,7 +269,7 @@ class TimelineTable extends React.Component {
 
                                 if (genreName === genre && this.matchAnnualQuarter(index, year, release)) {
                                     gamesBadgesItems.push(
-                                        <GamesBadgesItem key={title} className={!release ? 'release-date-unknown' : ''}>
+                                        <GamesBadgesItem key={title} className={!release ? 'release-unknown' : ''}>
                                             <GameBadge key={title} game={game}/>
                                         </GamesBadgesItem>
                                     );

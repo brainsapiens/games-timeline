@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 import iconLink from '../../images/icons/link.svg';
 
-const shadedGameTitle = `
+const releaseUnknownGameTitle = `
     .game-title {
         color: #000;
 
@@ -40,7 +40,7 @@ const Badge = styled.article`
         }
     }
     
-    &.shaded {
+    &.release-unknown {
         margin-right: -.8rem;
         margin-left: -.8rem;
         background: repeating-linear-gradient(
@@ -53,13 +53,13 @@ const Badge = styled.article`
         color: #000;
         opacity: .25;
         
-        ${shadedGameTitle};
+        ${releaseUnknownGameTitle};
         
         &.expansion {
             padding-top: .4rem;
             padding-bottom: .4rem;
             
-            ${shadedGameTitle};
+            ${releaseUnknownGameTitle};
         }
     }
 `;
@@ -198,7 +198,7 @@ class GameBadge extends React.Component {
 
         return (
             <Badge
-                className={[expansion ? 'expansion' : '', !release ? 'shaded' : '']}
+                className={[expansion ? 'expansion' : '', !release ? 'release-unknown' : '']}
                 data-game-anchor={release ? this.gameAnchor : null}
             >
                 {this.gameAnchorLink}
