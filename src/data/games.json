@@ -88,6 +88,12 @@
       "release": "August 31"
     },
     {
+      "title": "The Need for Speed",
+      "url": "https://en.wikipedia.org/wiki/The_Need_for_Speed",
+      "genre": "racing",
+      "release": "August 31"
+    },
+    {
       "title": "Torin&rsquo;s Passage",
       "url": "https://en.wikipedia.org/wiki/Torin%27s_Passage",
       "genre": "adventure",
@@ -185,6 +191,12 @@
       "genre": "shooter",
       "release": "March 19",
       "expansion": true
+    },
+    {
+      "title": "Need for Speed&nbsp;II",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed_II",
+      "genre": "racing",
+      "release": "April 18"
     },
     {
       "title": "Redneck Rampage",
@@ -318,6 +330,12 @@
       "release": "May 31"
     },
     {
+      "title": "Commandos:<br/> Behind Enemy Lines",
+      "url": "https://en.wikipedia.org/wiki/Commandos:_Behind_Enemy_Lines",
+      "genre": "strategy",
+      "release": "June 24"
+    },
+    {
       "title": "Redneck Rampage:<br/> Suckin&rsquo; Grits on&nbsp;Route&nbsp;66",
       "url": "https://en.wikipedia.org/wiki/Redneck_Rampage#Redneck_Rampage:_Suckin'_Grits_on_Route_66",
       "genre": "shooter",
@@ -337,6 +355,12 @@
       "genre": "shooter",
       "release": "September 11",
       "expansion": true
+    },
+    {
+      "title": "Need for Speed&nbsp;III:<br/> Hot Pursuit",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed_III:_Hot_Pursuit",
+      "genre": "racing",
+      "release": "September 23"
     },
     {
       "title": "Carmageddon&nbsp;II:</br> Carpocalypse Now",
@@ -397,11 +421,24 @@
       "release": "March 3"
     },
     {
+      "title": "Commandos:<br/> Beyond the Call of&nbsp;Duty",
+      "url": "https://en.wikipedia.org/wiki/Commandos:_Behind_Enemy_Lines#Expansion",
+      "genre": "strategy",
+      "release": "April 7",
+      "expansion": true
+    },
+    {
       "title": "Baldur&rsquo;s Gate:<br/> Tales of&nbsp;the Sword Coast",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate:_Tales_of_the_Sword_Coast",
       "genre": "role-playing",
       "release": "April 30",
       "expansion": true
+    },
+    {
+      "title": "Need for Speed:<br/> High Stakes",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_High_Stakes",
+      "genre": "racing",
+      "release": "June 1"
     },
     {
       "title": "Dungeon Keeper&nbsp;2",
@@ -457,6 +494,12 @@
     }
   ],
   "2000": [
+    {
+      "title": "Need for Speed:<br/> Porsche Unleashed",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Porsche_Unleashed",
+      "genre": "racing",
+      "release": "March 24"
+    },
     {
       "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> The Shadow of&nbsp;Death",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_The_Shadow_of_Death",
@@ -539,6 +582,12 @@
       "expansion": true
     },
     {
+      "title": "Commandos&nbsp;2:<br/> Men of&nbsp;Courage",
+      "url": "https://en.wikipedia.org/wiki/Commandos_2:_Men_of_Courage",
+      "genre": "strategy",
+      "release": "September 20"
+    },
+    {
       "title": "Half-Life:<br/> Decay",
       "url": "https://en.wikipedia.org/wiki/Half-Life:_Decay",
       "genre": "shooter",
@@ -560,6 +609,12 @@
       "release": "August 27"
     },
     {
+      "title": "Need for Speed:<br/> Hot Pursuit&nbsp;2",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Hot_Pursuit_2",
+      "genre": "racing",
+      "release": "October 21"
+    },
+    {
       "title": "Age of&nbsp;Mythology",
       "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
       "genre": "strategy",
@@ -579,9 +634,27 @@
       "url": "https://en.wikipedia.org/wiki/Age_of_Mythology:_The_Titans",
       "genre": "strategy",
       "release": "September 30"
+    },
+    {
+      "title": "Commandos&nbsp;3:<br/> Destination Berlin",
+      "url": "https://en.wikipedia.org/wiki/Commandos_3:_Destination_Berlin",
+      "genre": "strategy",
+      "release": "October 14"
+    },
+    {
+      "title": "Need for Speed:<br/> Underground",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Underground",
+      "genre": "racing",
+      "release": "November 17"
     }
   ],
   "2004": [
+    {
+      "title": "Need for Speed:<br/> Underground&nbsp;2",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Underground_2",
+      "genre": "racing",
+      "release": "November 9"
+    },
     {
       "title": "Half-Life&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2",
@@ -596,6 +669,12 @@
       "genre": "shooter",
       "release": "October 27",
       "expansion": true
+    },
+    {
+      "title": "Need for Speed:<br/> Most Wanted",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Most_Wanted_(2005_video_game)",
+      "genre": "racing",
+      "release": "November 15"
     }
   ],
   "2006": [
@@ -605,6 +684,12 @@
       "genre": "shooter",
       "release": "June 1",
       "expansion": true
+    },
+    {
+      "title": "Need for Speed:<br/> Carbon",
+      "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Carbon",
+      "genre": "racing",
+      "release": "October 30"
     }
   ],
   "2007": [
