@@ -15,7 +15,7 @@ class AppCopyright extends React.Component {
 
     render () {
         return (
-            <Copyright>&copy;&nbsp;Copyright {this.currentYear}</Copyright>
+            <Copyright>&copy;&nbsp;{this.currentYear} Games Timeline</Copyright>
         )
     }
 }
