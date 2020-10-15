@@ -25,6 +25,10 @@ const Badge = styled.article`
     background-color: #000;
     color: #fff;
     
+    &:hover {
+        z-index: 300;
+    }
+    
     a {
         color: #fff;
     }
@@ -66,7 +70,6 @@ const Badge = styled.article`
 
 const GameAnchor = styled.a`
     position: absolute;
-    z-index: 300;
     top: 0;
     right: 100%;
     display: flex;
