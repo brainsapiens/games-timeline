@@ -42,6 +42,15 @@ const Timeline = styled.div`
         border-right: 1px solid var(--border-color);
         border-bottom: 1px solid var(--border-color);
         
+        &:first-child {
+            position: sticky;
+            z-index: 101;
+            top: 0;
+            left: 0;
+            padding: var(--cell-padding);
+            background-color: #fcfcfc;
+        }
+        
         &[data-annual-quarter]:not([data-annual-quarter='Q4']) {
             border-right-style: dashed;
         }
@@ -53,32 +62,6 @@ const Timeline = styled.div`
             font-size: .9rem;
             text-align: right;
         }
-    }
-`;
-
-const Captions = styled.div`
-    position: sticky;
-    z-index: 101;
-    top: 0;
-    left: 0;
-    padding: var(--cell-padding);
-    background-color: #fcfcfc;
-    
-    &::before,
-    &::after {
-        position: absolute;
-        color: #ccc;
-        font-size: .9rem;
-    }
-    &::before {
-        top: .4rem;
-        right: .6rem;
-        content: attr(data-caption-year);
-    }
-    &::after {
-        bottom: .4rem;
-        left: .6rem;
-        content: attr(data-caption-genre);
     }
 `;
 
@@ -95,6 +78,8 @@ const Genre = styled.div`
         font-weight: var(--font-weight-title);
         text-transform: uppercase;
         white-space: nowrap;
+        writing-mode: vertical-lr;
+        transform: rotate(180deg);
     }
 `;
 
@@ -106,6 +91,8 @@ const Year = styled(Genre)`
     > span {
         top: unset;
         left: calc(var(--genre-width) + var(--cell-padding));
+        writing-mode: unset;
+        transform: unset;
     }
 `;
 
@@ -230,15 +217,6 @@ class TimelineTable extends React.Component {
         return listOfGenres;
     }
 
-    get captions () {
-        return (
-            <Captions
-                data-caption-year="Year"
-                data-caption-genre="Genre"
-            />
-        )
-    }
-
     get years () {
         return listOfYears.map((year, index) => {
             return (
@@ -303,7 +281,7 @@ class TimelineTable extends React.Component {
         return (
             <TimelineWrapper>
                 <Timeline ref={this.timelineRef}>
-                    {this.captions}
+                    <div />
                     {this.years}
                     {this.genres}
                 </Timeline>
