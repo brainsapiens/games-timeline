@@ -7,6 +7,14 @@
       "release": "October 5"
     }
   ],
+  "1988": [
+    {
+      "title": "F-19 Stealth Fighter",
+      "url": "https://en.wikipedia.org/wiki/F-19_Stealth_Fighter",
+      "genre": "Simulator",
+      "release": "January"
+    }
+  ],
   "1990": [
     {
       "title": "King&rsquo;s Bounty",
@@ -21,6 +29,11 @@
     }
   ],
   "1991": [
+    {
+      "title": "F-117A Nighthawk Stealth Fighter&nbsp;2.0",
+      "url": "https://en.wikipedia.org/wiki/F-117A_Nighthawk_Stealth_Fighter_2.0",
+      "genre": "simulator"
+    },
     {
       "title": "Duke Nukem",
       "url": "https://en.wikipedia.org/wiki/Duke_Nukem_(video_game)",
