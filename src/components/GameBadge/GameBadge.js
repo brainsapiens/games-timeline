@@ -148,14 +148,6 @@ class GameBadge extends Component {
     componentDidMount () {
         this.setGameBadgeActiveAnchor();
     }
-    componentDidUpdate (prevProps, prevState) {
-        console.log(this.state.value);
-        console.log(prevState.value);
-
-        if (this.state.value > prevState.value) {
-            console.log('!');
-        }
-    }
 
     matchGameAnchorToHash = () => {
         return this.gameAnchor && `#${this.gameAnchor}` === document.location.hash;
