@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 const Logo = styled.div`
     display: inline-grid;
     grid-gap: 2px;
+    margin-right: 1.2rem;
 
     span {
         display: block;
@@ -41,7 +42,7 @@ const Logo = styled.div`
     }
 `;
 
-class AppLogo extends React.Component {
+class AppLogo extends Component {
     render () {
         return (
             <Logo>

@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
-import Container from '../Container';
-import AppCopyright from '../AppCopyright';
+import UiContainer from '../../Ui/Container';
+import AppCopyright from '../Copyright';
 
 const Footer = styled.footer`
     display: grid;
@@ -10,13 +10,13 @@ const Footer = styled.footer`
     height: var(--bar-height);
 `;
 
-class AppFooter extends React.Component {
+class AppFooter extends Component {
     render () {
         return (
             <Footer role="contentinfo">
-                <Container>
+                <UiContainer>
                     <AppCopyright />
-                </Container>
+                </UiContainer>
             </Footer>
         )
     }

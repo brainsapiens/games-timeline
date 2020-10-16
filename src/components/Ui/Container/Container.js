@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -6,7 +6,7 @@ const Container = styled.div`
     padding-left: 1.6rem;
 `;
 
-class AppMain extends React.Component {
+class AppMain extends Component {
     render () {
         return (
             <Container>

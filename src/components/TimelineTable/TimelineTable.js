@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 import games from '../../data/games.json'
 import GameBadge from '../GameBadge';
@@ -112,44 +112,35 @@ const GamesBadgesItem = styled.li`
 `;
 
 // Component
-class TimelineTable extends React.Component {
+class TimelineTable extends Component {
     constructor (props) {
         super(props);
         this.timelineRef = React.createRef();
     }
 
     storage = window.sessionStorage;
+    timeline = null;
 
-    setGameAnchorScrollPosition = () => {
-        const hash = document.location.hash;
-        const hashValue = hash.substring(1);
-        const gameBadge = document.querySelector('[data-game-anchor="' + hashValue + '"]');
+    componentDidMount () {
+        this.timeline = this.timelineRef.current;
 
-        if (gameBadge) {
-            gameBadge.scrollIntoView({
-                behavior: 'auto',
-                block: 'center',
-                inline: 'center'
-            });
-
-            gameBadge.querySelector('.game-title > a').focus();
-        }
+        this.addTimelineScrollPosition();
+    }
+    componentWillUnmount () {
+        this.removeTimelineScrollPosition();
     }
 
     setTimelineScrollPosition = () => {
-        const timeline = this.timelineRef.current;
+        const timeline = this.timeline;
         const storage = this.storage;
 
         storage.setItem('timelineScrollTop', timeline.scrollTop);
         storage.setItem('timelineScrollLeft', timeline.scrollLeft);
     }
     addTimelineScrollPosition = () => {
-        const timeline = this.timelineRef.current;
-        const hash = document.location.hash;
+        const timeline = this.timeline;
 
-        if (hash) {
-            this.setGameAnchorScrollPosition();
-        } else {
+        if (!document.location.hash) {
             const storage = this.storage;
             const storageScrollTop = storage.getItem('timelineScrollTop');
             const storageScrollLeft = storage.getItem('timelineScrollLeft');
@@ -170,22 +161,8 @@ class TimelineTable extends React.Component {
         timeline.addEventListener('scroll', this.setTimelineScrollPosition);
     }
     removeTimelineScrollPosition = () => {
-        const timeline = this.timelineRef.current;
-        const storage = this.storage;
-
-        storage.removeItem('timelineScrollTop');
-        storage.removeItem('timelineScrollLeft');
-
-        timeline.removeEventListener(this.setTimelineScrollPosition);
+        this.timeline.removeEventListener('scroll', this.setTimelineScrollPosition);
     }
-
-    componentDidMount () {
-        this.addTimelineScrollPosition();
-    }
-    componentWillUnmount () {
-        this.removeTimelineScrollPosition();
-    }
-
     matchAnnualQuarter (index, year, release) {
         if (!release) return true;
 
@@ -220,7 +197,6 @@ class TimelineTable extends React.Component {
 
         return listOfGenres;
     }
-
     get years () {
         return listOfYears.map((year, index) => {
             return (
@@ -230,7 +206,6 @@ class TimelineTable extends React.Component {
             )
         });
     }
-
     get genres () {
         return this.listOfGenres.map((genreName, index) => {
             return ([

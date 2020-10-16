@@ -1,7 +1,8 @@
-import React from 'react';
+import React, {Component} from 'react';
 import styled from 'styled-components';
 
 import iconLink from '../../images/icons/link.svg';
+import iconLinkOff from '../../images/icons/link-off.svg';
 
 const releaseUnknownGameTitle = `
     .game-title {
@@ -79,18 +80,20 @@ const GameAnchor = styled.a`
     padding: .6rem;
     background-color: rgba(255, 255, 255, .75);
     color: #000;
-    visibility: hidden;
+    opacity: 0;
+    transition: opacity var(--transition-duration-base);
     
     &:hover > img {
         opacity: .75;
     }
     
     > img {
-        transition: opacity var(--transition-duration-base);        
+        transition: opacity var(--transition-duration-base);
     }
     
-    ${Badge}:hover & {
-        visibility: visible;
+    ${Badge}:hover &,
+    ${Badge}.anchor & {
+        opacity: 1;
     }
 `;
 
@@ -108,9 +111,6 @@ const Title = styled.h2`
     > a {
         color: #fff;
         text-decoration: none;
-        transition:
-            background-color var(--transition-duration-base),
-            color var(--transition-duration-base);
         
         &:hover {
             background-color: #fff;
@@ -136,9 +136,63 @@ const Footer = styled.footer`
     }
 `;
 
-class GameBadge extends React.Component {
-    history = window.history;
+class GameBadge extends Component {
+    constructor (props) {
+        super(props);
 
+        this.state = {
+            anchor: false
+        }
+    }
+
+    componentDidMount () {
+        this.setGameBadgeActiveAnchor();
+    }
+    componentDidUpdate (prevProps, prevState) {
+        console.log(this.state.value);
+        console.log(prevState.value);
+
+        if (this.state.value > prevState.value) {
+            console.log('!');
+        }
+    }
+
+    matchGameAnchorToHash = () => {
+        return this.gameAnchor && `#${this.gameAnchor}` === document.location.hash;
+    }
+    setGameBadgeActiveAnchor = () => {
+        const hashValue = document.location.hash.substring(1);
+        const gameBadge = document.querySelector('[data-game-anchor="' + hashValue + '"]');
+
+        if (gameBadge) {
+            gameBadge.scrollIntoView({
+                behavior: 'auto',
+                block: 'center',
+                inline: 'center'
+            });
+
+            gameBadge.querySelector('.game-title > a').focus();
+        }
+
+        if (this.matchGameAnchorToHash()) {
+            this.setState({'anchor': true});
+        }
+    }
+    toggleGameAnchor = event => {
+        const gameBadge = document.querySelector('[data-game-anchor="' + this.gameAnchor + '"]');
+
+        if (gameBadge) {
+            if (this.matchGameAnchorToHash()) {
+                this.setState({'anchor': false});
+
+                window.history.pushState('', document.title, window.location.pathname);
+
+                event.preventDefault();
+            } else {
+                this.setState({'anchor': true});
+            }
+        }
+    }
     get gameAnchor () {
         const {url} = this.props.game;
 
@@ -149,47 +203,15 @@ class GameBadge extends React.Component {
         return null;
     }
     get gameAnchorLink () {
-        const {url, release} = this.props.game
+        const {url, release} = this.props.game;
+        const icon = this.state.anchor ? iconLinkOff : iconLink;
 
         return (url && release) ? (
             <GameAnchor href={`#${this.gameAnchor}`} title='Game anchor' onClick={this.toggleGameAnchor}>
-                <img src={iconLink} width='24' height='24' alt='anchor' />
+                <img src={icon} width='24' height='24' alt='anchor' />
             </GameAnchor>
         ) : null
     }
-    toggleGameAnchor = event => {
-        const gameBadge = document.querySelector('[data-game-anchor="' + this.gameAnchor + '"]');
-
-        if (gameBadge) {
-            const hash = document.location.hash;
-
-            if (this.gameAnchor && `#${this.gameAnchor}` === hash) {
-                event.preventDefault();
-
-                window.history.pushState('', document.title, window.location.pathname);
-
-                this.removeFocusVisible();
-            } else {
-                const html = document.documentElement;
-                html.classList.add('js-focus-visible');
-
-                const titleLink = gameBadge.querySelector('.game-title > a');
-                setTimeout(() => {
-                    gameBadge.querySelectorAll('a').forEach(link => link.blur());
-                    titleLink.focus();
-                    titleLink.addEventListener('blur', this.removeFocusVisible);
-                }, 0);
-            }
-        }
-    }
-    removeFocusVisible = () => {
-        const html = document.documentElement;
-        html.classList.remove('js-focus-visible');
-
-        const gameBadge = document.querySelector('[data-game-anchor="' + this.gameAnchor + '"]');
-        gameBadge.removeEventListener('blur', this.removeFocusVisible);
-    }
-
     get title () {
         const {title, url} = this.props.game;
 
@@ -201,7 +223,6 @@ class GameBadge extends React.Component {
             <Title className='game-title' dangerouslySetInnerHTML={{ __html: title }} />
         )
     }
-
     get footer () {
         const {release} = this.props.game;
 
@@ -213,11 +234,15 @@ class GameBadge extends React.Component {
     }
 
     render () {
-        const {release, expansion} = this.props.game
+        const {release, expansion} = this.props.game;
+        const {anchor} = this.state;
 
         return (
             <Badge
-                className={[expansion ? 'expansion' : '', !release ? 'release-unknown' : '']}
+                className={[
+                    expansion ? 'expansion' : '',
+                    !release ? 'release-unknown' : '',
+                    anchor ? 'anchor' : '']}
                 data-game-anchor={release ? this.gameAnchor : null}
             >
                 {this.gameAnchorLink}

@@ -1,0 +1,89 @@
+@import url('../node_modules/normalize.css/normalize.css');
+
+:root {
+    --font-size-root: 62.5%;
+
+    --background-base: #fff;
+    --background-inverse: #333;
+
+    --color-base: #333;
+    --color-inverse: #fff;
+
+    --font-family-base: 'Roboto Mono', monospace;
+    --font-size-base: 1.5rem;
+    --font-weight-base: 400;
+    --font-weight-title: 600;
+
+    --line-height-base: 1.4;
+    --line-height-title: 1.2;
+
+    --border-color: #eee;
+
+    --transition-duration-base: .1s;
+
+    --cell-padding: .8rem;
+
+    --year-height: 3.6rem;
+    --genre-width: 3.6rem;
+
+    --bar-height: 4.8rem;
+}
+
+:focus:not(:focus-visible) {
+    outline: 0;
+}
+:focus-visible {
+    outline: 2px solid #00f;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    font-size: var(--font-size-root);
+}
+
+body {
+    background-color: var(--background-base);
+    color: var(--color-base);
+    font-family: var(--font-family-base);
+    font-weight: var(--font-weight-base);
+    font-size: var(--font-size-base);
+    line-height: var(--line-height-base);
+}
+
+h1,
+h2 {
+    font-weight: var(--font-weight-title);
+    line-height: var(--line-height-title);
+}
+h1 {
+    margin: 0;
+}
+
+a {
+    color: var(--color-base);
+    transition: all var(--transition-duration-base);
+}
+a:hover {
+    text-decoration: none;
+}
+a.active {
+    cursor: default;
+    text-decoration: none;
+}
+
+ol {
+    padding: 0;
+    list-style: none;
+}
