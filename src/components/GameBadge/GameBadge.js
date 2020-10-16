@@ -146,13 +146,13 @@ class GameBadge extends Component {
     }
 
     componentDidMount () {
-        this.setGameBadgeActiveAnchor();
+        this.setGameAnchor();
     }
 
     matchGameAnchorToHash = () => {
         return this.gameAnchor && `#${this.gameAnchor}` === document.location.hash;
     }
-    setGameBadgeActiveAnchor = () => {
+    setGameAnchor = () => {
         const hashValue = document.location.hash.substring(1);
         const gameBadge = document.querySelector('[data-game-anchor="' + hashValue + '"]');
 
@@ -234,7 +234,8 @@ class GameBadge extends Component {
                 className={[
                     expansion ? 'expansion' : '',
                     !release ? 'release-unknown' : '',
-                    anchor ? 'anchor' : '']}
+                    anchor ? 'anchor' : ''
+                ]}
                 data-game-anchor={release ? this.gameAnchor : null}
             >
                 {this.gameAnchorLink}
