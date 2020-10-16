@@ -69,12 +69,15 @@ const Genre = styled.div`
     position: sticky;
     z-index: 100;
     left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: #fcfcfc;
-    text-align: center;
     
     > span {
         position: sticky;
         top: calc(var(--year-height) + var(--cell-padding));
+        bottom: var(--cell-padding);
         font-weight: var(--font-weight-title);
         text-transform: uppercase;
         white-space: nowrap;
@@ -91,6 +94,7 @@ const Year = styled(Genre)`
     > span {
         top: unset;
         left: calc(var(--genre-width) + var(--cell-padding));
+        right: var(--cell-padding);
         writing-mode: unset;
         transform: unset;
     }

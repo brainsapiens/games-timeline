@@ -15,6 +15,13 @@
       "release": "January"
     }
   ],
+  "1989": [
+    {
+      "title": "MechWarrior",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_(1989_video_game)",
+      "genre": "simulator"
+    }
+  ],
   "1990": [
     {
       "title": "King&rsquo;s Bounty",
@@ -107,6 +114,12 @@
       "release": "June"
     },
     {
+      "title": "MechWarrior&nbsp;2:<br/> 31st Century Combat",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_31st_Century_Combat",
+      "genre": "simulator",
+      "release": "July 24"
+    },
+    {
       "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic:_A_Strategic_Quest",
       "genre": "strategy",
@@ -123,6 +136,13 @@
       "url": "https://en.wikipedia.org/wiki/Torin%27s_Passage",
       "genre": "adventure",
       "release": "October 31"
+    },
+    {
+      "title": "MechWarrior&nbsp;2:<br/> Ghost Bear&rsquo;s Legacy",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_31st_Century_Combat#MechWarrior_2:_Ghost_Bear's_Legacy",
+      "genre": "simulator",
+      "release": "November 1",
+      "expansion": true
     },
     {
       "title": "The 11th Hour",
@@ -168,6 +188,13 @@
       "url": "https://en.wikipedia.org/wiki/Broken_Sword:_The_Shadow_of_the_Templars",
       "genre": "adventure",
       "release": "September 30"
+    },
+    {
+      "title": "MechWarrior&nbsp;2:<br/> Mercenaries",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_Mercenaries",
+      "genre": "simulator",
+      "release": "September 30",
+      "expansion": true
     },
     {
       "title": "Heroes of&nbsp;Might and Magic&nbsp;II:<br/> The Succession Wars",
@@ -472,6 +499,12 @@
       "expansion": true
     },
     {
+      "title": "MechWarrior&nbsp;3",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_3",
+      "genre": "simulator",
+      "release": "May"
+    },
+    {
       "title": "Need for Speed:<br/> High Stakes",
       "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_High_Stakes",
       "genre": "racing",
@@ -522,6 +555,13 @@
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena",
       "genre": "shooter",
       "release": "December 2"
+    },
+    {
+      "title": "MechWarrior&nbsp;3: Pirate&rsquo;s Moon",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_3#Pirate's_Moon_(expansion_pack)",
+      "genre": "simulator",
+      "release": "December 3",
+      "expansion": true
     },
     {
       "title": "Planescape:<br/> Torment",
@@ -582,6 +622,12 @@
       "release": "November 8"
     },
     {
+      "title": "MechWarrior&nbsp;4: Vengeance",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance",
+      "genre": "simulator",
+      "release": "November 22"
+    },
+    {
       "title": "Quake&nbsp;III:<br/> Team Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena#Expansion",
       "genre": "shooter",
@@ -623,6 +669,13 @@
       "url": "https://en.wikipedia.org/wiki/Commandos_2:_Men_of_Courage",
       "genre": "tactics",
       "release": "September 20"
+    },
+    {
+      "title": "MechWarrior&nbsp;4: Black Knight",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance",
+      "genre": "simulator",
+      "release": "October 31",
+      "expansion": true
     },
     {
       "title": "Half-Life:<br/> Decay",

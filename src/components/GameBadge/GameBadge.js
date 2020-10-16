@@ -137,6 +137,8 @@ const Footer = styled.footer`
 `;
 
 class GameBadge extends React.Component {
+    history = window.history;
+
     get gameAnchor () {
         const {url} = this.props.game;
 
@@ -149,31 +151,35 @@ class GameBadge extends React.Component {
     get gameAnchorLink () {
         const {url, release} = this.props.game
 
-        return url && release ? (
-            <GameAnchor href={`#${this.gameAnchor}`} title='Game anchor' onClick={this.setGameAnchor}>
+        return (url && release) ? (
+            <GameAnchor href={`#${this.gameAnchor}`} title='Game anchor' onClick={this.toggleGameAnchor}>
                 <img src={iconLink} width='24' height='24' alt='anchor' />
             </GameAnchor>
         ) : null
     }
-    setGameAnchor = () => {
+    toggleGameAnchor = event => {
         const gameBadge = document.querySelector('[data-game-anchor="' + this.gameAnchor + '"]');
 
         if (gameBadge) {
-            gameBadge.scrollIntoView({
-                behavior: 'auto',
-                block: 'center',
-                inline: 'center'
-            });
+            const hash = document.location.hash;
 
-            const html = document.documentElement;
-            html.classList.add('js-focus-visible');
+            if (this.gameAnchor && `#${this.gameAnchor}` === hash) {
+                event.preventDefault();
 
-            const titleLink = gameBadge.querySelector('.game-title > a');
-            setTimeout(() => {
-                gameBadge.querySelectorAll('a').forEach(link => link.blur());
-                titleLink.focus();
-                titleLink.addEventListener('blur', this.removeFocusVisible);
-            }, 0);
+                window.history.pushState('', document.title, window.location.pathname);
+
+                this.removeFocusVisible();
+            } else {
+                const html = document.documentElement;
+                html.classList.add('js-focus-visible');
+
+                const titleLink = gameBadge.querySelector('.game-title > a');
+                setTimeout(() => {
+                    gameBadge.querySelectorAll('a').forEach(link => link.blur());
+                    titleLink.focus();
+                    titleLink.addEventListener('blur', this.removeFocusVisible);
+                }, 0);
+            }
         }
     }
     removeFocusVisible = () => {

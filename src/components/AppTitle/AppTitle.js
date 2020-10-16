@@ -3,6 +3,8 @@ import styled from 'styled-components';
 
 import AppLogo from '../AppLogo';
 
+import globals from '../../globals';
+
 const Title = styled.h1`
     display: flex;
     align-items: center;
@@ -20,7 +22,7 @@ class AppTitle extends React.Component {
         return (
             <Title>
                 <AppLogo />
-                <TitleText>Games Timeline</TitleText>
+                <TitleText>{globals.app.title}</TitleText>
             </Title>
         )
     }
