@@ -1,7 +1,7 @@
 import React from 'react';
 
 import AppHead from '../../components/App/Head';
-import TimelineTable from '../../components/TimelineTable';
+import Timeline from '../../components/Timeline';
 
 //TODO: <AppHead /> causes warning in console
 
@@ -9,7 +9,7 @@ function Home () {
     return (
         <>
             <AppHead />
-            <TimelineTable />
+            <Timeline />
         </>
     );
 }

@@ -1,9 +1,10 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-import iconLink from '../../images/icons/link.svg';
-import iconLinkOff from '../../images/icons/link-off.svg';
+import iconLink from '../../../images/icons/link.svg';
+import iconLinkOff from '../../../images/icons/link-off.svg';
 
+// Styles
 const releaseUnknownGameTitle = `
     .game-title {
         color: #000;
@@ -20,7 +21,7 @@ const releaseUnknownGameTitle = `
     }
 `;
 
-const Badge = styled.article`
+const Game = styled.article`
     position: relative;
     padding: .4rem .8rem;
     background-color: #000;
@@ -68,8 +69,7 @@ const Badge = styled.article`
         }
     }
 `;
-
-const GameAnchor = styled.a`
+const Anchor = styled.a`
     position: absolute;
     top: 0;
     right: 100%;
@@ -91,12 +91,11 @@ const GameAnchor = styled.a`
         transition: opacity var(--transition-duration-base);
     }
     
-    ${Badge}:hover &,
-    ${Badge}.anchor & {
+    ${Game}:hover &,
+    ${Game}.anchor & {
         opacity: 1;
     }
 `;
-
 const Title = styled.h2`
     color: #fff;
     font-size: 1.3rem;
@@ -104,7 +103,7 @@ const Title = styled.h2`
     line-height: unset;
     white-space: nowrap;
     
-    ${Badge}.expansion & {
+    ${Game}.expansion & {
         color: #000;
     }
     
@@ -116,27 +115,26 @@ const Title = styled.h2`
             background-color: #fff;
             color: #000;
             
-            ${Badge}.expansion & {
+            ${Game}.expansion & {
                 background-color: #000;
                 color: #fff;
             }
         }
     }
 `;
-
 const Footer = styled.footer`
     > time {
         color: #ccc;
         font-size: 1.1rem;
         white-space: nowrap;
         
-        ${Badge}.expansion & {
+        ${Game}.expansion & {
             color: #666;
         }
     }
 `;
 
-class GameBadge extends Component {
+class TimelineGame extends Component {
     constructor (props) {
         super(props);
 
@@ -146,13 +144,13 @@ class GameBadge extends Component {
     }
 
     componentDidMount () {
-        this.setGameAnchor();
+        this.setAnchor();
     }
 
-    matchGameAnchorToHash = () => {
-        return this.gameAnchor && `#${this.gameAnchor}` === document.location.hash;
+    matchAnchorToHash = () => {
+        return this.anchorUrl && `#${this.anchorUrl}` === document.location.hash;
     }
-    setGameAnchor = () => {
+    setAnchor = () => {
         const hashValue = document.location.hash.substring(1);
         const gameBadge = document.querySelector('[data-game-anchor="' + hashValue + '"]');
 
@@ -166,15 +164,15 @@ class GameBadge extends Component {
             gameBadge.querySelector('.game-title > a').focus();
         }
 
-        if (this.matchGameAnchorToHash()) {
+        if (this.matchAnchorToHash()) {
             this.setState({'anchor': true});
         }
     }
-    toggleGameAnchor = event => {
-        const gameBadge = document.querySelector('[data-game-anchor="' + this.gameAnchor + '"]');
+    toggleAnchor = event => {
+        const gameBadge = document.querySelector('[data-game-anchor="' + this.anchorUrl + '"]');
 
         if (gameBadge) {
-            if (this.matchGameAnchorToHash()) {
+            if (this.matchAnchorToHash()) {
                 this.setState({'anchor': false});
 
                 window.history.pushState('', document.title, window.location.pathname);
@@ -185,7 +183,8 @@ class GameBadge extends Component {
             }
         }
     }
-    get gameAnchor () {
+
+    get anchorUrl () {
         const {url} = this.props.game;
 
         if (url) {
@@ -194,14 +193,14 @@ class GameBadge extends Component {
 
         return null;
     }
-    get gameAnchorLink () {
+    get anchor () {
         const {url, release} = this.props.game;
         const icon = this.state.anchor ? iconLinkOff : iconLink;
 
         return (url && release) ? (
-            <GameAnchor href={`#${this.gameAnchor}`} title='Game anchor' onClick={this.toggleGameAnchor}>
+            <Anchor href={`#${this.anchorUrl}`} title='Game anchor' onClick={this.toggleAnchor}>
                 <img src={icon} width='24' height='24' alt='anchor' />
-            </GameAnchor>
+            </Anchor>
         ) : null
     }
     get title () {
@@ -230,20 +229,20 @@ class GameBadge extends Component {
         const {anchor} = this.state;
 
         return (
-            <Badge
+            <Game
                 className={[
                     expansion ? 'expansion' : '',
                     !release ? 'release-unknown' : '',
                     anchor ? 'anchor' : ''
                 ]}
-                data-game-anchor={release ? this.gameAnchor : null}
+                data-game-anchor={release ? this.anchorUrl : null}
             >
-                {this.gameAnchorLink}
+                {this.anchor}
                 {this.title}
                 {this.footer}
-            </Badge>
+            </Game>
         )
     }
 }
 
-export default GameBadge;
+export default TimelineGame;
