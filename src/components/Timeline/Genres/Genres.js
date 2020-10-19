@@ -28,8 +28,8 @@ class TimelineGenres extends Component {
     get genres () {
         return this.listOfGenres.map((genreName, index) => {
             return ([
-                <TimelineGenre genreName={genreName} />,
-                <TimelineGames genreName={genreName} />
+                <TimelineGenre key={genreName} genreName={genreName} />,
+                <TimelineGames key={index} genreName={genreName} />
             ])
         });
     }
