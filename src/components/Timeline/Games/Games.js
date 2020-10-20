@@ -95,8 +95,6 @@ class TimelineGames extends Component {
     toggleAnchor = event => {
         const item = document.querySelector('[data-anchor="' + this.anchorUrl + '"]');
 
-        console.log(item);
-
         if (item) {
             if (this.matchAnchorToHash()) {
                 this.setState({'anchor': false});
@@ -124,7 +122,11 @@ class TimelineGames extends Component {
         const icon = this.state.anchor ? iconLinkOff : iconLink;
 
         return (url && release) ? (
-            <Anchor href={`#${this.anchorUrl}`} title='Game anchor' onClick={this.toggleAnchor}>
+            <Anchor
+                href={`#${this.anchorUrl}`}
+                title='Game anchor'
+                onClick={this.toggleAnchor}
+            >
                 <img src={icon} width='24' height='24' alt='anchor' />
             </Anchor>
         ) : null
@@ -172,7 +174,6 @@ class TimelineGames extends Component {
                             gamesItems.push(
                                 <Item
                                     key={title}
-                                    onClick={this.toggleAnchor}
                                     className={[
                                         anchor ? 'anchor' : '',
                                         !release ? 'release-unknown' : ''
