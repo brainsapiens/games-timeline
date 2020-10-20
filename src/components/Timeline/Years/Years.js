@@ -28,7 +28,7 @@ class TimelineYears extends Component {
     get years () {
         const listOfYears = Object.keys(games);
 
-        listOfYears.map((year, index) => {
+        return listOfYears.map((year, index) => {
             return (
                 <Year key={index}>
                     <span>{year}</span>

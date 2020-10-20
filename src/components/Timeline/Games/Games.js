@@ -153,7 +153,7 @@ class TimelineGames extends Component {
         const {genreName} = this.props;
         const listOfYears = Object.keys(games);
 
-        listOfYears.map(year => {
+        return listOfYears.map(year => {
             let result = [];
 
             for (let index = 1; index <= 4; index++) {
