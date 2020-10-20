@@ -84,13 +84,14 @@ const Anchor = styled.a`
     transition: opacity var(--transition-duration-base);
 
     &:hover > img {
-        opacity: .75;
+        opacity: 1;
     }
 
     > img {
+        opacity: .75;
         transition: opacity var(--transition-duration-base);
     }
-
+    
     ${Game}:hover &,
     ${Game}.anchor & {
         opacity: 1;
@@ -140,9 +141,7 @@ class TimelineGame extends Component {
 
         this.state = {
             anchor: false
-        }
-
-        // this.toggleAnchor = this.toggleAnchor.bind(this);
+        };
     }
 
     componentDidMount () {
@@ -173,21 +172,17 @@ class TimelineGame extends Component {
             this.setState({anchor: true});
         }
     }
-    // toggleAnchor = event => {
-    //     const item = document.querySelector('[data-anchor="' + this.anchorUrl + '"]');
-    //
-    //     if (item) {
-    //         if (this.matchAnchorToHash()) {
-    //             event.preventDefault();
-    //
-    //             this.setState({'anchor': false});
-    //
-    //             window.history.pushState('', document.title, window.location.pathname);
-    //         } else {
-    //             this.setState({'anchor': true});
-    //         }
-    //     }
-    // }
+    toggleAnchor = event => {
+        if (this.state.anchor === true) {
+            event.preventDefault();
+
+            this.setState({'anchor': false});
+
+            window.history.pushState('', document.title, window.location.pathname);
+        } else {
+            this.setState({'anchor': true});
+        }
+    }
 
     get anchorUrl () {
         const {url, release} = this.props.game;
@@ -206,7 +201,7 @@ class TimelineGame extends Component {
             <Anchor
                 href={`#${this.anchorUrl}`}
                 title='Game anchor'
-                // onClick={this.toggleAnchor}
+                onClick={this.toggleAnchor}
             >
                 <img src={icon} width='24' height='24' alt='anchor' />
             </Anchor>
