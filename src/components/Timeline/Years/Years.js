@@ -30,7 +30,7 @@ class TimelineYears extends Component {
 
         return listOfYears.map((year, index) => {
             return (
-                <Year key={index}>
+                <Year key={year}>
                     <span>{year}</span>
                 </Year>
             )
