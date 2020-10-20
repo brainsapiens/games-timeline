@@ -2,7 +2,6 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 
 import iconLink from '../../../images/icons/link.svg';
-import iconLinkOff from '../../../images/icons/link-off.svg';
 
 // Styles
 const releaseUnknownGameTitle = `
@@ -92,8 +91,7 @@ const Anchor = styled.a`
         transition: opacity var(--transition-duration-base);
     }
     
-    ${Game}:hover &,
-    ${Game}.anchor & {
+    ${Game}:hover & {
         opacity: 1;
     }
 `;
@@ -135,22 +133,10 @@ const Footer = styled.footer`
     }
 `;
 
+// Component
 class TimelineGame extends Component {
-    constructor (props) {
-        super(props);
-
-        this.state = {
-            anchor: false
-        };
-    }
-
     componentDidMount () {
         this.setAnchor();
-    }
-
-    // Anchor
-    matchAnchorToHash = () => {
-        return this.anchorUrl && `#${this.anchorUrl}` === document.location.hash;
     }
 
     setAnchor = () => {
@@ -167,21 +153,6 @@ class TimelineGame extends Component {
 
             item.querySelector('.game-title > a').focus();
         }
-
-        if (this.matchAnchorToHash()) {
-            this.setState({anchor: true});
-        }
-    }
-    toggleAnchor = event => {
-        if (this.state.anchor === true) {
-            event.preventDefault();
-
-            this.setState({'anchor': false});
-
-            window.history.pushState('', document.title, window.location.pathname);
-        } else {
-            this.setState({'anchor': true});
-        }
     }
 
     get anchorUrl () {
@@ -194,21 +165,18 @@ class TimelineGame extends Component {
         return null;
     }
     get anchor () {
-        const icon = this.state.anchor ? iconLinkOff : iconLink;
         const {url, release} = this.props.game;
 
         return (url && release) ? (
             <Anchor
                 href={`#${this.anchorUrl}`}
-                title='Game anchor'
-                onClick={this.toggleAnchor}
+                title='Anchor'
             >
-                <img src={icon} width='24' height='24' alt='anchor' />
+                <img src={iconLink} width='24' height='24' alt='anchor' />
             </Anchor>
         ) : null
     }
 
-    // Game
     get title () {
         const {title, url} = this.props.game;
 
@@ -232,14 +200,12 @@ class TimelineGame extends Component {
 
     render () {
         const {release, expansion} = this.props.game;
-        const {anchor} = this.state;
 
         return (
             <Game
                 className={[
                     expansion ? 'expansion' : '',
                     !release ? 'release-unknown' : '',
-                    anchor ? 'anchor' : '',
                 ]}
                 data-anchor={this.anchorUrl}
             >
