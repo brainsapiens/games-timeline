@@ -151,61 +151,60 @@ class TimelineGames extends Component {
 
     get games () {
         const {genreName} = this.props;
+        const listOfYears = Object.keys(games);
 
-        return Object
-            .keys(games)
-            .map(year => {
-                let result = [];
+        listOfYears.map(year => {
+            let result = [];
 
-                for (let index = 1; index <= 4; index++) {
-                    let gamesList = [];
-                    let gamesItems = [];
+            for (let index = 1; index <= 4; index++) {
+                let gamesList = [];
+                let gamesItems = [];
 
-                    if (games[year]) {
-                        for (const game of games[year]) {
-                            const {anchor} = this.state;
-                            const {title, url, genre, release} = game;
+                if (games[year]) {
+                    for (const game of games[year]) {
+                        const {anchor} = this.state;
+                        const {title, url, genre, release} = game;
 
-                            if (genreName === genre && this.matchGameToQuarter(index, year, release)) {
-                                this.game.url = url;
-                                this.game.release = release;
+                        if (genreName === genre && this.matchGameToQuarter(index, year, release)) {
+                            this.game.url = url;
+                            this.game.release = release;
 
-                                gamesItems.push(
-                                    <Item
-                                        key={title}
-                                        onClick={this.toggleAnchor}
-                                        className={[
-                                            anchor ? 'anchor' : '',
-                                            !release ? 'release-unknown' : ''
-                                        ]}
-                                        data-anchor={release ? this.anchorUrl : null}
-                                    >
-                                        {this.anchor}
-                                        <Game key={title} game={game} />
-                                    </Item>
-                                );
-                            }
+                            gamesItems.push(
+                                <Item
+                                    key={title}
+                                    onClick={this.toggleAnchor}
+                                    className={[
+                                        anchor ? 'anchor' : '',
+                                        !release ? 'release-unknown' : ''
+                                    ]}
+                                    data-anchor={release ? this.anchorUrl : null}
+                                >
+                                    {this.anchor}
+                                    <Game key={title} game={game} />
+                                </Item>
+                            );
                         }
                     }
-
-                    if (gamesItems.length) {
-                        gamesList.push(
-                            <List key={index}>
-                                {gamesItems}
-                            </List>
-                        );
-                    }
-
-                    result.push(
-                        <div key={index} data-quarter={`Q${index}`}>
-                            {gamesList}
-                        </div>
-                    );
-
                 }
 
-                return result;
-            });
+                if (gamesItems.length) {
+                    gamesList.push(
+                        <List key={index}>
+                            {gamesItems}
+                        </List>
+                    );
+                }
+
+                result.push(
+                    <div key={index} data-quarter={`Q${index}`}>
+                        {gamesList}
+                    </div>
+                );
+
+            }
+
+            return result;
+        });
     }
 
     render () {

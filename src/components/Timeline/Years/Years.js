@@ -26,15 +26,15 @@ const Year = styled.div`
 // Component
 class TimelineYears extends Component {
     get years () {
-        return Object
-            .keys(games)
-            .map((year, index) => {
-                return (
-                    <Year key={index}>
-                        <span>{year}</span>
-                    </Year>
-                )
-            });
+        const listOfYears = Object.keys(games);
+
+        listOfYears.map((year, index) => {
+            return (
+                <Year key={index}>
+                    <span>{year}</span>
+                </Year>
+            )
+        });
     }
 
     render () {

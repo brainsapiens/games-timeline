@@ -9,10 +9,9 @@ import TimelineGames from '../Games';
 class TimelineGenres extends Component {
     get listOfGenres () {
         const listOfGenres = [];
+        const listOfGames = Object.values(games);
 
-        Object
-            .values(games)
-            .forEach(games => {
+        listOfGames.forEach(games => {
                 for (const game of games) {
                     const {genre} = game;
 
