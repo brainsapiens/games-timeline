@@ -1,9 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-import iconLink from '../../../images/icons/link.svg';
-import iconLinkOff from '../../../images/icons/link-off.svg';
-
 // Styles
 const releaseUnknownGameTitle = `
     .game-title {
@@ -69,33 +66,6 @@ const Game = styled.article`
         }
     }
 `;
-const Anchor = styled.a`
-    position: absolute;
-    top: 0;
-    right: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: .6rem;
-    background-color: rgba(255, 255, 255, .75);
-    color: #000;
-    opacity: 0;
-    transition: opacity var(--transition-duration-base);
-    
-    &:hover > img {
-        opacity: .75;
-    }
-    
-    > img {
-        transition: opacity var(--transition-duration-base);
-    }
-    
-    ${Game}:hover &,
-    ${Game}.anchor & {
-        opacity: 1;
-    }
-`;
 const Title = styled.h2`
     color: #fff;
     font-size: 1.3rem;
@@ -135,74 +105,6 @@ const Footer = styled.footer`
 `;
 
 class TimelineGame extends Component {
-    constructor (props) {
-        super(props);
-
-        this.state = {
-            anchor: false
-        }
-    }
-
-    componentDidMount () {
-        this.setAnchor();
-    }
-
-    matchAnchorToHash = () => {
-        return this.anchorUrl && `#${this.anchorUrl}` === document.location.hash;
-    }
-    setAnchor = () => {
-        const hashValue = document.location.hash.substring(1);
-        const gameBadge = document.querySelector('[data-game-anchor="' + hashValue + '"]');
-
-        if (gameBadge) {
-            gameBadge.scrollIntoView({
-                behavior: 'auto',
-                block: 'center',
-                inline: 'center'
-            });
-
-            gameBadge.querySelector('.game-title > a').focus();
-        }
-
-        if (this.matchAnchorToHash()) {
-            this.setState({'anchor': true});
-        }
-    }
-    toggleAnchor = event => {
-        const gameBadge = document.querySelector('[data-game-anchor="' + this.anchorUrl + '"]');
-
-        if (gameBadge) {
-            if (this.matchAnchorToHash()) {
-                this.setState({'anchor': false});
-
-                window.history.pushState('', document.title, window.location.pathname);
-
-                event.preventDefault();
-            } else {
-                this.setState({'anchor': true});
-            }
-        }
-    }
-
-    get anchorUrl () {
-        const {url} = this.props.game;
-
-        if (url) {
-            return url.replace('https://en.wikipedia.org/wiki/', '');
-        }
-
-        return null;
-    }
-    get anchor () {
-        const {url, release} = this.props.game;
-        const icon = this.state.anchor ? iconLinkOff : iconLink;
-
-        return (url && release) ? (
-            <Anchor href={`#${this.anchorUrl}`} title='Game anchor' onClick={this.toggleAnchor}>
-                <img src={icon} width='24' height='24' alt='anchor' />
-            </Anchor>
-        ) : null
-    }
     get title () {
         const {title, url} = this.props.game;
 
@@ -226,18 +128,14 @@ class TimelineGame extends Component {
 
     render () {
         const {release, expansion} = this.props.game;
-        const {anchor} = this.state;
 
         return (
             <Game
                 className={[
                     expansion ? 'expansion' : '',
-                    !release ? 'release-unknown' : '',
-                    anchor ? 'anchor' : ''
+                    !release ? 'release-unknown' : ''
                 ]}
-                data-game-anchor={release ? this.anchorUrl : null}
             >
-                {this.anchor}
                 {this.title}
                 {this.footer}
             </Game>
