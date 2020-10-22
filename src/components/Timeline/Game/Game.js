@@ -50,6 +50,7 @@ const Game = styled.article`
     &.release-unknown {
         margin-right: -.8rem;
         margin-left: -.8rem;
+        padding: .4rem 1.6rem;
         background-color: #f5f5f5;
         color: #666;
         
@@ -62,8 +63,6 @@ const Game = styled.article`
         ${releaseUnknownGameTitle};
         
         &.expansion {
-            padding: .4rem 1.6rem;
-            
             ${releaseUnknownGameTitle};
         }
     }

@@ -89,6 +89,12 @@
       "release": "March"
     },
     {
+      "title": "Theme Park",
+      "url": "https://en.wikipedia.org/wiki/Theme_Park_(video_game)",
+      "genre": "simulator",
+      "release": "June"
+    },
+    {
       "title": "Jagged Alliance",
       "url": "https://en.wikipedia.org/wiki/Jagged_Alliance",
       "genre": "tactics",
@@ -238,6 +244,11 @@
   ],
   "1997": [
     {
+      "title": "Constructor",
+      "url": "https://en.wikipedia.org/wiki/Constructor_(video_game)",
+      "genre": "simulator"
+    },
+    {
       "title": "Diablo",
       "url": "https://en.wikipedia.org/wiki/Diablo_(video_game)",
       "genre": "role-playing",
@@ -263,6 +274,12 @@
       "genre": "shooter",
       "release": "March 19",
       "expansion": true
+    },
+    {
+      "title": "Theme Hospital",
+      "url": "https://en.wikipedia.org/wiki/Theme_Hospital",
+      "genre": "simulator",
+      "release": "March 28"
     },
     {
       "title": "Need for Speed&nbsp;II",
@@ -599,11 +616,29 @@
       "expansion": true
     },
     {
+      "title": "Mob Rule",
+      "url": "https://en.wikipedia.org/wiki/Mob_Rule",
+      "genre": "simulator",
+      "release": "September 30"
+    },
+    {
       "title": "Warcraft&nbsp;II:<br/> Baltle.net Edition",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Tides_of_Darkness#Battle.net_Edition",
       "genre": "strategy",
       "release": "September 30",
       "expansion": true
+    },
+    {
+      "title": "Theme Park World",
+      "url": "https://en.wikipedia.org/wiki/Theme_Park_World",
+      "genre": "simulator",
+      "release": "November 3"
+    },
+    {
+      "title": "Gorky&nbsp;17",
+      "url": "https://en.wikipedia.org/wiki/Gorky_17",
+      "genre": "tactics",
+      "release": "November 15"
     },
     {
       "title": "Half-Life:<br/> Opposing Force",
@@ -723,6 +758,12 @@
       "url": "https://en.wikipedia.org/wiki/Evil_Islands:_Curse_of_the_Lost_Soul",
       "genre": "role-playing",
       "release": "April 17"
+    },
+    {
+      "title": "Desperados:<br/> Wanted Dead or&nbsp;Alive",
+      "url": "https://en.wikipedia.org/wiki/Desperados:_Wanted_Dead_or_Alive",
+      "genre": "tactics",
+      "release": "April 20"
     },
     {
       "title": "Half-Life:<br/> Blue Shift",
@@ -883,6 +924,12 @@
       "expansion": true
     },
     {
+      "title": "Desperados&nbsp;2:<br/> Cooper&rsquo;s Revenge",
+      "url": "https://en.wikipedia.org/wiki/Desperados_2:_Cooper%27s_Revenge",
+      "genre": "tactics",
+      "release": "April 28"
+    },
+    {
       "title": "Half-Life&nbsp;2:<br/> Episode One",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_One",
       "genre": "shooter",
@@ -903,6 +950,12 @@
       "genre": "shooter",
       "release": "October 10",
       "expansion": true
+    },
+    {
+      "title": "Helldorado",
+      "url": "https://en.wikipedia.org/wiki/Helldorado_(video_game)",
+      "genre": "tactics",
+      "release": "November 30"
     }
   ]
 }

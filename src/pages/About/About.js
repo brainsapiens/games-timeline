@@ -23,7 +23,7 @@ function About () {
                         <p>Vyacheslav Efremenko</p>
                         <ul>
                             <li>Email: <a href='mailto:brainsapiens@gmail.com' rel='noopener noreferrer'>brainsapiens@gmail.com</a></li>
-                            <li>Source code: <a href='https://github.com/brainsapiens/games-timeline' rel='noopener noreferrer'>https://github.com/brainsapiens/games-timeline</a></li>
+                            <li>Source code: <a href='https://github.com/brainsapiens/games-timeline' rel='noopener noreferrer' target='_blank'>https://github.com/brainsapiens/games-timeline</a></li>
                         </ul>
                     </section>
                 </UiContent>
