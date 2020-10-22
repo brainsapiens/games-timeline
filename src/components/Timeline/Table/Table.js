@@ -26,7 +26,7 @@ const Table = styled.div`
             top: 0;
             left: 0;
             padding: var(--cell-padding);
-            background-color: #fcfcfc;
+            background-color: #fafafa;
         }
         
         &[data-quarter]:not([data-quarter='Q4']) {

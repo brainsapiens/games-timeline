@@ -8,7 +8,7 @@ const Genre = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fcfcfc;
+    background-color: #fafafa;
     
     > span {
         position: sticky;
