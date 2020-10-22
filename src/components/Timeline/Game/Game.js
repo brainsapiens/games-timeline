@@ -62,8 +62,7 @@ const Game = styled.article`
         ${releaseUnknownGameTitle};
         
         &.expansion {
-            padding-top: .4rem;
-            padding-bottom: .4rem;
+            padding: .4rem 1.6rem;
             
             ${releaseUnknownGameTitle};
         }
