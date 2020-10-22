@@ -5,7 +5,7 @@ import iconLink from '../../../images/icons/link.svg';
 
 const releaseUnknownGameTitle = `
     .game-title {
-        color: #ccc;
+        color: #666;
         
         [data-quarter]:not([data-quarter='Q1']) & {
             visibility: hidden;
@@ -13,11 +13,11 @@ const releaseUnknownGameTitle = `
 
         > a {
             background-color: unset;
-            color: #ccc;
+            color: #666;
             
             &:hover {
                 background-color: unset;
-                color: #aaa;                
+                color: #333;
             }
         }
     }
@@ -51,7 +51,7 @@ const Game = styled.article`
         margin-right: -.8rem;
         margin-left: -.8rem;
         background-color: #f5f5f5;
-        color: #ccc;
+        color: #666;
         
         [data-quarter='Q2'] &,
         [data-quarter='Q3'] & {
