@@ -4,6 +4,7 @@ import globals from '../../global';
 
 import AppHead from '../../components/App/Head';
 import UiContainer from '../../components/Ui/Container';
+import UiContent from '../../components/Ui/Content';
 
 function About () {
     const {title} = globals.pages.about;
@@ -12,7 +13,12 @@ function About () {
         <>
             <AppHead title={title} />
             <UiContainer>
-                {title}
+                <UiContent>
+                    <section>
+                        <h2>Title</h2>
+                        <p>Text</p>
+                    </section>
+                </UiContent>
             </UiContainer>
         </>
     );

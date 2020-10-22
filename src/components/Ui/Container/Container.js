@@ -6,7 +6,7 @@ const Container = styled.div`
     padding-left: 1.6rem;
 `;
 
-class AppMain extends Component {
+class UiContainer extends Component {
     render () {
         return (
             <Container>
@@ -16,4 +16,4 @@ class AppMain extends Component {
     }
 }
 
-export default AppMain;
+export default UiContainer;

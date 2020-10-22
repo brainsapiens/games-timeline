@@ -6,15 +6,21 @@ import iconLink from '../../../images/icons/link.svg';
 // Styles
 const releaseUnknownGameTitle = `
     .game-title {
-        color: #000;
+        color: #ccc;
 
-         > a {
+        [data-quarter='Q2'] &,
+        [data-quarter='Q3'] &,
+        [data-quarter='Q4'] & {
+            visibility: hidden;
+        }
+
+        > a {
             background-color: unset;
-            color: #000;
+            color: #ccc;
             
             &:hover {
                 background-color: unset;
-                color: #333;
+                color: #aaa;                
             }
         }
     }
@@ -48,15 +54,14 @@ const Game = styled.article`
     &.release-unknown {
         margin-right: -.8rem;
         margin-left: -.8rem;
-        background: repeating-linear-gradient(
-          -45deg,
-          #ccc,
-          #ccc 12px,
-          #eee 12px,
-          #eee 24px
-        );
-        color: #000;
-        opacity: .25;
+        background-color: #f5f5f5;
+        color: #ccc;
+        
+        [data-quarter='Q2'] &,
+        [data-quarter='Q3'] & {
+            margin-right: -.9rem;
+            margin-left: -.9rem;
+        }
         
         ${releaseUnknownGameTitle};
         
@@ -158,11 +163,7 @@ class TimelineGame extends Component {
     get anchorUrl () {
         const {url, release} = this.props.game;
 
-        if (url && release) {
-            return url.replace('https://en.wikipedia.org/wiki/', '');
-        }
-
-        return null;
+        return (url && release) ? url.replace('https://en.wikipedia.org/wiki/', '') : null;
     }
     get anchor () {
         const {url, release} = this.props.game;
