@@ -89,6 +89,12 @@
       "release": "March"
     },
     {
+      "title": "Jagged Alliance",
+      "url": "https://en.wikipedia.org/wiki/Jagged_Alliance",
+      "genre": "tactics",
+      "release": "June 2"
+    },
+    {
       "title": "Doom&nbsp;II:<br/> Hell on&nbsp;Earth",
       "url": "https://en.wikipedia.org/wiki/Doom_II",
       "genre": "shooter",
@@ -183,6 +189,13 @@
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)",
       "genre": "shooter",
       "release": "June 22"
+    },
+    {
+      "title": "Jagged Alliance:<br/> Deadly Games",
+      "url": "https://en.wikipedia.org/wiki/Jagged_Alliance:_Deadly_Games",
+      "genre": "tactics",
+      "release": "September",
+      "expansion": true
     },
     {
       "title": "Broken Sword:<br/> The Shadow of&nbsp;the Templars",
@@ -536,6 +549,12 @@
       "release": "July 7"
     },
     {
+      "title": "Jagged Alliance&nbsp;2",
+      "url": "https://en.wikipedia.org/wiki/Jagged_Alliance_2",
+      "genre": "tactics",
+      "release": "July 23"
+    },
+    {
       "title": "Blood&nbsp;II:<br/> The Nightmare Levels",
       "url": "https://en.wikipedia.org/wiki/Blood_II:_The_Chosen#The_Nightmare_Levels",
       "genre": "shooter",
@@ -652,6 +671,13 @@
       "genre": "shooter",
       "release": "December 18",
       "expansion": true
+    },
+    {
+      "title": "Jagged Alliance&nbsp;2:<br/> Unfinished Business",
+      "url": "https://en.wikipedia.org/wiki/Jagged_Alliance_(series)#Jagged_Alliance_2:_Unfinished_Business",
+      "genre": "tactics",
+      "release": "December 30",
+      "expansion": true
     }
   ],
   "2001": [
@@ -712,6 +738,13 @@
       "release": "July 3"
     },
     {
+      "title": "Jagged Alliance&nbsp;2:<br/> Gold Pack",
+      "url": "https://en.wikipedia.org/wiki/Jagged_Alliance_(series)#Jagged_Alliance_2:_Gold_Pack",
+      "genre": "tactics",
+      "release": "August 6",
+      "expansion": true
+    },
+    {
       "title": "Icewind Dale&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Icewind_Dale_II",
       "genre": "role-playing",
@@ -758,6 +791,13 @@
     }
   ],
   "2004": [
+    {
+      "title": "Jagged Alliance&nbsp;2:<br/> Wildfire",
+      "url": "https://en.wikipedia.org/wiki/Jagged_Alliance_(series)#Jagged_Alliance_2:_Wildfire",
+      "genre": "tactics",
+      "release": "March 8",
+      "expansion": true
+    },
     {
       "title": "Need for Speed:<br/> Underground&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Underground_2",
