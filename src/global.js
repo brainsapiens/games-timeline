@@ -1,6 +1,6 @@
 export default {
     app: {
-        title: 'PC Games Timeline'
+        title: 'Games Timeline'
     },
     pages: {
         about: {
