@@ -3,14 +3,11 @@ import styled from 'styled-components';
 
 import iconLink from '../../../images/icons/link.svg';
 
-// Styles
 const releaseUnknownGameTitle = `
     .game-title {
         color: #ccc;
-
-        [data-quarter='Q2'] &,
-        [data-quarter='Q3'] &,
-        [data-quarter='Q4'] & {
+        
+        [data-quarter]:not([data-quarter='Q1']) & {
             visibility: hidden;
         }
 
@@ -25,7 +22,6 @@ const releaseUnknownGameTitle = `
         }
     }
 `;
-
 const Game = styled.article`
     position: relative;
     padding: .4rem .8rem;
@@ -138,7 +134,6 @@ const Footer = styled.footer`
     }
 `;
 
-// Component
 class TimelineGame extends Component {
     componentDidMount () {
         this.setAnchor();
@@ -147,7 +142,7 @@ class TimelineGame extends Component {
     setAnchor = () => {
         const hash = document.location.hash;
         const hashValue = hash.substring(1);
-        const item = document.querySelector('[data-anchor="' + hashValue + '"]');
+        const item = document.querySelector(`[data-anchor='${hashValue}']`);
 
         if (item) {
             item.scrollIntoView({

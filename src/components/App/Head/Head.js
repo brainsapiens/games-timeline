@@ -5,7 +5,6 @@ import global from '../../../global';
 
 class AppHead extends Component {
     render () {
-        //TODO: naming conflict between global.app.title and this.props.title
         const appTitle = global.app.title;
         const {title} = this.props;
 

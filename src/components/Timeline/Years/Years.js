@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
+
 import games from '../../../data/games.json';
 
-// Styles
 const Year = styled.div`
     position: sticky;
     z-index: 100;
@@ -23,12 +23,11 @@ const Year = styled.div`
     }
 `;
 
-// Component
 class TimelineYears extends Component {
     get years () {
         const listOfYears = Object.keys(games);
 
-        return listOfYears.map((year, index) => {
+        return listOfYears.map(year => {
             return (
                 <Year key={year}>
                     <span>{year}</span>
@@ -38,7 +37,7 @@ class TimelineYears extends Component {
     }
 
     render () {
-        return this.years
+        return this.years;
     }
 }
 

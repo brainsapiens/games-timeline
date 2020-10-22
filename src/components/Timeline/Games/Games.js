@@ -5,7 +5,6 @@ import games from '../../../data/games.json'
 
 import Game from '../Game';
 
-// Styles
 const List = styled.ol`
     display: flex;
     flex-wrap: wrap;
@@ -13,11 +12,10 @@ const List = styled.ol`
 `;
 const Item = styled.li`
     &.release-unknown {
-        flex: 0 0 100%;
+        flex-basis: 100%;
     }
 `;
 
-// Component
 class TimelineGames extends Component {
     matchGameToQuarter (index, year, release) {
         if (!release) return true;

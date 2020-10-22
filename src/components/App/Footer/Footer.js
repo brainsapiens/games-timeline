@@ -13,7 +13,7 @@ const Footer = styled.footer`
 class AppFooter extends Component {
     render () {
         return (
-            <Footer role="contentinfo">
+            <Footer role='contentinfo'>
                 <UiContainer>
                     <AppCopyright />
                 </UiContainer>

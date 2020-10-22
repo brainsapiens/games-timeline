@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-// Styles
 const Genre = styled.div`
     position: sticky;
     z-index: 100;
@@ -23,7 +22,6 @@ const Genre = styled.div`
     }
 `;
 
-// Component
 class TimelineGenre extends Component {
     render () {
         const {genreName} = this.props;

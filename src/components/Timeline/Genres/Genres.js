@@ -5,7 +5,6 @@ import games from '../../../data/games.json'
 import TimelineGenre from '../Genre';
 import TimelineGames from '../Games';
 
-// Component
 class TimelineGenres extends Component {
     get listOfGenres () {
         const listOfGenres = [];

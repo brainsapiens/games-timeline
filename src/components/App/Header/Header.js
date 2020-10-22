@@ -22,7 +22,7 @@ const HeaderInner = styled.div`
 class AppHeader extends Component {
     render () {
         return (
-            <Header role="banner">
+            <Header role='banner'>
                 <UiContainer>
                     <HeaderInner>
                         <AppTitle />

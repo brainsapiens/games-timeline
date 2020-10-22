@@ -8,7 +8,6 @@ import TimelineGenres from '../Genres';
 
 const numberOfYears = Object.keys(games).length;
 
-// Styles
 const Table = styled.div`
     display: grid;
     grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
@@ -44,7 +43,6 @@ const Table = styled.div`
     }
 `;
 
-// Component
 class TimelineTable extends Component {
     constructor (props) {
         super(props);

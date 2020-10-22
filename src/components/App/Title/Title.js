@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import AppLogo from '../Logo';
-
 import global from '../../../global';
+
+import AppLogo from '../Logo';
 
 const Title = styled.h1`
     margin-right: 3.6rem;
@@ -12,7 +12,6 @@ const Title = styled.h1`
     font-weight: var(--font-weight-base);
     word-spacing: -.3rem;
 `;
-
 const Link = styled(NavLink)`
     display: flex;
     align-items: center;

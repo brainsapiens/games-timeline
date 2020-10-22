@@ -7,7 +7,7 @@ import AppHeader from './components/App/Header';
 import AppMain from './components/App/Main';
 import AppFooter from './components/App/Footer';
 
-function App() {
+function App () {
     return (
         <Router>
             <AppHeader />

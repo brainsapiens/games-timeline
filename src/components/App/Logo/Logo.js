@@ -15,17 +15,17 @@ const Logo = styled.div`
         border: 2px outset #aaa;
         border-radius: 3px;
         
-        &[data-key="w"] {
+        &[data-key='w'] {
             grid-area: 1 / 2 / 2 / 3;
             transform: translateX(-4px);
         }
-        &[data-key="a"] {
+        &[data-key='a'] {
             grid-area: 2 / 1 / 3 / 2;
         }
-        &[data-key="s"] {
+        &[data-key='s'] {
             grid-area: 2 / 2 / 3 / 3;
         }
-        &[data-key="d"] {
+        &[data-key='d'] {
             grid-area: 2 / 3 / 3 / 4;
         }
         
@@ -46,10 +46,10 @@ class AppLogo extends Component {
     render () {
         return (
             <Logo>
-                <span data-key="w" />
-                <span data-key="a" />
-                <span data-key="s" />
-                <span data-key="d" />
+                <span data-key='w' />
+                <span data-key='a' />
+                <span data-key='s' />
+                <span data-key='d' />
             </Logo>
         )
     }
