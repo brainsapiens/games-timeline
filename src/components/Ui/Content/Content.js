@@ -11,13 +11,30 @@ const Content = styled.article`
         }
     }
     
-    h2 {
+    h2,
+    h3 {
         margin-bottom: 1.6rem;
     }
     
-    p {
+    p,
+    ol,
+    ul {
         &:not(:last-child) {
             margin-bottom: 1.6rem;
+        }
+    }
+    
+    ol {
+        list-style-type: decimal;
+    }
+
+    ul {
+        list-style-type: circle;
+    }
+
+    li {
+        &:not(:last-child) {
+            margin-bottom: .8rem;
         }
     }
 `;
