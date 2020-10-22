@@ -11,7 +11,7 @@ const List = styled.ol`
     grid-gap: .8rem;
 `;
 const Item = styled.li`
-    &.release-unknown {
+    &.full-width {
         flex-basis: 100%;
     }
 `;
@@ -54,7 +54,7 @@ class TimelineGames extends Component {
                             gamesItems.push(
                                 <Item
                                     key={title}
-                                    className={!release ? 'release-unknown' : ''}
+                                    className={!release ? 'full-width' : ''}
                                 >
                                     <Game key={title} game={game} />
                                 </Item>
