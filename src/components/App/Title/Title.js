@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import AppLogo from '../Logo';
 
-import globals from '../../../global';
+import global from '../../../global';
 
 const Title = styled.h1`
     margin-right: 3.6rem;
@@ -22,11 +22,13 @@ const Link = styled(NavLink)`
 
 class AppTitle extends Component {
     render () {
+        const {title} = global.app;
+
         return (
             <Title>
                 <Link to='/' exact>
                     <AppLogo />
-                    {globals.app.title}
+                    {title}
                 </Link>
             </Title>
         )

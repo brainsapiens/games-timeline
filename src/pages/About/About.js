@@ -1,13 +1,13 @@
 import React from 'react';
 
-import globals from '../../global';
+import global from '../../global';
 
 import AppHead from '../../components/App/Head';
 import UiContainer from '../../components/Ui/Container';
 import UiContent from '../../components/Ui/Content';
 
 function About () {
-    const {title} = globals.pages.about;
+    const {title} = global.pages.about;
 
     return (
         <>

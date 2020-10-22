@@ -204,6 +204,12 @@
       "release": "October 1"
     },
     {
+      "title": "Tomb Raider",
+      "url": "https://en.wikipedia.org/wiki/Tomb_Raider_(1996_video_game)",
+      "genre": "action",
+      "release": "October 25"
+    },
+    {
       "title": "The Neverhood",
       "url": "https://en.wikipedia.org/wiki/The_Neverhood",
       "genre": "adventure",
@@ -326,6 +332,12 @@
       "genre": "racing",
       "release": "November 14",
       "expansion": true
+    },
+    {
+      "title": "Tomb Raider&nbsp;II",
+      "url": "https://en.wikipedia.org/wiki/Tomb_Raider_II",
+      "genre": "action",
+      "release": "November 21"
     },
     {
       "title": "Diablo:<br/> Hellfire",
@@ -451,6 +463,12 @@
       "url": "https://en.wikipedia.org/wiki/Half-Life_(video_game)",
       "genre": "shooter",
       "release": "November 19"
+    },
+    {
+      "title": "Tomb Raider&nbsp;III",
+      "url": "https://en.wikipedia.org/wiki/Tomb_Raider_III",
+      "genre": "action",
+      "release": "November 20"
     },
     {
       "title": "Blood&nbsp;II:<br/> The Chosen",

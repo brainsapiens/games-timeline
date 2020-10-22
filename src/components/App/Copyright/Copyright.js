@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import globals from '../../../global';
+import global from '../../../global';
 
 const Text = styled.p`
     color: #666;
@@ -15,9 +15,11 @@ class AppCopyright extends Component {
     }
 
     render () {
+        const {title} = global.app;
+
         return (
             <Text>
-                &copy;&nbsp;{this.currentYear} <NavLink to='/' exact>{globals.app.title}</NavLink>
+                &copy;&nbsp;{this.currentYear} <NavLink to='/' exact>{title}</NavLink>
             </Text>
         )
     }

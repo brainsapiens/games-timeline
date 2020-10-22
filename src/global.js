@@ -6,5 +6,6 @@ export default {
         about: {
             title: 'About'
         }
-    }
+    },
+    anchorUrlReplace: 'https://en.wikipedia.org/wiki/'
 }
