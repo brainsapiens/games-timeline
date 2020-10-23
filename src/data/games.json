@@ -351,6 +351,12 @@
       "release": "October 17"
     },
     {
+      "title": "Grand Theft Auto",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_(video_game)",
+      "genre": "action",
+      "release": "October 21"
+    },
+    {
       "title": "The Curse of&nbsp;Monkey Island",
       "url": "https://en.wikipedia.org/wiki/The_Curse_of_Monkey_Island",
       "genre": "adventure",
@@ -559,6 +565,13 @@
       "release": "April 15"
     },
     {
+      "title": "Grand Theft Auto:<br/> London 1969",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_London_1969",
+      "genre": "action",
+      "release": "April 22",
+      "expansion": true
+    },
+    {
       "title": "Baldur&rsquo;s Gate:<br/> Tales of&nbsp;the Sword Coast",
       "url": "https://en.wikipedia.org/wiki/Baldur%27s_Gate:_Tales_of_the_Sword_Coast",
       "genre": "role-playing",
@@ -576,6 +589,13 @@
       "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_High_Stakes",
       "genre": "racing",
       "release": "June 1"
+    },
+    {
+      "title": "Grand Theft Auto:<br/> London 1961",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_London_1961",
+      "genre": "action",
+      "release": "July 1",
+      "expansion": true
     },
     {
       "title": "Dungeon Keeper&nbsp;2",
@@ -627,6 +647,12 @@
       "genre": "strategy",
       "release": "September 30",
       "expansion": true
+    },
+    {
+      "title": "Grand Theft Auto&nbsp;2",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_2",
+      "genre": "action",
+      "release": "October 22"
     },
     {
       "title": "Theme Park World",
@@ -799,6 +825,12 @@
       "release": "September 20"
     },
     {
+      "title": "Grand Theft Auto&nbsp;III",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_III",
+      "genre": "action",
+      "release": "October 22"
+    },
+    {
       "title": "MechWarrior&nbsp;4:<br/> Black Knight",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance",
       "genre": "simulator",
@@ -838,6 +870,12 @@
       "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Hot_Pursuit_2",
       "genre": "racing",
       "release": "October 21"
+    },
+    {
+      "title": "Grand Theft Auto:<br/> Vice City",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City",
+      "genre": "action",
+      "release": "October 29"
     },
     {
       "title": "Age of&nbsp;Mythology",
@@ -880,6 +918,12 @@
       "genre": "tactics",
       "release": "March 8",
       "expansion": true
+    },
+    {
+      "title": "Grand Theft Auto:<br/> San Andreas",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas",
+      "genre": "action",
+      "release": "October 26"
     },
     {
       "title": "Need for Speed:<br/> Underground&nbsp;2",
