@@ -1,28 +1,23 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
 import global from '../../../global';
+const {app: {title}} = global;
 
 const Text = styled.p`
     color: #666;
     text-align: center;
 `;
 
-class AppCopyright extends Component {
-    get currentYear () {
-        return new Date().getFullYear();
-    }
+const AppCopyright = () => {
+    const currentYear = new Date().getFullYear();
 
-    render () {
-        const {title} = global.app;
-
-        return (
-            <Text>
-                &copy;&nbsp;{this.currentYear} <NavLink to='/' exact>{title}</NavLink>
-            </Text>
-        )
-    }
-}
+    return (
+        <Text>
+            &copy;&nbsp;{currentYear} <NavLink to='/' exact>{title}</NavLink>
+        </Text>
+    );
+};
 
 export default AppCopyright;

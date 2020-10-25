@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import UiContainer from '../../Ui/Container';
@@ -10,16 +10,12 @@ const Footer = styled.footer`
     height: var(--bar-height);
 `;
 
-class AppFooter extends Component {
-    render () {
-        return (
-            <Footer role='contentinfo'>
-                <UiContainer>
-                    <AppCopyright />
-                </UiContainer>
-            </Footer>
-        )
-    }
-}
+const AppFooter = () => (
+    <Footer role='contentinfo'>
+        <UiContainer>
+            <AppCopyright />
+        </UiContainer>
+    </Footer>
+);
 
 export default AppFooter;

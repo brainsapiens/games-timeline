@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Logo = styled.div`
@@ -42,17 +42,13 @@ const Logo = styled.div`
     }
 `;
 
-class AppLogo extends Component {
-    render () {
-        return (
-            <Logo>
-                <span data-key='w' />
-                <span data-key='a' />
-                <span data-key='s' />
-                <span data-key='d' />
-            </Logo>
-        )
-    }
-}
+const AppLogo = () => (
+    <Logo>
+        <span data-key='w' />
+        <span data-key='a' />
+        <span data-key='s' />
+        <span data-key='d' />
+    </Logo>
+);
 
 export default AppLogo;

@@ -1,6 +1,9 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
+
+import global from '../../../global'
+const {pages} = global;
 
 const Nav = styled.nav`
     &:not(:last-child) {
@@ -13,14 +16,15 @@ const Link = styled(NavLink)`
     }
 `;
 
-class AppNav extends Component {
-    render () {
-        return (
-            <Nav role='navigation'>
-                <Link to='/about'>About</Link>
-            </Nav>
-        )
-    }
-}
+const AppNav = () => {
+    const {about} = pages;
+
+    return (
+        <Nav role='navigation'>
+            <Link to={about.url}>{about.title}</Link>
+        </Nav>
+    );
+
+};
 
 export default AppNav;
