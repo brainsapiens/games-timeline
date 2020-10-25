@@ -3,7 +3,6 @@ import styled from 'styled-components';
 
 import TimelineTable from './Table';
 
-// Styles
 const Timeline = styled.div`
     position: relative;
     width: 100vw;
@@ -27,10 +26,8 @@ const Timeline = styled.div`
     }
 `;
 
-export default function () {
-    return (
-        <Timeline>
-            <TimelineTable />
-        </Timeline>
-    );
-};
+export default () => (
+    <Timeline>
+        <TimelineTable />
+    </Timeline>
+);
