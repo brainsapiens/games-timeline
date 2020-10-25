@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Content = styled.article`
@@ -39,14 +39,10 @@ const Content = styled.article`
     }
 `;
 
-class UiContent extends Component {
-    render () {
-        return (
-            <Content>
-                {this.props.children}
-            </Content>
-        )
-    }
-}
+const UiContent = ({children}) => (
+    <Content>
+        {children}
+    </Content>
+);
 
 export default UiContent;
