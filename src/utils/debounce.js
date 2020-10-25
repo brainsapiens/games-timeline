@@ -4,7 +4,7 @@ export default function debounce (f, ms) {
 
     let isCooldown = false;
 
-    return function() {
+    return function () {
         if (isCooldown) return;
 
         f.apply(this, arguments);
@@ -13,5 +13,4 @@ export default function debounce (f, ms) {
 
         setTimeout(() => isCooldown = false, ms);
     };
-
 }
