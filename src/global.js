@@ -5,7 +5,7 @@ export default {
     pages: {
         about: {
             title: 'About',
-            url: '/about'
+            path: '/about'
         }
     },
     anchorUrlReplace: 'https://en.wikipedia.org/wiki/'

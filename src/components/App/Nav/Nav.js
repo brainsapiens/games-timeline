@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import global from '../../../global'
+import global from '../../../global';
 const {pages} = global;
 
 const Nav = styled.nav`
@@ -21,7 +21,7 @@ const AppNav = () => {
 
     return (
         <Nav role='navigation'>
-            <Link to={about.url}>{about.title}</Link>
+            <Link to={about.path}>{about.title}</Link>
         </Nav>
     );
 

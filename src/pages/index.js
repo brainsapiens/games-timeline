@@ -4,11 +4,16 @@ import {Switch, Route} from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 
-export default function () {
+import global from '../global';
+const {pages} = global;
+
+export default () => {
+    const {about} = pages;
+
     return (
         <Switch>
-            <Route path='/' exact component={Home} />
-            <Route path='/about' exact component={About} />
+            <Route path='/' exact component={Home}/>
+            <Route path={about.path} exact component={About}/>
         </Switch>
-    );
+    )
 };
