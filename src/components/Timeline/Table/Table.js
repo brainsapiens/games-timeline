@@ -48,6 +48,7 @@ class TimelineTable extends Component {
     constructor (props) {
         super(props);
         this.tableRef = React.createRef();
+        this.setTableScrollPosition = debounce(this.setTableScrollPosition.bind(this));
     }
 
     storage = window.sessionStorage;
@@ -91,7 +92,7 @@ class TimelineTable extends Component {
 
     render () {
         return (
-            <Table ref={this.tableRef} onScroll={debounce(this.setTableScrollPosition)}>
+            <Table ref={this.tableRef} onScroll={this.setTableScrollPosition}>
                 <div />
                 <TimelineYears />
                 <TimelineGenres />
