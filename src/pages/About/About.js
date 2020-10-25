@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 
 import global from '../../global';
 
@@ -8,10 +8,12 @@ import AppHead from '../../components/App/Head';
 import UiContainer from '../../components/Ui/Container';
 import UiContent from '../../components/Ui/Content';
 
-function About () {
-    const {title} = global.pages.about;
+const {pages: {about: {title}}} = global;
 
-    scrollToTop();
+function About () {
+    useEffect(() => {
+        scrollToTop();
+    }, []);
 
     return (
         <>

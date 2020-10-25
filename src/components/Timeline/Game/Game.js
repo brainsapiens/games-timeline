@@ -133,31 +133,36 @@ const Footer = styled.footer`
 `;
 
 class TimelineGame extends Component {
-    componentDidMount () {
-        this.setAnchor();
+    constructor (props) {
+        super(props);
+        this.gameRef = React.createRef();
     }
 
-    setAnchor = () => {
-        const hash = document.location.hash;
-        const hashValue = hash.substring(1);
-        const item = document.querySelector(`[data-anchor='${hashValue}']`);
+    componentDidMount () {
+        this.setAnchor(this.gameRef.current);
+    }
 
-        if (item) {
+    setAnchor = (item) => {
+        const hashValue = document.location.hash.substring(1);
+
+        if (item && this.anchorUrl === hashValue) {
             item.scrollIntoView({
                 behavior: 'auto',
                 block: 'center',
                 inline: 'center'
             });
 
-            item.querySelector('.game-title > a').focus();
+            const link = item.querySelector('.game-title > a');
+            link && link.focus();
         }
-    }
+    };
 
     get anchorUrl () {
         const {url, release} = this.props.game;
 
         return (url && release) ? url.replace('https://en.wikipedia.org/wiki/', '') : null;
     }
+
     get anchor () {
         const {url, release} = this.props.game;
 
@@ -201,7 +206,7 @@ class TimelineGame extends Component {
                     expansion ? 'expansion' : '',
                     !release ? 'release-unknown' : '',
                 ]}
-                data-anchor={this.anchorUrl}
+                ref={this.gameRef}
             >
                 {this.anchor}
                 {this.title}

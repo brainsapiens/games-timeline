@@ -57,9 +57,6 @@ class TimelineTable extends Component {
 
         this.addTableScrollPosition();
     }
-    componentWillUnmount () {
-        this.removeTableScrollPosition();
-    }
 
     setTableScrollPosition = () => {
         const table = this.table;
@@ -68,6 +65,7 @@ class TimelineTable extends Component {
         storage.setItem('tableScrollTop', table.scrollTop);
         storage.setItem('tableScrollLeft', table.scrollLeft);
     }
+
     addTableScrollPosition = () => {
         const table = this.table;
 
@@ -88,16 +86,11 @@ class TimelineTable extends Component {
                 storage.setItem('tableScrollLeft', table.scrollLeft);
             }
         }
-
-        table.addEventListener('scroll', this.setTableScrollPosition);
-    }
-    removeTableScrollPosition = () => {
-        this.table.removeEventListener('scroll', this.setTableScrollPosition);
     }
 
     render () {
         return (
-            <Table ref={this.tableRef}>
+            <Table ref={this.tableRef} onScroll={this.setTableScrollPosition}>
                 <div />
                 <TimelineYears />
                 <TimelineGenres />

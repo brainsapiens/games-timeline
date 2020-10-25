@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -19,19 +19,15 @@ const Link = styled(NavLink)`
     text-decoration: none;
 `;
 
-class AppTitle extends Component {
-    render () {
-        const {title} = global.app;
+const {app: {title}} = global;
 
-        return (
-            <Title>
-                <Link to='/' exact>
-                    <AppLogo />
-                    {title}
-                </Link>
-            </Title>
-        )
-    }
-}
+const AppTitle = () => (
+    <Title>
+        <Link to='/'>
+            <AppLogo />
+            {title}
+        </Link>
+    </Title>
+);
 
 export default AppTitle;

@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import UiContainer from '../../Ui/Container';
@@ -19,19 +19,15 @@ const HeaderInner = styled.div`
     color: var(--color-inverse);
 `;
 
-class AppHeader extends Component {
-    render () {
-        return (
-            <Header role='banner'>
-                <UiContainer>
-                    <HeaderInner>
-                        <AppTitle />
-                        <AppNav />
-                    </HeaderInner>
-                </UiContainer>
-            </Header>
-        )
-    }
-}
+const AppHeader = () => (
+    <Header role='banner'>
+        <UiContainer>
+            <HeaderInner>
+                <AppTitle />
+                <AppNav />
+            </HeaderInner>
+        </UiContainer>
+    </Header>
+);
 
 export default AppHeader;

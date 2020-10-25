@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useMemo} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -9,20 +9,16 @@ const Text = styled.p`
     text-align: center;
 `;
 
-class AppCopyright extends Component {
-    get currentYear () {
-        return new Date().getFullYear();
-    }
+const {app: {title}} = global;
 
-    render () {
-        const {title} = global.app;
+const AppCopyright = () => {
+    const currentYear = useMemo(() => new Date().getFullYear(), []);
 
-        return (
-            <Text>
-                &copy;&nbsp;{this.currentYear} <NavLink to='/' exact>{title}</NavLink>
-            </Text>
-        )
-    }
-}
+    return (
+        <Text>
+            &copy;&nbsp;{currentYear} <NavLink to='/' exact>{title}</NavLink>
+        </Text>
+    )
+};
 
 export default AppCopyright;

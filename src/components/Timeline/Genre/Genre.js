@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 const Genre = styled.div`
@@ -22,16 +22,10 @@ const Genre = styled.div`
     }
 `;
 
-class TimelineGenre extends Component {
-    render () {
-        const {genreName} = this.props;
-
-        return (
-            <Genre>
-                <span>{genreName}</span>
-            </Genre>
-        )
-    }
-}
+const TimelineGenre = ({genreName}) => (
+    <Genre>
+        <span>{genreName}</span>
+    </Genre>
+);
 
 export default TimelineGenre;

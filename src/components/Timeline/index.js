@@ -6,7 +6,7 @@ import TimelineTable from './Table';
 // Styles
 const Timeline = styled.div`
     position: relative;
-    width: 100vw;
+    width: 100vw - (100vw - 100%));
     
     &::before,
     &::after {
@@ -27,10 +27,8 @@ const Timeline = styled.div`
     }
 `;
 
-export default function () {
-    return (
-        <Timeline>
-            <TimelineTable />
-        </Timeline>
-    );
-};
+export default () => (
+    <Timeline>
+        <TimelineTable />
+    </Timeline>
+);
