@@ -17,8 +17,8 @@ const Table = styled.div`
     
     > div {
         padding: var(--cell-padding);
-        border-right: 1px solid var(--border-color);
-        border-bottom: 1px solid var(--border-color);
+        border-right: 1px solid var(--border-color-base);
+        border-bottom: 1px solid var(--border-color-base);
         
         &:first-child {
             position: sticky;

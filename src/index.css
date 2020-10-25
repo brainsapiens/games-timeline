@@ -17,14 +17,15 @@
     --line-height-base: 1.4;
     --line-height-title: 1.2;
 
-    --border-color: #eee;
+    --border-color-base: #eee;
 
     --transition-duration-base: .1s;
 
-    --cell-padding: .8rem;
+    --indent-base: 1.6rem;
+    --cell-padding: calc(var(--indent-base) / 2);
 
     --year-height: 3.6rem;
-    --genre-width: 3.6rem;
+    --genre-width: var(--year-height);
 
     --bar-height: 4.8rem;
 }

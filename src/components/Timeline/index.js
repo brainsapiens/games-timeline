@@ -14,7 +14,7 @@ const Timeline = styled.div`
         z-index: 200;
         bottom: 0;
         left: 0;
-        background-color: var(--border-color);
+        background-color: var(--border-color-base);
         content: "";
     }
     &::before {
