@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
-import games from '../../../data/games.json'
+import games from '../../../data/games';
 
 import Game from '../Game';
 
