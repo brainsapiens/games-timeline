@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import styled from 'styled-components';
 
 import games from '../../../data/games';
+import debounce from '../../../utils/debounce';
 
 import TimelineYears from '../Years';
 import TimelineGenres from '../Genres';
@@ -90,7 +91,7 @@ class TimelineTable extends Component {
 
     render () {
         return (
-            <Table ref={this.tableRef} onScroll={this.setTableScrollPosition}>
+            <Table ref={this.tableRef} onScroll={debounce(this.setTableScrollPosition)}>
                 <div />
                 <TimelineYears />
                 <TimelineGenres />
