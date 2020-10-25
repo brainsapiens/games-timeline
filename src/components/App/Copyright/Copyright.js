@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useMemo} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
@@ -11,7 +11,7 @@ const Text = styled.p`
 `;
 
 const AppCopyright = () => {
-    const currentYear = new Date().getFullYear();
+    const currentYear = useMemo(() => new Date().getFullYear(), []);
 
     return (
         <Text>
