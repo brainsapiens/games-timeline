@@ -780,6 +780,12 @@
       "expansion": true
     },
     {
+      "title": "Gothic",
+      "url": "https://en.wikipedia.org/wiki/Gothic_(video_game)",
+      "genre": "role-playing",
+      "release": "March 15"
+    },
+    {
       "title": "Evil Islands:<br/> Curse of&nbsp;the Lost Soul",
       "url": "https://en.wikipedia.org/wiki/Evil_Islands:_Curse_of_the_Lost_Soul",
       "genre": "role-playing",
@@ -882,6 +888,12 @@
       "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
       "genre": "strategy",
       "release": "October 30"
+    },
+    {
+      "title": "Gothic&nbsp;II",
+      "url": "https://en.wikipedia.org/wiki/Gothic_II",
+      "genre": "role-playing",
+      "release": "November 29"
     }
   ],
   "2003": [
@@ -890,6 +902,13 @@
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_The_Frozen_Throne",
       "genre": "strategy",
       "release": "July 1",
+      "expansion": true
+    },
+    {
+      "title": "Gothic&nbsp;II:<br/> Night of&nbsp;the Raven",
+      "url": "https://en.wikipedia.org/wiki/Gothic_II:_Night_of_the_Raven",
+      "genre": "role-playing",
+      "release": "August 22",
       "expansion": true
     },
     {
@@ -981,6 +1000,12 @@
       "expansion": true
     },
     {
+      "title": "Gothic&nbsp;3",
+      "url": "https://en.wikipedia.org/wiki/Gothic_3",
+      "genre": "role-playing",
+      "release": "October 13"
+    },
+    {
       "title": "Need for Speed:<br/> Carbon",
       "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Carbon",
       "genre": "racing",
@@ -1000,6 +1025,15 @@
       "url": "https://en.wikipedia.org/wiki/Helldorado_(video_game)",
       "genre": "tactics",
       "release": "November 30"
+    }
+  ],
+  "2008": [
+    {
+      "title": "Gothic&nbsp;3:<br/> Forsaken Gods",
+      "url": "https://en.wikipedia.org/wiki/Gothic_3:_Forsaken_Gods",
+      "genre": "role-playing",
+      "release": "November 20",
+      "expansion": true
     }
   ]
 }
