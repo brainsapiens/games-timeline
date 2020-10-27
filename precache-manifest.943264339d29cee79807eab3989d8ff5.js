@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f425cc6a5313f769589333224a61218d",
+    "revision": "3b115b23deb89aa5f05dcc494f56c954",
     "url": "/games-timeline/index.html"
   },
   {
-    "revision": "0cb28f008e9adf8a102f",
+    "revision": "92eb2437efa4cbd576dd",
     "url": "/games-timeline/static/css/2.764ccc25.chunk.css"
   },
   {
-    "revision": "953ffa66218cb51d3a1b",
+    "revision": "9b851fedba7ef20543f1",
     "url": "/games-timeline/static/css/main.3de66170.chunk.css"
   },
   {
-    "revision": "0cb28f008e9adf8a102f",
-    "url": "/games-timeline/static/js/2.042765a7.chunk.js"
+    "revision": "92eb2437efa4cbd576dd",
+    "url": "/games-timeline/static/js/2.00bfab70.chunk.js"
   },
   {
     "revision": "c64c486544348f10a6d6c716950bc223",
-    "url": "/games-timeline/static/js/2.042765a7.chunk.js.LICENSE.txt"
+    "url": "/games-timeline/static/js/2.00bfab70.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "953ffa66218cb51d3a1b",
-    "url": "/games-timeline/static/js/main.0c4ccec4.chunk.js"
+    "revision": "9b851fedba7ef20543f1",
+    "url": "/games-timeline/static/js/main.7682c70b.chunk.js"
   },
   {
     "revision": "d31b4acdfcefc42da775",
