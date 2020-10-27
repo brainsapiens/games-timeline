@@ -10,11 +10,31 @@ import TimelineGenres from '../Genres';
 const numberOfYears = Object.keys(games).length;
 
 const Table = styled.div`
+    position: relative;
     display: grid;
     grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
     grid-template-rows: var(--year-height) auto;
+    width: 100vw;
     max-height: calc(100vh - var(--bar-height));
     overflow: auto;
+    
+    &::before,
+    &::after {
+        position: absolute;
+        z-index: 200;
+        bottom: 0;
+        left: 0;
+        background-color: var(--border-color-base);
+        content: "";
+    }
+    &::before {
+        width: 1px;
+        height: 100%;
+    }
+    &::after {
+        width: 100%;
+        height: 1px;
+    }
     
     > div {
         padding: var(--cell-padding);
