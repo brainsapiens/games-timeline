@@ -1,6 +1,7 @@
 export default {
     app: {
-        title: 'Games Timeline'
+        title: 'Games Timeline',
+        basename: '/games-timeline/'
     },
     pages: {
         about: {
