@@ -8,7 +8,7 @@ import Game from '../Game';
 const List = styled.ol`
     display: flex;
     flex-wrap: wrap;
-    grid-gap: .8rem;
+    gap: .8rem;
 `;
 const Item = styled.li`
     &.full-width {
