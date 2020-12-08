@@ -52,6 +52,8 @@ body {
 
 html {
     font-size: var(--font-size-root);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 body {
