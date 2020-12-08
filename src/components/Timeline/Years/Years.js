@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import games from '../../../data/games';
@@ -23,22 +23,18 @@ const Year = styled.div`
   }
 `;
 
-class TimelineYears extends Component {
-    get years() {
-        const listOfYears = Object.keys(games);
+const years = () => {
+    const listOfYears = Object.keys(games);
 
-        return listOfYears.map(year => {
-            return (
-                <Year key={year}>
-                    <span>{year}</span>
-                </Year>
-            )
-        });
-    }
-
-    render() {
-        return this.years;
-    }
+    return listOfYears.map(year => {
+        return (
+            <Year key={year}>
+                <span>{year}</span>
+            </Year>
+        )
+    });
 }
+
+const TimelineYears = () => years();
 
 export default TimelineYears;
