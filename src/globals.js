@@ -1,4 +1,4 @@
-export default {
+const globals = {
     app: {
         title: 'Games Timeline',
         basename: '/games-timeline/'
@@ -13,3 +13,5 @@ export default {
         anchorUrlPattern: /https:\/\/(en|ru).wikipedia.org\/wiki\//g
     }
 }
+
+export default globals;

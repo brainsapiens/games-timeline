@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import globals from '../../../globals';
@@ -122,8 +123,8 @@ class TimelineGame extends Component {
         this.gameRef = React.createRef();
     }
 
-    componentDidMount() {
-        this.setAnchor(this.gameRef.current);
+    static propTypes = {
+        game: PropTypes.object.isRequired
     }
 
     setAnchor = (game) => {
@@ -199,6 +200,10 @@ class TimelineGame extends Component {
                 {this.footer}
             </Game>
         )
+    }
+
+    componentDidMount() {
+        this.setAnchor(this.gameRef.current);
     }
 }
 

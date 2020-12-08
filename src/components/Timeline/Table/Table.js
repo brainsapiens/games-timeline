@@ -77,12 +77,6 @@ class TimelineTable extends Component {
     storage = window.sessionStorage;
     table = null;
 
-    componentDidMount() {
-        this.table = this.tableRef.current;
-
-        this.addTableScrollPosition();
-    }
-
     setTableScrollPosition = () => {
         const table = this.table;
         const storage = this.storage;
@@ -121,6 +115,12 @@ class TimelineTable extends Component {
                 <TimelineGenres/>
             </Table>
         )
+    }
+
+    componentDidMount() {
+        this.table = this.tableRef.current;
+
+        this.addTableScrollPosition();
     }
 }
 

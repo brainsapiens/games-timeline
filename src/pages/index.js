@@ -8,7 +8,7 @@ import globals from '../globals';
 
 const {pages} = globals;
 
-export default () => {
+const Pages = () => {
     const {about} = pages;
 
     return (
@@ -18,3 +18,5 @@ export default () => {
         </Switch>
     )
 };
+
+export default Pages;

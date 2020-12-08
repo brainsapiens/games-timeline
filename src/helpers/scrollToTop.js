@@ -1,4 +1,4 @@
-export default function () {
+const scrollToTop = () => {
     const {history} = window;
 
     if ('scrollRestoration' in history) {
@@ -7,3 +7,5 @@ export default function () {
 
     window.scrollTo(0, 0);
 };
+
+export default scrollToTop;

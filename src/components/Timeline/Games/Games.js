@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import games from '../../../data/games';
@@ -84,5 +85,9 @@ const gamesByQuarters = (genreName) => {
 }
 
 const TimelineGames = ({genreName}) => gamesByQuarters(genreName);
+
+TimelineGames.propTypes = {
+    genreName: PropTypes.string.isRequired
+}
 
 export default TimelineGames;
