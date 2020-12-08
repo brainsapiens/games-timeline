@@ -5,21 +5,28 @@ import UiContainer from '../../Ui/Container';
 import AppCopyright from '../Copyright';
 
 const Footer = styled.footer`
-    display: grid;
-    align-items: center;
-    height: var(--bar-height);
-    background-color: var(--color-lightest);
-  
-    position: relative;
-    z-index: 101;
-    top: -1px;
-    border-top: 1px solid var(--color-light);
+  position: relative;
+  z-index: 102;
+  display: grid;
+  align-items: center;
+  height: var(--bar-height);
+  background-color: ${props => props.theme.appFooter.backgroundColor};
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: ${props => props.theme.appFooter.borderColor};
+  }
 `;
 
 const AppFooter = () => (
     <Footer role='contentinfo'>
         <UiContainer>
-            <AppCopyright />
+            <AppCopyright/>
         </UiContainer>
     </Footer>
 );

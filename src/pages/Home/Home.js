@@ -5,8 +5,8 @@ import TimelineTable from '../../components/Timeline/Table';
 
 const Home = () => (
     <>
-        <AppHead />
-        <TimelineTable />
+        <AppHead/>
+        <TimelineTable/>
     </>
 )
 

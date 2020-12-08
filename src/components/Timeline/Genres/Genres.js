@@ -6,7 +6,7 @@ import TimelineGenre from '../Genre';
 import TimelineGames from '../Games';
 
 class TimelineGenres extends Component {
-    get listOfGenres () {
+    get listOfGenres() {
         const listOfGenres = [];
         const listOfGames = Object.values(games);
 
@@ -25,16 +25,16 @@ class TimelineGenres extends Component {
         return listOfGenres;
     }
 
-    get genres () {
+    get genres() {
         return this.listOfGenres.map((genreName, index) => {
             return ([
-                <TimelineGenre key={genreName} genreName={genreName} />,
-                <TimelineGames key={index} genreName={genreName} />
+                <TimelineGenre key={genreName} genreName={genreName}/>,
+                <TimelineGames key={index} genreName={genreName}/>
             ])
         });
     }
 
-    render () {
+    render() {
         return this.genres;
     }
 }

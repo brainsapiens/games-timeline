@@ -10,62 +10,65 @@ import TimelineGenres from '../Genres';
 const numberOfYears = Object.keys(games).length;
 
 const Table = styled.div`
-    position: relative;
-    display: grid;
-    grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
-    grid-template-rows: var(--year-height) auto;
-    width: 100vw;
-    max-height: calc(100vh - var(--bar-height));
-    overflow: auto;
-    
-    &::before,
-    &::after {
-        position: absolute;
-        z-index: 200;
-        bottom: 0;
-        left: 0;
-        background-color: var(--color-light);
-        content: "";
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
+  grid-template-rows: var(--year-height) auto;
+  width: 100vw;
+  max-height: calc(100vh - var(--bar-height));
+  overflow: auto;
+
+  &::before,
+  &::after {
+    position: absolute;
+    z-index: 200;
+    bottom: 0;
+    left: 0;
+    background-color: ${props => props.theme.timelineTable.borderColor}
+    content: "";
+  }
+
+  &::before {
+    width: 1px;
+    height: 100%;
+  }
+
+  &::after {
+    width: 100%;
+    height: 1px;
+  }
+
+  > div {
+    padding: var(--cell-padding);
+    border-right: 1px solid ${props => props.theme.timelineTable.borderColor};
+    border-bottom: 1px solid ${props => props.theme.timelineTable.borderColor};
+
+    &:first-child {
+      position: sticky;
+      z-index: 101;
+      top: 0;
+      left: 0;
+      padding: var(--cell-padding);
+      background-color: ${props => props.theme.timelineTable.cellBackgroundColor};
     }
-    &::before {
-        width: 1px;
-        height: 100%;
+
+    &[data-quarter]:not([data-quarter='Q4']) {
+      border-right-style: dashed;
     }
-    &::after {
-        width: 100%;
-        height: 1px;
+
+    &[data-quarter]::before {
+      display: block;
+      margin-bottom: var(--cell-padding);
+      color: rgba(${props => props.theme.timelineTable.quarterColor}, .25);
+      content: attr(data-quarter);
+      font-size: .9rem;
+      text-align: right;
     }
-    
-    > div {
-        padding: var(--cell-padding);
-        border-right: 1px solid var(--color-light);
-        border-bottom: 1px solid var(--color-light);
-        
-        &:first-child {
-            position: sticky;
-            z-index: 101;
-            top: 0;
-            left: 0;
-            padding: var(--cell-padding);
-            background-color: var(--cell-background-color);
-        }
-        
-        &[data-quarter]:not([data-quarter='Q4']) {
-            border-right-style: dashed;
-        }
-        &[data-quarter]::before {
-            display: block;
-            margin-bottom: var(--cell-padding);
-            color: rgba(var(--color-darkest-rgb), .25);
-            content: attr(data-quarter);
-            font-size: .9rem;
-            text-align: right;
-        }
-    }
+  }
 `;
 
 class TimelineTable extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.tableRef = React.createRef();
         this.setTableScrollPosition = debounce(this.setTableScrollPosition.bind(this));
@@ -74,7 +77,7 @@ class TimelineTable extends Component {
     storage = window.sessionStorage;
     table = null;
 
-    componentDidMount () {
+    componentDidMount() {
         this.table = this.tableRef.current;
 
         this.addTableScrollPosition();
@@ -110,12 +113,12 @@ class TimelineTable extends Component {
         }
     }
 
-    render () {
+    render() {
         return (
             <Table ref={this.tableRef} onScroll={this.setTableScrollPosition}>
-                <div />
-                <TimelineYears />
-                <TimelineGenres />
+                <div/>
+                <TimelineYears/>
+                <TimelineGenres/>
             </Table>
         )
     }

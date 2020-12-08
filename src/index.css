@@ -7,10 +7,14 @@
     --color-darkest-rgb: 0, 0, 0;
     --color-darkest: #000;
     --color-dark: #333;
-    --color-muted: #666;
+    --color-muted: #999;
     --color-light: #eee;
     --color-lightest: #fff;
     --color-lightest-rgb: 255, 255, 255;
+
+    /* Links */
+    --color-link-basic: blue;
+    --color-link-muted: #ccc;
 
     /* Typography */
     --font-family-basic: 'Roboto Mono', monospace;
@@ -28,23 +32,27 @@
     --indent-basic: 1.6rem;
 
     --year-height: 3.6rem;
+
     --genre-width: var(--year-height);
 
     --bar-height: 4.8rem;
 
     /* Cells */
     --cell-padding: calc(var(--indent-basic) / 2);
-    --cell-background-color: #fafafa;
+    --cell-background-color-basic: #fafafa;
+    --cell-background-color-inverse: #0a0a0a;
 
     /* Games */
-    --game-release-unknown-background-color: #f5f5f5;
+    --game-release-unknown-background-color-basic: #f5f5f5;
+    --game-release-unknown-background-color-inverse: #0e0e0e;
 }
 
 :focus:not(:focus-visible) {
     outline: 0;
 }
+
 :focus-visible {
-    outline: 2px solid blue;
+    outline: 2px solid var(--color-link-basic);
 }
 
 *,
@@ -80,20 +88,23 @@ h2 {
     font-weight: var(--font-weight-title);
     line-height: var(--line-height-title);
 }
+
 h1 {
     margin: 0;
 }
 
 a {
-    color: blue;
+    color: var(--color-link-basic);
     transition: all var(--transition-duration-basic, 0s);
 }
-a:hover {
+
+a:hover,
+a.active {
     text-decoration: none;
 }
+
 a.active {
     cursor: default;
-    text-decoration: none;
 }
 
 ol,

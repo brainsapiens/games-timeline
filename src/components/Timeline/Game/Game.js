@@ -4,142 +4,125 @@ import styled from 'styled-components';
 import globals from '../../../globals';
 import iconLink from '../../../images/icons/link.svg';
 
-const releaseUnknownGameTitle = `
-    .game-title {
-        color: var(--color-muted);
-        
-        [data-quarter]:not([data-quarter='Q1']) & {
-            visibility: hidden;
-        }
-
-        > a {
-            background-color: unset;
-            color: var(--color-muted);
-            
-            &:hover {
-                background-color: unset;
-                color: var(--color-dark);
-            }
-        }
-    }
-`;
 const Game = styled.article`
-    position: relative;
-    padding: .4rem .8rem;
-    background-color: var(--color-darkest);
-    color: var(--color-lightest);
-    
-    &:hover {
-        z-index: 300;
+  position: relative;
+  padding: .4rem .8rem;
+  background-color: ${props => props.theme.timelineGame.backgroundColor};
+
+  &:hover {
+    z-index: 300;
+  }
+
+  &.expansion {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: unset;
+  }
+
+  &.release-unknown {
+    margin-right: -.8rem;
+    margin-left: -.8rem;
+    padding: .4rem 1.6rem;
+    background-color: ${props => props.theme.timelineGame.releaseUnknownBackgroundColor};
+
+    [data-quarter='Q2'] &,
+    [data-quarter='Q3'] & {
+      margin-right: -.9rem;
+      margin-left: -.9rem;
     }
-    
-    a {
-        color: var(--color-lightest);
-    }
-    
-    &.expansion {
-        padding-top: 0;
-        padding-bottom: 0;
-        background-color: unset;
-        color: var(--color-darkest);
-        
-        a {
-            color: var(--color-darkest);
-        }
-    }
-    
-    &.release-unknown {
-        margin-right: -.8rem;
-        margin-left: -.8rem;
-        padding: .4rem 1.6rem;
-        background-color: var(--game-release-unknown-background-color);
-        color: var(--color-muted);
-        
-        [data-quarter='Q2'] &,
-        [data-quarter='Q3'] & {
-            margin-right: -.9rem;
-            margin-left: -.9rem;
-        }
-        
-        ${releaseUnknownGameTitle};
-        
-        &.expansion {
-            ${releaseUnknownGameTitle};
-        }
-    }
+  }
 `;
 const Anchor = styled.a`
-    position: absolute;
-    top: 0;
-    right: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: .6rem;
-    background-color: rgba(var(--color-lightest-rgb), .75);
-    opacity: 0;
+  position: absolute;
+  top: 0;
+  right: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: .6rem;
+  background-color: rgba(${props => props.theme.timelineGame.anchorBackgroundColor}, .75);
+  opacity: 0;
+  transition: opacity var(--transition-duration-basic);
+
+  &:hover > img {
+    opacity: 1;
+  }
+
+  > img {
+    flex: 0 0 auto;
+    opacity: .75;
     transition: opacity var(--transition-duration-basic);
+    filter: ${props => props.theme.timelineGame.anchorIconFilter}
+  }
 
-    &:hover > img {
-        opacity: 1;
-    }
-
-    > img {
-        flex: 0 0 auto;
-        opacity: .75;
-        transition: opacity var(--transition-duration-basic);
-    }
-    
-    ${Game}:hover & {
-        opacity: 1;
-    }
+  ${Game}:hover & {
+    opacity: 1;
+  }
 `;
 const Title = styled.h2`
-    color: var(--color-lighest);
-    font-size: 1.3rem;
-    font-weight: unset;
-    line-height: unset;
-    white-space: nowrap;
-    
-    ${Game}.expansion & {
-        color: var(--color-darkest);
+  color: ${props => props.theme.timelineGame.titleColor};
+  font-size: 1.3rem;
+  font-weight: unset;
+  line-height: unset;
+  white-space: nowrap;
+  
+  > a {
+    color: ${props => props.theme.timelineGame.titleLinkColor};
+    text-decoration: none;
+
+    &:hover {
+      background-color: ${props => props.theme.timelineGame.titleLinkHoverBackgroundColor};
+      color: ${props => props.theme.timelineGame.titleLinkHoverColor};
+    }
+  }
+  
+  ${Game}.expansion & {
+    color: ${props => props.theme.timelineGame.titleExpansionColor};
+
+    > a {
+      color: ${props => props.theme.timelineGame.titleExpansionLinkColor};
+      
+      &:hover {
+        background-color: ${props => props.theme.timelineGame.titleExpansionLinkHoverBackgroundColor};
+        color: ${props => props.theme.timelineGame.titleExpansionLinkHoverColor};
+      }
+    }
+  }
+  
+  ${Game}.release-unknown & {
+    color: var(--color-muted);
+
+    [data-quarter]:not([data-quarter='Q1']) & {
+      visibility: hidden;
     }
     
     > a {
-        color: var(--color-lightest);
-        text-decoration: none;
-        
-        &:hover {
-            background-color: var(--color-lightest);
-            color: var(--color-darkest);
-            
-            ${Game}.expansion & {
-                background-color: var(--color-darkest);
-                color: var(--color-lightest);
-            }
-        }
+      background-color: unset;
+      color: var(--color-muted);
+
+      &:hover {
+        background-color: unset;
+        color: ${props => props.theme.timelineGame.titleReleaseUnknownLinkHoverColor};
+      }
     }
+  }
 `;
 const Footer = styled.footer`
-    > time {
-        color: rgba(var(--color-lightest-rgb), .75);
-        font-size: 1.1rem;
-        white-space: nowrap;
-        
-        ${Game}.expansion & {
-            color: var(--color-muted);
-        }
-    }
+  > time {
+    color: var(--color-muted);
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
 `;
 
 class TimelineGame extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.gameRef = React.createRef();
     }
 
-    componentDidMount () {
+    componentDidMount() {
         this.setAnchor(this.gameRef.current);
     }
 
@@ -158,14 +141,14 @@ class TimelineGame extends Component {
         }
     }
 
-    get anchorUrl () {
+    get anchorUrl() {
         const {url, release} = this.props.game;
         const {games: {anchorUrlPattern}} = globals;
 
         return (url && release) ? url.replace(anchorUrlPattern, '') : null;
     }
 
-    get anchor () {
+    get anchor() {
         const {url, release} = this.props.game;
 
         return (url && release) ? (
@@ -173,23 +156,24 @@ class TimelineGame extends Component {
                 href={`#${this.anchorUrl}`}
                 title='Anchor'
             >
-                <img src={iconLink} width='24' height='24' alt='anchor' />
+                <img src={iconLink} width='24' height='24' alt='anchor'/>
             </Anchor>
         ) : null
     }
 
-    get title () {
+    get title() {
         const {title, url} = this.props.game;
 
         return url ? (
             <Title className='game-title'>
-                <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
+                <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{__html: title}}/>
             </Title>
         ) : (
-            <Title className='game-title' dangerouslySetInnerHTML={{ __html: title }} />
+            <Title className='game-title' dangerouslySetInnerHTML={{__html: title}}/>
         )
     }
-    get footer () {
+
+    get footer() {
         const {release} = this.props.game;
 
         return release ? (
@@ -199,7 +183,7 @@ class TimelineGame extends Component {
         ) : null
     }
 
-    render () {
+    render() {
         const {release, expansion} = this.props.game;
 
         return (

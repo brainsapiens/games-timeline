@@ -6,18 +6,18 @@ import games from '../../../data/games';
 import Game from '../Game';
 
 const List = styled.ol`
-    display: flex;
-    flex-wrap: wrap;
-    gap: .8rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: .8rem;
 `;
 const Item = styled.li`
-    &.full-width {
-        flex-basis: 100%;
-    }
+  &.full-width {
+    flex-basis: 100%;
+  }
 `;
 
 class TimelineGames extends Component {
-    matchGameToQuarter (index, year, release) {
+    matchGameToQuarter(index, year, release) {
         if (!release) return true;
 
         let date = new Date(release);
@@ -35,7 +35,7 @@ class TimelineGames extends Component {
         return index === 4 && monthIndex > 9 && monthIndex <= 12;
     }
 
-    get games () {
+    get games() {
         const {genreName} = this.props;
         const listOfYears = Object.keys(games);
 
@@ -56,7 +56,7 @@ class TimelineGames extends Component {
                                     key={title}
                                     className={!release ? 'full-width' : ''}
                                 >
-                                    <Game key={title} game={game} />
+                                    <Game key={title} game={game}/>
                                 </Item>
                             );
                         }
@@ -86,7 +86,7 @@ class TimelineGames extends Component {
         });
     }
 
-    render () {
+    render() {
         return this.games;
     }
 }

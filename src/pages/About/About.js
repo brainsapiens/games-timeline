@@ -6,8 +6,9 @@ import AppHead from '../../components/App/Head';
 import UiContainer from '../../components/Ui/Container';
 import UiContent from '../../components/Ui/Content';
 
-import global from '../../globals';
-const {pages: {about: {title}}} = global;
+import globals from '../../globals';
+
+const {pages: {about: {title}}} = globals;
 
 const About = () => {
     useEffect(() => {
@@ -16,15 +17,18 @@ const About = () => {
 
     return (
         <>
-            <AppHead title={title} />
+            <AppHead title={title}/>
             <UiContainer>
                 <UiContent>
                     <section>
                         <h2>Author</h2>
                         <p>Vyacheslav Efremenko</p>
                         <ul>
-                            <li>Email: <a href='mailto:brainsapiens@gmail.com' rel='noopener noreferrer'>brainsapiens@gmail.com</a></li>
-                            <li>Source code: <a href='https://github.com/brainsapiens/games-timeline' rel='noopener noreferrer' target='_blank'>https://github.com/brainsapiens/games-timeline</a></li>
+                            <li>Email: <a href='mailto:brainsapiens@gmail.com'
+                                          rel='noopener noreferrer'>brainsapiens@gmail.com</a></li>
+                            <li>Source code: <a href='https://github.com/brainsapiens/games-timeline'
+                                                rel='noopener noreferrer'
+                                                target='_blank'>https://github.com/brainsapiens/games-timeline</a></li>
                         </ul>
                     </section>
                 </UiContent>

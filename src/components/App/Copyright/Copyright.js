@@ -2,16 +2,20 @@ import React, {useMemo} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import global from '../../../globals';
-const {app: {title}} = global;
+import globals from '../../../globals';
+
+const {app: {title}} = globals;
 
 const Text = styled.p`
-    color: var(--color-muted);
-    text-align: center;
-`;
-const Link = styled(NavLink)`
-  &.active {
-    color: var(--color-muted);
+  color: var(--color-muted);
+  text-align: center;
+
+  a {
+    color: ${props => props.theme.appCopyright.linkColor};
+
+    &.active {
+      color: var(--color-muted);
+    }
   }
 `;
 
@@ -20,7 +24,7 @@ const AppCopyright = () => {
 
     return (
         <Text>
-            &copy;&nbsp;{currentYear} <Link to='/' exact>{title}</Link>
+            &copy;&nbsp;{currentYear} <NavLink to='/' exact>{title}</NavLink>
         </Text>
     );
 };

@@ -1,8 +1,9 @@
 import React from 'react';
 import Helmet from 'react-helmet';
 
-import global from '../../../globals';
-const {app: {title: appTitle}} = global;
+import globals from '../../../globals';
+
+const {app: {title: appTitle}} = globals;
 
 const AppHead = ({title}) => (
     <Helmet

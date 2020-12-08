@@ -4,27 +4,27 @@ import styled from 'styled-components';
 import games from '../../../data/games';
 
 const Year = styled.div`
+  position: sticky;
+  z-index: 100;
+  top: 0;
+  grid-column: auto / span 4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: ${props => props.theme.timelineTable.cellBackgroundColor};
+
+  > span {
     position: sticky;
-    z-index: 100;
-    top: 0;
-    grid-column: auto / span 4;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: var(--cell-background-color);
-    
-    > span {
-        position: sticky;
-        right: var(--cell-padding);
-        left: calc(var(--genre-width) + var(--cell-padding));
-        font-weight: var(--font-weight-title);
-        text-transform: uppercase;
-        white-space: nowrap;
-    }
+    right: var(--cell-padding);
+    left: calc(var(--genre-width) + var(--cell-padding));
+    font-weight: var(--font-weight-title);
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
 `;
 
 class TimelineYears extends Component {
-    get years () {
+    get years() {
         const listOfYears = Object.keys(games);
 
         return listOfYears.map(year => {
@@ -36,7 +36,7 @@ class TimelineYears extends Component {
         });
     }
 
-    render () {
+    render() {
         return this.years;
     }
 }
