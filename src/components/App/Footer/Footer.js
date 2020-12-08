@@ -8,6 +8,12 @@ const Footer = styled.footer`
     display: grid;
     align-items: center;
     height: var(--bar-height);
+    background-color: var(--color-lightest);
+  
+    position: relative;
+    z-index: 101;
+    top: -1px;
+    border-top: 1px solid var(--color-light);
 `;
 
 const AppFooter = () => (

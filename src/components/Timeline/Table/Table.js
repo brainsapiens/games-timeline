@@ -24,7 +24,7 @@ const Table = styled.div`
         z-index: 200;
         bottom: 0;
         left: 0;
-        background-color: var(--border-color-base);
+        background-color: var(--color-light);
         content: "";
     }
     &::before {
@@ -38,8 +38,8 @@ const Table = styled.div`
     
     > div {
         padding: var(--cell-padding);
-        border-right: 1px solid var(--border-color-base);
-        border-bottom: 1px solid var(--border-color-base);
+        border-right: 1px solid var(--color-light);
+        border-bottom: 1px solid var(--color-light);
         
         &:first-child {
             position: sticky;
@@ -47,7 +47,7 @@ const Table = styled.div`
             top: 0;
             left: 0;
             padding: var(--cell-padding);
-            background-color: #fafafa;
+            background-color: var(--cell-background-color);
         }
         
         &[data-quarter]:not([data-quarter='Q4']) {
@@ -56,7 +56,7 @@ const Table = styled.div`
         &[data-quarter]::before {
             display: block;
             margin-bottom: var(--cell-padding);
-            color: #ccc;
+            color: rgba(var(--color-darkest-rgb), .25);
             content: attr(data-quarter);
             font-size: .9rem;
             text-align: right;

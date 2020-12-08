@@ -11,7 +11,7 @@ const Year = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #fafafa;
+    background-color: var(--cell-background-color);
     
     > span {
         position: sticky;

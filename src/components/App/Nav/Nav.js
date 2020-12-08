@@ -2,7 +2,7 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import global from '../../../global';
+import global from '../../../globals';
 const {pages} = global;
 
 const Nav = styled.nav`

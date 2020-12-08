@@ -1,11 +1,12 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 
+import globals from '../../../globals';
 import iconLink from '../../../images/icons/link.svg';
 
 const releaseUnknownGameTitle = `
     .game-title {
-        color: #666;
+        color: var(--color-muted);
         
         [data-quarter]:not([data-quarter='Q1']) & {
             visibility: hidden;
@@ -13,11 +14,11 @@ const releaseUnknownGameTitle = `
 
         > a {
             background-color: unset;
-            color: #666;
+            color: var(--color-muted);
             
             &:hover {
                 background-color: unset;
-                color: #333;
+                color: var(--color-dark);
             }
         }
     }
@@ -25,25 +26,25 @@ const releaseUnknownGameTitle = `
 const Game = styled.article`
     position: relative;
     padding: .4rem .8rem;
-    background-color: #000;
-    color: #fff;
+    background-color: var(--color-darkest);
+    color: var(--color-lightest);
     
     &:hover {
         z-index: 300;
     }
     
     a {
-        color: #fff;
+        color: var(--color-lightest);
     }
     
     &.expansion {
         padding-top: 0;
         padding-bottom: 0;
         background-color: unset;
-        color: #000;
+        color: var(--color-darkest);
         
         a {
-            color: #000;
+            color: var(--color-darkest);
         }
     }
     
@@ -51,8 +52,8 @@ const Game = styled.article`
         margin-right: -.8rem;
         margin-left: -.8rem;
         padding: .4rem 1.6rem;
-        background-color: #f5f5f5;
-        color: #666;
+        background-color: var(--game-release-unknown-background-color);
+        color: var(--color-muted);
         
         [data-quarter='Q2'] &,
         [data-quarter='Q3'] & {
@@ -76,18 +77,18 @@ const Anchor = styled.a`
     align-items: center;
     height: 100%;
     padding: .6rem;
-    background-color: rgba(255, 255, 255, .75);
-    color: #000;
+    background-color: rgba(var(--color-lightest-rgb), .75);
     opacity: 0;
-    transition: opacity var(--transition-duration-base);
+    transition: opacity var(--transition-duration-basic);
 
     &:hover > img {
         opacity: 1;
     }
 
     > img {
+        flex: 0 0 auto;
         opacity: .75;
-        transition: opacity var(--transition-duration-base);
+        transition: opacity var(--transition-duration-basic);
     }
     
     ${Game}:hover & {
@@ -95,39 +96,39 @@ const Anchor = styled.a`
     }
 `;
 const Title = styled.h2`
-    color: #fff;
+    color: var(--color-lighest);
     font-size: 1.3rem;
     font-weight: unset;
     line-height: unset;
     white-space: nowrap;
     
     ${Game}.expansion & {
-        color: #000;
+        color: var(--color-darkest);
     }
     
     > a {
-        color: #fff;
+        color: var(--color-lightest);
         text-decoration: none;
         
         &:hover {
-            background-color: #fff;
-            color: #000;
+            background-color: var(--color-lightest);
+            color: var(--color-darkest);
             
             ${Game}.expansion & {
-                background-color: #000;
-                color: #fff;
+                background-color: var(--color-darkest);
+                color: var(--color-lightest);
             }
         }
     }
 `;
 const Footer = styled.footer`
     > time {
-        color: #ccc;
+        color: rgba(var(--color-lightest-rgb), .75);
         font-size: 1.1rem;
         white-space: nowrap;
         
         ${Game}.expansion & {
-            color: #666;
+            color: var(--color-muted);
         }
     }
 `;
@@ -159,8 +160,9 @@ class TimelineGame extends Component {
 
     get anchorUrl () {
         const {url, release} = this.props.game;
+        const {games: {anchorUrlPattern}} = globals;
 
-        return (url && release) ? url.replace('https://en.wikipedia.org/wiki/', '') : null;
+        return (url && release) ? url.replace(anchorUrlPattern, '') : null;
     }
 
     get anchor () {

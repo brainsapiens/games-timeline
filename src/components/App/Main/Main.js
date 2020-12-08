@@ -1,11 +1,16 @@
 import React from 'react';
+import styled from 'styled-components';
 
 import Pages from '../../../pages';
 
+const Main = styled.main`
+    background-color: var(--color-lightest);
+`;
+
 const AppMain = () => (
-    <main role='main'>
+    <Main role='main'>
         <Pages />
-    </main>
+    </Main>
 );
 
 export default AppMain;

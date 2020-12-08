@@ -31,7 +31,7 @@ const Logo = styled.div`
         
         &::before {
             display: block;
-            color: #333;
+            color: var(--color-dark);
             content: attr(data-key);
             font-family: sans-serif;
             font-weight: var(--font-weight-title);

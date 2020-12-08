@@ -6,17 +6,17 @@ import AppTitle from '../Title';
 import AppNav from '../Nav';
 
 const Header = styled.header`
-    background-color: var(--background-inverse);
+    background-color: var(--color-darkest);
     
     a {
-        color: var(--color-inverse);
+        color: var(--color-lightest);
     }
 `;
 const HeaderInner = styled.div`
     display: flex;
     align-items: center;
     height: var(--bar-height);
-    color: var(--color-inverse);
+    color: var(--color-lightest);
 `;
 
 const AppHeader = () => (

@@ -4,7 +4,7 @@ import {Switch, Route} from 'react-router-dom';
 import Home from './Home';
 import About from './About';
 
-import global from '../global';
+import global from '../globals';
 const {pages} = global;
 
 export default () => {

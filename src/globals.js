@@ -9,5 +9,7 @@ export default {
             path: '/about'
         }
     },
-    anchorUrlReplace: 'https://en.wikipedia.org/wiki/'
+    games: {
+        anchorUrlPattern: /https:\/\/(en|ru).wikipedia.org\/wiki\//g
+    }
 }

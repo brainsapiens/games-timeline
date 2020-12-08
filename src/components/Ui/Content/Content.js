@@ -3,24 +3,24 @@ import styled from 'styled-components';
 
 const Content = styled.article`
     max-width: 80rem;
-    padding: calc(var(--indent-base) * 2);
+    padding: calc(var(--indent-basic) * 2);
     
     section {
         &:not(:last-child) {
-            margin-bottom: calc(var(--indent-base) * 2);
+            margin-bottom: calc(var(--indent-basic) * 2);
         }
     }
     
     h2,
     h3 {
-        margin-bottom: var(--indent-base);
+        margin-bottom: var(--indent-basic);
     }
     
     p,
     ol,
     ul {
         &:not(:last-child) {
-            margin-bottom: var(--indent-base);
+            margin-bottom: var(--indent-basic);
         }
     }
     
@@ -34,7 +34,7 @@ const Content = styled.article`
 
     li {
         &:not(:last-child) {
-            margin-bottom: calc(var(--indent-base) / 2);
+            margin-bottom: calc(var(--indent-basic) / 2);
         }
     }
 `;
