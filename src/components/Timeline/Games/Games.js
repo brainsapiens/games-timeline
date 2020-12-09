@@ -11,6 +11,7 @@ const List = styled.ol`
   flex-wrap: wrap;
   gap: .8rem;
 `;
+
 const Item = styled.li`
   &.full-width {
     flex-basis: 100%;

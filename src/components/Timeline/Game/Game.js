@@ -32,6 +32,7 @@ const Game = styled.article`
     }
   }
 `;
+
 const Anchor = styled.a`
   position: absolute;
   top: 0;
@@ -60,6 +61,7 @@ const Anchor = styled.a`
     opacity: 1;
   }
 `;
+
 const Title = styled.h2`
   color: ${props => props.theme.timelineGame.titleColor};
   font-size: 1.3rem;
@@ -108,6 +110,7 @@ const Title = styled.h2`
     }
   }
 `;
+
 const Footer = styled.footer`
   > time {
     color: var(--color-muted);

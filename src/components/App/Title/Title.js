@@ -14,6 +14,7 @@ const Title = styled.h1`
   font-weight: var(--font-weight-basic);
   word-spacing: -.75rem;
 `;
+
 const Link = styled(NavLink)`
   display: flex;
   align-items: center;

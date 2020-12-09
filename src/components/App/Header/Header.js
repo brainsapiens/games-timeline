@@ -25,6 +25,7 @@ const Header = styled.header`
     background-color: ${props => props.theme.appHeader.borderColor};
   }
 `;
+
 const HeaderRow = styled.div`
   display: flex;
   align-items: center;
