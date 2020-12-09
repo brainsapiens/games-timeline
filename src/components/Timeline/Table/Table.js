@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, {useEffect, useRef} from 'react';
 import styled from 'styled-components';
 
 import games from '../../../data/games';
@@ -67,61 +67,47 @@ const Table = styled.div`
   }
 `;
 
-class TimelineTable extends Component {
-    constructor(props) {
-        super(props);
-        this.tableRef = React.createRef();
-        this.setTableScrollPosition = debounce(this.setTableScrollPosition.bind(this));
-    }
+const storage = window.sessionStorage;
 
-    storage = window.sessionStorage;
-    table = null;
+const addTableScrollPosition = table => {
+    if (!document.location.hash) {
+        const storageScrollTop = storage.getItem('tableScrollTop');
+        const storageScrollLeft = storage.getItem('tableScrollLeft');
 
-    setTableScrollPosition = () => {
-        const table = this.table;
-        const storage = this.storage;
+        if (storageScrollTop) {
+            table.scrollTop = +storageScrollTop;
+        } else {
+            storage.setItem('tableScrollTop', table.scrollTop);
+        }
 
-        storage.setItem('tableScrollTop', table.scrollTop);
-        storage.setItem('tableScrollLeft', table.scrollLeft);
-    }
-
-    addTableScrollPosition = () => {
-        const table = this.table;
-
-        if (!document.location.hash) {
-            const storage = this.storage;
-            const storageScrollTop = storage.getItem('tableScrollTop');
-            const storageScrollLeft = storage.getItem('tableScrollLeft');
-
-            if (storageScrollTop) {
-                table.scrollTop = +storageScrollTop;
-            } else {
-                storage.setItem('tableScrollTop', table.scrollTop);
-            }
-
-            if (storageScrollLeft) {
-                table.scrollLeft = +storageScrollLeft;
-            } else {
-                storage.setItem('tableScrollLeft', table.scrollLeft);
-            }
+        if (storageScrollLeft) {
+            table.scrollLeft = +storageScrollLeft;
+        } else {
+            storage.setItem('tableScrollLeft', table.scrollLeft);
         }
     }
+}
 
-    render() {
-        return (
-            <Table ref={this.tableRef} onScroll={this.setTableScrollPosition}>
-                <div/>
-                <TimelineYears/>
-                <TimelineGenres/>
-            </Table>
-        )
-    }
+const setTableScrollPosition = table => {
+    storage.setItem('tableScrollTop', table.scrollTop);
+    storage.setItem('tableScrollLeft', table.scrollLeft);
+}
 
-    componentDidMount() {
-        this.table = this.tableRef.current;
+const TimelineTable = () => {
+    const tableRef = useRef(null);
+    const onScroll = debounce(() => setTableScrollPosition(tableRef.current));
 
-        this.addTableScrollPosition();
-    }
+    useEffect(() => {
+        addTableScrollPosition(tableRef.current);
+    });
+
+    return (
+        <Table ref={tableRef} onScroll={onScroll}>
+            <div/>
+            <TimelineYears/>
+            <TimelineGenres/>
+        </Table>
+    )
 }
 
 export default TimelineTable;
