@@ -12,14 +12,12 @@ const Nav = styled.nav`
   }
 
   a {
-    color: ${props => props.theme.appNav.linkColor};
-
     &:not(:last-child) {
       margin-right: 1.2rem;
     }
 
     &.active {
-      color: var(--color-muted);
+      color: ${props => props.theme.appNav.linkColorActive};
     }
   }
 `;

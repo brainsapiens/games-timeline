@@ -7,14 +7,11 @@ import globals from '../../../globals';
 const {app: {title}} = globals;
 
 const Text = styled.p`
-  color: var(--color-muted);
   text-align: center;
 
   a {
-    color: ${props => props.theme.appCopyright.linkColor};
-
     &.active {
-      color: var(--color-muted);
+      color: ${props => props.theme.appCopyright.linkColorActive};
     }
   }
 `;

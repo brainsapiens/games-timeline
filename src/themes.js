@@ -2,36 +2,39 @@ export const themeLight = {
     global: {
         backgroundColor: 'var(--color-lightest)',
         textColor: 'var(--color-dark)',
-        linkColor: 'var(--color-link-basic)'
+        linkColor: 'var(--color-link-dark)',
+        outlineColor: 'var(--color-link-dark)'
     },
     appHeader: {
         backgroundColor: 'var(--color-lightest)',
-        borderColor: 'var(--color-light)'
+        borderColor: 'var(--color-border-light)'
     },
     appTitle: {
         linkColor: 'var(--color-darkest)'
     },
     appNav: {
-        linkColor: 'var(--color-link-basic)'
+        linkColorActive: 'var(--color-dark)'
     },
     appMain: {
         backgroundColor: 'var(--color-lightest)'
     },
     appFooter: {
         backgroundColor: 'var(--color-lightest)',
-        borderColor: 'var(--color-light)'
+        borderColor: 'var(--color-border-light)'
     },
     appCopyright: {
-        linkColor: 'var(--color-link-basic)'
+        linkColorActive: 'var(--color-dark)'
     },
     timelineTable: {
-        borderColor: 'var(--color-light)',
-        cellBackgroundColor: 'var(--cell-background-color-basic)',
+        borderColor: 'var(--color-border-light)',
+        cellBackgroundColor: 'var(--cell-background-color-light)',
         quarterColor: 'var(--color-darkest-rgb)'
     },
     timelineGame: {
         backgroundColor: 'var(--color-darkest)',
-        releaseUnknownBackgroundColor: 'var(--game-release-unknown-background-color-basic)',
+        releaseUnknownBackgroundColor: 'var(--game-release-unknown-background-color-light)',
+        anchorBackgroundColor: 'var(--color-lightest-rgb)',
+        anchorIconFilter: 'invert(0)',
         titleColor: 'var(--color-lightest)',
         titleLinkColor: 'var(--color-lightest)',
         titleLinkHoverColor: 'var(--color-darkest)',
@@ -40,46 +43,50 @@ export const themeLight = {
         titleExpansionLinkColor: 'var(--color-darkest)',
         titleExpansionLinkHoverColor: 'var(--color-lightest)',
         titleExpansionLinkHoverBackgroundColor: 'var(--color-darkest)',
-        titleReleaseUnknownLinkHoverColor: 'var(--color-dark)',
-        anchorBackgroundColor: 'var(--color-lightest-rgb)',
-        anchorIconFilter: 'invert(0)'
+        titleReleaseUnknownLinkColor: 'var(--color-dark)',
+        titleReleaseUnknownLinkHoverColor: 'var(--color-darkest)',
+        footerColor: 'var(--color-light)',
+        footerExpansionColor: 'var(--color-dark)'
     }
 };
 
 export const themeDark = {
     global: {
         backgroundColor: 'var(--color-darkest)',
-        textColor: 'var(--color-muted)',
-        linkColor: 'var(--color-link-muted)'
+        textColor: 'var(--color-light)',
+        linkColor: 'var(--color-link-light)',
+        outlineColor: 'var(--color-link-light)'
     },
     appHeader: {
         backgroundColor: 'var(--color-darkest)',
-        borderColor: 'var(--color-dark)'
+        borderColor: 'var(--color-border-dark)'
     },
     appTitle: {
         linkColor: 'var(--color-lightest)'
     },
     appNav: {
-        linkColor: 'var(--color-link-muted)'
+        linkColorActive: 'var(--color-light)'
     },
     appMain: {
         backgroundColor: 'var(--color-darkest)',
     },
     appFooter: {
         backgroundColor: 'var(--color-darkest)',
-        borderColor: 'var(--color-dark)'
+        borderColor: 'var(--color-border-dark)'
     },
     appCopyright: {
-        linkColor: 'var(--color-link-muted)'
+        linkColorActive: 'var(--color-light)'
     },
     timelineTable: {
-        borderColor: 'var(--color-dark)',
-        cellBackgroundColor: 'var(--cell-background-color-inverse)',
+        borderColor: 'var(--color-border-dark)',
+        cellBackgroundColor: 'var(--cell-background-color-dark)',
         quarterColor: 'var(--color-lightest-rgb)'
     },
     timelineGame: {
         backgroundColor: 'var(--color-lightest)',
-        releaseUnknownBackgroundColor: 'var(--game-release-unknown-background-color-inverse)',
+        releaseUnknownBackgroundColor: 'var(--game-release-unknown-background-color-dark)',
+        anchorBackgroundColor: 'var(--color-darkest-rgb)',
+        anchorIconFilter: 'invert(1)',
         titleColor: 'var(--color-darkest)',
         titleLinkColor: 'var(--color-darkest)',
         titleLinkHoverColor: 'var(--color-lightest)',
@@ -88,8 +95,9 @@ export const themeDark = {
         titleExpansionLinkColor: 'var(--color-lightest)',
         titleExpansionLinkHoverColor: 'var(--color-darkest)',
         titleExpansionLinkHoverBackgroundColor: 'var(--color-lightest)',
-        titleReleaseUnknownLinkHoverColor: 'var(--color-light)',
-        anchorBackgroundColor: 'var(--color-darkest-rgb)',
-        anchorIconFilter: 'invert(1)'
+        titleReleaseUnknownLinkColor: 'var(--color-light)',
+        titleReleaseUnknownLinkHoverColor: 'var(--color-lightest)',
+        footerColor: 'var(--color-dark)',
+        footerExpansionColor: 'var(--color-light)'
     }
 }

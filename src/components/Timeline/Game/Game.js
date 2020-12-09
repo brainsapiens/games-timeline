@@ -22,6 +22,14 @@ const Title = styled.h2`
   }
 `;
 
+const Footer = styled.footer`
+  > time {
+    color: ${props => props.theme.timelineGame.footerColor};
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
+`;
+
 const Game = styled.article`
   position: relative;
   padding: .4rem .8rem;
@@ -48,6 +56,12 @@ const Game = styled.article`
           }
         }
       }
+    
+    ${Footer} {
+      > time {
+        color: ${props => props.theme.timelineGame.footerExpansionColor};
+      }
+    }
   }
 
   &.release-unknown {
@@ -63,15 +77,13 @@ const Game = styled.article`
     }
 
     ${Title} {
-      color: var(--color-muted);
-
       [data-quarter]:not([data-quarter='Q1']) & {
         visibility: hidden;
       }
 
       > a {
         background-color: unset;
-        color: var(--color-muted);
+        color: ${props => props.theme.timelineGame.titleReleaseUnknownLinkColor}};
 
         &:hover {
           background-color: unset;
@@ -108,14 +120,6 @@ const Anchor = styled.a`
 
   ${Game}:hover & {
     opacity: 1;
-  }
-`;
-
-const Footer = styled.footer`
-  > time {
-    color: var(--color-muted);
-    font-size: 1.1rem;
-    white-space: nowrap;
   }
 `;
 
@@ -159,6 +163,7 @@ const gameAnchor = (url, release) => {
         <Anchor
             href={`#${anchorUrl(url)}`}
             title='Anchor'
+            tabIndex='-1'
         >
             <img src={iconLink} width='24' height='24' alt='anchor'/>
         </Anchor>
