@@ -151,12 +151,11 @@ const anchorUrl = (url) => {
     return url ? url.replace(pattern, '') : null;
 }
 
-const gameAnchor = (gameEl, url, release) => {
+const gameAnchor = (url, release) => {
     return (url && release) ? (
         <Anchor
             href={`#${anchorUrl(url)}`}
             title='Anchor'
-            onClick={setAnchor(gameEl, url)}
         >
             <img src={iconLink} width='24' height='24' alt='anchor'/>
         </Anchor>
@@ -196,7 +195,7 @@ const TimelineGame = ({game: {title, url, release, expansion}}) => {
             ]}
             ref={gameRef}
         >
-            {gameAnchor(gameRef.current, url, release)}
+            {gameAnchor(url, release)}
             {gameTitle(title, url)}
             {gameFooter(release)}
         </Game>
