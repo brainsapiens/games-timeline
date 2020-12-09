@@ -4,6 +4,24 @@ import styled from 'styled-components';
 
 import iconLink from '../../../images/icons/link.svg';
 
+const Title = styled.h2`
+  color: ${props => props.theme.timelineGame.titleColor};
+  font-size: 1.3rem;
+  font-weight: unset;
+  line-height: unset;
+  white-space: nowrap;
+  
+  > a {
+    color: ${props => props.theme.timelineGame.titleLinkColor};
+    text-decoration: none;
+
+    &:hover {
+      background-color: ${props => props.theme.timelineGame.titleLinkHoverBackgroundColor};
+      color: ${props => props.theme.timelineGame.titleLinkHoverColor};
+    }
+  }
+`;
+
 const Game = styled.article`
   position: relative;
   padding: .4rem .8rem;
@@ -17,6 +35,19 @@ const Game = styled.article`
     padding-top: 0;
     padding-bottom: 0;
     background-color: unset;
+    
+    ${Title} {
+        color: ${props => props.theme.timelineGame.titleExpansionColor};
+    
+        > a {
+          color: ${props => props.theme.timelineGame.titleExpansionLinkColor};
+          
+          &:hover {
+            background-color: ${props => props.theme.timelineGame.titleExpansionLinkHoverBackgroundColor};
+            color: ${props => props.theme.timelineGame.titleExpansionLinkHoverColor};
+          }
+        }
+      }
   }
 
   &.release-unknown {
@@ -29,6 +60,24 @@ const Game = styled.article`
     [data-quarter='Q3'] & {
       margin-right: -.9rem;
       margin-left: -.9rem;
+    }
+
+    ${Title} {
+      color: var(--color-muted);
+
+      [data-quarter]:not([data-quarter='Q1']) & {
+        visibility: hidden;
+      }
+
+      > a {
+        background-color: unset;
+        color: var(--color-muted);
+
+        &:hover {
+          background-color: unset;
+          color: ${props => props.theme.timelineGame.titleReleaseUnknownLinkHoverColor};
+        }
+      }
     }
   }
 `;
@@ -59,55 +108,6 @@ const Anchor = styled.a`
 
   ${Game}:hover & {
     opacity: 1;
-  }
-`;
-
-const Title = styled.h2`
-  color: ${props => props.theme.timelineGame.titleColor};
-  font-size: 1.3rem;
-  font-weight: unset;
-  line-height: unset;
-  white-space: nowrap;
-  
-  > a {
-    color: ${props => props.theme.timelineGame.titleLinkColor};
-    text-decoration: none;
-
-    &:hover {
-      background-color: ${props => props.theme.timelineGame.titleLinkHoverBackgroundColor};
-      color: ${props => props.theme.timelineGame.titleLinkHoverColor};
-    }
-  }
-  
-  ${Game}.expansion & {
-    color: ${props => props.theme.timelineGame.titleExpansionColor};
-
-    > a {
-      color: ${props => props.theme.timelineGame.titleExpansionLinkColor};
-      
-      &:hover {
-        background-color: ${props => props.theme.timelineGame.titleExpansionLinkHoverBackgroundColor};
-        color: ${props => props.theme.timelineGame.titleExpansionLinkHoverColor};
-      }
-    }
-  }
-  
-  ${Game}.release-unknown & {
-    color: var(--color-muted);
-
-    [data-quarter]:not([data-quarter='Q1']) & {
-      visibility: hidden;
-    }
-    
-    > a {
-      background-color: unset;
-      color: var(--color-muted);
-
-      &:hover {
-        background-color: unset;
-        color: ${props => props.theme.timelineGame.titleReleaseUnknownLinkHoverColor};
-      }
-    }
   }
 `;
 
