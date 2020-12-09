@@ -137,13 +137,11 @@ const setAnchor = (gameEl, url) => {
         const html = document.documentElement;
         html.classList.add('js-focus-visible');
 
-        const gameTitleLink = gameEl.querySelector('.game-title > a');
-        setTimeout(() => {
-            gameTitleLink.addEventListener('blur', removeFocusVisible);
-        }, 0)
-
         const link = gameEl.querySelector('.game-title > a');
-        link && link.focus();
+        if (link) {
+            link.focus();
+            link.addEventListener('blur', removeFocusVisible);
+        }
     }
 }
 
@@ -153,11 +151,12 @@ const anchorUrl = (url) => {
     return url ? url.replace(pattern, '') : null;
 }
 
-const gameAnchor = (url, release) => {
+const gameAnchor = (gameEl, url, release) => {
     return (url && release) ? (
         <Anchor
             href={`#${anchorUrl(url)}`}
             title='Anchor'
+            onClick={setAnchor(gameEl, url)}
         >
             <img src={iconLink} width='24' height='24' alt='anchor'/>
         </Anchor>
@@ -197,7 +196,7 @@ const TimelineGame = ({game: {title, url, release, expansion}}) => {
             ]}
             ref={gameRef}
         >
-            {gameAnchor(url, release)}
+            {gameAnchor(gameRef.current, url, release)}
             {gameTitle(title, url)}
             {gameFooter(release)}
         </Game>
