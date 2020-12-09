@@ -1,8 +1,7 @@
-import React, {Component} from 'react';
+import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-import globals from '../../../globals';
 import iconLink from '../../../images/icons/link.svg';
 
 const Game = styled.article`
@@ -117,94 +116,96 @@ const Footer = styled.footer`
   }
 `;
 
-class TimelineGame extends Component {
-    constructor(props) {
-        super(props);
-        this.gameRef = React.createRef();
+const removeFocusVisible = e => {
+    const html = document.documentElement;
+    html.classList.remove('js-focus-visible');
+
+    const target = e.target;
+    target.removeEventListener('blur', removeFocusVisible);
+}
+
+const setAnchor = (gameEl, url) => {
+    const hashValue = document.location.hash.substring(1);
+
+    if (gameEl && anchorUrl(url) === hashValue) {
+        gameEl.scrollIntoView({
+            behavior: 'auto',
+            block: 'center',
+            inline: 'center'
+        });
+
+        const html = document.documentElement;
+        html.classList.add('js-focus-visible');
+
+        const gameTitleLink = gameEl.querySelector('.game-title > a');
+        setTimeout(() => {
+            gameTitleLink.addEventListener('blur', removeFocusVisible);
+        }, 0)
+
+        const link = gameEl.querySelector('.game-title > a');
+        link && link.focus();
     }
+}
 
-    static propTypes = {
-        game: PropTypes.object.isRequired
-    }
+const anchorUrl = (url) => {
+    const pattern = /https:\/\/(en|ru).wikipedia.org\/wiki\//g;
 
-    setAnchor = (game) => {
-        const hashValue = document.location.hash.substring(1);
+    return url ? url.replace(pattern, '') : null;
+}
 
-        if (game && this.anchorUrl === hashValue) {
-            game.scrollIntoView({
-                behavior: 'auto',
-                block: 'center',
-                inline: 'center'
-            });
+const gameAnchor = (url, release) => {
+    return (url && release) ? (
+        <Anchor
+            href={`#${anchorUrl(url)}`}
+            title='Anchor'
+        >
+            <img src={iconLink} width='24' height='24' alt='anchor'/>
+        </Anchor>
+    ) : null
+}
 
-            const link = game.querySelector('.game-title > a');
-            link && link.focus();
-        }
-    }
+const gameTitle = (title, url) => {
+    return url ? (
+        <Title className='game-title'>
+            <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{__html: title}}/>
+        </Title>
+    ) : (
+        <Title className='game-title' dangerouslySetInnerHTML={{__html: title}}/>
+    )
+}
 
-    get anchorUrl() {
-        const {url, release} = this.props.game;
-        const {games: {anchorUrlPattern}} = globals;
+const gameFooter = release => {
+    return release ? (
+        <Footer>
+            <time>{release}</time>
+        </Footer>
+    ) : null
+}
 
-        return (url && release) ? url.replace(anchorUrlPattern, '') : null;
-    }
+const TimelineGame = ({game: {title, url, release, expansion}}) => {
+    const gameRef = useRef(null);
 
-    get anchor() {
-        const {url, release} = this.props.game;
+    useEffect(() => {
+        setAnchor(gameRef.current, url);
+    });
 
-        return (url && release) ? (
-            <Anchor
-                href={`#${this.anchorUrl}`}
-                title='Anchor'
-            >
-                <img src={iconLink} width='24' height='24' alt='anchor'/>
-            </Anchor>
-        ) : null
-    }
+    return (
+        <Game
+            className={[
+                expansion ? 'expansion' : '',
+                !release ? 'release-unknown' : '',
+            ]}
+            ref={gameRef}
+        >
+            {gameAnchor(url, release)}
+            {gameTitle(title, url)}
+            {gameFooter(release)}
+        </Game>
+    )
+}
 
-    get title() {
-        const {title, url} = this.props.game;
-
-        return url ? (
-            <Title className='game-title'>
-                <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{__html: title}}/>
-            </Title>
-        ) : (
-            <Title className='game-title' dangerouslySetInnerHTML={{__html: title}}/>
-        )
-    }
-
-    get footer() {
-        const {release} = this.props.game;
-
-        return release ? (
-            <Footer>
-                <time>{release}</time>
-            </Footer>
-        ) : null
-    }
-
-    render() {
-        const {release, expansion} = this.props.game;
-
-        return (
-            <Game
-                className={[
-                    expansion ? 'expansion' : '',
-                    !release ? 'release-unknown' : '',
-                ]}
-                ref={this.gameRef}
-            >
-                {this.anchor}
-                {this.title}
-                {this.footer}
-            </Game>
-        )
-    }
-
-    componentDidMount() {
-        this.setAnchor(this.gameRef.current);
-    }
+TimelineGame.propTypes = {
+    game: PropTypes.object.isRequired
 }
 
 export default TimelineGame;

@@ -47,20 +47,20 @@
     --game-release-unknown-background-color-inverse: #0e0e0e;
 }
 
-:focus:not(:focus-visible) {
-    outline: 0;
-}
-
-:focus-visible {
-    outline: 2px solid var(--color-link-basic);
-}
-
 *,
 *::before,
 *::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+html:not(.js-focus-visible) :focus:not(:focus-visible) {
+    outline: 0;
+}
+html:not(.js-focus-visible) :focus-visible,
+html.js-focus-visible :focus {
+    outline: 2px solid var(--color-link-basic);
 }
 
 html,
