@@ -263,7 +263,6 @@
     },
     {
       "title": "Duke It&nbsp;Out In&nbsp;D.C.",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
       "genre": "shooter",
       "release": "March 17",
       "expansion": true
@@ -364,7 +363,6 @@
     },
     {
       "title": "Carmageddon:<br/> Splat Pack",
-      "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
       "genre": "racing",
       "release": "November 14",
       "expansion": true
@@ -390,14 +388,12 @@
     },
     {
       "title": "Duke:<br/> Nuclear Winter",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
       "genre": "shooter",
       "release": "December 30",
       "expansion": true
     },
     {
       "title": "Duke Caribbean:<br/> Life&rsquo;s a&nbsp;Beach",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
       "genre": "shooter",
       "release": "December 31",
       "expansion": true
@@ -406,7 +402,6 @@
   "1998": [
     {
       "title": "Carmageddon Max Pack",
-      "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
       "genre": "racing",
       "release": "February 17",
       "expansion": true
@@ -838,7 +833,7 @@
     },
     {
       "title": "MechWarrior&nbsp;4:<br/> Black Knight",
-      "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance#Black_Knight",
       "genre": "simulator",
       "release": "October 31",
       "expansion": true
