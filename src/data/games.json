@@ -9,6 +9,12 @@
   ],
   "1988": [
     {
+      "title": "Dangerous Dave",
+      "url": "https://en.wikipedia.org/wiki/Dangerous_Dave",
+      "genre": "platform",
+      "release": "October"
+    },
+    {
       "title": "F-19 Stealth Fighter",
       "url": "https://en.wikipedia.org/wiki/F-19_Stealth_Fighter",
       "genre": "simulator",
@@ -33,11 +39,27 @@
       "url": "https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island",
       "genre": "adventure",
       "release": "October 15"
+    },
+    {
+      "title": "Commander Keen<br/> in&nbsp;Invasion of&nbsp;the Vorticons",
+      "url": "https://en.wikipedia.org/wiki/Commander_Keen_in_Invasion_of_the_Vorticons",
+      "genre": "platform",
+      "release": "December 14"
     }
   ],
   "1991": [
     {
-      "title": "F-117A Nighthawk Stealth Fighter&nbsp;2.0",
+      "title": "Dangerous Dave<br/> in&nbsp;the Haunted Mansion",
+      "url": "https://en.wikipedia.org/wiki/Dangerous_Dave_in_the_Haunted_Mansion",
+      "genre": "platform"
+    },
+    {
+      "title": "Commander Keen<br/> in&nbsp;Keen Dreams",
+      "url": "https://en.wikipedia.org/wiki/Commander_Keen_in_Keen_Dreams",
+      "genre": "platform"
+    },
+    {
+      "title": "F-117A Nighthawk<br/> Stealth Fighter&nbsp;2.0",
       "url": "https://en.wikipedia.org/wiki/F-117A_Nighthawk_Stealth_Fighter_2.0",
       "genre": "simulator",
       "release": "January 2"
@@ -49,10 +71,22 @@
       "release": "July 1"
     },
     {
+      "title": "Commander Keen<br/> in&nbsp;Aliens Ate My&nbsp;Babysitter",
+      "url": "https://en.wikipedia.org/wiki/Commander_Keen_in_Aliens_Ate_My_Babysitter",
+      "genre": "platform",
+      "release": "December"
+    },
+    {
       "title": "Monkey Island&nbsp;2:<br/> LeChuck&rsquo;s Revenge",
       "url": "https://en.wikipedia.org/wiki/Monkey_Island_2:_LeChuck%27s_Revenge",
       "genre": "adventure",
       "release": "December"
+    },
+    {
+      "title": "Commander Keen<br/> in&nbsp;Goodbye, Galaxy",
+      "url": "https://en.wikipedia.org/wiki/Commander_Keen_in_Goodbye,_Galaxy",
+      "genre": "platform",
+      "release": "December 15"
     }
   ],
   "1993": [
@@ -61,6 +95,16 @@
       "url": "https://en.wikipedia.org/wiki/The_7th_Guest",
       "genre": "adventure",
       "release": "April 1"
+    },
+    {
+      "title": "Dangerous Dave&rsquo;s<br/> Risky Rescue",
+      "url": "https://en.wikipedia.org/wiki/Dangerous_Dave#Dangerous_Dave.27s_Risky_Rescue",
+      "genre": "platform"
+    },
+    {
+      "title": "Dave Goes Nutz!",
+      "url": "https://en.wikipedia.org/wiki/Dangerous_Dave#Dave_Goes_Nutz.21",
+      "genre": "platform"
     },
     {
       "title": "Day of&nbsp;the Tentacle",
@@ -243,6 +287,11 @@
     }
   ],
   "1997": [
+    {
+      "title": "Ignition",
+      "url": "https://en.wikipedia.org/wiki/Ignition_(video_game)",
+      "genre": "racing"
+    },
     {
       "title": "Constructor",
       "url": "https://en.wikipedia.org/wiki/Constructor_(video_game)",
