@@ -2,6 +2,7 @@ export const themeLight = {
     global: {
         backgroundColor: 'var(--color-lightest)',
         textColor: 'var(--color-dark)',
+        titleColor: 'var(--color-title-dark)',
         linkColor: 'var(--color-link-dark)',
         outlineColor: 'var(--color-link-dark)'
     },
@@ -54,6 +55,7 @@ export const themeDark = {
     global: {
         backgroundColor: 'var(--color-darkest)',
         textColor: 'var(--color-light)',
+        titleColor: 'var(--color-title-light)',
         linkColor: 'var(--color-link-light)',
         outlineColor: 'var(--color-link-light)'
     },

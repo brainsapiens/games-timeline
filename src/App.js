@@ -28,6 +28,10 @@ const GlobalStyle = createGlobalStyle`
   a {
     color: ${props => props.theme.global.linkColor};
   }
+  
+  h1, h2 {
+    color: ${props => props.theme.global.titleColor};
+  }
 `;
 
 function App() {
