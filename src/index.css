@@ -6,13 +6,12 @@
     /* Colors */
     --color-darkest-rgb: 0, 0, 0;
     --color-darkest: #000;
+    --color-darker: #333;
     --color-dark: #666;
     --color-light: #ddd;
+    --color-lighter: #eee;
     --color-lightest: #fff;
     --color-lightest-rgb: 255, 255, 255;
-
-    --color-title-dark: #333;
-    --color-title-light: #eee;
 
     --color-border-dark: #1f1f1f;
     --color-border-light: #f1f1f1;

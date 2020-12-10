@@ -2,7 +2,7 @@ export const themeLight = {
     global: {
         backgroundColor: 'var(--color-lightest)',
         textColor: 'var(--color-dark)',
-        titleColor: 'var(--color-title-dark)',
+        titleColor: 'var(--color-darker)',
         linkColor: 'var(--color-link-dark)',
         outlineColor: 'var(--color-link-dark)'
     },
@@ -11,7 +11,7 @@ export const themeLight = {
         borderColor: 'var(--color-border-light)'
     },
     appTitle: {
-        linkColor: 'var(--color-darkest)'
+        linkColor: 'var(--color-darker)'
     },
     appNav: {
         linkColorActive: 'var(--color-dark)'
@@ -55,7 +55,7 @@ export const themeDark = {
     global: {
         backgroundColor: 'var(--color-darkest)',
         textColor: 'var(--color-light)',
-        titleColor: 'var(--color-title-light)',
+        titleColor: 'var(--color-lighter)',
         linkColor: 'var(--color-link-light)',
         outlineColor: 'var(--color-link-light)'
     },
@@ -64,7 +64,7 @@ export const themeDark = {
         borderColor: 'var(--color-border-dark)'
     },
     appTitle: {
-        linkColor: 'var(--color-lightest)'
+        linkColor: 'var(--color-lighter)'
     },
     appNav: {
         linkColorActive: 'var(--color-light)'
@@ -85,21 +85,21 @@ export const themeDark = {
         quarterColor: 'var(--color-lightest-rgb)'
     },
     timelineGame: {
-        backgroundColor: 'var(--color-lightest)',
+        backgroundColor: 'var(--color-light)',
         releaseUnknownBackgroundColor: 'var(--game-release-unknown-background-color-dark)',
         anchorBackgroundColor: 'var(--color-darkest-rgb)',
         anchorIconFilter: 'invert(1)',
         titleColor: 'var(--color-darkest)',
         titleLinkColor: 'var(--color-darkest)',
-        titleLinkHoverColor: 'var(--color-lightest)',
+        titleLinkHoverColor: 'var(--color-light)',
         titleLinkHoverBackgroundColor: 'var(--color-darkest)',
-        titleExpansionColor: 'var(--color-lightest)',
-        titleExpansionLinkColor: 'var(--color-lightest)',
+        titleExpansionColor: 'var(--color-light)',
+        titleExpansionLinkColor: 'var(--color-light)',
         titleExpansionLinkHoverColor: 'var(--color-darkest)',
-        titleExpansionLinkHoverBackgroundColor: 'var(--color-lightest)',
+        titleExpansionLinkHoverBackgroundColor: 'var(--color-light)',
         titleReleaseUnknownLinkColor: 'var(--color-light)',
-        titleReleaseUnknownLinkHoverColor: 'var(--color-lightest)',
-        footerColor: 'var(--color-dark)',
+        titleReleaseUnknownLinkHoverColor: 'var(--color-light)',
+        footerColor: 'var(--color-darker)',
         footerExpansionColor: 'var(--color-light)'
     }
 }
