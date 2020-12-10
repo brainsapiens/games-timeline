@@ -43,7 +43,7 @@ function App() {
     }
 
     return (
-        <AppContext.Provider value={{toggleTheme}}>
+        <AppContext.Provider value={{theme, toggleTheme}}>
             <Router basename={basename}>
                 <ThemeProvider theme={themeMode}>
                     <GlobalStyle/>

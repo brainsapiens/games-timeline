@@ -1,11 +1,10 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import styled from 'styled-components';
-
-import AppContext from '../../../AppContext';
 
 import UiContainer from '../../Ui/Container';
 import AppTitle from '../Title';
 import AppNav from '../Nav';
+import AppThemeSwitcher from '../ThemeSwitcher';
 
 const Header = styled.header`
   position: relative;
@@ -31,24 +30,20 @@ const HeaderRow = styled.div`
   align-items: center;
 `;
 
-const AppHeader = () => {
-    const {toggleTheme} = useContext(AppContext);
+const HeaderSwitcher = styled.div`
+  margin-left: auto;
+`;
 
+const AppHeader = () => {
     return (
         <Header role='banner'>
             <UiContainer>
                 <HeaderRow>
                     <AppTitle/>
                     <AppNav/>
-                    <button
-                        style={{
-                            'marginLeft': 'auto',
-                            'padding': '.2rem .4rem'
-                        }}
-                        onClick={toggleTheme}
-                    >
-                        Toggle theme
-                    </button>
+                    <HeaderSwitcher>
+                        <AppThemeSwitcher/>
+                    </HeaderSwitcher>
                 </HeaderRow>
             </UiContainer>
         </Header>
