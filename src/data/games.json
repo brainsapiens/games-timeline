@@ -133,6 +133,12 @@
       "release": "March"
     },
     {
+      "title": "The Elder Scrolls:<br/> Arena",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls:_Arena",
+      "genre": "role-playing",
+      "release": "March 25"
+    },
+    {
       "title": "Theme Park",
       "url": "https://en.wikipedia.org/wiki/Theme_Park_(video_game)",
       "genre": "simulator",
@@ -143,6 +149,12 @@
       "url": "https://en.wikipedia.org/wiki/Jagged_Alliance",
       "genre": "tactics",
       "release": "June 2"
+    },
+    {
+      "title": "Jazz Jackrabbit",
+      "url": "https://en.wikipedia.org/wiki/Jazz_Jackrabbit_(1994_video_game)",
+      "genre": "platform",
+      "release": "August 1"
     },
     {
       "title": "Doom&nbsp;II:<br/> Hell on&nbsp;Earth",
@@ -246,6 +258,12 @@
       "genre": "tactics",
       "release": "September",
       "expansion": true
+    },
+    {
+      "title": " The Elder Scrolls&nbsp;II:<br/> Daggerfall",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_II:_Daggerfall",
+      "genre": "role-playing",
+      "release": "September 20"
     },
     {
       "title": "Broken Sword:<br/> The Shadow of&nbsp;the Templars",
@@ -430,6 +448,12 @@
       "expansion": true
     },
     {
+      "title": "An&nbsp;Elder Scrolls Legend:<br/> Battlespire",
+      "url": "https://en.wikipedia.org/wiki/An_Elder_Scrolls_Legend:_Battlespire",
+      "genre": "role-playing",
+      "release": "December 2"
+    },
+    {
       "title": "Quake&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Quake_II",
       "genre": "shooter",
@@ -472,6 +496,12 @@
       "url": "https://ru.wikipedia.org/wiki/%D0%90%D0%BB%D0%BB%D0%BE%D0%B4%D1%8B:_%D0%9F%D0%B5%D1%87%D0%B0%D1%82%D1%8C_%D1%82%D0%B0%D0%B9%D0%BD%D1%8B",
       "genre": "role-playing",
       "release": "April 10"
+    },
+    {
+      "title": "Jazz Jackrabbit&nbsp;2",
+      "url": "https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2",
+      "genre": "platform",
+      "release": "May 7"
     },
     {
       "title": "Quake&nbsp;II Mission Pack:<br/> The Reckoning",
@@ -549,6 +579,12 @@
       "url": "https://en.wikipedia.org/wiki/Grim_Fandango",
       "genre": "adventure",
       "release": "October 30"
+    },
+    {
+      "title": "The Elder Scrolls Adventures:<br/> Redguard",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_Adventures:_Redguard",
+      "genre": "role-playing",
+      "release": "November 14"
     },
     {
       "title": "Half-Life",
@@ -824,6 +860,12 @@
       "expansion": true
     },
     {
+      "title": "Fallout Tactics:<br/> Brotherhood of&nbsp;Steel",
+      "url": "https://en.wikipedia.org/wiki/Fallout_Tactics:_Brotherhood_of_Steel",
+      "genre": "role-playing",
+      "release": "March 15"
+    },
+    {
       "title": "Gothic",
       "url": "https://en.wikipedia.org/wiki/Gothic_(video_game)",
       "genre": "role-playing",
@@ -897,6 +939,12 @@
   ],
   "2002": [
     {
+      "title": "The Elder Scrolls&nbsp;III:<br/> Morrowind",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Morrowind",
+      "genre": "role-playing",
+      "release": "May 1"
+    },
+    {
       "title": "Warcraft&nbsp;III:<br/> Reign of&nbsp;Chaos",
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos",
       "genre": "strategy",
@@ -934,6 +982,13 @@
       "release": "October 30"
     },
     {
+      "title": "The Elder Scrolls&nbsp;III:<br/> Tribunal",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Tribunal",
+      "genre": "role-playing",
+      "release": "November 6",
+      "expansion": true
+    },
+    {
       "title": "Gothic&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Gothic_II",
       "genre": "role-playing",
@@ -941,6 +996,13 @@
     }
   ],
   "2003": [
+    {
+      "title": "The Elder Scrolls&nbsp;III:<br/> Bloodmoon",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Bloodmoon",
+      "genre": "role-playing",
+      "release": "July 3",
+      "expansion": true
+    },
     {
       "title": "Warcraft&nbsp;III:<br/> The Frozen Throne",
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_The_Frozen_Throne",
@@ -1031,6 +1093,12 @@
       "expansion": true
     },
     {
+      "title": "The Elder Scrolls&nbsp;IV:<br/> Oblivion",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_IV:_Oblivion",
+      "genre": "role-playing",
+      "release": "March 20"
+    },
+    {
       "title": "Desperados&nbsp;2:<br/> Cooper&rsquo;s Revenge",
       "url": "https://en.wikipedia.org/wiki/Desperados_2:_Cooper%27s_Revenge",
       "genre": "tactics",
@@ -1054,9 +1122,23 @@
       "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Carbon",
       "genre": "racing",
       "release": "October 30"
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;IV:<br/> Knights of&nbsp;the Nine",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_IV:_Knights_of_the_Nine",
+      "genre": "role-playing",
+      "release": "November 21",
+      "expansion": true
     }
   ],
   "2007": [
+    {
+      "title": "The Elder Scrolls&nbsp;IV:<br/> Shivering Isles",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_IV:_Shivering_Isles",
+      "genre": "role-playing",
+      "release": "March 26",
+      "expansion": true
+    },
     {
       "title": "Half-Life&nbsp;2:<br/> Episode Two",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Two",
@@ -1073,11 +1155,64 @@
   ],
   "2008": [
     {
+      "title": "Fallout&nbsp;3",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3",
+      "genre": "role-playing",
+      "release": "October 28"
+    },
+    {
       "title": "Gothic&nbsp;3:<br/> Forsaken Gods",
       "url": "https://en.wikipedia.org/wiki/Gothic_3:_Forsaken_Gods",
       "genre": "role-playing",
       "release": "November 20",
       "expansion": true
+    }
+  ],
+  "2010": [
+    {
+      "title": "Fallout:<br/> New Vegas",
+      "url": "https://en.wikipedia.org/wiki/Fallout:_New_Vegas",
+      "genre": "role-playing",
+      "release": "October 19"
+    }
+  ],
+  "2011": [
+    {
+      "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim",
+      "genre": "role-playing",
+      "release": "November 11"
+    }
+  ],
+  "2012": [
+    {
+      "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim&nbsp;&mdash; Dawnguard",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dawnguard",
+      "genre": "role-playing",
+      "release": "June 26",
+      "expansion": true
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim&nbsp;&mdash; Hearthfire",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Hearthfire",
+      "genre": "role-playing",
+      "release": "September 4",
+      "expansion": true
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim&nbsp;&mdash; Dragonborn",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dragonborn",
+      "genre": "role-playing",
+      "release": "December 4",
+      "expansion": true
+    }
+  ],
+  "2015": [
+    {
+      "title": "Fallout&nbsp;4",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4",
+      "genre": "role-playing",
+      "release": "November 10"
     }
   ]
 }
