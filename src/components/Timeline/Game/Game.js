@@ -73,10 +73,6 @@ const Game = styled.article`
     [data-quarter]:not([data-quarter='Q1']) & {
       pointer-events: none;
       
-      > a {
-        display: none;
-      }
-      
       ${Title} {
         visibility: hidden;
       }
@@ -133,16 +129,12 @@ const Anchor = styled.a`
   }
 `;
 
-let prevHashValue = null;
-
 const removeFocusVisible = e => {
     const html = document.documentElement;
     html.classList.remove('js-focus-visible');
 
     const target = e.target;
     target.removeEventListener('blur', removeFocusVisible);
-
-    prevHashValue = null;
 }
 
 const setAnchor = (gameEl, url) => {
@@ -151,7 +143,7 @@ const setAnchor = (gameEl, url) => {
     if (gameEl && anchorUrl(url) === hashValue) {
         const link = gameEl.querySelector('.game-title > a');
 
-        if (link && prevHashValue !== hashValue) {
+        if (link) {
             const html = document.documentElement;
             html.classList.add('js-focus-visible');
 
@@ -163,8 +155,6 @@ const setAnchor = (gameEl, url) => {
                 block: 'center',
                 inline: 'center'
             });
-
-            prevHashValue = hashValue;
         }
     }
 }
@@ -202,22 +192,31 @@ const gameFooter = release => {
         <Footer>
             <time>{release}</time>
         </Footer>
-    ) : null
+    ) : null;
 }
 
-const TimelineGame = ({game: {title, url, release, expansion}}) => {
+const TimelineGame = ({game, placeholder }) => {
+    const {title, url, release, expansion} = game;
     const gameRef = useRef(null);
+    const className = [
+        expansion ? 'expansion' : '',
+        !release ? 'release-unknown' : '',
+    ];
 
     useEffect(() => {
         setAnchor(gameRef.current, url);
     });
 
-    return (
+    return placeholder ? (
         <Game
-            className={[
-                expansion ? 'expansion' : '',
-                !release ? 'release-unknown' : '',
-            ]}
+            className={className}
+            ref={gameRef}
+        >
+            {gameTitle(title)}
+        </Game>
+    ) : (
+        <Game
+            className={className}
             ref={gameRef}
         >
             {gameAnchor(url)}
@@ -228,7 +227,8 @@ const TimelineGame = ({game: {title, url, release, expansion}}) => {
 }
 
 TimelineGame.propTypes = {
-    game: PropTypes.object.isRequired
+    game: PropTypes.object.isRequired,
+    placeholder: PropTypes.bool
 }
 
 export default TimelineGame;

@@ -56,7 +56,11 @@ const gamesByQuarters = (genreName) => {
                                 key={title}
                                 className={!release ? 'full-width' : ''}
                             >
-                                <Game key={title} game={game}/>
+                                <Game
+                                    key={title}
+                                    game={game}
+                                    placeholder={!release && index !== 1}
+                                />
                             </Item>
                         );
                     }
