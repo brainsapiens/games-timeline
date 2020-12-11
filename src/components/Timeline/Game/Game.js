@@ -70,6 +70,18 @@ const Game = styled.article`
     padding: .4rem 1.6rem;
     background-color: ${props => props.theme.timelineGame.releaseUnknownBackgroundColor};
 
+    [data-quarter]:not([data-quarter='Q1']) & {
+      pointer-events: none;
+      
+      > a {
+        display: none;
+      }
+      
+      ${Title} {
+        visibility: hidden;
+      }
+    }
+    
     [data-quarter='Q2'] &,
     [data-quarter='Q3'] & {
       margin-right: -.9rem;
@@ -78,10 +90,6 @@ const Game = styled.article`
 
     ${Title} {
       color: ${props => props.theme.timelineGame.titleReleaseUnknownColor};
-
-      [data-quarter]:not([data-quarter='Q1']) & {
-        visibility: hidden;
-      }
 
       > a {
         background-color: unset;
@@ -125,43 +133,50 @@ const Anchor = styled.a`
   }
 `;
 
+let prevHashValue = null;
+
 const removeFocusVisible = e => {
     const html = document.documentElement;
     html.classList.remove('js-focus-visible');
 
     const target = e.target;
     target.removeEventListener('blur', removeFocusVisible);
+
+    prevHashValue = null;
 }
 
 const setAnchor = (gameEl, url) => {
     const hashValue = document.location.hash.substring(1);
 
     if (gameEl && anchorUrl(url) === hashValue) {
-        gameEl.scrollIntoView({
-            behavior: 'auto',
-            block: 'center',
-            inline: 'center'
-        });
-
-        const html = document.documentElement;
-        html.classList.add('js-focus-visible');
-
         const link = gameEl.querySelector('.game-title > a');
-        if (link) {
+
+        if (link && prevHashValue !== hashValue) {
+            const html = document.documentElement;
+            html.classList.add('js-focus-visible');
+
             link.focus();
             link.addEventListener('blur', removeFocusVisible);
+
+            gameEl.scrollIntoView({
+                behavior: 'auto',
+                block: 'center',
+                inline: 'center'
+            });
+
+            prevHashValue = hashValue;
         }
     }
 }
 
-const anchorUrl = (url) => {
+const anchorUrl = url => {
     const pattern = /https:\/\/(en|ru).wikipedia.org\/wiki\//g;
 
     return url ? url.replace(pattern, '') : null;
 }
 
-const gameAnchor = (url, release) => {
-    return (url && release) ? (
+const gameAnchor = url => {
+    return url ? (
         <Anchor
             href={`#${anchorUrl(url)}`}
             title='Anchor'
@@ -205,7 +220,7 @@ const TimelineGame = ({game: {title, url, release, expansion}}) => {
             ]}
             ref={gameRef}
         >
-            {gameAnchor(url, release)}
+            {gameAnchor(url)}
             {gameTitle(title, url)}
             {gameFooter(release)}
         </Game>
