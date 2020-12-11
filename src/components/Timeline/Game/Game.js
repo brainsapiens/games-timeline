@@ -10,7 +10,7 @@ const Title = styled.h2`
   font-weight: unset;
   line-height: unset;
   white-space: nowrap;
-  
+
   > a {
     color: ${props => props.theme.timelineGame.titleLinkColor};
     text-decoration: none;
@@ -43,20 +43,20 @@ const Game = styled.article`
     padding-top: 0;
     padding-bottom: 0;
     background-color: unset;
-    
+
     ${Title} {
-        color: ${props => props.theme.timelineGame.titleExpansionColor};
-    
-        > a {
-          color: ${props => props.theme.timelineGame.titleExpansionLinkColor};
-          
-          &:hover {
-            background-color: ${props => props.theme.timelineGame.titleExpansionLinkHoverBackgroundColor};
-            color: ${props => props.theme.timelineGame.titleExpansionLinkHoverColor};
-          }
+      color: ${props => props.theme.timelineGame.titleExpansionColor};
+
+      > a {
+        color: ${props => props.theme.timelineGame.titleExpansionLinkColor};
+
+        &:hover {
+          background-color: ${props => props.theme.timelineGame.titleExpansionLinkHoverBackgroundColor};
+          color: ${props => props.theme.timelineGame.titleExpansionLinkHoverColor};
         }
       }
-    
+    }
+
     ${Footer} {
       > time {
         color: ${props => props.theme.timelineGame.footerExpansionColor};
@@ -77,13 +77,15 @@ const Game = styled.article`
     }
 
     ${Title} {
+      color: ${props => props.theme.timelineGame.titleReleaseUnknownColor};
+
       [data-quarter]:not([data-quarter='Q1']) & {
         visibility: hidden;
       }
 
       > a {
         background-color: unset;
-        color: ${props => props.theme.timelineGame.titleReleaseUnknownLinkColor}};
+        color: ${props => props.theme.timelineGame.titleReleaseUnknownLinkColor};
 
         &:hover {
           background-color: unset;

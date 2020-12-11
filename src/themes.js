@@ -44,6 +44,7 @@ export const themeLight = {
         titleExpansionLinkColor: 'var(--color-darkest)',
         titleExpansionLinkHoverColor: 'var(--color-lightest)',
         titleExpansionLinkHoverBackgroundColor: 'var(--color-darkest)',
+        titleReleaseUnknownColor: 'var(--color-dark)',
         titleReleaseUnknownLinkColor: 'var(--color-dark)',
         titleReleaseUnknownLinkHoverColor: 'var(--color-darkest)',
         footerColor: 'var(--color-light)',
@@ -97,8 +98,9 @@ export const themeDark = {
         titleExpansionLinkColor: 'var(--color-light)',
         titleExpansionLinkHoverColor: 'var(--color-darkest)',
         titleExpansionLinkHoverBackgroundColor: 'var(--color-light)',
+        titleReleaseUnknownColor: 'var(--color-light)',
         titleReleaseUnknownLinkColor: 'var(--color-light)',
-        titleReleaseUnknownLinkHoverColor: 'var(--color-light)',
+        titleReleaseUnknownLinkHoverColor: 'var(--color-lightest)',
         footerColor: 'var(--color-darker)',
         footerExpansionColor: 'var(--color-light)'
     }
