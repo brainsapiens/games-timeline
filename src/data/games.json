@@ -1168,6 +1168,43 @@
       "expansion": true
     }
   ],
+  "2009": [
+    {
+      "title": "Fallout&nbsp;3&nbsp;&mdash;<br/> Operation: Anchorage",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Operation:_Anchorage",
+      "genre": "role-playing",
+      "release": "January 27",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;3:<br/> The Pitt",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#The_Pitt",
+      "genre": "role-playing",
+      "release": "March 24",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;3:<br/> Broken Steel",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Broken_Steel",
+      "genre": "role-playing",
+      "release": "May 5",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;3:<br/> Point Lookout",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Point_Lookout",
+      "genre": "role-playing",
+      "release": "June 23",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;3:<br/> Mothership Zeta",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Mothership_Zeta",
+      "genre": "role-playing",
+      "release": "August 3",
+      "expansion": true
+    }
+  ],
   "2010": [
     {
       "title": "Fallout:<br/> New Vegas",
@@ -1185,6 +1222,12 @@
     }
   ],
   "2012": [
+    {
+      "title": "Diablo&nbsp;III",
+      "url": "https://en.wikipedia.org/wiki/Diablo_III",
+      "genre": "role-playing",
+      "release": "May 15"
+    },
     {
       "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim&nbsp;&mdash; Dawnguard",
       "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dawnguard",
@@ -1207,12 +1250,74 @@
       "expansion": true
     }
   ],
+  "2014": [
+    {
+      "title": "Diablo&nbsp;III:<br/> Reaper of&nbsp;Souls",
+      "url": "https://en.wikipedia.org/wiki/Diablo_III:_Reaper_of_Souls",
+      "genre": "role-playing",
+      "release": "March 25",
+      "expansion": true
+    }
+  ],
   "2015": [
     {
       "title": "Fallout&nbsp;4",
       "url": "https://en.wikipedia.org/wiki/Fallout_4",
       "genre": "role-playing",
       "release": "November 10"
+    }
+  ],
+  "2016": [
+    {
+      "title": "Fallout&nbsp;4: Automatron",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Automatron",
+      "genre": "role-playing",
+      "release": "March 22",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Wasteland Workshop",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Wasteland_Workshop",
+      "genre": "role-playing",
+      "release": "April 12",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Far Harbor",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4:_Far_Harbor",
+      "genre": "role-playing",
+      "release": "May 19",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Contraptions Workshop",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Contraptions_Workshop",
+      "genre": "role-playing",
+      "release": "June 21",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Vault-Tec Workshop",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Vault-Tec_Workshop",
+      "genre": "role-playing",
+      "release": "July 26",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Nuka-World",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4:_Nuka-World",
+      "genre": "role-playing",
+      "release": "August 30",
+      "expansion": true
+    }
+  ],
+  "2017": [
+    {
+      "title": "Diablo&nbsp;III:<br/> Rise of&nbsp;the Necromancer",
+      "url": "https://en.wikipedia.org/wiki/Diablo_III:_Rise_of_the_Necromancer",
+      "genre": "role-playing",
+      "release": "June 27",
+      "expansion": true
     }
   ]
 }
