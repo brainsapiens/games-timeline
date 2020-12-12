@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/games-timeline/static/css/main.fe82c7cb.chunk.css",
-    "main.js": "/games-timeline/static/js/main.05b7a3b4.chunk.js",
-    "main.js.map": "/games-timeline/static/js/main.05b7a3b4.chunk.js.map",
+    "main.js": "/games-timeline/static/js/main.d61de33c.chunk.js",
+    "main.js.map": "/games-timeline/static/js/main.d61de33c.chunk.js.map",
     "runtime-main.js": "/games-timeline/static/js/runtime-main.0c625e82.js",
     "runtime-main.js.map": "/games-timeline/static/js/runtime-main.0c625e82.js.map",
     "static/css/2.679831fc.chunk.css": "/games-timeline/static/css/2.679831fc.chunk.css",
@@ -19,6 +19,6 @@
     "static/css/2.679831fc.chunk.css",
     "static/js/2.20f4799f.chunk.js",
     "static/css/main.fe82c7cb.chunk.css",
-    "static/js/main.05b7a3b4.chunk.js"
+    "static/js/main.d61de33c.chunk.js"
   ]
 }
