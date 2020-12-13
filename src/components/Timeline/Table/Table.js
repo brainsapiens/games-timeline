@@ -14,6 +14,7 @@ const Table = styled.div`
   grid-template-columns: var(--genre-width) repeat(${numberOfYears * 4}, 1fr);
   grid-template-rows: var(--year-height) auto;
   width: 100vw;
+  height: 100%;
   max-height: calc(100vh - var(--bar-height) * 2);
   overflow: auto;
   border-top: 1px solid ${props => props.theme.timelineTable.borderColor};
