@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import globals from '../../../globals';
 import series from '../../../data/series.json';
 
-const SeriesSelector = styled.div`
+const SeriesSelector = styled.label`
   display: flex;
   align-items: center;
   user-select: none;
@@ -116,6 +116,7 @@ const TimelineSeriesSelector = () => {
         <SeriesSelector>
             Highlight series:&nbsp;
             <SeriesSelect
+                id='select'
                 value={series}
                 onChange={onChange}
             >
