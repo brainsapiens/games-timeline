@@ -84,7 +84,6 @@ const TimelineTable = () => {
 
     return (
         <Table
-            className={'hidden'}
             ref={tableRef}
             onScroll={onScroll}
         >
