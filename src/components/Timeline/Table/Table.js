@@ -18,13 +18,6 @@ const Table = styled.div`
   overflow: auto;
   border-top: 1px solid ${props => props.theme.timelineTable.borderColor};
   border-left: 1px solid ${props => props.theme.timelineTable.borderColor};
-  transition: opacity var(--transition-duration-basic);
-  will-change: opacity;
-  
-  &.hidden {
-    pointer-events: none;
-    opacity: 0;
-  }
   
   > div {
     padding: var(--cell-padding);
@@ -86,13 +79,7 @@ const TimelineTable = () => {
     const onScroll = debounce(() => setTableScrollPosition(tableRef.current));
 
     useEffect(() => {
-        const table = tableRef.current;
-
-        addTableScrollPosition(table);
-
-        setTimeout(() => {
-            table.classList.remove('hidden');
-        }, 100);
+        addTableScrollPosition(tableRef.current);
     });
 
     return (
