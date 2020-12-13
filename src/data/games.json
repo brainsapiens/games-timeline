@@ -25,7 +25,8 @@
     {
       "title": "MechWarrior",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_(1989_video_game)",
-      "genre": "simulator"
+      "genre": "simulator",
+      "series": "mechwarrior"
     }
   ],
   "1990": [
@@ -186,12 +187,14 @@
       "title": "MechWarrior&nbsp;2:<br/> 31st Century Combat",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_31st_Century_Combat",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "July 24"
     },
     {
       "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic:_A_Strategic_Quest",
       "genre": "strategy",
+      "series": "heroes",
       "release": "August 31"
     },
     {
@@ -210,6 +213,7 @@
       "title": "MechWarrior&nbsp;2:<br/> Ghost Bear&rsquo;s Legacy",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_31st_Century_Combat#MechWarrior_2:_Ghost_Bear's_Legacy",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "November 1",
       "expansion": true
     },
@@ -275,6 +279,7 @@
       "title": "MechWarrior&nbsp;2:<br/> Mercenaries",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_Mercenaries",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "September 30",
       "expansion": true
     },
@@ -282,6 +287,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;II:<br/> The Succession Wars",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II",
       "genre": "strategy",
+      "series": "heroes",
       "release": "October 1"
     },
     {
@@ -319,6 +325,7 @@
       "title": "Diablo",
       "url": "https://en.wikipedia.org/wiki/Diablo_(video_game)",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "January 3"
     },
     {
@@ -363,6 +370,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;II:<br/> The Price of&nbsp;Loyalty",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II#Expansion",
       "genre": "strategy",
+      "series": "heroes",
       "release": "May 16",
       "expansion": true
     },
@@ -395,6 +403,7 @@
       "title": "Fallout",
       "url": "https://en.wikipedia.org/wiki/Fallout_(video_game)",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "October 10"
     },
     {
@@ -444,6 +453,7 @@
       "title": "Diablo:<br/> Hellfire",
       "url": "https://en.wikipedia.org/wiki/Diablo:_Hellfire",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "November 25",
       "expansion": true
     },
@@ -572,6 +582,7 @@
       "title": "Fallout&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Fallout_2",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "October 29"
     },
     {
@@ -629,6 +640,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> The Restoration of&nbsp;Erathia",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III",
       "genre": "strategy",
+      "series": "heroes",
       "release": "March 3"
     },
     {
@@ -662,6 +674,7 @@
       "title": "MechWarrior&nbsp;3",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_3",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "May"
     },
     {
@@ -712,6 +725,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> Armageddon&rsquo;s Blade",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Armageddon%27s_Blade",
       "genre": "strategy",
+      "series": "heroes",
       "release": "September 30",
       "expansion": true
     },
@@ -763,6 +777,7 @@
       "title": "MechWarrior&nbsp;3:<br/> Pirate&rsquo;s Moon",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_3#Pirate's_Moon_(expansion_pack)",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "December 3",
       "expansion": true
     },
@@ -784,6 +799,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> The Shadow of&nbsp;Death",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_The_Shadow_of_Death",
       "genre": "strategy",
+      "series": "heroes",
       "release": "March 31",
       "expansion": true
     },
@@ -791,6 +807,7 @@
       "title": "Diablo&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Diablo_II",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "June 29"
     },
     {
@@ -834,6 +851,7 @@
       "title": "MechWarrior&nbsp;4:<br/> Vengeance",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "November 22"
     },
     {
@@ -863,6 +881,7 @@
       "title": "Fallout Tactics:<br/> Brotherhood of&nbsp;Steel",
       "url": "https://en.wikipedia.org/wiki/Fallout_Tactics:_Brotherhood_of_Steel",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "March 15"
     },
     {
@@ -901,6 +920,7 @@
       "title": "Diablo&nbsp;II:<br/> Lord of&nbsp;Destruction",
       "url": "https://en.wikipedia.org/wiki/Diablo_II:_Lord_of_Destruction",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "June 27",
       "expansion": true
     },
@@ -926,6 +946,7 @@
       "title": "MechWarrior&nbsp;4:<br/> Black Knight",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance#Black_Knight",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "October 31",
       "expansion": true
     },
@@ -938,6 +959,19 @@
     }
   ],
   "2002": [
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;IV:<br/> The Gathering Storm",
+      "genre": "strategy",
+      "series": "heroes",
+      "expansion": true
+    },
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;IV",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_IV",
+      "genre": "strategy",
+      "series": "heroes",
+      "release": "March 28"
+    },
     {
       "title": "The Elder Scrolls&nbsp;III:<br/> Morrowind",
       "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Morrowind",
@@ -996,6 +1030,12 @@
     }
   ],
   "2003": [
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;IV:<br/> Winds of&nbsp;War",
+      "genre": "strategy",
+      "series": "heroes",
+      "expansion": true
+    },
     {
       "title": "The Elder Scrolls&nbsp;III:<br/> Bloodmoon",
       "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Bloodmoon",
@@ -1105,6 +1145,13 @@
       "release": "April 28"
     },
     {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;V",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_V",
+      "genre": "strategy",
+      "series": "heroes",
+      "release": "May 16"
+    },
+    {
       "title": "Half-Life&nbsp;2:<br/> Episode One",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_One",
       "genre": "shooter",
@@ -1122,6 +1169,14 @@
       "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Carbon",
       "genre": "racing",
       "release": "October 30"
+    },
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;V:<br/> Hammers of&nbsp;Fate",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_V:_Hammers_of_Fate",
+      "genre": "strategy",
+      "series": "heroes",
+      "release": "November 14",
+      "expansion": true
     },
     {
       "title": "The Elder Scrolls&nbsp;IV:<br/> Knights of&nbsp;the Nine",
@@ -1147,6 +1202,14 @@
       "expansion": true
     },
     {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;V:<br/> Tribes of&nbsp;the East",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_V:_Tribes_of_the_East",
+      "genre": "strategy",
+      "series": "heroes",
+      "release": "October 12",
+      "expansion": true
+    },
+    {
       "title": "Helldorado",
       "url": "https://en.wikipedia.org/wiki/Helldorado_(video_game)",
       "genre": "tactics",
@@ -1158,6 +1221,7 @@
       "title": "Fallout&nbsp;3",
       "url": "https://en.wikipedia.org/wiki/Fallout_3",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "October 28"
     },
     {
@@ -1173,6 +1237,7 @@
       "title": "Fallout&nbsp;3&nbsp;&mdash;<br/> Operation: Anchorage",
       "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Operation:_Anchorage",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "January 27",
       "expansion": true
     },
@@ -1180,6 +1245,7 @@
       "title": "Fallout&nbsp;3:<br/> The Pitt",
       "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#The_Pitt",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "March 24",
       "expansion": true
     },
@@ -1187,6 +1253,7 @@
       "title": "Fallout&nbsp;3:<br/> Broken Steel",
       "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Broken_Steel",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "May 5",
       "expansion": true
     },
@@ -1194,6 +1261,7 @@
       "title": "Fallout&nbsp;3:<br/> Point Lookout",
       "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Point_Lookout",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "June 23",
       "expansion": true
     },
@@ -1201,6 +1269,7 @@
       "title": "Fallout&nbsp;3:<br/> Mothership Zeta",
       "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Mothership_Zeta",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "August 3",
       "expansion": true
     }
@@ -1210,6 +1279,7 @@
       "title": "Fallout:<br/> New Vegas",
       "url": "https://en.wikipedia.org/wiki/Fallout:_New_Vegas",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "October 19"
     }
   ],
@@ -1226,6 +1296,7 @@
       "title": "Diablo&nbsp;III",
       "url": "https://en.wikipedia.org/wiki/Diablo_III",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "May 15"
     },
     {
@@ -1255,6 +1326,7 @@
       "title": "Diablo&nbsp;III:<br/> Reaper of&nbsp;Souls",
       "url": "https://en.wikipedia.org/wiki/Diablo_III:_Reaper_of_Souls",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "March 25",
       "expansion": true
     }
@@ -1264,6 +1336,7 @@
       "title": "Fallout&nbsp;4",
       "url": "https://en.wikipedia.org/wiki/Fallout_4",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "November 10"
     }
   ],
@@ -1272,6 +1345,7 @@
       "title": "Fallout&nbsp;4: Automatron",
       "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Automatron",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "March 22",
       "expansion": true
     },
@@ -1279,6 +1353,7 @@
       "title": "Fallout&nbsp;4: Wasteland Workshop",
       "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Wasteland_Workshop",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "April 12",
       "expansion": true
     },
@@ -1286,6 +1361,7 @@
       "title": "Fallout&nbsp;4: Far Harbor",
       "url": "https://en.wikipedia.org/wiki/Fallout_4:_Far_Harbor",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "May 19",
       "expansion": true
     },
@@ -1293,6 +1369,7 @@
       "title": "Fallout&nbsp;4: Contraptions Workshop",
       "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Contraptions_Workshop",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "June 21",
       "expansion": true
     },
@@ -1300,6 +1377,7 @@
       "title": "Fallout&nbsp;4: Vault-Tec Workshop",
       "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Vault-Tec_Workshop",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "July 26",
       "expansion": true
     },
@@ -1307,6 +1385,7 @@
       "title": "Fallout&nbsp;4: Nuka-World",
       "url": "https://en.wikipedia.org/wiki/Fallout_4:_Nuka-World",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "August 30",
       "expansion": true
     }
@@ -1316,6 +1395,7 @@
       "title": "Diablo&nbsp;III:<br/> Rise of&nbsp;the Necromancer",
       "url": "https://en.wikipedia.org/wiki/Diablo_III:_Rise_of_the_Necromancer",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "June 27",
       "expansion": true
     }

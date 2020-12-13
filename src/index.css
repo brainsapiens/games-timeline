@@ -85,16 +85,7 @@ body {
     line-height: var(--line-height-basic);
 }
 
-h1,
-h2 {
-    font-weight: var(--font-weight-title);
-    line-height: var(--line-height-title);
-}
-
-h1 {
-    margin: 0;
-}
-
+/* Links */
 a {
     color: var(--color-link-dark);
     transition: all var(--transition-duration-basic);
@@ -109,6 +100,18 @@ a.active {
     cursor: default;
 }
 
+/* Headings */
+h1,
+h2 {
+    font-weight: var(--font-weight-title);
+    line-height: var(--line-height-title);
+}
+
+h1 {
+    margin: 0;
+}
+
+/* Lists */
 ol,
 ul {
     padding: 0;

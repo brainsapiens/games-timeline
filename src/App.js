@@ -39,7 +39,7 @@ function App() {
     const themeMode = theme === 'light' ? themeLight : themeDark
 
     if (!componentMounted) {
-        return null
+        return null;
     }
 
     return (

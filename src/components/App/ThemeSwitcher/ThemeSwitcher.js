@@ -43,6 +43,10 @@ const Switcher = styled.span`
       left: 2.5rem;
       box-shadow: -1px 1px 3px 2px rgba(0, 0, 0, .2);
     }
+    
+    &:focus:not(:active) + span {
+      box-shadow: 0 0 0 2px ${props => props.theme.global.outlineColor};
+    }
   }
 
   > span {

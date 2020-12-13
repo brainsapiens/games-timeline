@@ -34,11 +34,18 @@ const Game = styled.article`
   position: relative;
   padding: .4rem .8rem;
   background-color: ${props => props.theme.timelineGame.backgroundColor};
+  transition: opacity var(--transition-duration-basic);
+  will-change: opacity;
 
   &:hover {
     z-index: 300;
   }
-
+  
+  &.muted {
+    opacity: .1;
+    pointer-events: none;
+  }
+  
   &.expansion {
     padding-top: 0;
     padding-bottom: 0;
@@ -141,7 +148,7 @@ const setAnchor = (gameEl, url) => {
     const hashValue = document.location.hash.substring(1);
 
     if (gameEl && anchorUrl(url) === hashValue) {
-        const link = gameEl.querySelector('.game-title > a');
+        const link = gameEl.querySelector('.game__title > a');
 
         if (link) {
             const html = document.documentElement;
@@ -150,11 +157,13 @@ const setAnchor = (gameEl, url) => {
             link.focus();
             link.addEventListener('blur', removeFocusVisible);
 
-            gameEl.scrollIntoView({
-                behavior: 'auto',
-                block: 'center',
-                inline: 'center'
-            });
+            setTimeout(() => {
+                gameEl.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                    inline: 'center'
+                });
+            }, 0);
         }
     }
 }
@@ -178,12 +187,14 @@ const gameAnchor = url => {
 }
 
 const gameTitle = (title, url) => {
+    const className = 'game__title'
+
     return url ? (
-        <Title className='game-title'>
+        <Title className={className}>
             <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{__html: title}}/>
         </Title>
     ) : (
-        <Title className='game-title' dangerouslySetInnerHTML={{__html: title}}/>
+        <Title className={className} dangerouslySetInnerHTML={{__html: title}}/>
     )
 }
 
@@ -196,9 +207,10 @@ const gameFooter = release => {
 }
 
 const TimelineGame = ({game, placeholder }) => {
-    const {title, url, release, expansion} = game;
+    const {title, url, release, series, expansion} = game;
     const gameRef = useRef(null);
     const className = [
+        'game',
         expansion ? 'expansion' : '',
         !release ? 'release-unknown' : '',
     ];
@@ -210,6 +222,7 @@ const TimelineGame = ({game, placeholder }) => {
     return placeholder ? (
         <Game
             className={className}
+            data-series={series}
             ref={gameRef}
         >
             {gameTitle(title)}
@@ -217,6 +230,7 @@ const TimelineGame = ({game, placeholder }) => {
     ) : (
         <Game
             className={className}
+            data-series={series}
             ref={gameRef}
         >
             {gameAnchor(url)}

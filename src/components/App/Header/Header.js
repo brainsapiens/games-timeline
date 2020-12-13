@@ -1,10 +1,12 @@
 import React from 'react';
+import {useLocation} from 'react-router-dom';
 import styled from 'styled-components';
 
 import UiContainer from '../../Ui/Container';
 import AppTitle from '../Title';
 import AppNav from '../Nav';
 import AppThemeSwitcher from '../ThemeSwitcher';
+import TimelineSeriesSelector from '../../Timeline/SeriesSelector';
 
 const Header = styled.header`
   position: relative;
@@ -30,20 +32,37 @@ const HeaderRow = styled.div`
   align-items: center;
 `;
 
-const HeaderSwitcher = styled.div`
+const HeaderControls = styled.div`
+  display: flex;
+  align-items: center;
   margin-left: auto;
 `;
 
+const HeaderControl = styled.div`
+  &:not(:last-child) {
+    margin-right: 3.6rem;
+  }
+`;
+
 const AppHeader = () => {
+    const {pathname} = useLocation();
+
     return (
         <Header role='banner'>
             <UiContainer>
                 <HeaderRow>
                     <AppTitle/>
                     <AppNav/>
-                    <HeaderSwitcher>
-                        <AppThemeSwitcher/>
-                    </HeaderSwitcher>
+                    <HeaderControls>
+                        {pathname === '/' ? (
+                            <HeaderControl>
+                                <TimelineSeriesSelector/>
+                            </HeaderControl>
+                        ) : null}
+                        <HeaderControl>
+                            <AppThemeSwitcher/>
+                        </HeaderControl>
+                    </HeaderControls>
                 </HeaderRow>
             </UiContainer>
         </Header>
