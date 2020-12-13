@@ -80,7 +80,7 @@ const selectSeries = (series) => {
                 const html = document.documentElement;
                 html.classList.add('js-focus-visible');
 
-                        link.focus();
+                link.focus();
 
                 setTimeout(() => {
                     firstGameInSeries.scrollIntoView({
