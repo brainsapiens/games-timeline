@@ -1,24 +1,24 @@
 {
   "files": {
     "main.css": "/games-timeline/static/css/main.d87ee702.chunk.css",
-    "main.js": "/games-timeline/static/js/main.83e57b19.chunk.js",
-    "main.js.map": "/games-timeline/static/js/main.83e57b19.chunk.js.map",
+    "main.js": "/games-timeline/static/js/main.b10ce8e1.chunk.js",
+    "main.js.map": "/games-timeline/static/js/main.b10ce8e1.chunk.js.map",
     "runtime-main.js": "/games-timeline/static/js/runtime-main.0c625e82.js",
     "runtime-main.js.map": "/games-timeline/static/js/runtime-main.0c625e82.js.map",
     "static/css/2.679831fc.chunk.css": "/games-timeline/static/css/2.679831fc.chunk.css",
-    "static/js/2.91bb8ec4.chunk.js": "/games-timeline/static/js/2.91bb8ec4.chunk.js",
-    "static/js/2.91bb8ec4.chunk.js.map": "/games-timeline/static/js/2.91bb8ec4.chunk.js.map",
+    "static/js/2.a6de1f1a.chunk.js": "/games-timeline/static/js/2.a6de1f1a.chunk.js",
+    "static/js/2.a6de1f1a.chunk.js.map": "/games-timeline/static/js/2.a6de1f1a.chunk.js.map",
     "index.html": "/games-timeline/index.html",
     "static/css/2.679831fc.chunk.css.map": "/games-timeline/static/css/2.679831fc.chunk.css.map",
     "static/css/main.d87ee702.chunk.css.map": "/games-timeline/static/css/main.d87ee702.chunk.css.map",
-    "static/js/2.91bb8ec4.chunk.js.LICENSE.txt": "/games-timeline/static/js/2.91bb8ec4.chunk.js.LICENSE.txt",
+    "static/js/2.a6de1f1a.chunk.js.LICENSE.txt": "/games-timeline/static/js/2.a6de1f1a.chunk.js.LICENSE.txt",
     "static/media/link.d898b4a9.svg": "/games-timeline/static/media/link.d898b4a9.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.0c625e82.js",
     "static/css/2.679831fc.chunk.css",
-    "static/js/2.91bb8ec4.chunk.js",
+    "static/js/2.a6de1f1a.chunk.js",
     "static/css/main.d87ee702.chunk.css",
-    "static/js/main.83e57b19.chunk.js"
+    "static/js/main.b10ce8e1.chunk.js"
   ]
 }
