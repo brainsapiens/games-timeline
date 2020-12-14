@@ -123,6 +123,7 @@
       "title": "Doom",
       "url": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)",
       "genre": "shooter",
+      "series": "doom",
       "release": "December 10"
     }
   ],
@@ -161,6 +162,7 @@
       "title": "Doom&nbsp;II:<br/> Hell on&nbsp;Earth",
       "url": "https://en.wikipedia.org/wiki/Doom_II",
       "genre": "shooter",
+      "series": "doom",
       "release": "October 10"
     },
     {
@@ -248,12 +250,14 @@
       "title": "Final Doom",
       "url": "https://en.wikipedia.org/wiki/Final_Doom",
       "genre": "shooter",
+      "series": "doom",
       "release": "June 17"
     },
     {
       "title": "Quake",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)",
       "genre": "shooter",
+      "series": "quake",
       "release": "June 22"
     },
     {
@@ -332,6 +336,7 @@
       "title": "Quake Mission Pack No.&nbsp;1:<br/> Scourge of&nbsp;Armagon",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._1:_Scourge_of_Armagon",
       "genre": "shooter",
+      "series": "quake",
       "release": "March 5",
       "expansion": true
     },
@@ -345,6 +350,7 @@
       "title": "Quake Mission Pack No.&nbsp;2:<br/> Dissolution of&nbsp;Eternity",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._2:_Dissolution_of_Eternity",
       "genre": "shooter",
+      "series": "quake",
       "release": "March 19",
       "expansion": true
     },
@@ -353,6 +359,13 @@
       "url": "https://en.wikipedia.org/wiki/Theme_Hospital",
       "genre": "simulator",
       "release": "March 28"
+    },
+    {
+      "title": "Doom&nbsp;64",
+      "url": "https://en.wikipedia.org/wiki/Doom_64",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "April 4"
     },
     {
       "title": "Need for Speed&nbsp;II",
@@ -429,6 +442,7 @@
       "title": "Grand Theft Auto",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_(video_game)",
       "genre": "action",
+      "series": "gta",
       "release": "October 21"
     },
     {
@@ -467,6 +481,7 @@
       "title": "Quake&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Quake_II",
       "genre": "shooter",
+      "series": "quake",
       "release": "December 9"
     },
     {
@@ -517,6 +532,7 @@
       "title": "Quake&nbsp;II Mission Pack:<br/> The Reckoning",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_The_Reckoning",
       "genre": "shooter",
+      "series": "quake",
       "release": "May 31",
       "expansion": true
     },
@@ -550,6 +566,7 @@
       "title": "Quake&nbsp;II Mission Pack:<br/> Ground Zero",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_Ground_Zero",
       "genre": "shooter",
+      "series": "quake",
       "release": "September 11",
       "expansion": true
     },
@@ -660,6 +677,7 @@
       "title": "Grand Theft Auto:<br/> London 1969",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_London_1969",
       "genre": "action",
+      "series": "gta",
       "release": "April 22",
       "expansion": true
     },
@@ -687,6 +705,7 @@
       "title": "Grand Theft Auto:<br/> London 1961",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_London_1961",
       "genre": "action",
+      "series": "gta",
       "release": "July 1",
       "expansion": true
     },
@@ -746,6 +765,7 @@
       "title": "Grand Theft Auto&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_2",
       "genre": "action",
+      "series": "gta",
       "release": "October 22"
     },
     {
@@ -771,6 +791,7 @@
       "title": "Quake&nbsp;III Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena",
       "genre": "shooter",
+      "series": "quake",
       "release": "December 2"
     },
     {
@@ -858,6 +879,7 @@
       "title": "Quake&nbsp;III:<br/> Team Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena#Expansion",
       "genre": "shooter",
+      "series": "quake",
       "release": "December 18",
       "expansion": true
     },
@@ -940,6 +962,7 @@
       "title": "Grand Theft Auto&nbsp;III",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_III",
       "genre": "action",
+      "series": "gta",
       "release": "October 22"
     },
     {
@@ -1007,6 +1030,7 @@
       "title": "Grand Theft Auto:<br/> Vice City",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City",
       "genre": "action",
+      "series": "gta",
       "release": "October 29"
     },
     {
@@ -1085,9 +1109,17 @@
       "expansion": true
     },
     {
+      "title": "Doom&nbsp;3",
+      "url": "https://en.wikipedia.org/wiki/Doom_3",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "August 3"
+    },
+    {
       "title": "Grand Theft Auto:<br/> San Andreas",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas",
       "genre": "action",
+      "series": "gta",
       "release": "October 26"
     },
     {
@@ -1104,6 +1136,21 @@
     }
   ],
   "2005": [
+    {
+      "title": "Doom&nbsp;3:<br/> Resurrection of&nbsp;Evil",
+      "url": "https://en.wikipedia.org/wiki/Doom_3:_Resurrection_of_Evil",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "April 3",
+      "expansion": true
+    },
+    {
+      "title": "Quake&nbsp;4",
+      "url": "https://en.wikipedia.org/wiki/Quake_4",
+      "genre": "shooter",
+      "series": "quake",
+      "release": "October 18"
+    },
     {
       "title": "Half-Life&nbsp;2:<br/> Lost Coast",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Lost_Coast",
@@ -1218,6 +1265,13 @@
   ],
   "2008": [
     {
+      "title": "Grand Theft Auto&nbsp;IV",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV",
+      "genre": "action",
+      "series": "gta",
+      "release": "April 29"
+    },
+    {
       "title": "Fallout&nbsp;3",
       "url": "https://en.wikipedia.org/wiki/Fallout_3",
       "genre": "role-playing",
@@ -1239,6 +1293,14 @@
       "genre": "role-playing",
       "series": "fallout",
       "release": "January 27",
+      "expansion": true
+    },
+    {
+      "title": "Grand Theft Auto&nbsp;IV:<br/> The Lost and Damned",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV:_The_Lost_and_Damned",
+      "genre": "action",
+      "series": "gta",
+      "release": "February 17",
       "expansion": true
     },
     {
@@ -1271,6 +1333,14 @@
       "genre": "role-playing",
       "series": "fallout",
       "release": "August 3",
+      "expansion": true
+    },
+    {
+      "title": "Grand Theft Auto&nbsp;IV:<br/> The Ballad of&nbsp;Gay Tony",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_The_Ballad_of_Gay_Tony",
+      "genre": "action",
+      "series": "gta",
+      "release": "October 29",
       "expansion": true
     }
   ],
@@ -1314,11 +1384,27 @@
       "expansion": true
     },
     {
+      "title": "Doom&nbsp;3:<br/> BFG Edition",
+      "url": "https://en.wikipedia.org/wiki/Doom_3:_BFG_Edition",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "October 16"
+    },
+    {
       "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim&nbsp;&mdash; Dragonborn",
       "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dragonborn",
       "genre": "role-playing",
       "release": "December 4",
       "expansion": true
+    }
+  ],
+  "2013": [
+    {
+      "title": "Grand Theft Auto&nbsp;V",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+      "genre": "action",
+      "series": "gta",
+      "release": "September 17"
     }
   ],
   "2014": [
@@ -1356,6 +1442,13 @@
       "series": "fallout",
       "release": "April 12",
       "expansion": true
+    },
+    {
+      "title": "Doom",
+      "url": "https://en.wikipedia.org/wiki/Doom_(2016_video_game)",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "May 13"
     },
     {
       "title": "Fallout&nbsp;4: Far Harbor",
@@ -1398,6 +1491,15 @@
       "series": "diablo",
       "release": "June 27",
       "expansion": true
+    }
+  ],
+  "2020": [
+    {
+      "title": "Doom Eternal",
+      "url": "https://en.wikipedia.org/wiki/Doom_Eternal",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "March 20"
     }
   ]
 }
