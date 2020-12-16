@@ -45,54 +45,48 @@ const seriesOptions = () => {
     return options;
 }
 
-const selectSeries = (series) => {
+const selectSeries = series => {
     const allGames = document.querySelectorAll('.game');
-    allGames.forEach(game => {
-        game.classList.remove('muted');
 
+    allGames.forEach(game => {
         const link = game.querySelector('.game__title > a');
-        if (link) {
-            link.removeAttribute('tabindex');
-        }
+
+        game.classList.remove('muted');
+        if (link) link.removeAttribute('tabindex');
     });
 
-    if (series !== 'none') {
+    if (series === 'none') {
+        storage.removeItem('series');
+    } else {
         removeAnchor();
 
         storage.setItem('series', series);
 
         const notSeriesGames = document.querySelectorAll(`.game:not([data-series='${series}'])`);
+
         notSeriesGames.forEach(game => {
+            const link = game.querySelector('.game__title > a');
             game.classList.add('muted');
 
-            const link = game.querySelector('.game__title > a');
-            if (link) {
-                link.setAttribute('tabindex', '-1');
-            }
+            if (link) link.setAttribute('tabindex', '-1');
         });
 
         const seriesGames = document.querySelectorAll(`.game[data-series='${series}']`);
         const firstGameInSeries = seriesGames[0];
-        if (firstGameInSeries) {
-            const link = firstGameInSeries.querySelector('.game__title > a');
 
-            if (link) {
-                const html = document.documentElement;
-                html.classList.add('js-focus-visible');
+        if (!firstGameInSeries) return;
 
-                link.focus();
+        const link = firstGameInSeries.querySelector('.game__title > a');
+        if (!link) return;
 
-                setTimeout(() => {
-                    firstGameInSeries.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center',
-                        inline: 'center'
-                    });
-                }, 0);
-            }
-        }
-    } else {
-        storage.removeItem('series');
+        document.documentElement.classList.add('js-focus-visible');
+        link.focus();
+
+        firstGameInSeries.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center'
+        });
     }
 }
 
