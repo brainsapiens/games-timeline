@@ -28,10 +28,10 @@ const matchGameToQuarter = (index, year, release) => {
 
     const monthIndex = date.getMonth() + 1;
 
-    if (index === 1 && monthIndex > 0 && monthIndex <= 3) return true;
-    if (index === 2 && monthIndex > 3 && monthIndex <= 6) return true;
-    if (index === 3 && monthIndex > 6 && monthIndex <= 9) return true;
-
+    if ((index === 1 && monthIndex > 0 && monthIndex <= 3) ||
+        (index === 2 && monthIndex > 3 && monthIndex <= 6) ||
+        (index === 3 && monthIndex > 6 && monthIndex <= 9)) return true;
+    
     return index === 4 && monthIndex > 9 && monthIndex <= 12;
 }
 
