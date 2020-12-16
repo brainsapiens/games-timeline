@@ -5,6 +5,7 @@ import styled from 'styled-components';
 import UiContainer from '../../Ui/Container';
 import AppTitle from '../Title';
 import AppNav from '../Nav';
+import AppSearch from '../Search';
 import AppThemeSwitcher from '../ThemeSwitcher';
 import TimelineSeriesSelector from '../../Timeline/SeriesSelector';
 
@@ -59,6 +60,9 @@ const AppHeader = () => {
                                 <TimelineSeriesSelector/>
                             </HeaderControl>
                         ) : null}
+                        <HeaderControl>
+                            <AppSearch/>
+                        </HeaderControl>
                         <HeaderControl>
                             <AppThemeSwitcher/>
                         </HeaderControl>

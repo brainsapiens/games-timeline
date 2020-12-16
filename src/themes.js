@@ -16,6 +16,10 @@ export const themeLight = {
     appNav: {
         linkColorActive: 'var(--color-dark)'
     },
+    appSearch: {
+        buttonIconFilter: 'invert(0)',
+        tooltipBackgroundColor: 'var(--color-lightest)'
+    },
     appMain: {
         backgroundColor: 'var(--color-lightest)'
     },
@@ -69,6 +73,10 @@ export const themeDark = {
     },
     appNav: {
         linkColorActive: 'var(--color-light)'
+    },
+    appSearch: {
+        buttonIconFilter: 'invert(1)',
+        tooltipBackgroundColor: 'var(--color-lighter)'
     },
     appMain: {
         backgroundColor: 'var(--color-darkest)',

@@ -1,7 +1,12 @@
 import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
+import {addFocusVisible} from '../../../helpers/focusVisible';
 import globals from '../../../globals';
 import series from '../../../data/series.json';
+
+const SeriesLabel = styled.label`
+    display: block;
+`;
 
 const SeriesSelect = styled.select`
   width: 16rem;
@@ -71,10 +76,7 @@ const selectSeries = (series) => {
             const link = firstGameInSeries.querySelector('.game__title > a');
 
             if (link) {
-                const html = document.documentElement;
-                html.classList.add('js-focus-visible');
-
-                link.focus();
+                addFocusVisible(link);
 
                 setTimeout(() => {
                     firstGameInSeries.scrollIntoView({
@@ -107,13 +109,16 @@ const TimelineSeriesSelector = () => {
     }
 
     return (
-        <SeriesSelect
-            id='select'
-            value={series}
-            onChange={onChange}
-        >
-            {seriesOptions()}
-        </SeriesSelect>
+        <SeriesLabel>
+            <span className='visually-hidden'>Select series</span>
+            <SeriesSelect
+                id='select'
+                value={series}
+                onChange={onChange}
+            >
+                {seriesOptions()}
+            </SeriesSelect>
+        </SeriesLabel>
     );
 };
 
