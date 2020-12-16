@@ -1,9 +1,8 @@
 import React, {useEffect, useRef} from 'react';
 import styled from 'styled-components';
-
-import games from '../../../data/games';
 import debounce from '../../../utils/debounce';
 
+import games from '../../../data/games';
 import TimelineYears from '../Years';
 import TimelineGenres from '../Genres';
 
@@ -81,7 +80,7 @@ const TimelineTable = () => {
 
     useEffect(() => {
         addTableScrollPosition(tableRef.current);
-    });
+    }, []); 
 
     return (
         <Table

@@ -102,7 +102,7 @@ const TimelineSeriesSelector = () => {
 
         setSeries(value);
         selectSeries(value);
-    }, [setSeries, selectSeries]);
+    }, [setSeries]);
 
     return (
         <SeriesSelector>
