@@ -34,13 +34,11 @@ const GlobalStyle = createGlobalStyle`
   }
 `;
 
-function App() {
+const App = () => {
     const [theme, toggleTheme, componentMounted] = useDarkMode();
     const themeMode = theme === 'light' ? themeLight : themeDark
 
-    if (!componentMounted) {
-        return null;
-    }
+    if (!componentMounted) return null;
 
     return (
         <AppContext.Provider value={{theme, toggleTheme}}>
