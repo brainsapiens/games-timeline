@@ -1,37 +1,24 @@
 import React from 'react';
 
 import games from '../../../data/games';
-
 import TimelineGenre from '../Genre';
 import TimelineGames from '../Games';
 
-const listOfGenres = games => {
-    const listOfGenres = [];
-    const listOfGames = Object.values(games);
-
-    listOfGames.forEach(games => {
+const listOfGenres = games => (
+    Object.values(games).reduce((acc, games) => {
         for (const game of games) {
             const {genre} = game;
 
-            if (!listOfGenres.includes(genre)) {
-                listOfGenres.push(genre);
-            }
+            if (!acc.includes(genre)) acc.push(genre);
         }
-    });
+        return acc;
+    }, []).sort((a, b) => a.localeCompare(b))
+)
 
-    listOfGenres.sort((a, b) => a.localeCompare(b));
-
-    return listOfGenres;
-}
-
-const genres = games => {
-    return listOfGenres(games).map((genreName, index) => {
-        return ([
-            <TimelineGenre key={genreName} genreName={genreName}/>,
-            <TimelineGames key={index} genreName={genreName}/>
-        ])
-    });
-}
+const genres = games => listOfGenres(games).map((genreName, index) => ([
+    <TimelineGenre key={genreName} genreName={genreName}/>,
+    <TimelineGames key={index} genreName={genreName}/>
+]))
 
 const TimelineGenres = () => genres(games);
 
