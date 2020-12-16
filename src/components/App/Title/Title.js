@@ -2,29 +2,30 @@ import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import global from '../../../global';
-
 import AppLogo from '../Logo';
 
+import globals from '../../../globals';
+
+const {app: {title}} = globals;
+
 const Title = styled.h1`
-    margin-right: 3.6rem;
-    font-size: 2.5rem;
-    font-weight: var(--font-weight-base);
-    word-spacing: -.3rem;
-`;
-const Link = styled(NavLink)`
-    display: flex;
-    align-items: center;
-    color: var(--color-inverse);
-    text-decoration: none;
+  margin-right: 3.6rem;
+  font-size: 2.5rem;
+  font-weight: var(--font-weight-basic);
+  word-spacing: -.75rem;
 `;
 
-const {app: {title}} = global;
+const Link = styled(NavLink)`
+  display: flex;
+  align-items: center;
+  color: ${props => props.theme.appTitle.linkColor};
+  text-decoration: none;
+`;
 
 const AppTitle = () => (
     <Title>
-        <Link to='/'>
-            <AppLogo />
+        <Link to='/' exact>
+            <AppLogo/>
             {title}
         </Link>
     </Title>

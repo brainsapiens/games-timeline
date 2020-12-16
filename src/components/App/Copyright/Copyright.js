@@ -2,14 +2,19 @@ import React, {useMemo} from 'react';
 import {NavLink} from 'react-router-dom';
 import styled from 'styled-components';
 
-import global from '../../../global';
+import globals from '../../../globals';
+
+const {app: {title}} = globals;
 
 const Text = styled.p`
-    color: #666;
-    text-align: center;
-`;
+  text-align: center;
 
-const {app: {title}} = global;
+  a {
+    &.active {
+      color: ${props => props.theme.appCopyright.linkColorActive};
+    }
+  }
+`;
 
 const AppCopyright = () => {
     const currentYear = useMemo(() => new Date().getFullYear(), []);
@@ -18,7 +23,7 @@ const AppCopyright = () => {
         <Text>
             &copy;&nbsp;{currentYear} <NavLink to='/' exact>{title}</NavLink>
         </Text>
-    )
+    );
 };
 
 export default AppCopyright;

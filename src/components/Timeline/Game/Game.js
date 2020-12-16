@@ -1,219 +1,248 @@
-import React, {Component} from 'react';
+import React, {useEffect, useRef} from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import iconLink from '../../../images/icons/link.svg';
 
-const releaseUnknownGameTitle = `
-    .game-title {
-        color: #666;
-        
-        [data-quarter]:not([data-quarter='Q1']) & {
-            visibility: hidden;
-        }
-
-        > a {
-            background-color: unset;
-            color: #666;
-            
-            &:hover {
-                background-color: unset;
-                color: #333;
-            }
-        }
-    }
-`;
-const Game = styled.article`
-    position: relative;
-    padding: .4rem .8rem;
-    background-color: #000;
-    color: #fff;
-    
-    &:hover {
-        z-index: 300;
-    }
-    
-    a {
-        color: #fff;
-    }
-    
-    &.expansion {
-        padding-top: 0;
-        padding-bottom: 0;
-        background-color: unset;
-        color: #000;
-        
-        a {
-            color: #000;
-        }
-    }
-    
-    &.release-unknown {
-        margin-right: -.8rem;
-        margin-left: -.8rem;
-        padding: .4rem 1.6rem;
-        background-color: #f5f5f5;
-        color: #666;
-        
-        [data-quarter='Q2'] &,
-        [data-quarter='Q3'] & {
-            margin-right: -.9rem;
-            margin-left: -.9rem;
-        }
-        
-        ${releaseUnknownGameTitle};
-        
-        &.expansion {
-            ${releaseUnknownGameTitle};
-        }
-    }
-`;
-const Anchor = styled.a`
-    position: absolute;
-    top: 0;
-    right: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: .6rem;
-    background-color: rgba(255, 255, 255, .75);
-    color: #000;
-    opacity: 0;
-    transition: opacity var(--transition-duration-base);
-
-    &:hover > img {
-        opacity: 1;
-    }
-
-    > img {
-        opacity: .75;
-        transition: opacity var(--transition-duration-base);
-    }
-    
-    ${Game}:hover & {
-        opacity: 1;
-    }
-`;
 const Title = styled.h2`
-    color: #fff;
-    font-size: 1.3rem;
-    font-weight: unset;
-    line-height: unset;
-    white-space: nowrap;
-    
-    ${Game}.expansion & {
-        color: #000;
+  color: ${props => props.theme.timelineGame.titleColor};
+  font-size: 1.3rem;
+  font-weight: unset;
+  line-height: unset;
+  white-space: nowrap;
+
+  > a {
+    color: ${props => props.theme.timelineGame.titleLinkColor};
+    text-decoration: none;
+
+    &:hover {
+      background-color: ${props => props.theme.timelineGame.titleLinkHoverBackgroundColor};
+      color: ${props => props.theme.timelineGame.titleLinkHoverColor};
     }
-    
-    > a {
-        color: #fff;
-        text-decoration: none;
-        
-        &:hover {
-            background-color: #fff;
-            color: #000;
-            
-            ${Game}.expansion & {
-                background-color: #000;
-                color: #fff;
-            }
-        }
-    }
+  }
 `;
+
 const Footer = styled.footer`
-    > time {
-        color: #ccc;
-        font-size: 1.1rem;
-        white-space: nowrap;
-        
-        ${Game}.expansion & {
-            color: #666;
-        }
-    }
+  > time {
+    color: ${props => props.theme.timelineGame.footerColor};
+    font-size: 1.1rem;
+    white-space: nowrap;
+  }
 `;
 
-class TimelineGame extends Component {
-    constructor (props) {
-        super(props);
-        this.gameRef = React.createRef();
-    }
+const Game = styled.article`
+  position: relative;
+  padding: .4rem .8rem;
+  background-color: ${props => props.theme.timelineGame.backgroundColor};
+  transition: opacity var(--transition-duration-basic);
+  will-change: opacity;
 
-    componentDidMount () {
-        this.setAnchor(this.gameRef.current);
-    }
+  &:hover {
+    z-index: 300;
+  }
+  
+  &.muted {
+    opacity: .1;
+    pointer-events: none;
+  }
+  
+  &.expansion {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: unset;
 
-    setAnchor = (item) => {
-        const hashValue = document.location.hash.substring(1);
+    ${Title} {
+      color: ${props => props.theme.timelineGame.titleExpansionColor};
 
-        if (item && this.anchorUrl === hashValue) {
-            item.scrollIntoView({
-                behavior: 'auto',
-                block: 'center',
-                inline: 'center'
-            });
+      > a {
+        color: ${props => props.theme.timelineGame.titleExpansionLinkColor};
 
-            const link = item.querySelector('.game-title > a');
-            link && link.focus();
+        &:hover {
+          background-color: ${props => props.theme.timelineGame.titleExpansionLinkHoverBackgroundColor};
+          color: ${props => props.theme.timelineGame.titleExpansionLinkHoverColor};
         }
-    };
-
-    get anchorUrl () {
-        const {url, release} = this.props.game;
-
-        return (url && release) ? url.replace('https://en.wikipedia.org/wiki/', '') : null;
+      }
     }
 
-    get anchor () {
-        const {url, release} = this.props.game;
+    ${Footer} {
+      > time {
+        color: ${props => props.theme.timelineGame.footerExpansionColor};
+      }
+    }
+  }
 
-        return (url && release) ? (
-            <Anchor
-                href={`#${this.anchorUrl}`}
-                title='Anchor'
-            >
-                <img src={iconLink} width='24' height='24' alt='anchor' />
-            </Anchor>
-        ) : null
+  &.release-unknown {
+    margin-right: -.8rem;
+    margin-left: -.8rem;
+    padding: .4rem 1.6rem;
+    background-color: ${props => props.theme.timelineGame.releaseUnknownBackgroundColor};
+
+    [data-quarter]:not([data-quarter='Q1']) & {
+      pointer-events: none;
+      
+      ${Title} {
+        visibility: hidden;
+      }
+    }
+    
+    [data-quarter='Q2'] &,
+    [data-quarter='Q3'] & {
+      margin-right: -.9rem;
+      margin-left: -.9rem;
     }
 
-    get title () {
-        const {title, url} = this.props.game;
+    ${Title} {
+      color: ${props => props.theme.timelineGame.titleReleaseUnknownColor};
 
-        return url ? (
-            <Title className='game-title'>
-                <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{ __html: title }} />
-            </Title>
-        ) : (
-            <Title className='game-title' dangerouslySetInnerHTML={{ __html: title }} />
-        )
+      > a {
+        background-color: unset;
+        color: ${props => props.theme.timelineGame.titleReleaseUnknownLinkColor};
+
+        &:hover {
+          background-color: unset;
+          color: ${props => props.theme.timelineGame.titleReleaseUnknownLinkHoverColor};
+        }
+      }
     }
-    get footer () {
-        const {release} = this.props.game;
+  }
+`;
 
-        return release ? (
-            <Footer>
-                <time>{release}</time>
-            </Footer>
-        ) : null
+const Anchor = styled.a`
+  position: absolute;
+  top: 0;
+  right: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: .6rem;
+  background-color: rgba(${props => props.theme.timelineGame.anchorBackgroundColor}, .75);
+  opacity: 0;
+  transition: opacity var(--transition-duration-basic);
+
+  &:hover > img {
+    opacity: 1;
+  }
+
+  > img {
+    flex: 0 0 auto;
+    opacity: .75;
+    transition: opacity var(--transition-duration-basic);
+    filter: ${props => props.theme.timelineGame.anchorIconFilter}
+  }
+
+  ${Game}:hover & {
+    opacity: 1;
+  }
+`;
+
+const removeFocusVisible = e => {
+    const html = document.documentElement;
+    html.classList.remove('js-focus-visible');
+
+    const target = e.target;
+    target.removeEventListener('blur', removeFocusVisible);
+}
+
+const setAnchor = (gameEl, url) => {
+    const hashValue = document.location.hash.substring(1);
+
+    if (gameEl && anchorUrl(url) === hashValue) {
+        const link = gameEl.querySelector('.game__title > a');
+
+        if (link) {
+            const html = document.documentElement;
+            html.classList.add('js-focus-visible');
+
+            link.focus();
+            link.addEventListener('blur', removeFocusVisible);
+
+            setTimeout(() => {
+                gameEl.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'center',
+                    inline: 'center'
+                });
+            }, 0);
+        }
     }
+}
 
-    render () {
-        const {release, expansion} = this.props.game;
+const anchorUrl = url => {
+    const pattern = /https:\/\/(en|ru).wikipedia.org\/wiki\//g;
 
-        return (
-            <Game
-                className={[
-                    expansion ? 'expansion' : '',
-                    !release ? 'release-unknown' : '',
-                ]}
-                ref={this.gameRef}
-            >
-                {this.anchor}
-                {this.title}
-                {this.footer}
-            </Game>
-        )
-    }
+    return url ? url.replace(pattern, '') : null;
+}
+
+const gameAnchor = url => {
+    return url ? (
+        <Anchor
+            href={`#${anchorUrl(url)}`}
+            title='Anchor'
+            tabIndex='-1'
+        >
+            <img src={iconLink} width='24' height='24' alt='anchor'/>
+        </Anchor>
+    ) : null
+}
+
+const gameTitle = (title, url) => {
+    const className = 'game__title'
+
+    return url ? (
+        <Title className={className}>
+            <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{__html: title}}/>
+        </Title>
+    ) : (
+        <Title className={className} dangerouslySetInnerHTML={{__html: title}}/>
+    )
+}
+
+const gameFooter = release => {
+    return release ? (
+        <Footer>
+            <time>{release}</time>
+        </Footer>
+    ) : null;
+}
+
+const TimelineGame = ({game, placeholder }) => {
+    const {title, url, release, series, expansion} = game;
+    const gameRef = useRef(null);
+    const className = [
+        'game',
+        expansion ? 'expansion' : '',
+        !release ? 'release-unknown' : '',
+    ];
+
+    useEffect(() => {
+        setAnchor(gameRef.current, url);
+    });
+
+    return placeholder ? (
+        <Game
+            className={className}
+            data-series={series}
+            ref={gameRef}
+        >
+            {gameTitle(title)}
+        </Game>
+    ) : (
+        <Game
+            className={className}
+            data-series={series}
+            ref={gameRef}
+        >
+            {gameAnchor(url)}
+            {gameTitle(title, url)}
+            {gameFooter(release)}
+        </Game>
+    )
+}
+
+TimelineGame.propTypes = {
+    game: PropTypes.object.isRequired,
+    placeholder: PropTypes.bool
 }
 
 export default TimelineGame;

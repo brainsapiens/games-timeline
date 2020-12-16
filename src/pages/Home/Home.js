@@ -1,14 +1,13 @@
 import React from 'react';
 
 import AppHead from '../../components/App/Head';
-import Timeline from '../../components/Timeline';
+import TimelineTable from '../../components/Timeline/Table';
 
 const Home = () => (
     <>
-        <AppHead />
-        <Timeline />
+        <AppHead/>
+        <TimelineTable/>
     </>
-);
-
+)
 
 export default Home;

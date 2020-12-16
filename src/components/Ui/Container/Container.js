@@ -2,8 +2,8 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
-    padding-right: 1.6rem;
-    padding-left: 1.6rem;
+  padding-right: var(--indent-basic);
+  padding-left: var(--indent-basic);
 `;
 
 const UiContainer = ({children}) => (

@@ -9,6 +9,12 @@
   ],
   "1988": [
     {
+      "title": "Dangerous Dave",
+      "url": "https://en.wikipedia.org/wiki/Dangerous_Dave",
+      "genre": "platform",
+      "release": "October"
+    },
+    {
       "title": "F-19 Stealth Fighter",
       "url": "https://en.wikipedia.org/wiki/F-19_Stealth_Fighter",
       "genre": "simulator",
@@ -19,7 +25,8 @@
     {
       "title": "MechWarrior",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_(1989_video_game)",
-      "genre": "simulator"
+      "genre": "simulator",
+      "series": "mechwarrior"
     }
   ],
   "1990": [
@@ -33,11 +40,27 @@
       "url": "https://en.wikipedia.org/wiki/The_Secret_of_Monkey_Island",
       "genre": "adventure",
       "release": "October 15"
+    },
+    {
+      "title": "Commander Keen<br/> in&nbsp;Invasion of&nbsp;the Vorticons",
+      "url": "https://en.wikipedia.org/wiki/Commander_Keen_in_Invasion_of_the_Vorticons",
+      "genre": "platform",
+      "release": "December 14"
     }
   ],
   "1991": [
     {
-      "title": "F-117A Nighthawk Stealth Fighter&nbsp;2.0",
+      "title": "Dangerous Dave<br/> in&nbsp;the Haunted Mansion",
+      "url": "https://en.wikipedia.org/wiki/Dangerous_Dave_in_the_Haunted_Mansion",
+      "genre": "platform"
+    },
+    {
+      "title": "Commander Keen<br/> in&nbsp;Keen Dreams",
+      "url": "https://en.wikipedia.org/wiki/Commander_Keen_in_Keen_Dreams",
+      "genre": "platform"
+    },
+    {
+      "title": "F-117A Nighthawk<br/> Stealth Fighter&nbsp;2.0",
       "url": "https://en.wikipedia.org/wiki/F-117A_Nighthawk_Stealth_Fighter_2.0",
       "genre": "simulator",
       "release": "January 2"
@@ -49,10 +72,22 @@
       "release": "July 1"
     },
     {
+      "title": "Commander Keen<br/> in&nbsp;Aliens Ate My&nbsp;Babysitter",
+      "url": "https://en.wikipedia.org/wiki/Commander_Keen_in_Aliens_Ate_My_Babysitter",
+      "genre": "platform",
+      "release": "December"
+    },
+    {
       "title": "Monkey Island&nbsp;2:<br/> LeChuck&rsquo;s Revenge",
       "url": "https://en.wikipedia.org/wiki/Monkey_Island_2:_LeChuck%27s_Revenge",
       "genre": "adventure",
       "release": "December"
+    },
+    {
+      "title": "Commander Keen<br/> in&nbsp;Goodbye, Galaxy",
+      "url": "https://en.wikipedia.org/wiki/Commander_Keen_in_Goodbye,_Galaxy",
+      "genre": "platform",
+      "release": "December 15"
     }
   ],
   "1993": [
@@ -61,6 +96,16 @@
       "url": "https://en.wikipedia.org/wiki/The_7th_Guest",
       "genre": "adventure",
       "release": "April 1"
+    },
+    {
+      "title": "Dangerous Dave&rsquo;s<br/> Risky Rescue",
+      "url": "https://en.wikipedia.org/wiki/Dangerous_Dave#Dangerous_Dave.27s_Risky_Rescue",
+      "genre": "platform"
+    },
+    {
+      "title": "Dave Goes Nutz!",
+      "url": "https://en.wikipedia.org/wiki/Dangerous_Dave#Dave_Goes_Nutz.21",
+      "genre": "platform"
     },
     {
       "title": "Day of&nbsp;the Tentacle",
@@ -78,6 +123,7 @@
       "title": "Doom",
       "url": "https://en.wikipedia.org/wiki/Doom_(1993_video_game)",
       "genre": "shooter",
+      "series": "doom",
       "release": "December 10"
     }
   ],
@@ -87,6 +133,12 @@
       "url": "https://en.wikipedia.org/wiki/UFO:_Enemy_Unknown",
       "genre": "tactics",
       "release": "March"
+    },
+    {
+      "title": "The Elder Scrolls:<br/> Arena",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls:_Arena",
+      "genre": "role-playing",
+      "release": "March 25"
     },
     {
       "title": "Theme Park",
@@ -101,9 +153,16 @@
       "release": "June 2"
     },
     {
+      "title": "Jazz Jackrabbit",
+      "url": "https://en.wikipedia.org/wiki/Jazz_Jackrabbit_(1994_video_game)",
+      "genre": "platform",
+      "release": "August 1"
+    },
+    {
       "title": "Doom&nbsp;II:<br/> Hell on&nbsp;Earth",
       "url": "https://en.wikipedia.org/wiki/Doom_II",
       "genre": "shooter",
+      "series": "doom",
       "release": "October 10"
     },
     {
@@ -130,12 +189,14 @@
       "title": "MechWarrior&nbsp;2:<br/> 31st Century Combat",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_31st_Century_Combat",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "July 24"
     },
     {
       "title": "Heroes of&nbsp;Might and Magic:<br/> A&nbsp;Strategic Quest",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic:_A_Strategic_Quest",
       "genre": "strategy",
+      "series": "heroes",
       "release": "August 31"
     },
     {
@@ -154,6 +215,7 @@
       "title": "MechWarrior&nbsp;2:<br/> Ghost Bear&rsquo;s Legacy",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_31st_Century_Combat#MechWarrior_2:_Ghost_Bear's_Legacy",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "November 1",
       "expansion": true
     },
@@ -188,12 +250,14 @@
       "title": "Final Doom",
       "url": "https://en.wikipedia.org/wiki/Final_Doom",
       "genre": "shooter",
+      "series": "doom",
       "release": "June 17"
     },
     {
       "title": "Quake",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)",
       "genre": "shooter",
+      "series": "quake",
       "release": "June 22"
     },
     {
@@ -202,6 +266,12 @@
       "genre": "tactics",
       "release": "September",
       "expansion": true
+    },
+    {
+      "title": " The Elder Scrolls&nbsp;II:<br/> Daggerfall",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_II:_Daggerfall",
+      "genre": "role-playing",
+      "release": "September 20"
     },
     {
       "title": "Broken Sword:<br/> The Shadow of&nbsp;the Templars",
@@ -213,6 +283,7 @@
       "title": "MechWarrior&nbsp;2:<br/> Mercenaries",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_2:_Mercenaries",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "September 30",
       "expansion": true
     },
@@ -220,6 +291,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;II:<br/> The Succession Wars",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II",
       "genre": "strategy",
+      "series": "heroes",
       "release": "October 1"
     },
     {
@@ -244,6 +316,11 @@
   ],
   "1997": [
     {
+      "title": "Ignition",
+      "url": "https://en.wikipedia.org/wiki/Ignition_(video_game)",
+      "genre": "racing"
+    },
+    {
       "title": "Constructor",
       "url": "https://en.wikipedia.org/wiki/Constructor_(video_game)",
       "genre": "simulator"
@@ -252,18 +329,19 @@
       "title": "Diablo",
       "url": "https://en.wikipedia.org/wiki/Diablo_(video_game)",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "January 3"
     },
     {
       "title": "Quake Mission Pack No.&nbsp;1:<br/> Scourge of&nbsp;Armagon",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._1:_Scourge_of_Armagon",
       "genre": "shooter",
+      "series": "quake",
       "release": "March 5",
       "expansion": true
     },
     {
       "title": "Duke It&nbsp;Out In&nbsp;D.C.",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
       "genre": "shooter",
       "release": "March 17",
       "expansion": true
@@ -272,6 +350,7 @@
       "title": "Quake Mission Pack No.&nbsp;2:<br/> Dissolution of&nbsp;Eternity",
       "url": "https://en.wikipedia.org/wiki/Quake_(video_game)#Quake_Mission_Pack_No._2:_Dissolution_of_Eternity",
       "genre": "shooter",
+      "series": "quake",
       "release": "March 19",
       "expansion": true
     },
@@ -280,6 +359,13 @@
       "url": "https://en.wikipedia.org/wiki/Theme_Hospital",
       "genre": "simulator",
       "release": "March 28"
+    },
+    {
+      "title": "Doom&nbsp;64",
+      "url": "https://en.wikipedia.org/wiki/Doom_64",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "April 4"
     },
     {
       "title": "Need for Speed&nbsp;II",
@@ -297,6 +383,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;II:<br/> The Price of&nbsp;Loyalty",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_II#Expansion",
       "genre": "strategy",
+      "series": "heroes",
       "release": "May 16",
       "expansion": true
     },
@@ -329,6 +416,7 @@
       "title": "Fallout",
       "url": "https://en.wikipedia.org/wiki/Fallout_(video_game)",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "October 10"
     },
     {
@@ -354,6 +442,7 @@
       "title": "Grand Theft Auto",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_(video_game)",
       "genre": "action",
+      "series": "gta",
       "release": "October 21"
     },
     {
@@ -364,7 +453,6 @@
     },
     {
       "title": "Carmageddon:<br/> Splat Pack",
-      "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
       "genre": "racing",
       "release": "November 14",
       "expansion": true
@@ -379,25 +467,31 @@
       "title": "Diablo:<br/> Hellfire",
       "url": "https://en.wikipedia.org/wiki/Diablo:_Hellfire",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "November 25",
       "expansion": true
+    },
+    {
+      "title": "An&nbsp;Elder Scrolls Legend:<br/> Battlespire",
+      "url": "https://en.wikipedia.org/wiki/An_Elder_Scrolls_Legend:_Battlespire",
+      "genre": "role-playing",
+      "release": "December 2"
     },
     {
       "title": "Quake&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Quake_II",
       "genre": "shooter",
+      "series": "quake",
       "release": "December 9"
     },
     {
       "title": "Duke:<br/> Nuclear Winter",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
       "genre": "shooter",
       "release": "December 30",
       "expansion": true
     },
     {
       "title": "Duke Caribbean:<br/> Life&rsquo;s a&nbsp;Beach",
-      "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Expansion_packs",
       "genre": "shooter",
       "release": "December 31",
       "expansion": true
@@ -406,7 +500,6 @@
   "1998": [
     {
       "title": "Carmageddon Max Pack",
-      "url": "https://en.wikipedia.org/wiki/Carmageddon#Release",
       "genre": "racing",
       "release": "February 17",
       "expansion": true
@@ -430,9 +523,16 @@
       "release": "April 10"
     },
     {
+      "title": "Jazz Jackrabbit&nbsp;2",
+      "url": "https://en.wikipedia.org/wiki/Jazz_Jackrabbit_2",
+      "genre": "platform",
+      "release": "May 7"
+    },
+    {
       "title": "Quake&nbsp;II Mission Pack:<br/> The Reckoning",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_The_Reckoning",
       "genre": "shooter",
+      "series": "quake",
       "release": "May 31",
       "expansion": true
     },
@@ -466,6 +566,7 @@
       "title": "Quake&nbsp;II Mission Pack:<br/> Ground Zero",
       "url": "https://en.wikipedia.org/wiki/Quake_II#Quake_II_Mission_Pack:_Ground_Zero",
       "genre": "shooter",
+      "series": "quake",
       "release": "September 11",
       "expansion": true
     },
@@ -498,6 +599,7 @@
       "title": "Fallout&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Fallout_2",
       "genre": "role-playing",
+      "series": "fallout",
       "release": "October 29"
     },
     {
@@ -505,6 +607,12 @@
       "url": "https://en.wikipedia.org/wiki/Grim_Fandango",
       "genre": "adventure",
       "release": "October 30"
+    },
+    {
+      "title": "The Elder Scrolls Adventures:<br/> Redguard",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_Adventures:_Redguard",
+      "genre": "role-playing",
+      "release": "November 14"
     },
     {
       "title": "Half-Life",
@@ -549,6 +657,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> The Restoration of&nbsp;Erathia",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III",
       "genre": "strategy",
+      "series": "heroes",
       "release": "March 3"
     },
     {
@@ -568,6 +677,7 @@
       "title": "Grand Theft Auto:<br/> London 1969",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_London_1969",
       "genre": "action",
+      "series": "gta",
       "release": "April 22",
       "expansion": true
     },
@@ -582,6 +692,7 @@
       "title": "MechWarrior&nbsp;3",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_3",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "May"
     },
     {
@@ -594,6 +705,7 @@
       "title": "Grand Theft Auto:<br/> London 1961",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_London_1961",
       "genre": "action",
+      "series": "gta",
       "release": "July 1",
       "expansion": true
     },
@@ -632,6 +744,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> Armageddon&rsquo;s Blade",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_Armageddon%27s_Blade",
       "genre": "strategy",
+      "series": "heroes",
       "release": "September 30",
       "expansion": true
     },
@@ -652,6 +765,7 @@
       "title": "Grand Theft Auto&nbsp;2",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_2",
       "genre": "action",
+      "series": "gta",
       "release": "October 22"
     },
     {
@@ -677,12 +791,14 @@
       "title": "Quake&nbsp;III Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena",
       "genre": "shooter",
+      "series": "quake",
       "release": "December 2"
     },
     {
       "title": "MechWarrior&nbsp;3:<br/> Pirate&rsquo;s Moon",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_3#Pirate's_Moon_(expansion_pack)",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "December 3",
       "expansion": true
     },
@@ -704,6 +820,7 @@
       "title": "Heroes of&nbsp;Might and Magic&nbsp;III:<br/> The Shadow of&nbsp;Death",
       "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_III:_The_Shadow_of_Death",
       "genre": "strategy",
+      "series": "heroes",
       "release": "March 31",
       "expansion": true
     },
@@ -711,6 +828,7 @@
       "title": "Diablo&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Diablo_II",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "June 29"
     },
     {
@@ -754,12 +872,14 @@
       "title": "MechWarrior&nbsp;4:<br/> Vengeance",
       "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "November 22"
     },
     {
       "title": "Quake&nbsp;III:<br/> Team Arena",
       "url": "https://en.wikipedia.org/wiki/Quake_III_Arena#Expansion",
       "genre": "shooter",
+      "series": "quake",
       "release": "December 18",
       "expansion": true
     },
@@ -778,6 +898,19 @@
       "genre": "role-playing",
       "release": "February 21",
       "expansion": true
+    },
+    {
+      "title": "Fallout Tactics:<br/> Brotherhood of&nbsp;Steel",
+      "url": "https://en.wikipedia.org/wiki/Fallout_Tactics:_Brotherhood_of_Steel",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "March 15"
+    },
+    {
+      "title": "Gothic",
+      "url": "https://en.wikipedia.org/wiki/Gothic_(video_game)",
+      "genre": "role-playing",
+      "release": "March 15"
     },
     {
       "title": "Evil Islands:<br/> Curse of&nbsp;the Lost Soul",
@@ -809,6 +942,7 @@
       "title": "Diablo&nbsp;II:<br/> Lord of&nbsp;Destruction",
       "url": "https://en.wikipedia.org/wiki/Diablo_II:_Lord_of_Destruction",
       "genre": "role-playing",
+      "series": "diablo",
       "release": "June 27",
       "expansion": true
     },
@@ -828,12 +962,14 @@
       "title": "Grand Theft Auto&nbsp;III",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_III",
       "genre": "action",
+      "series": "gta",
       "release": "October 22"
     },
     {
       "title": "MechWarrior&nbsp;4:<br/> Black Knight",
-      "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance",
+      "url": "https://en.wikipedia.org/wiki/MechWarrior_4:_Vengeance#Black_Knight",
       "genre": "simulator",
+      "series": "mechwarrior",
       "release": "October 31",
       "expansion": true
     },
@@ -846,6 +982,25 @@
     }
   ],
   "2002": [
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;IV:<br/> The Gathering Storm",
+      "genre": "strategy",
+      "series": "heroes",
+      "expansion": true
+    },
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;IV",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_IV",
+      "genre": "strategy",
+      "series": "heroes",
+      "release": "March 28"
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;III:<br/> Morrowind",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Morrowind",
+      "genre": "role-playing",
+      "release": "May 1"
+    },
     {
       "title": "Warcraft&nbsp;III:<br/> Reign of&nbsp;Chaos",
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_Reign_of_Chaos",
@@ -875,6 +1030,7 @@
       "title": "Grand Theft Auto:<br/> Vice City",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_Vice_City",
       "genre": "action",
+      "series": "gta",
       "release": "October 29"
     },
     {
@@ -882,14 +1038,47 @@
       "url": "https://en.wikipedia.org/wiki/Age_of_Mythology",
       "genre": "strategy",
       "release": "October 30"
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;III:<br/> Tribunal",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Tribunal",
+      "genre": "role-playing",
+      "release": "November 6",
+      "expansion": true
+    },
+    {
+      "title": "Gothic&nbsp;II",
+      "url": "https://en.wikipedia.org/wiki/Gothic_II",
+      "genre": "role-playing",
+      "release": "November 29"
     }
   ],
   "2003": [
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;IV:<br/> Winds of&nbsp;War",
+      "genre": "strategy",
+      "series": "heroes",
+      "expansion": true
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;III:<br/> Bloodmoon",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_III:_Bloodmoon",
+      "genre": "role-playing",
+      "release": "July 3",
+      "expansion": true
+    },
     {
       "title": "Warcraft&nbsp;III:<br/> The Frozen Throne",
       "url": "https://en.wikipedia.org/wiki/Warcraft_III:_The_Frozen_Throne",
       "genre": "strategy",
       "release": "July 1",
+      "expansion": true
+    },
+    {
+      "title": "Gothic&nbsp;II:<br/> Night of&nbsp;the Raven",
+      "url": "https://en.wikipedia.org/wiki/Gothic_II:_Night_of_the_Raven",
+      "genre": "role-playing",
+      "release": "August 22",
       "expansion": true
     },
     {
@@ -920,9 +1109,17 @@
       "expansion": true
     },
     {
+      "title": "Doom&nbsp;3",
+      "url": "https://en.wikipedia.org/wiki/Doom_3",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "August 3"
+    },
+    {
       "title": "Grand Theft Auto:<br/> San Andreas",
       "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_San_Andreas",
       "genre": "action",
+      "series": "gta",
       "release": "October 26"
     },
     {
@@ -939,6 +1136,21 @@
     }
   ],
   "2005": [
+    {
+      "title": "Doom&nbsp;3:<br/> Resurrection of&nbsp;Evil",
+      "url": "https://en.wikipedia.org/wiki/Doom_3:_Resurrection_of_Evil",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "April 3",
+      "expansion": true
+    },
+    {
+      "title": "Quake&nbsp;4",
+      "url": "https://en.wikipedia.org/wiki/Quake_4",
+      "genre": "shooter",
+      "series": "quake",
+      "release": "October 18"
+    },
     {
       "title": "Half-Life&nbsp;2:<br/> Lost Coast",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Lost_Coast",
@@ -968,10 +1180,23 @@
       "expansion": true
     },
     {
+      "title": "The Elder Scrolls&nbsp;IV:<br/> Oblivion",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_IV:_Oblivion",
+      "genre": "role-playing",
+      "release": "March 20"
+    },
+    {
       "title": "Desperados&nbsp;2:<br/> Cooper&rsquo;s Revenge",
       "url": "https://en.wikipedia.org/wiki/Desperados_2:_Cooper%27s_Revenge",
       "genre": "tactics",
       "release": "April 28"
+    },
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;V",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_V",
+      "genre": "strategy",
+      "series": "heroes",
+      "release": "May 16"
     },
     {
       "title": "Half-Life&nbsp;2:<br/> Episode One",
@@ -981,13 +1206,41 @@
       "expansion": true
     },
     {
+      "title": "Gothic&nbsp;3",
+      "url": "https://en.wikipedia.org/wiki/Gothic_3",
+      "genre": "role-playing",
+      "release": "October 13"
+    },
+    {
       "title": "Need for Speed:<br/> Carbon",
       "url": "https://en.wikipedia.org/wiki/Need_for_Speed:_Carbon",
       "genre": "racing",
       "release": "October 30"
+    },
+    {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;V:<br/> Hammers of&nbsp;Fate",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_V:_Hammers_of_Fate",
+      "genre": "strategy",
+      "series": "heroes",
+      "release": "November 14",
+      "expansion": true
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;IV:<br/> Knights of&nbsp;the Nine",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_IV:_Knights_of_the_Nine",
+      "genre": "role-playing",
+      "release": "November 21",
+      "expansion": true
     }
   ],
   "2007": [
+    {
+      "title": "The Elder Scrolls&nbsp;IV:<br/> Shivering Isles",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_IV:_Shivering_Isles",
+      "genre": "role-playing",
+      "release": "March 26",
+      "expansion": true
+    },
     {
       "title": "Half-Life&nbsp;2:<br/> Episode Two",
       "url": "https://en.wikipedia.org/wiki/Half-Life_2:_Episode_Two",
@@ -996,10 +1249,257 @@
       "expansion": true
     },
     {
+      "title": "Heroes of&nbsp;Might and Magic&nbsp;V:<br/> Tribes of&nbsp;the East",
+      "url": "https://en.wikipedia.org/wiki/Heroes_of_Might_and_Magic_V:_Tribes_of_the_East",
+      "genre": "strategy",
+      "series": "heroes",
+      "release": "October 12",
+      "expansion": true
+    },
+    {
       "title": "Helldorado",
       "url": "https://en.wikipedia.org/wiki/Helldorado_(video_game)",
       "genre": "tactics",
       "release": "November 30"
+    }
+  ],
+  "2008": [
+    {
+      "title": "Grand Theft Auto&nbsp;IV",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV",
+      "genre": "action",
+      "series": "gta",
+      "release": "April 29"
+    },
+    {
+      "title": "Fallout&nbsp;3",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "October 28"
+    },
+    {
+      "title": "Gothic&nbsp;3:<br/> Forsaken Gods",
+      "url": "https://en.wikipedia.org/wiki/Gothic_3:_Forsaken_Gods",
+      "genre": "role-playing",
+      "release": "November 20",
+      "expansion": true
+    }
+  ],
+  "2009": [
+    {
+      "title": "Fallout&nbsp;3&nbsp;&mdash;<br/> Operation: Anchorage",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Operation:_Anchorage",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "January 27",
+      "expansion": true
+    },
+    {
+      "title": "Grand Theft Auto&nbsp;IV:<br/> The Lost and Damned",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_IV:_The_Lost_and_Damned",
+      "genre": "action",
+      "series": "gta",
+      "release": "February 17",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;3:<br/> The Pitt",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#The_Pitt",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "March 24",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;3:<br/> Broken Steel",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Broken_Steel",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "May 5",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;3:<br/> Point Lookout",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Point_Lookout",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "June 23",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;3:<br/> Mothership Zeta",
+      "url": "https://en.wikipedia.org/wiki/Fallout_3_downloadable_content#Mothership_Zeta",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "August 3",
+      "expansion": true
+    },
+    {
+      "title": "Grand Theft Auto&nbsp;IV:<br/> The Ballad of&nbsp;Gay Tony",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto:_The_Ballad_of_Gay_Tony",
+      "genre": "action",
+      "series": "gta",
+      "release": "October 29",
+      "expansion": true
+    }
+  ],
+  "2010": [
+    {
+      "title": "Fallout:<br/> New Vegas",
+      "url": "https://en.wikipedia.org/wiki/Fallout:_New_Vegas",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "October 19"
+    }
+  ],
+  "2011": [
+    {
+      "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim",
+      "genre": "role-playing",
+      "release": "November 11"
+    }
+  ],
+  "2012": [
+    {
+      "title": "Diablo&nbsp;III",
+      "url": "https://en.wikipedia.org/wiki/Diablo_III",
+      "genre": "role-playing",
+      "series": "diablo",
+      "release": "May 15"
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim&nbsp;&mdash; Dawnguard",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dawnguard",
+      "genre": "role-playing",
+      "release": "June 26",
+      "expansion": true
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim&nbsp;&mdash; Hearthfire",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Hearthfire",
+      "genre": "role-playing",
+      "release": "September 4",
+      "expansion": true
+    },
+    {
+      "title": "Doom&nbsp;3:<br/> BFG Edition",
+      "url": "https://en.wikipedia.org/wiki/Doom_3:_BFG_Edition",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "October 16"
+    },
+    {
+      "title": "The Elder Scrolls&nbsp;V:<br/> Skyrim&nbsp;&mdash; Dragonborn",
+      "url": "https://en.wikipedia.org/wiki/The_Elder_Scrolls_V:_Skyrim_%E2%80%93_Dragonborn",
+      "genre": "role-playing",
+      "release": "December 4",
+      "expansion": true
+    }
+  ],
+  "2013": [
+    {
+      "title": "Grand Theft Auto&nbsp;V",
+      "url": "https://en.wikipedia.org/wiki/Grand_Theft_Auto_V",
+      "genre": "action",
+      "series": "gta",
+      "release": "September 17"
+    }
+  ],
+  "2014": [
+    {
+      "title": "Diablo&nbsp;III:<br/> Reaper of&nbsp;Souls",
+      "url": "https://en.wikipedia.org/wiki/Diablo_III:_Reaper_of_Souls",
+      "genre": "role-playing",
+      "series": "diablo",
+      "release": "March 25",
+      "expansion": true
+    }
+  ],
+  "2015": [
+    {
+      "title": "Fallout&nbsp;4",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "November 10"
+    }
+  ],
+  "2016": [
+    {
+      "title": "Fallout&nbsp;4: Automatron",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Automatron",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "March 22",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Wasteland Workshop",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Wasteland_Workshop",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "April 12",
+      "expansion": true
+    },
+    {
+      "title": "Doom",
+      "url": "https://en.wikipedia.org/wiki/Doom_(2016_video_game)",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "May 13"
+    },
+    {
+      "title": "Fallout&nbsp;4: Far Harbor",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4:_Far_Harbor",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "May 19",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Contraptions Workshop",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Contraptions_Workshop",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "June 21",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Vault-Tec Workshop",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4_downloadable_content#Vault-Tec_Workshop",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "July 26",
+      "expansion": true
+    },
+    {
+      "title": "Fallout&nbsp;4: Nuka-World",
+      "url": "https://en.wikipedia.org/wiki/Fallout_4:_Nuka-World",
+      "genre": "role-playing",
+      "series": "fallout",
+      "release": "August 30",
+      "expansion": true
+    }
+  ],
+  "2017": [
+    {
+      "title": "Diablo&nbsp;III:<br/> Rise of&nbsp;the Necromancer",
+      "url": "https://en.wikipedia.org/wiki/Diablo_III:_Rise_of_the_Necromancer",
+      "genre": "role-playing",
+      "series": "diablo",
+      "release": "June 27",
+      "expansion": true
+    }
+  ],
+  "2020": [
+    {
+      "title": "Doom Eternal",
+      "url": "https://en.wikipedia.org/wiki/Doom_Eternal",
+      "genre": "shooter",
+      "series": "doom",
+      "release": "March 20"
     }
   ]
 }
