@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import styled from 'styled-components';
 import globals from '../../../globals';
 import series from '../../../data/series.json';
@@ -103,13 +103,12 @@ const TimelineSeriesSelector = () => {
         selectSeries(series);
     }, [series]);
 
-    const onChange = e => {
+    const onChange = useCallback(e => {
         const value = e.target.value;
 
         setSeries(value);
-
         selectSeries(value);
-    }
+    }, []);
 
     return (
         <SeriesSelector>
