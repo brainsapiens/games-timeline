@@ -101,7 +101,7 @@ const TimelineSeriesSelector = () => {
 
     useEffect(() => {
         selectSeries(series);
-    });
+    }, [series]);
 
     const onChange = e => {
         const value = e.target.value;
