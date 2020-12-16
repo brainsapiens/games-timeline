@@ -3,14 +3,8 @@ import styled from 'styled-components';
 import globals from '../../../globals';
 import series from '../../../data/series.json';
 
-const SeriesSelector = styled.label`
-  display: flex;
-  align-items: center;
-  user-select: none;
-`;
-
 const SeriesSelect = styled.select`
-  width: 12rem;
+  width: 16rem;
   overflow: hidden;
   text-overflow: ellipsis;
   background-color: var(--color-lighter);
@@ -36,7 +30,7 @@ const removeAnchor = () => {
 
 const seriesOptions = () => {
     const listOfSeries = Object.entries(series);
-    const options = [<option key='none' value='none'>None</option>];
+    const options = [<option key='none' value='none'>Select series...</option>];
 
     for (const [key, value] of listOfSeries) {
         options.push(<option key={key} value={key}>{value}</option>);
@@ -113,16 +107,13 @@ const TimelineSeriesSelector = () => {
     }
 
     return (
-        <SeriesSelector>
-            Series:&nbsp;
-            <SeriesSelect
-                id='select'
-                value={series}
-                onChange={onChange}
-            >
-                {seriesOptions()}
-            </SeriesSelect>
-        </SeriesSelector>
+        <SeriesSelect
+            id='select'
+            value={series}
+            onChange={onChange}
+        >
+            {seriesOptions()}
+        </SeriesSelect>
     );
 };
 

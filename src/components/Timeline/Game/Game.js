@@ -181,7 +181,7 @@ const gameAnchor = url => {
             title='Anchor'
             tabIndex='-1'
         >
-            <img src={iconLink} width='24' height='24' alt='anchor'/>
+            <img src={iconLink} width='24' height='24' alt='Anchor'/>
         </Anchor>
     ) : null
 }
