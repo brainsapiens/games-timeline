@@ -97,8 +97,7 @@ const selectSeries = (series) => {
 }
 
 const TimelineSeriesSelector = () => {
-    const initialState = storage.getItem('series') || 'none';
-    const [series, setSeries] = useState(initialState);
+    const [series, setSeries] = useState(() => storage.getItem('series') || 'none');
 
     useEffect(() => {
         selectSeries(series);
