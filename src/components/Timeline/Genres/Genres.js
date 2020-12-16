@@ -5,7 +5,7 @@ import games from '../../../data/games';
 import TimelineGenre from '../Genre';
 import TimelineGames from '../Games';
 
-const listOfGenres = () => {
+const listOfGenres = games => {
     const listOfGenres = [];
     const listOfGames = Object.values(games);
 
@@ -24,8 +24,8 @@ const listOfGenres = () => {
     return listOfGenres;
 }
 
-const genres = () => {
-    return listOfGenres().map((genreName, index) => {
+const genres = games => {
+    return listOfGenres(games).map((genreName, index) => {
         return ([
             <TimelineGenre key={genreName} genreName={genreName}/>,
             <TimelineGames key={index} genreName={genreName}/>
@@ -33,6 +33,6 @@ const genres = () => {
     });
 }
 
-const TimelineGenres = () => genres();
+const TimelineGenres = () => genres(games);
 
 export default TimelineGenres;
