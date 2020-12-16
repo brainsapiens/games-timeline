@@ -23,17 +23,11 @@ const Year = styled.div`
   }
 `;
 
-const years = () => {
-    const listOfYears = Object.keys(games);
-
-    return listOfYears.map(year => {
-        return (
-            <Year key={year}>
-                <span>{year}</span>
-            </Year>
-        )
-    });
-}
+const years = () => Object.keys(games).map(year =>
+    <Year key={year}>
+        <span>{year}</span>
+    </Year>
+);
 
 const TimelineYears = () => years();
 
