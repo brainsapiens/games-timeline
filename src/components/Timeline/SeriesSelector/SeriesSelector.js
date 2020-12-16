@@ -10,7 +10,7 @@ const SeriesSelector = styled.label`
 `;
 
 const SeriesSelect = styled.select`
-  width: 16rem;
+  width: 12rem;
   overflow: hidden;
   text-overflow: ellipsis;
   background-color: var(--color-lighter);
@@ -114,7 +114,7 @@ const TimelineSeriesSelector = () => {
 
     return (
         <SeriesSelector>
-            Highlight series:&nbsp;
+            Series:&nbsp;
             <SeriesSelect
                 id='select'
                 value={series}
