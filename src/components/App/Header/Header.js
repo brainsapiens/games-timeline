@@ -54,11 +54,11 @@ const AppHeader = () => {
                     <AppTitle/>
                     <AppNav/>
                     <HeaderControls>
-                        {pathname === '/' ? (
+                        {pathname === '/' &&
                             <HeaderControl>
                                 <TimelineSeriesSelector/>
                             </HeaderControl>
-                        ) : null}
+                        }
                         <HeaderControl>
                             <AppThemeSwitcher/>
                         </HeaderControl>
