@@ -80,7 +80,7 @@ const TimelineTable = () => {
 
     useEffect(() => {
         addTableScrollPosition(tableRef.current);
-    }, []); 
+    }, []);
 
     return (
         <Table
