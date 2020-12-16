@@ -31,11 +31,11 @@ const matchGameToQuarter = (index, year, release) => {
     if ((index === 1 && monthIndex > 0 && monthIndex <= 3) ||
         (index === 2 && monthIndex > 3 && monthIndex <= 6) ||
         (index === 3 && monthIndex > 6 && monthIndex <= 9)) return true;
-    
+
     return index === 4 && monthIndex > 9 && monthIndex <= 12;
 }
 
-const gamesByQuarters = (genreName) => {
+const gamesByQuarters = (games, genreName) => {
     const listOfYears = Object.keys(games);
 
     return listOfYears.map(year => {
@@ -88,7 +88,7 @@ const gamesByQuarters = (genreName) => {
     });
 }
 
-const TimelineGames = ({genreName}) => gamesByQuarters(genreName);
+const TimelineGames = ({genreName}) => gamesByQuarters(games, genreName);
 
 TimelineGames.propTypes = {
     genreName: PropTypes.string.isRequired
