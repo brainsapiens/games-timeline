@@ -151,8 +151,7 @@ const setAnchor = (gameEl, url) => {
         const link = gameEl.querySelector('.game__title > a');
 
         if (link) {
-            const html = document.documentElement;
-            html.classList.add('js-focus-visible');
+            document.documentElement.classList.add('js-focus-visible');
 
             link.focus();
             link.addEventListener('blur', removeFocusVisible);
