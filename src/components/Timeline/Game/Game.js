@@ -1,6 +1,7 @@
 import React, {useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
+import {addFocusVisible} from '../../../helpers/focusVisible';
 
 import iconLink from '../../../images/icons/link.svg';
 
@@ -136,14 +137,6 @@ const Anchor = styled.a`
   }
 `;
 
-const removeFocusVisible = e => {
-    const html = document.documentElement;
-    html.classList.remove('js-focus-visible');
-
-    const target = e.target;
-    target.removeEventListener('blur', removeFocusVisible);
-}
-
 const setAnchor = (gameEl, url) => {
     const hashValue = document.location.hash.substring(1);
 
@@ -151,10 +144,7 @@ const setAnchor = (gameEl, url) => {
         const link = gameEl.querySelector('.game__title > a');
 
         if (link) {
-            document.documentElement.classList.add('js-focus-visible');
-
-            link.focus();
-            link.addEventListener('blur', removeFocusVisible);
+            addFocusVisible(link);
 
             setTimeout(() => {
                 gameEl.scrollIntoView({
@@ -180,7 +170,7 @@ const gameAnchor = url => {
             title='Anchor'
             tabIndex='-1'
         >
-            <img src={iconLink} width='24' height='24' alt='anchor'/>
+            <img src={iconLink} width='24' height='24' alt='Anchor'/>
         </Anchor>
     ) : null
 }

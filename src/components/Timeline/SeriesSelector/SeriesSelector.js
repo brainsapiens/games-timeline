@@ -1,12 +1,11 @@
 import React, {useCallback, useEffect, useState} from 'react';
 import styled from 'styled-components';
+import {addFocusVisible} from '../../../helpers/focusVisible';
 import globals from '../../../globals';
 import series from '../../../data/series.json';
 
-const SeriesSelector = styled.label`
-  display: flex;
-  align-items: center;
-  user-select: none;
+const SeriesLabel = styled.label`
+    display: block;
 `;
 
 const SeriesSelect = styled.select`
@@ -36,7 +35,7 @@ const removeAnchor = () => {
 
 const seriesOptions = () => {
     const listOfSeries = Object.entries(series);
-    const options = [<option key='none' value='none'>None</option>];
+    const options = [<option key='none' value='none'>Select series...</option>];
 
     for (const [key, value] of listOfSeries) {
         options.push(<option key={key} value={key}>{value}</option>);
@@ -79,14 +78,15 @@ const selectSeries = series => {
         const link = firstGameInSeries.querySelector('.game__title > a');
         if (!link) return;
 
-        document.documentElement.classList.add('js-focus-visible');
-        link.focus();
+        addFocusVisible(link);
 
-        firstGameInSeries.scrollIntoView({
-            behavior: 'smooth',
-            block: 'center',
-            inline: 'center'
-        });
+        setTimeout(() => {
+            firstGameInSeries.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+                inline: 'center'
+            });
+        }, 0);
     }
 }
 
@@ -105,8 +105,8 @@ const TimelineSeriesSelector = () => {
     }, [setSeries]);
 
     return (
-        <SeriesSelector>
-            Highlight series:&nbsp;
+        <SeriesLabel>
+            <span className='visually-hidden'>Select series</span>
             <SeriesSelect
                 id='select'
                 value={series}
@@ -114,7 +114,7 @@ const TimelineSeriesSelector = () => {
             >
                 {seriesOptions()}
             </SeriesSelect>
-        </SeriesSelector>
+        </SeriesLabel>
     );
 };
 

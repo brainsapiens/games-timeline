@@ -1,3 +1,6 @@
+@import 'styles/helpers/_focus-visible.css';
+@import 'styles/helpers/_visually-hidden.css';
+
 #app {
     display: grid;
     grid-template-rows: auto 1fr auto; /* header main footer */
