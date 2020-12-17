@@ -206,7 +206,7 @@ const TimelineGame = ({game, placeholder }) => {
 
     useEffect(() => {
         setAnchor(gameRef.current, url);
-    });
+    }, [url]);
 
     return placeholder ? (
         <Game

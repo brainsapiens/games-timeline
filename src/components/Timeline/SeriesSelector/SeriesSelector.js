@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useCallback, useEffect, useState} from 'react';
 import styled from 'styled-components';
 import {addFocusVisible} from '../../../helpers/focusVisible';
 import globals from '../../../globals';
@@ -44,69 +44,65 @@ const seriesOptions = () => {
     return options;
 }
 
-const selectSeries = (series) => {
+const selectSeries = series => {
     const allGames = document.querySelectorAll('.game');
-    allGames.forEach(game => {
-        game.classList.remove('muted');
 
+    allGames.forEach(game => {
         const link = game.querySelector('.game__title > a');
-        if (link) {
-            link.removeAttribute('tabindex');
-        }
+
+        game.classList.remove('muted');
+        if (link) link.removeAttribute('tabindex');
     });
 
-    if (series !== 'none') {
+    if (series === 'none') {
+        storage.removeItem('series');
+    } else {
         removeAnchor();
 
         storage.setItem('series', series);
 
         const notSeriesGames = document.querySelectorAll(`.game:not([data-series='${series}'])`);
+
         notSeriesGames.forEach(game => {
+            const link = game.querySelector('.game__title > a');
             game.classList.add('muted');
 
-            const link = game.querySelector('.game__title > a');
-            if (link) {
-                link.setAttribute('tabindex', '-1');
-            }
+            if (link) link.setAttribute('tabindex', '-1');
         });
 
         const seriesGames = document.querySelectorAll(`.game[data-series='${series}']`);
         const firstGameInSeries = seriesGames[0];
-        if (firstGameInSeries) {
-            const link = firstGameInSeries.querySelector('.game__title > a');
 
-            if (link) {
-                addFocusVisible(link);
+        if (!firstGameInSeries) return;
 
-                setTimeout(() => {
-                    firstGameInSeries.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'center',
-                        inline: 'center'
-                    });
-                }, 0);
-            }
-        }
-    } else {
-        storage.removeItem('series');
+        const link = firstGameInSeries.querySelector('.game__title > a');
+        if (!link) return;
+
+        addFocusVisible(link);
+
+        setTimeout(() => {
+            firstGameInSeries.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+                inline: 'center'
+            });
+        }, 0);
     }
 }
 
 const TimelineSeriesSelector = () => {
-    const initialState = storage.getItem('series') || 'none';
-    const [series, setSeries] = useState(initialState);
+    const [series, setSeries] = useState(() => storage.getItem('series') || 'none');
 
     useEffect(() => {
         selectSeries(series);
-    });
+    }, [series]);
 
-    const onChange = e => {
+    const onChange = useCallback(e => {
         const value = e.target.value;
 
         setSeries(value);
-
         selectSeries(value);
-    }
+    }, [setSeries]);
 
     return (
         <SeriesLabel>

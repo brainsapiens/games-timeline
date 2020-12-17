@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 import games from '../../../data/games';
-
 import Game from '../Game';
 
 const List = styled.ol`
@@ -29,14 +28,14 @@ const matchGameToQuarter = (index, year, release) => {
 
     const monthIndex = date.getMonth() + 1;
 
-    if (index === 1 && monthIndex > 0 && monthIndex <= 3) return true;
-    if (index === 2 && monthIndex > 3 && monthIndex <= 6) return true;
-    if (index === 3 && monthIndex > 6 && monthIndex <= 9) return true;
+    if ((index === 1 && monthIndex > 0 && monthIndex <= 3) ||
+        (index === 2 && monthIndex > 3 && monthIndex <= 6) ||
+        (index === 3 && monthIndex > 6 && monthIndex <= 9)) return true;
 
     return index === 4 && monthIndex > 9 && monthIndex <= 12;
 }
 
-const gamesByQuarters = (genreName) => {
+const gamesByQuarters = (games, genreName) => {
     const listOfYears = Object.keys(games);
 
     return listOfYears.map(year => {
@@ -89,7 +88,7 @@ const gamesByQuarters = (genreName) => {
     });
 }
 
-const TimelineGames = ({genreName}) => gamesByQuarters(genreName);
+const TimelineGames = ({genreName}) => gamesByQuarters(games, genreName);
 
 TimelineGames.propTypes = {
     genreName: PropTypes.string.isRequired
