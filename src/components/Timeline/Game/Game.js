@@ -1,7 +1,8 @@
-import React, {useEffect, useRef} from 'react';
+import React, {useContext, useEffect, useRef} from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 import {addFocusVisible} from '../../../helpers/focusVisible';
+import AppContext from '../../../AppContext';
 
 import iconLink from '../../../images/icons/link.svg';
 
@@ -137,21 +138,21 @@ const Anchor = styled.a`
   }
 `;
 
-const setAnchor = (gameEl, url) => {
+const scrollToAnchor = (game, url) => {
     const hashValue = document.location.hash.substring(1);
 
-    if (gameEl && anchorUrl(url) === hashValue) {
-        const link = gameEl.querySelector('.game__title > a');
+    if (game && anchorUrl(url) === hashValue) {
+        const link = game.querySelector('.game-link');
 
-        if (link) {
-            addFocusVisible(link);
+        if (!link) return;
 
-            gameEl.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center',
-                inline: 'center'
-            });
-        }
+        addFocusVisible(link);
+
+        game.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center'
+        });
     }
 }
 
@@ -173,23 +174,20 @@ const gameAnchor = url => {
     ) : null
 }
 
-const gameTitle = (title, url) => {
-    const className = 'game__title'
-
+const gameTitle = (title, url, selected) => {
     return url ? (
-        <Title className={className}>
+        <Title>
             <a
                 href={url}
                 rel='noopener noreferrer'
                 target='_blank'
+                className='game-link'
+                tabIndex={!selected ? '-1' : undefined}
                 dangerouslySetInnerHTML={{__html: title}}
             />
         </Title>
     ) : (
-        <Title
-            className={className}
-            dangerouslySetInnerHTML={{__html: title}}
-        />
+        <Title dangerouslySetInnerHTML={{__html: title}}/>
     )
 }
 
@@ -203,36 +201,42 @@ const gameFooter = release => {
 
 const TimelineGame = ({game, placeholder}) => {
     const {title, url, release, series, expansion} = game;
+
+    const {selectedSeries} = useContext(AppContext);
+    const selected = selectedSeries === '' || (series === selectedSeries);
+
     const gameRef = useRef(null);
+
     const className = [
-        'game',
         expansion ? 'expansion' : '',
         !release ? 'release-unknown' : '',
+        !selected ? 'muted' : ''
     ];
 
-    // TODO: Add deps: [url]
     useEffect(() => {
-        setAnchor(gameRef.current, url);
+        scrollToAnchor(gameRef.current, url);
     });
 
-    return placeholder ? (
-        <Game
-            className={className}
-            data-series={series}
-            ref={gameRef}
-        >
-            {gameTitle(title)}
-        </Game>
-    ) : (
-        <Game
-            className={className}
-            data-series={series}
-            ref={gameRef}
-        >
-            {gameAnchor(url)}
-            {gameTitle(title, url)}
-            {gameFooter(release)}
-        </Game>
+    return (
+        placeholder ? (
+            <Game
+                className={className}
+                data-series={series}
+                ref={gameRef}
+            >
+                {gameTitle(title, null, selected)}
+            </Game>
+        ) : (
+            <Game
+                className={className}
+                data-series={series}
+                ref={gameRef}
+            >
+                {gameAnchor(url)}
+                {gameTitle(title, url, selected)}
+                {gameFooter(release)}
+            </Game>
+        )
     )
 }
 

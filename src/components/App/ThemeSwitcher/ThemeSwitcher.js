@@ -83,15 +83,15 @@ const Switcher = styled.span`
 `;
 
 const AppThemeSwitcher = () => {
-    const {theme, toggleTheme} = useContext(AppContext);
+    const {activeTheme, toggleTheme} = useContext(AppContext);
 
     return (
         <ThemeSwitcher>
             Dark mode&nbsp;
-            <Switcher className={theme === 'dark' ? 'on' : 'off'}>
+            <Switcher className={activeTheme === 'dark' ? 'on' : 'off'}>
                 <input
                     type='checkbox'
-                    checked={theme === 'dark' ? 'checked' : ''}
+                    checked={activeTheme === 'dark' ? 'checked' : ''}
                     onChange={toggleTheme}
                 />
                 <span/>

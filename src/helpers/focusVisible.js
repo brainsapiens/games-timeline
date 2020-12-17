@@ -5,11 +5,11 @@ const removeFocusVisible = e => {
     target.removeEventListener('blur', removeFocusVisible);
 }
 
-const addFocusVisible = el => {
+const addFocusVisible = link => {
     document.documentElement.classList.add('js-focus-visible');
 
-    el.focus();
-    el.addEventListener('blur', removeFocusVisible);
+    link.focus();
+    link.addEventListener('blur', removeFocusVisible);
 }
 
 export {addFocusVisible};

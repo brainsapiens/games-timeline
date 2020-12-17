@@ -2,8 +2,10 @@ import React from 'react';
 import {BrowserRouter as Router} from 'react-router-dom';
 import {ThemeProvider, createGlobalStyle} from 'styled-components';
 import {useDarkMode} from './hooks/useDarkMode';
-import {themeLight, themeDark} from './themes';
+import {useSeriesSelector} from './hooks/useSeriesSelector';
+
 import globals from './globals';
+import {themeLight, themeDark} from './themes';
 
 import './App.css';
 
@@ -35,15 +37,22 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const App = () => {
-    const [theme, toggleTheme, componentMounted] = useDarkMode();
-    const themeMode = theme === 'light' ? themeLight : themeDark
+    const [activeTheme, toggleTheme, themeApplied] = useDarkMode();
+    const theme = activeTheme === 'light' ? themeLight : themeDark
 
-    if (!componentMounted) return null;
+    const [selectedSeries, selectSeries, seriesApplied] = useSeriesSelector();
+
+    if (!themeApplied && !seriesApplied) return null;
 
     return (
-        <AppContext.Provider value={{theme, toggleTheme}}>
+        <AppContext.Provider value={{
+            activeTheme,
+            toggleTheme,
+            selectedSeries,
+            selectSeries
+        }}>
             <Router basename={basename}>
-                <ThemeProvider theme={themeMode}>
+                <ThemeProvider theme={theme}>
                     <GlobalStyle/>
                     <AppHeader/>
                     <AppMain/>

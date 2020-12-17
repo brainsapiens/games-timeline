@@ -2,31 +2,31 @@ import {useCallback, useEffect, useState} from 'react';
 
 export const useDarkMode = () => {
     const storage = window.localStorage;
-    const [theme, setTheme] = useState('light');
-    const [componentMounted, setComponentMounted] = useState(false);
+    const [activeTheme, setActiveTheme] = useState('light');
+    const [themeApplied, setThemeApplied] = useState(false);
 
-    const setMode = useCallback(mode => {
-        storage.setItem('theme', mode);
-        setTheme(mode);
+    const setTheme = useCallback(theme => {
+        storage.setItem('activeTheme', theme);
+        setActiveTheme(theme);
     }, [storage]);
 
     const toggleTheme = () => {
-        if (theme === 'light') {
-            setMode('dark');
+        if (activeTheme === 'light') {
+            setTheme('dark');
         } else {
-            setMode('light');
+            setTheme('light');
         }
     };
 
     useEffect(() => {
-        const localTheme = storage.getItem('theme');
+        const localTheme = storage.getItem('activeTheme');
         if (localTheme) {
-            setTheme(localTheme);
+            setActiveTheme(localTheme);
         } else {
-            setMode('light');
+            setTheme('light');
         }
-        setComponentMounted(true);
-    }, [storage, setMode]);
+        setThemeApplied(true);
+    }, [storage, setTheme]);
 
-    return [theme, toggleTheme, componentMounted];
+    return [activeTheme, toggleTheme, themeApplied];
 };

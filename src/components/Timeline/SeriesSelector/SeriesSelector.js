@@ -1,6 +1,7 @@
-import React, {useCallback, useEffect, useState} from 'react';
+import React, {useContext, useEffect} from 'react';
 import styled from 'styled-components';
 import {addFocusVisible} from '../../../helpers/focusVisible';
+import AppContext from '../../../AppContext';
 import globals from '../../../globals';
 import series from '../../../data/series.json';
 
@@ -23,19 +24,17 @@ const SeriesSelect = styled.select`
   }
 `;
 
-const storage = window.sessionStorage;
-
-const removeAnchor = () => {
+const removeAnchor = (series) => {
     const {app: {basename}} = globals;
 
-    if (!storage.getItem('series')) {
+    if (series) {
         window.history.pushState(null, null, basename);
     }
 }
 
 const seriesOptions = () => {
     const listOfSeries = Object.entries(series);
-    const options = [<option key='none' value='none'>Select series...</option>];
+    const options = [<option key='' value=''>Select series...</option>];
 
     for (const [key, value] of listOfSeries) {
         options.push(<option key={key} value={key}>{value}</option>);
@@ -44,77 +43,46 @@ const seriesOptions = () => {
     return options;
 }
 
-const selectSeries = series => {
-    const allGames = document.querySelectorAll('.game');
+const scrollToSeries = series => {
+    removeAnchor(series);
 
-    allGames.forEach(game => {
-        const link = game.querySelector('.game__title > a');
+    const game = document.querySelector(`[data-series='${series}']`);
 
-        game.classList.remove('muted');
-        if (link) link.removeAttribute('tabindex');
-    });
+    if (!game) return;
 
-    if (series === 'none') {
-        storage.removeItem('series');
-    } else {
-        removeAnchor();
+    const link = game.querySelector('.game-link');
 
-        storage.setItem('series', series);
+    if (!link) return;
 
-        const notSeriesGames = document.querySelectorAll(`.game:not([data-series='${series}'])`);
+    addFocusVisible(link);
 
-        notSeriesGames.forEach(game => {
-            const link = game.querySelector('.game__title > a');
-            game.classList.add('muted');
-
-            if (link) link.setAttribute('tabindex', '-1');
-        });
-
-        const seriesGames = document.querySelectorAll(`.game[data-series='${series}']`);
-        const firstGameInSeries = seriesGames[0];
-
-        if (!firstGameInSeries) return;
-
-        const link = firstGameInSeries.querySelector('.game__title > a');
-        if (!link) return;
-
-        addFocusVisible(link);
-
-        firstGameInSeries.scrollIntoView({
+    setTimeout(() => {
+        game.scrollIntoView({
             behavior: 'smooth',
             block: 'center',
             inline: 'center'
         });
-    }
+    }, 0);
 }
 
 const TimelineSeriesSelector = () => {
-    const [series, setSeries] = useState(() => storage.getItem('series') || 'none');
+    const {selectedSeries, selectSeries} = useContext(AppContext);
 
-    // TODO: Add deps: [series]
     useEffect(() => {
-        selectSeries(series);
-    });
-
-    const onChange = useCallback(e => {
-        const value = e.target.value;
-
-        setSeries(value);
-        selectSeries(value);
-    }, [setSeries]);
+        scrollToSeries(selectedSeries);
+    }, [selectedSeries]);
 
     return (
         <SeriesLabel>
             <span className='visually-hidden'>Select series</span>
             <SeriesSelect
-                id='select'
-                value={series}
-                onChange={onChange}
+                value={selectedSeries}
+                onChange={selectSeries}
             >
                 {seriesOptions()}
             </SeriesSelect>
         </SeriesLabel>
     );
-};
+}
 
 export default TimelineSeriesSelector;
