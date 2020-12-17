@@ -91,10 +91,10 @@ const selectSeries = series => {
 const TimelineSeriesSelector = () => {
     const [series, setSeries] = useState(() => storage.getItem('series') || 'none');
 
-    // TODO: Add "series" to "deps" array
+    // TODO: Add deps: [series]
     useEffect(() => {
         selectSeries(series);
-    }, []);
+    });
 
     const onChange = useCallback(e => {
         const value = e.target.value;

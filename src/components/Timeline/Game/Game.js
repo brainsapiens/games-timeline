@@ -210,10 +210,10 @@ const TimelineGame = ({game, placeholder}) => {
         !release ? 'release-unknown' : '',
     ];
 
-    // TODO: Add "url" to "deps" array
+    // TODO: Add deps: [url]
     useEffect(() => {
         setAnchor(gameRef.current, url);
-    }, []);
+    });
 
     return placeholder ? (
         <Game
