@@ -215,7 +215,7 @@ const TimelineGame = ({game, placeholder}) => {
 
     useEffect(() => {
         scrollToAnchor(gameRef.current, url);
-    });
+    }, [url]);
 
     return (
         placeholder ? (
