@@ -80,22 +80,21 @@ const selectSeries = series => {
 
         addFocusVisible(link);
 
-        setTimeout(() => {
-            firstGameInSeries.scrollIntoView({
-                behavior: 'smooth',
-                block: 'center',
-                inline: 'center'
-            });
-        }, 0);
+        firstGameInSeries.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center',
+            inline: 'center'
+        });
     }
 }
 
 const TimelineSeriesSelector = () => {
     const [series, setSeries] = useState(() => storage.getItem('series') || 'none');
 
+    // TODO: Add "series" to "deps" array
     useEffect(() => {
         selectSeries(series);
-    }, [series]);
+    }, []);
 
     const onChange = useCallback(e => {
         const value = e.target.value;

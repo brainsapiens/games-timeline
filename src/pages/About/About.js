@@ -7,6 +7,7 @@ import UiContainer from '../../components/Ui/Container';
 import UiContent from '../../components/Ui/Content';
 
 import globals from '../../globals';
+
 const {pages: {about: {title}}} = globals;
 
 const About = () => {

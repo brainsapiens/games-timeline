@@ -41,12 +41,12 @@ const Game = styled.article`
   &:hover {
     z-index: 300;
   }
-  
+
   &.muted {
     opacity: .1;
     pointer-events: none;
   }
-  
+
   &.expansion {
     padding-top: 0;
     padding-bottom: 0;
@@ -80,12 +80,12 @@ const Game = styled.article`
 
     [data-quarter]:not([data-quarter='Q1']) & {
       pointer-events: none;
-      
+
       ${Title} {
         visibility: hidden;
       }
     }
-    
+
     [data-quarter='Q2'] &,
     [data-quarter='Q3'] & {
       margin-right: -.9rem;
@@ -146,13 +146,11 @@ const setAnchor = (gameEl, url) => {
         if (link) {
             addFocusVisible(link);
 
-            setTimeout(() => {
-                gameEl.scrollIntoView({
-                    behavior: 'smooth',
-                    block: 'center',
-                    inline: 'center'
-                });
-            }, 0);
+            gameEl.scrollIntoView({
+                behavior: 'smooth',
+                block: 'center',
+                inline: 'center'
+            });
         }
     }
 }
@@ -180,10 +178,18 @@ const gameTitle = (title, url) => {
 
     return url ? (
         <Title className={className}>
-            <a href={url} rel='noopener noreferrer' target='_blank' dangerouslySetInnerHTML={{__html: title}}/>
+            <a
+                href={url}
+                rel='noopener noreferrer'
+                target='_blank'
+                dangerouslySetInnerHTML={{__html: title}}
+            />
         </Title>
     ) : (
-        <Title className={className} dangerouslySetInnerHTML={{__html: title}}/>
+        <Title
+            className={className}
+            dangerouslySetInnerHTML={{__html: title}}
+        />
     )
 }
 
@@ -195,7 +201,7 @@ const gameFooter = release => {
     ) : null;
 }
 
-const TimelineGame = ({game, placeholder }) => {
+const TimelineGame = ({game, placeholder}) => {
     const {title, url, release, series, expansion} = game;
     const gameRef = useRef(null);
     const className = [
@@ -204,9 +210,10 @@ const TimelineGame = ({game, placeholder }) => {
         !release ? 'release-unknown' : '',
     ];
 
+    // TODO: Add "url" to "deps" array
     useEffect(() => {
         setAnchor(gameRef.current, url);
-    }, [url]);
+    }, []);
 
     return placeholder ? (
         <Game
