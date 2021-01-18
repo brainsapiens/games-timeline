@@ -40,6 +40,7 @@ const SearchButton = styled.button`
   padding: .4rem;
   background-color: transparent;
   border: none;
+  color: ${props => props.theme.appSearch.buttonColor};
   cursor: pointer;
   vertical-align: top;
         

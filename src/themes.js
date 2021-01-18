@@ -3,8 +3,7 @@ export const themeLight = {
         backgroundColor: 'var(--color-lightest)',
         textColor: 'var(--color-dark)',
         titleColor: 'var(--color-darker)',
-        linkColor: 'var(--color-link-dark)',
-        outlineColor: 'var(--color-link-dark)'
+        linkColor: 'var(--color-link-dark)'
     },
     appHeader: {
         backgroundColor: 'var(--color-lightest)',
@@ -17,6 +16,7 @@ export const themeLight = {
         linkColorActive: 'var(--color-dark)'
     },
     appSearch: {
+        buttonColor: 'var(--color-darker)',
         buttonIconFilter: 'invert(0)',
         tooltipBackgroundColor: 'var(--color-lightest)'
     },
@@ -61,8 +61,7 @@ export const themeDark = {
         backgroundColor: 'var(--color-darkest)',
         textColor: 'var(--color-light)',
         titleColor: 'var(--color-lighter)',
-        linkColor: 'var(--color-link-light)',
-        outlineColor: 'var(--color-link-light)'
+        linkColor: 'var(--color-link-light)'
     },
     appHeader: {
         backgroundColor: 'var(--color-darkest)',
@@ -75,6 +74,7 @@ export const themeDark = {
         linkColorActive: 'var(--color-light)'
     },
     appSearch: {
+        buttonColor: 'var(--color-lighter)',
         buttonIconFilter: 'invert(1)',
         tooltipBackgroundColor: 'var(--color-lighter)'
     },

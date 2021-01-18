@@ -58,6 +58,7 @@ const Switcher = styled.span`
     background-color: #fff;
     border-radius: 50%;
     box-shadow: 1px 1px 3px 2px rgba(0, 0, 0, .2);
+    color: var(--color-darkest);
     pointer-events: none;
     transition: left var(--transition-duration-basic);
     

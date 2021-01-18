@@ -17,11 +17,6 @@ import AppFooter from './components/App/Footer';
 const {app: {basename}} = globals;
 
 const GlobalStyle = createGlobalStyle`
-  html:not(.js-focus-visible) :focus-visible,
-  html.js-focus-visible :focus {
-    outline-color: ${props => props.theme.global.outlineColor};
-  }
-        
   body {
     background-color: ${props => props.theme.global.backgroundColor};
     color: ${props => props.theme.global.textColor};
