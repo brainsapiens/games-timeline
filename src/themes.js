@@ -30,6 +30,11 @@ export const themeLight = {
     appCopyright: {
         linkColorActive: 'var(--color-dark)'
     },
+    timelineSeriesSelector: {
+        backgroundColor: 'var(--color-lighter)',
+        borderColor: 'var(--color-light)',
+        textColor: 'var(--color-darker)'
+    },
     timelineTable: {
         borderColor: 'var(--color-border-light)',
         cellBackgroundColor: 'var(--cell-background-color-light)',
@@ -87,6 +92,11 @@ export const themeDark = {
     },
     appCopyright: {
         linkColorActive: 'var(--color-light)'
+    },
+    timelineSeriesSelector: {
+        backgroundColor: 'var(--color-darker)',
+        borderColor: '#999',
+        textColor: 'var(--color-lighter)'
     },
     timelineTable: {
         borderColor: 'var(--color-border-dark)',

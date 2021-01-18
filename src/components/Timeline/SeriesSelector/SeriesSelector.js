@@ -13,10 +13,10 @@ const SeriesSelect = styled.select`
   width: 16rem;
   overflow: hidden;
   text-overflow: ellipsis;
-  background-color: var(--color-lighter);
-  border: 2px outset var(--color-light);
+  background-color: ${props => props.theme.timelineSeriesSelector.backgroundColor};
+  border: 2px outset ${props => props.theme.timelineSeriesSelector.borderColor};
   border-radius: 3px;
-  color: var(--color-darker);
+  color: ${props => props.theme.timelineSeriesSelector.textColor};
   font-size: 1.3rem;
   
   &:active {
