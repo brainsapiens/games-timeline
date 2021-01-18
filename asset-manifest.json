@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/games-timeline/static/css/main.60bd68fb.chunk.css",
+    "main.css": "/games-timeline/static/css/main.4de98fde.chunk.css",
     "main.js": "/games-timeline/static/js/main.83e62fca.chunk.js",
     "main.js.map": "/games-timeline/static/js/main.83e62fca.chunk.js.map",
     "runtime-main.js": "/games-timeline/static/js/runtime-main.0c625e82.js",
@@ -10,7 +10,7 @@
     "static/js/2.b85c807e.chunk.js.map": "/games-timeline/static/js/2.b85c807e.chunk.js.map",
     "index.html": "/games-timeline/index.html",
     "static/css/2.679831fc.chunk.css.map": "/games-timeline/static/css/2.679831fc.chunk.css.map",
-    "static/css/main.60bd68fb.chunk.css.map": "/games-timeline/static/css/main.60bd68fb.chunk.css.map",
+    "static/css/main.4de98fde.chunk.css.map": "/games-timeline/static/css/main.4de98fde.chunk.css.map",
     "static/js/2.b85c807e.chunk.js.LICENSE.txt": "/games-timeline/static/js/2.b85c807e.chunk.js.LICENSE.txt",
     "static/media/link.d898b4a9.svg": "/games-timeline/static/media/link.d898b4a9.svg",
     "static/media/search.9ca002d1.svg": "/games-timeline/static/media/search.9ca002d1.svg"
@@ -19,7 +19,7 @@
     "static/js/runtime-main.0c625e82.js",
     "static/css/2.679831fc.chunk.css",
     "static/js/2.b85c807e.chunk.js",
-    "static/css/main.60bd68fb.chunk.css",
+    "static/css/main.4de98fde.chunk.css",
     "static/js/main.83e62fca.chunk.js"
   ]
 }
