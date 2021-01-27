@@ -1,5 +1,4 @@
 {
-  "short_name": "GT",
   "name": "Games Timeline",
   "icons": [
     {
@@ -12,9 +11,5 @@
       "type": "image/png",
       "sizes": "512x512"
     }
-  ],
-  "start_url": ".",
-  "display": "standalone",
-  "theme_color": "#333333",
-  "background_color": "#ffffff"
+  ]
 }

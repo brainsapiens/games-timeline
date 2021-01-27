@@ -4,5 +4,5 @@ html:not(.js-focus-visible) :focus:not(:focus-visible) {
 
 html:not(.js-focus-visible) :focus-visible,
 html.js-focus-visible :focus {
-    outline: 2px solid var(--color-link-dark);
+    outline: 2px solid currentColor;
 }
