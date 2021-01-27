@@ -3,7 +3,7 @@
 :root {
     --font-size-root: 62.5%;
 
-    /* Colors */
+    // Colors
     --color-darkest-rgb: 0, 0, 0;
     --color-darkest: #000;
     --color-darker: #333;
@@ -19,7 +19,7 @@
     --color-link-dark: blue;
     --color-link-light: cyan;
 
-    /* Typography */
+    // Typography
     --font-family-basic: 'Roboto Mono', monospace;
     --font-size-basic: 1.5rem;
     --font-weight-basic: 400;
@@ -28,10 +28,10 @@
     --line-height-basic: 1.4;
     --line-height-title: 1.2;
 
-    /* Durations */
+    // Durations
     --transition-duration-basic: .2s;
 
-    /* Sizes */
+    // Sizes
     --indent-basic: 1.6rem;
 
     --year-height: 3.6rem;
@@ -39,12 +39,12 @@
 
     --bar-height: 4.8rem;
 
-    /* Cells */
+    // Cells
     --cell-padding: calc(var(--indent-basic) / 2);
     --cell-background-color-dark: #0a0a0a;
     --cell-background-color-light: #fafafa;
 
-    /* Games */
+    // Games
     --game-release-unknown-background-color-dark: #0e0e0e;
     --game-release-unknown-background-color-light: #efefef;
 }
@@ -77,22 +77,22 @@ body {
     line-height: var(--line-height-basic);
 }
 
-/* Links */
+// Links
 a {
     color: var(--color-link-dark);
     transition: all var(--transition-duration-basic);
+
+    &:hover,
+    &.active {
+        text-decoration: none;
+    }
+
+    &.active {
+        cursor: default;
+    }
 }
 
-a:hover,
-a.active {
-    text-decoration: none;
-}
-
-a.active {
-    cursor: default;
-}
-
-/* Headings */
+// Headings
 h1,
 h2 {
     font-weight: var(--font-weight-title);
@@ -108,14 +108,14 @@ h6 {
     line-height: var(--line-height-basic);
 }
 
-/* Lists */
+// Lists
 ol,
 ul {
     padding: 0;
     list-style: none;
 }
 
-/* Small */
+// Small
 small {
     font-size: 1rem;
 }

@@ -3,6 +3,6 @@
 
 #app {
     display: grid;
-    grid-template-rows: auto 1fr auto; /* header main footer */
+    grid-template-rows: auto 1fr auto; // header main footer
     min-height: 100%;
 }

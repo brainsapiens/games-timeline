@@ -7,7 +7,7 @@ import {useSeriesSelector} from './hooks/useSeriesSelector';
 import globals from './globals';
 import {themeLight, themeDark} from './themes';
 
-import './App.css';
+import './App.scss';
 
 import AppContext from './AppContext';
 import AppHeader from './components/App/Header';
