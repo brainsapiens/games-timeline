@@ -32,15 +32,28 @@ const removeAnchor = (series) => {
     }
 }
 
-const seriesOptions = () => {
+const seriesContents = () => {
     const listOfSeries = Object.entries(series);
-    const options = [<option key='' value=''>Select series...</option>];
+    const selectContents = [<option key='' value=''>Select series...</option>];
+
+    let prevFirstChar = '';
+    let optgroupContents = [];
 
     for (const [key, value] of listOfSeries) {
-        options.push(<option key={key} value={key}>{value}</option>);
+        const currentFirstChar = value.charAt(0).toLowerCase();
+
+        if (!prevFirstChar || prevFirstChar === currentFirstChar) {
+            optgroupContents.push(<option key={key} value={key}>{value}</option>);
+        } else {
+            selectContents.push(<optgroup key={key} label={prevFirstChar.toUpperCase()}>{optgroupContents}</optgroup>);
+            optgroupContents = [];
+            optgroupContents.push(<option key={key} value={key}>{value}</option>);
+        }
+
+        prevFirstChar = currentFirstChar;
     }
 
-    return options;
+    return selectContents;
 }
 
 const scrollToSeries = series => {
@@ -79,7 +92,7 @@ const TimelineSeriesSelector = () => {
                 value={selectedSeries}
                 onChange={selectSeries}
             >
-                {seriesOptions()}
+                {seriesContents()}
             </SeriesSelect>
         </SeriesLabel>
     );

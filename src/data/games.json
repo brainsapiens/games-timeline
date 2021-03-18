@@ -69,6 +69,7 @@
       "title": "Duke Nukem",
       "url": "https://en.wikipedia.org/wiki/Duke_Nukem_(video_game)",
       "genre": "platform",
+      "series": "duke",
       "release": "July 1"
     },
     {
@@ -117,6 +118,7 @@
       "title": "Duke Nukem&nbsp;II",
       "url": "https://en.wikipedia.org/wiki/Duke_Nukem_II",
       "genre": "platform",
+      "series": "duke",
       "release": "December 3"
     },
     {
@@ -237,6 +239,7 @@
       "title": "Duke Nukem&nbsp;3D",
       "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D",
       "genre": "shooter",
+      "series": "duke",
       "release": "January 29"
     },
     {
@@ -310,6 +313,7 @@
       "title": "Duke Nukem&nbsp;3D:<br/> Atomic Edition",
       "url": "https://en.wikipedia.org/wiki/Duke_Nukem_3D#Release",
       "genre": "shooter",
+      "series": "duke",
       "release": "November 1",
       "expansion": true
     }
@@ -343,6 +347,7 @@
     {
       "title": "Duke It&nbsp;Out In&nbsp;D.C.",
       "genre": "shooter",
+      "series": "duke",
       "release": "March 17",
       "expansion": true
     },
@@ -487,12 +492,14 @@
     {
       "title": "Duke:<br/> Nuclear Winter",
       "genre": "shooter",
+      "series": "duke",
       "release": "December 30",
       "expansion": true
     },
     {
       "title": "Duke Caribbean:<br/> Life&rsquo;s a&nbsp;Beach",
       "genre": "shooter",
+      "series": "duke",
       "release": "December 31",
       "expansion": true
     }
