@@ -1,4 +1,20 @@
 {
+  "1981": [
+    {
+      "title": "Castle Wolfenstein",
+      "url": "https://en.wikipedia.org/wiki/Castle_Wolfenstein",
+      "genre": "platform",
+      "release": "September"
+    }
+  ],
+  "1984": [
+    {
+      "title": "Beyond Castle Wolfenstein",
+      "url": "https://en.wikipedia.org/wiki/Beyond_Castle_Wolfenstein",
+      "genre": "platform",
+      "release": "June"
+    }
+  ],
   "1987": [
     {
       "title": "Maniac Mansion",
@@ -91,6 +107,20 @@
       "release": "December 15"
     }
   ],
+  "1992": [
+    {
+      "title": "Wolfenstein&nbsp;3D",
+      "url": "https://en.wikipedia.org/wiki/Wolfenstein_3D",
+      "genre": "shooter",
+      "release": "May 5"
+    },
+    {
+      "title": "Wolfenstein&nbsp;3D:<br/> Spear of&nbsp;Destiny",
+      "genre": "shooter",
+      "release": "September",
+      "expansion": true
+    }
+  ],
   "1993": [
     {
       "title": "The 7th Guest",
@@ -113,6 +143,12 @@
       "url": "https://en.wikipedia.org/wiki/Day_of_the_Tentacle",
       "genre": "adventure",
       "release": "June 25"
+    },
+    {
+      "title": "ShadowCaster",
+      "url": "https://en.wikipedia.org/wiki/ShadowCaster",
+      "genre": "role-playing",
+      "release": "September"
     },
     {
       "title": "Duke Nukem&nbsp;II",
@@ -172,6 +208,12 @@
       "url": "https://en.wikipedia.org/wiki/Warcraft:_Orcs_%26_Humans",
       "genre": "strategy",
       "release": "November 23"
+    },
+    {
+      "title": "Heretic",
+      "url": "https://en.wikipedia.org/wiki/Heretic_(video_game)",
+      "genre": "shooter",
+      "release": "December 23"
     }
   ],
   "1995": [
@@ -206,6 +248,12 @@
       "url": "https://en.wikipedia.org/wiki/The_Need_for_Speed",
       "genre": "racing",
       "release": "August 31"
+    },
+    {
+      "title": "Hexen:<br/> Beyond Heretic",
+      "url": "https://en.wikipedia.org/wiki/Hexen:_Beyond_Heretic",
+      "genre": "shooter",
+      "release": "October 30"
     },
     {
       "title": "Torin&rsquo;s Passage",
@@ -243,6 +291,13 @@
       "release": "January 29"
     },
     {
+      "title": "Heretic:<br/> Shadow of&nbsp;the Serpent Riders",
+      "url": "https://en.wikipedia.org/wiki/Heretic_(video_game)#Shadow_of_the_Serpent_Riders",
+      "genre": "shooter",
+      "release": "March 31",
+      "expansion": true
+    },
+    {
       "title": "Warcraft&nbsp;II:<br/> Beyond the Dark Portal",
       "url": "https://en.wikipedia.org/wiki/Warcraft_II:_Beyond_the_Dark_Portal",
       "genre": "strategy",
@@ -268,6 +323,13 @@
       "url": "https://en.wikipedia.org/wiki/Jagged_Alliance:_Deadly_Games",
       "genre": "tactics",
       "release": "September",
+      "expansion": true
+    },
+    {
+      "title": "Hexen:<br/> Deathkings of&nbsp;the Dark Citadel",
+      "url": "https://en.wikipedia.org/wiki/Hexen:_Beyond_Heretic#Deathkings_of_the_Dark_Citadel",
+      "genre": "shooter",
+      "release": "September 3",
       "expansion": true
     },
     {
@@ -418,6 +480,18 @@
       "expansion": true
     },
     {
+      "title": "Hexen&nbsp;II",
+      "url": "https://en.wikipedia.org/wiki/Hexen_II",
+      "genre": "shooter",
+      "release": "September 11"
+    },
+    {
+      "title": "Shadow Warrior",
+      "url": "https://en.wikipedia.org/wiki/Shadow_Warrior_(1997_video_game)",
+      "genre": "shooter",
+      "release": "September 12"
+    },
+    {
       "title": "Fallout",
       "url": "https://en.wikipedia.org/wiki/Fallout_(video_game)",
       "genre": "role-playing",
@@ -522,6 +596,13 @@
       "url": "https://en.wikipedia.org/wiki/StarCraft_(video_game)",
       "genre": "strategy",
       "release": "March 31"
+    },
+    {
+      "title": "Hexen II&nbsp;Mission Pack:<br/> Portal of&nbsp;Praevus",
+      "url": "https://en.wikipedia.org/wiki/Hexen_II#Portal_of_Praevus",
+      "genre": "shooter",
+      "release": "April 1",
+      "expansion": true
     },
     {
       "title": "Аллоды:<br/> Печать тайны",
