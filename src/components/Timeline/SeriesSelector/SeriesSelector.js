@@ -1,7 +1,6 @@
 import React, {useContext, useEffect} from 'react';
 import styled from 'styled-components';
 import {addFocusVisible} from '../../../helpers/focusVisible';
-import sortAlphabetically from '../../../helpers/sortAlphabetically';
 import AppContext from '../../../AppContext';
 import globals from '../../../globals';
 import series from '../../../data/series';
@@ -34,23 +33,21 @@ const removeAnchor = (series) => {
 }
 
 const seriesContents = () => {
-    const listOfSeries = sortAlphabetically(Object.values(series));
+    const listOfSeries = Object.entries(series);
     const selectContents = [<option key='firstOption' value=''>Select series...</option>];
 
     let prevFirstChar = '';
     let optgroupContents = [];
 
-    for (const value of listOfSeries) {
+    for (const [key, value] of listOfSeries) {
         const currentFirstChar = value.charAt(0).toLowerCase();
 
-        if (!prevFirstChar || prevFirstChar === currentFirstChar) {
-            optgroupContents.push(<option key={value} value={value}>{value}</option>);
-        } else {
-            selectContents.push(<optgroup key={value} label={prevFirstChar.toUpperCase()}>{optgroupContents}</optgroup>);
+        if (prevFirstChar && prevFirstChar !== currentFirstChar) {
+            selectContents.push(<optgroup key={key} label={prevFirstChar.toUpperCase()}>{optgroupContents}</optgroup>);
             optgroupContents = [];
-            optgroupContents.push(<option key={value} value={value}>{value}</option>);
         }
 
+        optgroupContents.push(<option key={key} value={key}>{value}</option>);
         prevFirstChar = currentFirstChar;
     }
 
